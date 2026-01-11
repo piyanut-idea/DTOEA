@@ -1,0 +1,23 @@
+meta {
+  name: admindtl
+  type: http
+  seq: 1
+}
+
+get {
+  url: http://apiserver:8090/admin/admindtl
+  body: text
+  auth: inherit
+}
+
+params:query {
+  ~peoid: 100
+  ~peoidlist_str: 100
+  ~apprvtype: 1
+  ~ckfin: wwwwww
+  ~status: 1
+}
+
+settings {
+  encodeUrl: true
+}

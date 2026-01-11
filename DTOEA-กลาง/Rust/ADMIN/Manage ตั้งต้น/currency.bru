@@ -1,0 +1,20 @@
+meta {
+  name: currency
+  type: http
+  seq: 8
+}
+
+get {
+  url: http://apiserver:8090/admin/currency
+  body: none
+  auth: inherit
+}
+
+params:query {
+  ~rpp: 2
+  ~pg: 1
+}
+
+settings {
+  encodeUrl: true
+}

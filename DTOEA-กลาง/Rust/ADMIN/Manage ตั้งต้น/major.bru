@@ -1,0 +1,21 @@
+meta {
+  name: major
+  type: http
+  seq: 6
+}
+
+get {
+  url: http://apiserver:8090/admin/major
+  body: none
+  auth: inherit
+}
+
+params:query {
+  ~rpp: 2
+  ~pg: 1
+  ~id: 88
+}
+
+settings {
+  encodeUrl: true
+}

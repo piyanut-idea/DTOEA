@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "DTOEA-กลาง",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}

@@ -1,0 +1,21 @@
+meta {
+  name: อัพเดตข้อมูล ตอนเที่ยงคืน
+  type: http
+  seq: 7
+}
+
+put {
+  url: http://apiserver:8080/admin/requesttype/202/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "action" : "updateRequestType"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

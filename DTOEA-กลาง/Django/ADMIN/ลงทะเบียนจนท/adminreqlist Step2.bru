@@ -1,0 +1,33 @@
+meta {
+  name: adminreqlist Step2
+  type: http
+  seq: 7
+}
+
+put {
+  url: http://apiserver:8080/admin/adminreqlist/2/
+  body: json
+  auth: inherit
+}
+
+params:query {
+  ~name: 
+}
+
+body:json {
+  {
+      "action" : "registerAdminDtlStep2",
+      "tel" : "0887768011",
+      "department" : "เจ้าพนักงาน",
+      "apid" : 1,
+      "peoid" : 100,
+      "dpid" : 8,
+      "bc1" : 1,
+      "bc2" : 1,
+      "reason" : "เจ้าพนักงานบรรจุประจำตำแหน่ง"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

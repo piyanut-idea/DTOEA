@@ -1,0 +1,66 @@
+meta {
+  name: put_step2_next
+  type: http
+  seq: 4
+}
+
+put {
+  url: http://apiserver:8080/web/seekerreqlist/4/
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+      "action":"step2",
+      "rtid":202,
+      "cntid":1066,
+      "comtype" : 1,
+      "comcode" : "1253154125111",
+      "bosspfid" : "",
+      "bossfnameen" : "HANNSTAR BOARD CORPORATION",
+      "bosslnameen" : "",
+      "address" : "NO. 9, GONGYE 4TH RD.,",
+      "fcitid":1,
+      "postcode" : "25315",
+      "idtid" : 7800,
+      "tel" : "023532654282",
+      "fax" : "",
+      "email" : "natee@vpadvance.com",
+      "twcid" : "",
+      "contacttype" : 2,
+      "contactoth" : "",
+      "contactpay" : 0,
+      //"contactpaid" : "",
+      "jobtype":1,
+      "j1id":"",
+      "wtid":1,
+      "wage":50000,
+      "curid":70,
+      "empyear":1,
+      //"empmonth":"",
+      //"empday":"",
+      //"proyear":"1",
+      //"promonth":"",
+      //"proday":"",
+      "endjob":"2027-12-31",
+      "samebossaddr":1,
+      "sbcntid":1066,
+      "workaddress":"NO. 9, GONGYE 4TH RD.,",
+      "sfcitid":1,
+      "zipcode":"52520",
+      "regfund":1,
+      //"remarkfund":"",
+      //"otherremark":"",
+      "peoid":100,
+      "flight":"525442",
+      "airline":"zip air",
+      "flightdate":"2026-01-20",
+      "twpartner":2
+  
+  }
+}
+
+settings {
+  encodeUrl: true
+}

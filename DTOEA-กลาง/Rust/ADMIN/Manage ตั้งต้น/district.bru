@@ -1,0 +1,21 @@
+meta {
+  name: district
+  type: http
+  seq: 4
+}
+
+get {
+  url: http://apiserver:8090/admin/district
+  body: none
+  auth: inherit
+}
+
+params:query {
+  ~rpp: 2
+  ~pg: 1
+  ~id: 88
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,28 @@
+meta {
+  name: province_2
+  type: http
+  seq: 4
+}
+
+put {
+  url: http://apiserver:8080/admin/province/78/
+  body: json
+  auth: inherit
+}
+
+params:query {
+  ~rpp: 2
+  ~pg: 1
+}
+
+body:json {
+  {
+      "rgid" : "1001",
+      "nameth" : "กระบี่ฟ",
+      "nameen" : "Krabii"    
+  }
+}
+
+settings {
+  encodeUrl: true
+}

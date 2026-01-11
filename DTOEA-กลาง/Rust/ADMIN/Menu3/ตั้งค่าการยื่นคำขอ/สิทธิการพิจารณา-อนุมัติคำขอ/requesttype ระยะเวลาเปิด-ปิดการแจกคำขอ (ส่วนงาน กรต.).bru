@@ -1,0 +1,26 @@
+meta {
+  name: requesttype ระยะเวลาเปิด-ปิดการแจกคำขอ (ส่วนงาน กรต.)
+  type: http
+  seq: 4
+}
+
+put {
+  url: http://apiserver:8080/admin/requesttype/202/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "action" : "submitRequestTypeHours",
+      "type" : "tab1",
+      "rtid" : 202,
+      "opentype" : 1,
+      "timestart" : 1,
+      "timeend" : 8
+  }
+}
+
+settings {
+  encodeUrl: true
+}

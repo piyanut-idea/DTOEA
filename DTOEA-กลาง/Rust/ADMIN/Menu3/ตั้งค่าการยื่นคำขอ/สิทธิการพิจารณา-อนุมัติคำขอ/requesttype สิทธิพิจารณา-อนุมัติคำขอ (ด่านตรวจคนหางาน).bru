@@ -1,0 +1,36 @@
+meta {
+  name: requesttype สิทธิพิจารณา/อนุมัติคำขอ (ด่านตรวจคนหางาน)
+  type: http
+  seq: 3
+}
+
+put {
+  url: http://apiserver:8080/admin/requesttype/202/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "action" : "submitConsiderLevel",
+      "type" : "tab3",
+      "requesttypeinfo_list" : [
+          {
+              "rtid" : 202,
+              "bc" : 3
+          },        
+          {
+              "rtid" : 203,
+              "bc" : 3
+          },        
+          {
+              "rtid" : 204,
+              "bc" : 3
+          }
+      ]
+  }
+}
+
+settings {
+  encodeUrl: true
+}

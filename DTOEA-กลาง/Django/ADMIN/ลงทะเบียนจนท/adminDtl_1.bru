@@ -1,0 +1,25 @@
+meta {
+  name: adminDtl_1
+  type: http
+  seq: 2
+}
+
+put {
+  url: http://apiserver:8080/admin/admindtl/1/
+  body: json
+  auth: inherit
+}
+
+params:query {
+  ~idcard: 1200100474370
+}
+
+body:json {
+  {
+      "bc1" : 3
+  }
+}
+
+settings {
+  encodeUrl: true
+}

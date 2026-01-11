@@ -1,0 +1,25 @@
+meta {
+  name: adminreqlist Step3 Submit
+  type: http
+  seq: 8
+}
+
+put {
+  url: http://apiserver:8080/admin/adminreqlist/2/
+  body: json
+  auth: inherit
+}
+
+params:query {
+  ~name: 
+}
+
+body:json {
+  {
+      "action" : "SubmitRegiterAdminDtl"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

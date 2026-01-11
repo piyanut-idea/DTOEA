@@ -1,0 +1,26 @@
+meta {
+  name: seekerregisttmp Step3 Submit
+  type: http
+  seq: 5
+}
+
+put {
+  url: http://apiserver:8080/web/seekerregisttmp/3/
+  body: json
+  auth: inherit
+}
+
+params:query {
+  ~name: 
+}
+
+body:json {
+  {
+      "sessionid" : "76816895381000000000",
+      "action" : "submitSeekerRegistTmpInfo"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

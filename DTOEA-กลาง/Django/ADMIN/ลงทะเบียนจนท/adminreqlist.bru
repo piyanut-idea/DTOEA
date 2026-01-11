@@ -1,0 +1,19 @@
+meta {
+  name: adminreqlist
+  type: http
+  seq: 3
+}
+
+get {
+  url: http://apiserver:8080/admin/adminreqlist/2/
+  body: none
+  auth: inherit
+}
+
+params:query {
+  ~name: 
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,20 @@
+meta {
+  name: peo
+  type: http
+  seq: 2
+}
+
+get {
+  url: http://apiserver:8090/admin/peo?name=สจจ. แพร่&view=3
+  body: none
+  auth: inherit
+}
+
+params:query {
+  name: สจจ. แพร่
+  view: 3
+}
+
+settings {
+  encodeUrl: true
+}

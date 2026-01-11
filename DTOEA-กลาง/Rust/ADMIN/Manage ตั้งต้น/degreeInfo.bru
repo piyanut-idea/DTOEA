@@ -1,0 +1,21 @@
+meta {
+  name: degreeInfo
+  type: http
+  seq: 11
+}
+
+get {
+  url: http://apiserver:8090/admin/degree?idnozint=1
+  body: none
+  auth: inherit
+}
+
+params:query {
+  idnozint: 1
+  ~idlist: 1
+  ~id: 1
+}
+
+settings {
+  encodeUrl: true
+}

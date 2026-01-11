@@ -1,0 +1,21 @@
+meta {
+  name: requesttype
+  type: http
+  seq: 20
+}
+
+get {
+  url: http://apiserver:8080/admin/requesttype/?id=202
+  body: none
+  auth: inherit
+}
+
+params:query {
+  id: 202
+  ~rpp: 2
+  ~pg: 1
+}
+
+settings {
+  encodeUrl: true
+}

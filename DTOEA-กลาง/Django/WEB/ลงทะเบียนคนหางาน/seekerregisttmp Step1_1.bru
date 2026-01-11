@@ -1,0 +1,37 @@
+meta {
+  name: seekerregisttmp Step1_1
+  type: http
+  seq: 3
+}
+
+put {
+  url: http://apiserver:8080/web/seekerregisttmp/3/
+  body: json
+  auth: inherit
+}
+
+params:query {
+  ~name: 
+}
+
+body:json {
+  {
+      "sessionid" : "76816895381000000000",
+      "gender"    : 2,
+      "birthdate": "1990-01-01T00:00:00",
+      "addressth" : "ทดสอบที่อยู่ 192/3 หมู่ 2",
+      "addressen" : "test addressen 192/3 Moo.2",
+      "pvid"  : 1,
+      "ddtid" : 1,
+      "sdtid" : 1,
+      "postcode"  : 81000,
+      "email" : "vptestdtoea3@vpadvance.com",
+      "refotp" : "AaBb",
+      "otp" : "123456",
+      "lateupdateotp" : "2023-09-02T15:13:04.435521+07:00"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

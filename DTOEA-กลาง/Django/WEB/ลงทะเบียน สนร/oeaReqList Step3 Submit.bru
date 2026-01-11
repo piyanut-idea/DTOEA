@@ -1,0 +1,25 @@
+meta {
+  name: oeaReqList Step3 Submit
+  type: http
+  seq: 7
+}
+
+put {
+  url: http://apiserver:8080/web/oeareqlist/9/
+  body: json
+  auth: inherit
+}
+
+params:query {
+  ~name: 
+}
+
+body:json {
+  {
+      "action" : "SubmitRegiterOeaDtl"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

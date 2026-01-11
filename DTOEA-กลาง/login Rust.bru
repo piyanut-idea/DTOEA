@@ -1,0 +1,28 @@
+meta {
+  name: login Rust
+  type: http
+  seq: 3
+}
+
+get {
+  url: http://apiserver:8090/admin/login
+  body: json
+  auth: inherit
+}
+
+params:query {
+  ~rpp: 2
+  ~pg: 1
+}
+
+body:json {
+  {
+      "login"    : "superadmin",
+      "passwd" : "password",
+      "typeuser" : "1"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

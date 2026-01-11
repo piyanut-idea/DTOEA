@@ -1,0 +1,20 @@
+meta {
+  name: admindtl
+  type: http
+  seq: 1
+}
+
+get {
+  url: http://apiserver:8080/admin/admindtl/?peoidlist_str=100
+  body: text
+  auth: inherit
+}
+
+params:query {
+  peoidlist_str: 100
+  ~peoid: 100
+}
+
+settings {
+  encodeUrl: true
+}

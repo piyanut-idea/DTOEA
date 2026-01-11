@@ -1,0 +1,22 @@
+meta {
+  name: currency_2
+  type: http
+  seq: 19
+}
+
+put {
+  url: http://apiserver:8080/admin/currency/1/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "rate": 1, 
+      "thrate": "9.52"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

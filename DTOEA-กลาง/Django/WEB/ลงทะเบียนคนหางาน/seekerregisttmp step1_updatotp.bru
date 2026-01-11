@@ -1,0 +1,29 @@
+meta {
+  name: seekerregisttmp step1_updatotp
+  type: http
+  seq: 8
+}
+
+put {
+  url: http://apiserver:8080/web/seekerregisttmp/1/
+  body: json
+  auth: inherit
+}
+
+params:query {
+  ~name: 
+}
+
+body:json {
+      {
+          "action" : "updateotp",
+          "email":"natee@vpadvance.com",
+          "refotp":"opkd",
+          "otp":"123456",
+          "lateupdateotp":"2025-12-22T20:00"
+      }
+}
+
+settings {
+  encodeUrl: true
+}

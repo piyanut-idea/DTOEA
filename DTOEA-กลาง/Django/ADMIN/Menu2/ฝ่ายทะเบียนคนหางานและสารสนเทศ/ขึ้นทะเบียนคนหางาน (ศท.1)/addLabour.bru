@@ -1,0 +1,116 @@
+meta {
+  name: addLabour
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://apiserver:8080/admin/seekerdtl/
+  body: json
+  auth: inherit
+}
+
+params:query {
+  ~name: 
+}
+
+body:json {
+  {
+      "action" : "addLabour",
+      "idcard" : "1200100474370",
+      "gender"    : 2,
+      "pfid"  : 1,
+      "pfnameen"  : 1,
+      "pfnameth"  : 1,
+      "fnameth"   : "ชื่อทดสอบ",
+      "lnameth"   : "นามสกุลทดสอบ",
+      "fnameen"   : "fnametest",
+      "lnameen"   : "lnametest",
+      "birthdate": "1990-01-01T00:00:00",
+      "stampbdate"    : "2025-10-01T00:00:00",
+      "height"    : 168,
+      "weight"    : 52,
+      "addressth" : "ทดสอบที่อยู่ 192/3 หมู่ 2",
+      "addressen" : "test addressen 192/3 Moo.2",
+      "pvid"  : 1,
+      "ddtid" : 1,
+      "sdtid" : 1,
+      "postcode"  : 81000,
+      "sameaddr"  : 1,
+      "ctaddressth"   : "ทดสอบที่อยู่ 192/3 หมู่ 2",
+      "ctaddressen"   : "test addressen 192/3 Moo.2",
+      "ctpvid"    : 1,
+      "ctddtid"   : 1,
+      "ctsdtid"   : 1,
+      "ctpostcode"    : 81000,
+      "mobile1"   : "0000000000",
+      "mobile2"   : "0000000000",
+      "tel"   : "0000000000",
+      "passportno"    : "AA0987654",
+      "periodexp" : null,
+      "issuedate" : "2025-01-01T00:00:00",
+      "expdate"   : "2035-01-01T00:00:00",
+      "emerpfid"  : 1,
+      "emerfname" : "ทดสอบชื่อฉุกเเฉิน",
+      "emerlname" : "ทดสอบนามสกุลฉุกเเฉิน",
+      "relation"  : "บิดา",
+      "emertel"   : "0000000000",
+      "sameemr"   : 1,
+      "emeraddr"  : "ทดสอบที่อยู่ฉุกเฉิน 192/3 หมู่ 2",
+      "empostcode"  : "10200",
+      "empvid"    : 1,
+      "emddtid"   : 1,
+      "emsdtid"   : 1,
+      "dgid"  : 1,
+      "mjid"  : 5000,
+      "schoolname"    : "ชื่อสถานศึกษา",
+      "scpvid"    : 1,
+      "langskill1"    : 1,
+      "langskill2"    : 2,
+      "langskill3"    : 3,
+      "langskill4"    : 4,
+      "langskill5"    : 5,
+      // "j1id"  : 5000,
+      // "j2id"  : 5001,
+      // "j3id"  : 5002,
+      "jobstatus" : 1,
+      "cnt1id"    : 1000,
+      "cnt2id"    : 1002,
+      "cnt3id"    : 1004,
+      "ctstatus"  : 1,
+      "traveltype"    : 4,
+      "tagenttype"    : 1,
+      // "cid"   : 1,
+      // "jt2id" : 1,
+      // "jt2job"    : "รหัส จต.2",
+      // "jt3id" : 1,
+      "needstatus"    : 1,
+      "status"    : 1,
+      "seekerregistdoctmp_list" : [
+          {
+              "did" : 37,
+              "filename" : "filename.pdf",
+              "uploaddate" : "2023-09-02T15:13:04.435521+07:00"
+          },        
+          {
+              "did" : 38,
+              "filename" : "filename2.pdf",
+              "uploaddate" : "2023-09-02T15:13:04.435521+07:00"
+          },        
+          {
+              "did" : 39,
+              "filename" : "filename3.pdf",
+              "uploaddate" : "2023-09-02T15:13:04.435521+07:00"
+          },        
+          {
+              "did" : 40,
+              "filename" : "filename3.pdf",
+              "uploaddate" : "2023-09-02T15:13:04.435521+07:00"
+          }
+      ]
+  }
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,21 @@
+meta {
+  name: subdistrict
+  type: http
+  seq: 8
+}
+
+get {
+  url: http://apiserver:8080/admin/subdistrict
+  body: none
+  auth: inherit
+}
+
+params:query {
+  ~rpp: 2
+  ~pg: 1
+  ~id: 88
+}
+
+settings {
+  encodeUrl: true
+}

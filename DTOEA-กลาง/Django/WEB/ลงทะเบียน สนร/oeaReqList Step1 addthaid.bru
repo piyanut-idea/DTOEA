@@ -1,0 +1,33 @@
+meta {
+  name: oeaReqList Step1 addthaid
+  type: http
+  seq: 3
+}
+
+post {
+  url: http://apiserver:8080/web/oeareqlist/
+  body: json
+  auth: inherit
+}
+
+params:query {
+  ~name: 
+}
+
+body:json {
+  {
+      "action" : "addthaid",
+      "idcard" : "1200100474370",
+      "pfid"  : 1,
+      "fnameth"   : "ชื่อทดสอบ",
+      "lnameth"   : "นามสกุลทดสอบ",
+      "fnameen"   : "fnametest",
+      "lnameen"   : "lnametest",
+      "birthdate": "01012530",
+      "actby_id": 100
+  }
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,22 @@
+meta {
+  name: requestDocList
+  type: http
+  seq: 8
+}
+
+get {
+  url: http://apiserver:8090/web/requestdoc/
+  body: text
+  auth: inherit
+}
+
+params:query {
+  ~peoid: 100
+  ~peoidlist_str: 100
+  ~apprvtype: 1
+  ~ckfin: wwwwww
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,23 @@
+meta {
+  name: major_2
+  type: http
+  seq: 13
+}
+
+put {
+  url: http://apiserver:8080/admin/major/300001/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "dgid" : 11,
+      "nameth" : "ขับร้องประสาน",
+      "nameen" : "Voice"    
+  }
+}
+
+settings {
+  encodeUrl: true
+}

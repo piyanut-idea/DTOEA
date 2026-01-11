@@ -1,0 +1,22 @@
+meta {
+  name: currency_1
+  type: http
+  seq: 18
+}
+
+post {
+  url: http://apiserver:8080/admin/currency/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "nameth" : "โรงพิมพ์เอกสารหมึกถั่วเหลือง",
+      "nameen" : "Ink jet"    
+  }
+}
+
+settings {
+  encodeUrl: true
+}

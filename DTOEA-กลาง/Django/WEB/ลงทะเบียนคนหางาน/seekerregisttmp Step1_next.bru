@@ -1,0 +1,30 @@
+meta {
+  name: seekerregisttmp Step1_next
+  type: http
+  seq: 9
+}
+
+put {
+  url: http://apiserver:8080/web/seekerregisttmp/1/
+  body: json
+  auth: inherit
+}
+
+params:query {
+  ~name: 
+}
+
+body:json {
+  {
+      "action" : "step1",
+      "email":"natee@vpadvance.com",
+      "refotp":"opkd",
+      "otp":"123456",
+      "passwd":"12345678",
+      "confirmpasswd":"12345678"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

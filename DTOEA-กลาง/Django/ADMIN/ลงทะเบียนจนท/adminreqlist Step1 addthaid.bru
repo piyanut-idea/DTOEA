@@ -1,0 +1,31 @@
+meta {
+  name: adminreqlist Step1 addthaid
+  type: http
+  seq: 4
+}
+
+post {
+  url: http://apiserver:8080/admin/adminreqlist/
+  body: json
+  auth: inherit
+}
+
+params:query {
+  ~name: 
+}
+
+body:json {
+  {
+      "action" : "addthaid",
+      "idcard" : "1200100474370",
+      "pfid"  : 1,
+      "fnameth"   : "ชื่อทดสอบ",
+      "lnameth"   : "นามสกุลทดสอบ",
+      "fnameen"   : "fnametest",
+      "lnameen"   : "lnametest"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

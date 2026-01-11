@@ -1,0 +1,19 @@
+meta {
+  name: adminDtl
+  type: http
+  seq: 1
+}
+
+get {
+  url: http://apiserver:8080/admin/admindtl/?idcard=1200100474370
+  body: none
+  auth: inherit
+}
+
+params:query {
+  idcard: 1200100474370
+}
+
+settings {
+  encodeUrl: true
+}

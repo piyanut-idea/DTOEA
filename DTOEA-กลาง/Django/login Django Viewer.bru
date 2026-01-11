@@ -1,0 +1,23 @@
+meta {
+  name: login Django Viewer
+  type: http
+  seq: 4
+}
+
+post {
+  url: http://apiserver:8080/login/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "login"    : "viewer",
+      "passwd" : "password",
+      "typeuser" : "1"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

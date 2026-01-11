@@ -1,0 +1,19 @@
+meta {
+  name: region
+  type: http
+  seq: 1
+}
+
+get {
+  url: http://apiserver:8090/admin/region
+  body: none
+  auth: inherit
+}
+
+params:query {
+  ~pg: 1
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,20 @@
+meta {
+  name: industrytype
+  type: http
+  seq: 7
+}
+
+get {
+  url: http://apiserver:8090/admin/industrytype
+  body: none
+  auth: inherit
+}
+
+params:query {
+  ~rpp: 2
+  ~pg: 1
+}
+
+settings {
+  encodeUrl: true
+}

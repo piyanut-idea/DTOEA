@@ -1,0 +1,35 @@
+meta {
+  name: oeaReqList Step1 Next Step
+  type: http
+  seq: 5
+}
+
+put {
+  url: http://apiserver:8080/web/oeareqlist/1/
+  body: json
+  auth: inherit
+}
+
+params:query {
+  ~name: 
+}
+
+body:json {
+  {
+      "action" : "registerOeaDtlStep1",
+      "idcard" : "1200100474370",
+      "pfid"  : 1,
+      "fnameth"   : "ชื่อทดสอบ",
+      "lnameth"   : "นามสกุลทดสอบ",
+      "fnameen"   : "fnametest",
+      "lnameen"   : "lnametest",
+      "email" : "dtoeaq@gmail.com",
+      "refotp" : "AaBb",
+      "otp" : "123456",
+      "lateupdateotp" : "2023-09-02T15:13:04.435521+07:00"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

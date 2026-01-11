@@ -1,0 +1,22 @@
+meta {
+  name: industrytype_2
+  type: http
+  seq: 16
+}
+
+put {
+  url: http://apiserver:8080/admin/industrytype/7821/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "nameth" : "โรงพิมพ์เอกสารหมึกถั่วเหลือง",
+      "nameen" : "Ink jet"    
+  }
+}
+
+settings {
+  encodeUrl: true
+}

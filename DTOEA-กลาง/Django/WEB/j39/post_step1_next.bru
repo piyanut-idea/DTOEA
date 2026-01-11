@@ -1,0 +1,42 @@
+meta {
+  name: post_step1_next
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://apiserver:8080/web/seekerreqlist/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "action":"step1",
+      "rtid":202,
+      "ojid":105,
+      "channel":1,
+      "emerpfid":1,
+      "emerfnameth":"สมชาบ",
+      "emerlnameth":"สันติ",
+      "relation":"เพิ่อน",
+      "emertel":"00000000000",
+      "empvid":45,
+      "emddtid":596,
+      "emsdtid":4713,
+      "emaddressth":"723 หมู่ที่ 8",
+      "empostcode":"45160",
+      "tsubmit" : 1 
+      //"adpeoid":"",
+      //"adid":"",
+      //"adname":"",
+      //"adposition":"",
+      //"pincode":""
+  }
+  
+  
+}
+
+settings {
+  encodeUrl: true
+}

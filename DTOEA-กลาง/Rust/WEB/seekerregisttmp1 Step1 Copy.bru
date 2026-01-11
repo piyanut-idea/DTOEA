@@ -1,0 +1,19 @@
+meta {
+  name: seekerregisttmp1 Step1 Copy
+  type: http
+  seq: 3
+}
+
+get {
+  url: http://apiserver:8090/web/agentdtl
+  body: none
+  auth: inherit
+}
+
+params:query {
+  ~name: 
+}
+
+settings {
+  encodeUrl: true
+}

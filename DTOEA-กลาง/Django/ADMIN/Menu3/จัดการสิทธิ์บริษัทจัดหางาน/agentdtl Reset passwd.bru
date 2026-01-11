@@ -1,0 +1,32 @@
+meta {
+  name: agentdtl Reset passwd
+  type: http
+  seq: 3
+}
+
+put {
+  url: http://apiserver:8080/admin/agentdtl/101/
+  body: text
+  auth: inherit
+}
+
+params:query {
+  ~name: 
+  ~status: 1
+  ~cid: 5262
+  ~status: 0
+  ~comnameth: เจ
+  ~comtype: 1
+  ~cidlist: 5267
+  ~oj_cid_ctype: 4
+}
+
+body:text {
+  {
+      "status" : 1
+  }
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,32 @@
+meta {
+  name: agentdtl Change status
+  type: http
+  seq: 2
+}
+
+put {
+  url: http://apiserver:8080/admin/agentdtl/101/
+  body: json
+  auth: inherit
+}
+
+params:query {
+  ~name: 
+  ~status: 1
+  ~cid: 5262
+  ~status: 0
+  ~comnameth: เจ
+  ~comtype: 1
+  ~cidlist: 5267
+  ~oj_cid_ctype: 4
+}
+
+body:json {
+  {
+      "status": 99
+  }
+}
+
+settings {
+  encodeUrl: true
+}

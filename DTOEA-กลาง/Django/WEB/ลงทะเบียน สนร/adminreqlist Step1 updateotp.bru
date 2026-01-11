@@ -1,0 +1,28 @@
+meta {
+  name: adminreqlist Step1 updateotp
+  type: http
+  seq: 4
+}
+
+put {
+  url: http://apiserver:8080/web/oeareqlist/1/
+  body: json
+  auth: inherit
+}
+
+params:query {
+  ~name: 
+}
+
+body:json {
+  {
+      "action" : "updateotp",
+      "email" : "dtoeaq@gmail.com",
+      "refotp" : "AaBb",
+      "otp" : "123456"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

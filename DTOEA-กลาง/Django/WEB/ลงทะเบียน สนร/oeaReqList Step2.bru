@@ -1,0 +1,28 @@
+meta {
+  name: oeaReqList Step2
+  type: http
+  seq: 6
+}
+
+put {
+  url: http://apiserver:8080/web/oeareqlist/15/
+  body: json
+  auth: inherit
+}
+
+params:query {
+  ~name: 
+}
+
+body:json {
+  {
+      "action" : "registerOeaDtlStep2",
+      "cntid" : 1,
+      "poeid" : 1,
+      "remark" : "เจ้าพนักงานบรรจุประจำตำแหน่ง"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

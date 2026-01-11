@@ -1,0 +1,34 @@
+meta {
+  name: seekerregisttmp Step1
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://apiserver:8080/web/seekerregisttmp/
+  body: json
+  auth: inherit
+}
+
+params:query {
+  ~name: 
+}
+
+body:json {
+  {
+      "sessionid" : "76816895381000000000",
+      "idcard" : "1200100474370",
+      "pfid"  : 1,
+      "fnameth"   : "ชื่อทดสอบ",
+      "lnameth"   : "นามสกุลทดสอบ",
+      "fnameen"   : "fnametest",
+      "lnameen"   : "lnametest",
+      "gender"    : 2,
+      "birthdate": "1990-01-01T00:00:00",
+      "addrthaid" : "ทดสอบที่อยู่ 192/3 หมู่ 2"
+  }
+}
+
+settings {
+  encodeUrl: true
+}
