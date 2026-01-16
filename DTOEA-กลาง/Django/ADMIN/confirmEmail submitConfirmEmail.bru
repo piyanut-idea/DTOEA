@@ -1,0 +1,26 @@
+meta {
+  name: confirmEmail submitConfirmEmail
+  type: http
+  seq: 10
+}
+
+put {
+  url: http://apiserver:8080/admin/user/100/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "action"    : "confirmEmail",
+      "event"    : "submitConfirmEmail",
+      "email" : "piyanut.work2@gmail.com",
+      "refotp" : "AaBb",
+      "otp" : "123456"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
