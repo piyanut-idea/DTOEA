@@ -1,0 +1,45 @@
+meta {
+  name: companyreqlist Step 1 add person
+  type: http
+  seq: 3
+}
+
+post {
+  url: http://apiserver:8080/web/companyreqlist/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "action" : "regiterDomesStep1",
+      "rtid" : 301,
+      "cardtype" : 1,
+      "idcard" : "1200000000001",
+      "periodexp" : 1,
+      "pfid"  : 1,
+      "fnameth"   : "ชื่อทดสอบ",
+      "lnameth"   : "นามสกุลทดสอบ",
+      "fnameen"   : "fnametest",
+      "lnameen"   : "lnametest",
+      "gender"    : 2,
+      "birthdate": "1990-01-01",
+      "addrthaid" : "ทดสอบที่อยู่ 192/3 หมู่ 2",
+      "cardissue" : "2023-09-02",
+      "cardexp" : "2033-09-02",
+      "ntid" : 1,
+      "rlgid" : 1,
+      "addressth" : "เลขที่ 209/91 หมู่ที่ 6",
+      "addressen" : "No.209/91 Moo 6",
+      "pvid"  : 1,
+      "ddtid" : 1,
+      "sdtid" : 1,
+      "postcode"  : 81000,
+      "tel" : "0000000000",
+      "email" : "piyanut.work@gmail.com"
+  }
+}
+
+settings {
+  encodeUrl: true
+}
