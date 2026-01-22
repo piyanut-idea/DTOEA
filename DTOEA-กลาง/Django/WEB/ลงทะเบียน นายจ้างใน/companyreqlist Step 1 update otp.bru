@@ -1,0 +1,24 @@
+meta {
+  name: companyreqlist Step 1 update otp
+  type: http
+  seq: 4
+}
+
+put {
+  url: http://apiserver:8080/web/companyreqlist/38/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "action" : "updateotp",
+      "email":"piyanut.work@gmail.com",
+      "refotp":"opkd",
+      "otp":"123456"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

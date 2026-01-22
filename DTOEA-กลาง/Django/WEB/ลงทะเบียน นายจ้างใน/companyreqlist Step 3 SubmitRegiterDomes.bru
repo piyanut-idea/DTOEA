@@ -1,0 +1,21 @@
+meta {
+  name: companyreqlist Step 3 SubmitRegiterDomes
+  type: http
+  seq: 7
+}
+
+put {
+  url: http://apiserver:8080/web/companyreqlist/42/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "action" : "SubmitRegiterDomes"
+   }
+}
+
+settings {
+  encodeUrl: true
+}

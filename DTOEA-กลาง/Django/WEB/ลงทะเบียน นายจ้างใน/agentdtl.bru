@@ -1,0 +1,35 @@
+meta {
+  name: agentdtl
+  type: http
+  seq: 1
+}
+
+get {
+  url: http://apiserver:8080/admin/agentdtl?idcard=4101400027952&bc1=6
+  body: text
+  auth: inherit
+}
+
+params:query {
+  idcard: 4101400027952
+  bc1: 6
+  ~name: 
+  ~status: 1
+  ~cid: 5262
+  ~status: 0
+  ~comnameth: เจ
+  ~comtype: 1
+  ~cidlist: 5267
+  ~oj_cid_ctype: 4
+}
+
+body:text {
+  {
+      "sessionid" : "76816895381000000000",
+      "action" : "submitSeekerRegistTmpInfo"
+  }
+}
+
+settings {
+  encodeUrl: true
+}
