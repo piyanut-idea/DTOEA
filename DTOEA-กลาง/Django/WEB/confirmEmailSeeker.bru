@@ -1,0 +1,26 @@
+meta {
+  name: confirmEmailSeeker
+  type: http
+  seq: 6
+}
+
+put {
+  url: http://apiserver:8080/web/user/1/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "action"    : "confirmEmailSeeker",
+      "event"    : "genOPT",
+      "idcard" : "1200100474370",
+      "email" : "piyanut.work@gmail.com",
+      "refotp" : "AaBb",
+      "otp" : "123456"
+  }
+}
+
+settings {
+  encodeUrl: true
+}
