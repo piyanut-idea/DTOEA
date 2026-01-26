@@ -1,0 +1,24 @@
+meta {
+  name: templateInfo
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://apiserver:8080/admin/template/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "cntid" : 1,
+      "nameth" : "สัญญาจ้างงาน - ประเทศอิสราเอล1",
+      "nameen" : "Employment Contract - Israel1",
+      "filename" : "filename.pdf"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

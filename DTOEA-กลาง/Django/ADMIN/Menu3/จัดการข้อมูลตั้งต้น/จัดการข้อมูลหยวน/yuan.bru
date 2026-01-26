@@ -4,18 +4,17 @@ meta {
   seq: 1
 }
 
-put {
-  url: http://apiserver:8080/admin/yuan/1/
+post {
+  url: http://apiserver:8080/admin/yuan/
   body: json
   auth: inherit
 }
 
 body:json {
   {
-      "action": "editYuan",
-      "bosscomtype": 2,
+      "bosscomtype": 1,
       "biid" : null,
-      "bosscomcode" : "29083795",
+      "bosscomcode" : "290837952",
       "bosspfid" : 1,
       "bossfnameen": "shang wang precision industry co.,ltd.",
       "bosslnameen": null,
@@ -33,7 +32,7 @@ body:json {
       "cityid" : null,
       "fcit2id" : 1,
       "postcode" : null,
-      "yuancode": "1071904881",
+      "yuancode": "10719048841",
       "yuandate": "2026-01-01T00:00:00",
       "yuanexp": "2028-01-01T00:00:00",
       "yuanamt" : 3000,
@@ -44,5 +43,4 @@ body:json {
 
 settings {
   encodeUrl: true
-  timeout: 0
 }
