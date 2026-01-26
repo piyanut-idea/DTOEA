@@ -1,0 +1,42 @@
+meta {
+  name: updateAgent
+  type: http
+  seq: 5
+}
+
+put {
+  url: http://apiserver:8080/admin/agentdtl/118/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "action" : "updateAgent",
+      "pfid" : 1,
+      "fnameth" : "ทดสอบเจ้าหน้าที่",
+      "lnameth" : "ทดสอบนามสกุลเจ้าหน้าที่",
+      "fnameen" : "testerad",
+      "lnameen" : "lnamead",
+      "picname" : "picname.jpg",
+      "birthdate" : "1990-09-02",
+      "idcard" : "1200100474370",
+      "cardissue" : "2023-09-02",
+      "cardexp" : "2033-09-02",
+      "ntid" : 1,
+      // "rlgid" : 1,
+      "addressth" : "เลขที่ 209/91 หมู่ที่ 6",
+      "addressen" : "No.209/91 Moo 6",
+      "pvidcode" : 81,
+      "ddtidcode" : 5204,
+      "sdtidcode" : 810103,
+      "postcode" : "10302",
+      "tel" : "0998987766",
+      "email" : "aumail1@gmail.com"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

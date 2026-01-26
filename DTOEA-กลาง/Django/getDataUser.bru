@@ -1,0 +1,15 @@
+meta {
+  name: getDataUser
+  type: http
+  seq: 5
+}
+
+get {
+  url: http://apiserver:8080/admin/getdatauser/100/
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}
