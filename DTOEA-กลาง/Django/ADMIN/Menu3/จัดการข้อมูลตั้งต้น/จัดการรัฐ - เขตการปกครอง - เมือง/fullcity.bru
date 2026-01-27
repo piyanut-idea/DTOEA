@@ -1,11 +1,11 @@
 meta {
-  name: county_1
+  name: fullcity
   type: http
   seq: 2
 }
 
 put {
-  url: http://apiserver:8080/admin/county/1005/
+  url: http://apiserver:8080/admin/fullcity/1005/
   body: json
   auth: inherit
 }
@@ -32,4 +32,5 @@ body:json {
 
 settings {
   encodeUrl: true
+  timeout: 0
 }
