@@ -1,11 +1,11 @@
 meta {
-  name: requesttype
+  name: district
   type: http
-  seq: 20
+  seq: 1
 }
 
 get {
-  url: http://apiserver:8080/admin/requesttype/
+  url: http://apiserver:8080/admin/district
   body: none
   auth: inherit
 }
@@ -13,7 +13,7 @@ get {
 params:query {
   ~rpp: 2
   ~pg: 1
-  ~id: 202
+  ~id: 88
 }
 
 settings {

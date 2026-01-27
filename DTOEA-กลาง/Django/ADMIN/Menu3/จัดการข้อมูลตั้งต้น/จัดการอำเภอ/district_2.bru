@@ -1,18 +1,18 @@
 meta {
-  name: district_1
+  name: district_2
   type: http
-  seq: 6
+  seq: 3
 }
 
-post {
-  url: http://apiserver:8080/admin/district/
+put {
+  url: http://apiserver:8080/admin/district/5005/
   body: json
   auth: inherit
 }
 
 body:json {
   {
-      "pvid" : 99,
+      "pvid" : 31,
       "nameth" : "ร้องกวาง",
       "nameen" : "Rong Kwang"    
   }

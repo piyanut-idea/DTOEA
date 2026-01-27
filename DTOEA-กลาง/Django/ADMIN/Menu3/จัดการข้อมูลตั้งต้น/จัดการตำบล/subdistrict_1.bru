@@ -1,11 +1,11 @@
 meta {
-  name: subdistrict_2
+  name: subdistrict_1
   type: http
-  seq: 10
+  seq: 2
 }
 
-put {
-  url: http://apiserver:8080/admin/subdistrict/5005/
+post {
+  url: http://apiserver:8080/admin/subdistrict/
   body: json
   auth: inherit
 }
@@ -13,6 +13,7 @@ put {
 body:json {
   {
       "pvid" : 1,
+      "ddtid" : 1,
       "nameth" : "ร้องกวาง",
       "nameen" : "Rong Kwang"    
   }
