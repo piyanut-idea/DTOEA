@@ -1,0 +1,35 @@
+meta {
+  name: orgrecieve
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://apiserver:8080/admin/orgrecieve/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "employtype" : 2,
+      "orgname" : "orgname test",
+      "cntid" : 1,
+      "fcitid" : 2,
+      "address" : "address test",
+      // "fullcity" : "",
+      // "country" : "",
+      "postcode" : "109000",
+      "tel" : "0000000000",
+      "fax" : "0000000000",
+      "email" : "orgname_test@gmail.com",
+      "approvedate" : "2023-09-02",
+      "expiredate" : "2027-09-02",
+      "status" : 1,
+      "filename" : "filename.pdf"
+  }
+}
+
+settings {
+  encodeUrl: true
+}
