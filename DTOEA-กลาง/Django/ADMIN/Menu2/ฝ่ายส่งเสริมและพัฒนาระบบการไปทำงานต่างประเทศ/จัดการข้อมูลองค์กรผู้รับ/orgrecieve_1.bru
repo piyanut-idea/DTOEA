@@ -1,0 +1,35 @@
+meta {
+  name: orgrecieve_1
+  type: http
+  seq: 2
+}
+
+put {
+  url: http://apiserver:8080/admin/fullcity/2/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "employtype" : 3,
+      "orgname" : "orgname test",
+      "cntid" : 1,
+      "fcitid" : 2,
+      "address" : "address test",
+      // "fullcity" : "",
+      // "country" : "",
+      "postcode" : "109000",
+      "tel" : "0000000000",
+      "fax" : "0000000000",
+      "email" : "orgname_test@gmail.com",
+      "approvedate" : "2023-09-02",
+      "expiredate" : "2027-09-02",
+      "status" : 1,
+      "filename" : "filename.pdf"
+  }
+}
+
+settings {
+  encodeUrl: true
+}
