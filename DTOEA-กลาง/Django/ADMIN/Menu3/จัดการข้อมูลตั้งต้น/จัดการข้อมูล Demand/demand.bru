@@ -1,0 +1,19 @@
+meta {
+  name: demand
+  type: http
+  seq: 1
+}
+
+get {
+  url: http://apiserver:8080/admin/demand/?id=13
+  body: json
+  auth: inherit
+}
+
+params:query {
+  id: 13
+}
+
+settings {
+  encodeUrl: true
+}

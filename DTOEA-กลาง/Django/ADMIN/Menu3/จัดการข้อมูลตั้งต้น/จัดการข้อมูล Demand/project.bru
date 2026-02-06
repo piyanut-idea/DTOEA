@@ -1,0 +1,15 @@
+meta {
+  name: project
+  type: http
+  seq: 4
+}
+
+get {
+  url: http://apiserver:8080/admin/project/
+  body: json
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

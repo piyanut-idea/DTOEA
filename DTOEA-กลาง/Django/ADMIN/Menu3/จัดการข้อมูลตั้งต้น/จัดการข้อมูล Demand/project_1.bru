@@ -1,0 +1,52 @@
+meta {
+  name: project_1
+  type: http
+  seq: 5
+}
+
+post {
+  url: http://apiserver:8080/admin/project/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "action" : "addDemandProject",
+      "dmid" : 13,
+      "projtype": 1,
+      "name": "Projname",
+      "address": "Projaddress",
+      "cntid" : 1066,  
+      "fcitid" : 10,
+      "postcode" : null,
+      "projother" : "โครงการ/หน่วยงาน อื่นๆ",
+      "jid" : 2001,
+      "jobdesc" : "ลักษณะงาน",
+      "placetype" : 1,
+      "needgender" : 1,
+      "numseeker" : 10,
+      "numman" : 5,
+      "numwoman" : 5,
+      "wtid": 2,
+      "wage" : 300000,
+      "curid": 1,
+      "rate" : 1,
+      "thrate" : 30,
+      "salary" : 300000,
+      "benefit" : "สวัสดิการ",
+      "ot" : 1,
+      "vehicletype" : 1,
+      "tickettype" : 1,
+      "renew" : 0,
+      "startdate" : "2025-01-01",
+      "empyear" : 1,
+      "empmonth" : 0,
+      "empday" : 0,
+      "endprojdate" : "2025-04-01"
+  }
+}
+
+settings {
+  encodeUrl: true
+}
