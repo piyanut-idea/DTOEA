@@ -1,0 +1,62 @@
+meta {
+  name: demand_1
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://apiserver:8080/admin/demand/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "cid" : 5267,
+      "demanddate" : "2025-01-01",
+      "demandexp" : "2030-01-01",
+      "dmannum" : 100,
+      "dmanrequest" : 200,
+      "comtype": 1,
+      "biid" : 1,
+      "comcode" : "290837952",
+      "fnameen": "shang wang precision industry co.,ltd.",
+      "lnameen": null,
+      "idtid": 5567,
+      "address": "no.7, lane 236, zhengguang st., yonglong village, taiping dist., taichung city, taiwan r.o.c.",
+      "cntid" : 1196,  
+      "fcitid" : 1,
+      "postcode" : null,
+      "ynid" : 1,
+      "yuandate": "2025-01-01",
+      "yuanexp": "2025-12-31T00:00:00+07:00",
+      "employtype" : 3,
+      "orcid" : 1,
+      "document_list" : [
+          {
+              "did" : 27,
+              "filename" : "filename.pdf",
+              "uploaddate" : "2023-09-02T15:13:04.435521+07:00"
+          },        
+          {
+              "did" : 28,
+              "filename" : "filename2.pdf",
+              "uploaddate" : "2023-09-02T15:13:04.435521+07:00"
+          },        
+          {
+              "did" : 48,
+              "filename" : "filename3.pdf",
+              "uploaddate" : "2023-09-02T15:13:04.435521+07:00"
+          },        
+          {
+              "did" : 35,
+              "filename" : "filename3.pdf",
+              "uploaddate" : "2023-09-02T15:13:04.435521+07:00"
+          }
+      ]
+  }
+}
+
+settings {
+  encodeUrl: true
+}

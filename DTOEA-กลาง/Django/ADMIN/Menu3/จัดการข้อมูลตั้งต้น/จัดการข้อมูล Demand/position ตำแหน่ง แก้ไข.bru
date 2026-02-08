@@ -1,0 +1,44 @@
+meta {
+  name: position ตำแหน่ง แก้ไข
+  type: http
+  seq: 8
+}
+
+put {
+  url: http://apiserver:8080/admin/position/3010/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "projid" : 9,
+      "jid" : 2002,
+      "jobdesc" : "ลักษณะงาน",
+      "placetype" : 1,
+      "needgender" : 1,
+      "numseeker" : 10,
+      "numman" : 5,
+      "numwoman" : 5,
+      "wtid": 2,
+      "wage" : 300000,
+      "curid": 1,
+      "rate" : 1,
+      "thrate" : 30,
+      "salary" : 300000,
+      "benefit" : "สวัสดิการ",
+      "ot" : 1,
+      "vehicletype" : 1,
+      "tickettype" : 1,
+      "renew" : 0,
+      "startdate" : "2025-01-01",
+      "empyear" : 1,
+      "empmonth" : 0,
+      "empday" : 0,
+      "endprojdate" : "2025-04-01"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

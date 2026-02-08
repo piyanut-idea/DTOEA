@@ -1,0 +1,22 @@
+meta {
+  name: shiptype แก้ไข
+  type: http
+  seq: 3
+}
+
+put {
+  url: http://apiserver:8080/admin/shiptype/1/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "name": "เรือขนส่งสินค้า",
+      "status" : 1
+  }
+}
+
+settings {
+  encodeUrl: true
+}

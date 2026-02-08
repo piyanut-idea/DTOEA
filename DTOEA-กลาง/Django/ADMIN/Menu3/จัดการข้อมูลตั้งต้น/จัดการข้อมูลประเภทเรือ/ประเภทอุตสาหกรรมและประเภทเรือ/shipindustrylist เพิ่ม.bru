@@ -1,0 +1,23 @@
+meta {
+  name: shipindustrylist เพิ่ม
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://apiserver:8080/admin/shipindustrylist/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "shtid": 1,
+      "idtid" : 5403,
+      "status" : 1
+  }
+}
+
+settings {
+  encodeUrl: true
+}

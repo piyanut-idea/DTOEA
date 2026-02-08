@@ -1,0 +1,46 @@
+meta {
+  name: shipindustrylist
+  type: http
+  seq: 1
+}
+
+get {
+  url: http://apiserver:8080/admin/shipindustrylist/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "bosscomtype": 1,
+      "biid" : null,
+      "bosscomcode" : "290837952",
+      "bosspfid" : 1,
+      "bossfnameen": "shang wang precision industry co.,ltd.",
+      "bosslnameen": null,
+      "bossaddress": "no.7, lane 236, zhengguang st., yonglong village, taiping dist., taichung city, taiwan r.o.c.",
+      "bossstid": 5000,
+      "bosscotid": 5037,
+      "bosscityid": 5013,
+      "fcitid" : 1,
+      "bosspostcode" : null,
+      "idtid": 5567,
+      "addrwork" : "no.7",
+      "ctid" : 1066,
+      "stid" : null,
+      "cotid" : null,
+      "cityid" : null,
+      "fcit2id" : 1,
+      "postcode" : null,
+      "yuancode": "10719048841",
+      "yuandate": "2026-01-01T00:00:00",
+      "yuanexp": "2028-01-01T00:00:00",
+      "yuanamt" : 3000,
+      "oldnum" : 2000
+      // "uploadlist" : ,
+  }
+}
+
+settings {
+  encodeUrl: true
+}

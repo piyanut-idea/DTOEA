@@ -1,0 +1,15 @@
+meta {
+  name: position
+  type: http
+  seq: 6
+}
+
+get {
+  url: http://apiserver:8080/admin/position/
+  body: json
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}
