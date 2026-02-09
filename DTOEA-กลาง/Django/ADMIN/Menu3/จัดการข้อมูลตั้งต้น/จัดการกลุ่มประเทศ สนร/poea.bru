@@ -1,0 +1,19 @@
+meta {
+  name: poea
+  type: http
+  seq: 1
+}
+
+get {
+  url: http://apiserver:8080/admin/poea/?id=1
+  body: json
+  auth: inherit
+}
+
+params:query {
+  id: 1
+}
+
+settings {
+  encodeUrl: true
+}

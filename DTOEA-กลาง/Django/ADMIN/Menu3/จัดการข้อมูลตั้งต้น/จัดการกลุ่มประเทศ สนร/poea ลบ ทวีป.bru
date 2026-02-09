@@ -1,0 +1,22 @@
+meta {
+  name: poea ลบ ทวีป
+  type: http
+  seq: 5
+}
+
+put {
+  url: http://apiserver:8080/admin/poea/1/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "action" : "deleteCountryGroup",
+      "ctgid" : 3
+  }
+}
+
+settings {
+  encodeUrl: true
+}
