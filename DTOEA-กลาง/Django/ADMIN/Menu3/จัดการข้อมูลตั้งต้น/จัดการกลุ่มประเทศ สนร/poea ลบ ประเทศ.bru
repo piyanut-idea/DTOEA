@@ -1,0 +1,22 @@
+meta {
+  name: poea ลบ ประเทศ
+  type: http
+  seq: 6
+}
+
+put {
+  url: http://apiserver:8080/admin/poea/1/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "action" : "deleteCountry",
+      "cntid" : 1000
+  }
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,21 +1,20 @@
 meta {
-  name: region
+  name: poeagroup
   type: http
-  seq: 12
+  seq: 2
 }
 
 get {
-  url: http://apiserver:8080/admin/region?id=1
+  url: http://apiserver:8080/admin/poeagroup/?poeid=1
   body: none
   auth: inherit
 }
 
 params:query {
-  id: 1
-  ~pg: 1
+  poeid: 1
+  ~id: 49
 }
 
 settings {
   encodeUrl: true
-  timeout: 0
 }
