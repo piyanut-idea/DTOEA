@@ -36,11 +36,21 @@ body:json {
       "yuandate": "2026-01-01T00:00:00",
       "yuanexp": "2028-01-01T00:00:00",
       "yuanamt" : 3000,
-      "oldnum" : 2000
-      // "uploadlist" : ,
+      "oldnum" : 2000,
+      "document_list" : [
+          {
+              "did" : 37,
+              "filename" : "filename.pdf"
+          },        
+          {
+              "did" : 38,
+              "filename" : "filename.pdf"
+          }
+      ]
   }
 }
 
 settings {
   encodeUrl: true
+  timeout: 0
 }
