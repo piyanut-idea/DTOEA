@@ -1,0 +1,21 @@
+meta {
+  name: hospitalregister ลบ
+  type: http
+  seq: 12
+}
+
+post {
+  url: http://apiserver:8080/admin/hospitalregister/1/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {    
+      "action" : "deleteHospitalCert"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

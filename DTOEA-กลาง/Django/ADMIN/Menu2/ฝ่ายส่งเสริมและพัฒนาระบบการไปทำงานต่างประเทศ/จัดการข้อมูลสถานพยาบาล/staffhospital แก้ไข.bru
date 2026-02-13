@@ -1,0 +1,28 @@
+meta {
+  name: staffhospital แก้ไข
+  type: http
+  seq: 7
+}
+
+put {
+  url: http://apiserver:8080/admin/staffhospital/1/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {    
+      "hpid" : 1,
+      "fullname" : "นางสาวฐิดารัตน์ ทดสอบ",
+      "permitcode" : "ใบอนุญาตที่ ",
+      "diplomacode" : "วุฒิบัตรที่",
+      "stype" : 2,
+      "qualified" : "คุณวุฒิ",
+      "status" : 1,
+      "canceldate" : "2026-01-01"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

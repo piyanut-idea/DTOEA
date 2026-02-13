@@ -1,0 +1,25 @@
+meta {
+  name: hospitalregister แก้ไข
+  type: http
+  seq: 11
+}
+
+put {
+  url: http://apiserver:8080/admin/hospitalregister/1/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {    
+      "certtype" : 1,
+      "certcode" : "certcode",
+      "certissue" : "2025-01-01T00:00:00",
+      "certexp" : "2028-01-01T00:00:00",
+      "filename" : "filename2.pdf"
+  }
+}
+
+settings {
+  encodeUrl: true
+}
