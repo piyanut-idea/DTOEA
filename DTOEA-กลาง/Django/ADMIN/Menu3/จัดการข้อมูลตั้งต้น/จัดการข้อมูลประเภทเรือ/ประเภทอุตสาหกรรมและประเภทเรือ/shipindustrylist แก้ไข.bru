@@ -5,19 +5,22 @@ meta {
 }
 
 put {
-  url: http://apiserver:8080/admin/shipindustrylist/55/
+  url: http://apiserver:8080/admin/shipindustrylist/4/
   body: json
   auth: inherit
 }
 
 body:json {
   {
+      
+      "action": "edit",
       "shtid": 1,
-      "idtid" : 5403,
-      "status" : 1
+      "idtid" : 5400,
+      "status" : 0
   }
 }
 
 settings {
   encodeUrl: true
+  timeout: 0
 }

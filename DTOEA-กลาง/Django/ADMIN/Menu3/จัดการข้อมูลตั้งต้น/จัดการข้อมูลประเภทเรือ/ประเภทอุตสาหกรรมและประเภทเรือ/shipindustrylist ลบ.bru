@@ -5,17 +5,19 @@ meta {
 }
 
 put {
-  url: http://apiserver:8080/admin/shipindustrylist/55/
+  url: http://apiserver:8080/admin/shipindustrylist/4/
   body: json
   auth: inherit
 }
 
 body:json {
   {
-      "mar" : "1"
+    "action": "delete",
+    "mar" : "1"
   }
 }
 
 settings {
   encodeUrl: true
+  timeout: 0
 }
