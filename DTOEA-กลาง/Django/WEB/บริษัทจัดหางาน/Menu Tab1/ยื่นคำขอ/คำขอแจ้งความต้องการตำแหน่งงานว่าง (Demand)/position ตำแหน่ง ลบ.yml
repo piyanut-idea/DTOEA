@@ -1,0 +1,22 @@
+info:
+  name: position ตำแหน่ง ลบ
+  type: http
+  seq: 10
+
+http:
+  method: PUT
+  url: http://apiserver:8080/web/position/3015/
+  body:
+    type: json
+    data: "{\r
+
+      \    \"action\" : \"deleteRequestDemandPosition\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

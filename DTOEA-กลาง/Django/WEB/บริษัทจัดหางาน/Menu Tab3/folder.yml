@@ -1,0 +1,7 @@
+info:
+  name: Menu Tab3
+  type: folder
+  seq: 3
+
+request:
+  auth: inherit

@@ -1,0 +1,22 @@
+info:
+  name: demandreqlist Submit
+  type: http
+  seq: 11
+
+http:
+  method: PUT
+  url: http://apiserver:8080/web/demandreqlist/1/
+  body:
+    type: json
+    data: "{\r
+
+      \    \"action\" : \"submitRequestDemand\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

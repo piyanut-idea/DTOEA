@@ -1,0 +1,18 @@
+info:
+  name: demandreq
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: http://apiserver:8090/web/demandreq
+  body:
+    type: json
+    data: ""
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
