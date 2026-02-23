@@ -8,11 +8,10 @@ http:
   url: http://apiserver:8080/admin/crime/1/
   body:
     type: json
-    data: "{\r
+    data: "{
 
-      \    \"action\" : \"deleteCrimeInfo\"\r
-
-      }\r\n"
+         "action" : "deleteCrimeInfo"
+      }"
   auth: inherit
 
 settings:
