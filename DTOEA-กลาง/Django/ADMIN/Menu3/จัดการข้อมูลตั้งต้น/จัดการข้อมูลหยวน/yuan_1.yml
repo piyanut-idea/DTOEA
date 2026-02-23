@@ -1,0 +1,74 @@
+info:
+  name: yuan_1
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: http://apiserver:8080/admin/yuan/
+  body:
+    type: json
+    data: "{\r
+
+      \    \"bosscomtype\": 1,\r
+
+      \    \"bosscomcode\" : \"290837952\",\r
+
+      \    \"bossfnameen\": \"shang wang precision industry co.,ltd.\",\r
+
+      \    \"bossaddress\": \"no.7, lane 236, zhengguang st., yonglong village, taiping dist., taichung city, taiwan r.o.c.\",\r
+
+      \    \"bosscntid\" : 1066,\r
+
+      \    \"bossfcitid\" : 1,    \r
+
+      \    \"bosspostcode\" : null,\r
+
+      \    \"idtid\": 5567,\r
+
+      \    \"addrwork\" : \"no.7\",\r
+
+      \    \"cntid\" : 1066,\r
+
+      \    \"fcit2id\" : 1,\r
+
+      \    \"postcode\" : null,\r
+
+      \    \"yuancode\": \"10719048844\",\r
+
+      \    \"yuandate\": \"2026-01-01T00:00:00\",\r
+
+      \    \"yuanexp\": \"2028-01-01T00:00:00\",\r
+
+      \    \"yuanamt\" : 3000,\r
+
+      \    \"oldnum\" : 2000,\r
+
+      \    \"document_list\" : [\r
+
+      \        {\r
+
+      \            \"did\" : 37,\r
+
+      \            \"filename\" : \"filename.pdf\"\r
+
+      \        },        \r
+
+      \        {\r
+
+      \            \"did\" : 38,\r
+
+      \            \"filename\" : \"filename.pdf\"\r
+
+      \        }\r
+
+      \    ]\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
