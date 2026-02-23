@@ -1,0 +1,26 @@
+meta {
+  name: hospitalregister เพิ่ม
+  type: http
+  seq: 10
+}
+
+post {
+  url: http://apiserver:8080/admin/hospitalregister/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {    
+      "hpid" : 1,
+      "certtype" : 1,
+      "certcode" : "certcode",
+      "certissue" : "2025-01-01T00:00:00",
+      "certexp" : "2028-01-01T00:00:00",
+      "filename" : "filename.pdf"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

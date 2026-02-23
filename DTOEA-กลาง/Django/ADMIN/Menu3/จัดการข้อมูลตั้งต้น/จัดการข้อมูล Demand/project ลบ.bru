@@ -1,0 +1,21 @@
+meta {
+  name: project ลบ
+  type: http
+  seq: 6
+}
+
+put {
+  url: http://apiserver:8080/admin/project/3/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "action" : "deleteDemandProject"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

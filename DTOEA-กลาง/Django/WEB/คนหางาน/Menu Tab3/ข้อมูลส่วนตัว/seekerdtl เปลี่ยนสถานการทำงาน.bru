@@ -1,0 +1,28 @@
+meta {
+  name: seekerdtl เปลี่ยนสถานการทำงาน
+  type: http
+  seq: 2
+}
+
+put {
+  url: http://apiserver:8080/web/seekerdtl/11/
+  body: json
+  auth: inherit
+}
+
+params:query {
+  ~name: 
+}
+
+body:json {
+  {
+      "action" : "editWorkstatus",
+      "workstatus" : 2,
+      "reason" : 3,
+      "description" : "สาเหตุอื่นๆ ให้กรอกอื่น ๆ โปรดระบุ"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

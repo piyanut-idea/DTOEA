@@ -1,0 +1,43 @@
+meta {
+  name: hospital เพิ่ม
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://apiserver:8080/admin/hospital/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "name" : "ชื่อสถานพยาบาล",
+      "hpold" : "รหัสสถานพยาบาล",
+      "hptype" : 1,
+      "officername" : "ผู้ดำเนินการสถานพยาบาล",
+      "address" : "ทดสอบที่อยู่ 192/3 หมู่ 2",
+      "pvid"  : 1,
+      "ddtid" : 1,
+      "sdtid" : 1,
+      "postcode"  : 81000,
+      "tel" : "081-8679954" ,
+      "fax" : "081-8679954" ,
+      "email" : "comemail@gmail.com" ,
+      "bed" : 200,
+      "coname" : "ผู้ประสานงาน",
+      "hpstatus" : 1,
+      "country_list" : [
+          {
+              "cntid" : 1066
+          },        
+          {
+              "cntid" : 1068
+          }
+      ] 
+  }
+}
+
+settings {
+  encodeUrl: true
+}

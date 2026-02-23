@@ -1,0 +1,15 @@
+meta {
+  name: hospitalregister
+  type: http
+  seq: 9
+}
+
+get {
+  url: http://apiserver:8090/admin/staffhospital/
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

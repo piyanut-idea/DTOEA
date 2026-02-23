@@ -1,0 +1,19 @@
+meta {
+  name: oeadtl
+  type: http
+  seq: 1
+}
+
+get {
+  url: http://apiserver:8090/admin/oeadtl
+  body: text
+  auth: inherit
+}
+
+params:query {
+  ~peoid: 100
+}
+
+settings {
+  encodeUrl: true
+}
