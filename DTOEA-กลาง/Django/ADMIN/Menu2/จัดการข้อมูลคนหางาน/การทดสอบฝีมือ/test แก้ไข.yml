@@ -1,0 +1,60 @@
+info:
+  name: test แก้ไข
+  type: http
+  seq: 3
+
+http:
+  method: PUT
+  url: http://apiserver:8080/admin/test/1/
+  body:
+    type: json
+    data: "{\r
+
+      \    \"action\" : \"editTestInfo\",\r
+
+      \    \"testtype\": 1,\r
+
+      \    \"branchname\": \"สาขาช่างเชื่อมโลหะ\",\r
+
+      \    \"posname\": \"ช่างเชื่อมไฟฟ้า\",\r
+
+      \    \"placename\": \"ศูนย์ฝึกอบรมฝีมือแรงงาน\",\r
+
+      \    \"placeaddr\": \"123 หมู่ 5 ถ.มิตรภาพ\",\r
+
+      \    \"postcode\": \"10110\",\r
+
+      \    \"status\": 1,\r
+
+      \    \"ojid\": 1,\r
+
+      \    \"tpid\": 5000,\r
+
+      \    \"coutid\": 5000,\r
+
+      \    \"pvid\": 1,\r
+
+      \    \"ddtid\": 1,\r
+
+      \    \"sdtid\": 1,\r
+
+      \    \"document_list\" : [\r
+
+      \        {\r
+
+      \            \"did\" : 37,\r
+
+      \            \"filename\" : \"filename.pdf\"\r
+
+      \        }\r
+
+      \    ]\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,46 @@
+info:
+  name: trainingInfo เพิ่ม
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: http://apiserver:8080/admin/training/
+  body:
+    type: json
+    data: "{\r
+
+      \    \"action\" : \"addTrainingInfo\",\r
+
+      \    \"cosname\": \"หลักสูตรการพัฒนาซอฟต์แวร์\",\r
+
+      \    \"placename\": \"ห้องประชุมอาคาร A\",\r
+
+      \    \"tmonth\": 0,\r
+
+      \    \"tday\": 5,\r
+
+      \    \"thour\": 30,\r
+
+      \    \"ojid\": 1,\r
+
+      \    \"document_list\" : [\r
+
+      \        {\r
+
+      \            \"did\" : 37,\r
+
+      \            \"filename\" : \"filename.pdf\"\r
+
+      \        }\r
+
+      \    ]\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

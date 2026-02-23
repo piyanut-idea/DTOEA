@@ -1,0 +1,7 @@
+info:
+  name: การทดสอบฝีมือ
+  type: folder
+  seq: 3
+
+request:
+  auth: inherit

@@ -1,0 +1,36 @@
+info:
+  name: health แก้ไข
+  type: http
+  seq: 3
+
+http:
+  method: PUT
+  url: http://apiserver:8080/admin/health/1/
+  body:
+    type: json
+    data: "{\r
+
+      \    \"action\" : \"addHealthInfo\",\r
+
+      \    \"ckcongen\": 0,\r
+
+      \    \"congen\": \"ไม่มีโรคประจำตัว\",\r
+
+      \    \"blood\": \"A\",\r
+
+      \    \"ckdrug\": 0,\r
+
+      \    \"drug\": \"ไม่มีประวัติการใช้ยาเสพติด\",\r
+
+      \    \"ojid\": 1,\r
+
+      \    \"hpid\": 5\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
