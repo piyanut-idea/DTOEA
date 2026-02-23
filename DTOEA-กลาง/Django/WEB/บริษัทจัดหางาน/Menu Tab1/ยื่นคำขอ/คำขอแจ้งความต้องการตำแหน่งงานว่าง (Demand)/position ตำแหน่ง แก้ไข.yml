@@ -1,0 +1,100 @@
+info:
+  name: position ตำแหน่ง แก้ไข
+  type: http
+  seq: 9
+
+http:
+  method: PUT
+  url: http://apiserver:8080/web/position/3007/
+  body:
+    type: json
+    data: "{\r
+
+      \    \"action\" : \"editRequestDemandPosition\",\r
+
+      \    \"reqid\": 5268,\r
+
+      \    \"projid\" : 1,\r
+
+      \    \"jid\" : 2002,\r
+
+      \    \"jobdesc\" : \"ลักษณะงาน\",\r
+
+      \    \"placetype\" : 1,\r
+
+      \    \"needgender\" : 1,\r
+
+      \    \"numseeker\" : 10,\r
+
+      \    \"numman\" : 5,\r
+
+      \    \"numwoman\" : 5,\r
+
+      \    \"wtid\": 2,\r
+
+      \    \"wage\" : 300000,\r
+
+      \    \"curid\": 1,\r
+
+      \    \"rate\" : 1,\r
+
+      \    \"thrate\" : 30,\r
+
+      \    \"salary\" : 300000,\r
+
+      \    \"benefit\" : \"สวัสดิการ\",\r
+
+      \    \"ot\" : 1,\r
+
+      \    \"vehicletype\" : 1,\r
+
+      \    \"tickettype\" : 1,\r
+
+      \    \"renew\" : 0,\r
+
+      \    \"startdate\" : \"2025-01-01\",\r
+
+      \    \"empyear\" : 1,\r
+
+      \    \"empmonth\" : 0,\r
+
+      \    \"empday\" : 0,\r
+
+      \    \"endprojdate\" : \"2025-04-01\",\r
+
+      \    \"document_list\" : [\r
+
+      \        {\r
+
+      \            \"did\" : 37,\r
+
+      \            \"filename\" : \"filename5.pdf\"\r
+
+      \        },        \r
+
+      \        {\r
+
+      \            \"did\" : 38,\r
+
+      \            \"filename\" : \"filename2.pdf\"\r
+
+      \        },\r
+
+      \        {\r
+
+      \            \"did\" : 39,\r
+
+      \            \"filename\" : \"filename3.pdf\"\r
+
+      \        }\r
+
+      \    ]\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

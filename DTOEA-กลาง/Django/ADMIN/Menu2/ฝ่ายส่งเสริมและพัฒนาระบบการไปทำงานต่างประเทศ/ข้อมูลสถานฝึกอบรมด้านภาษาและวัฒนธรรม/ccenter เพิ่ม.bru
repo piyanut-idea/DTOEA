@@ -1,0 +1,71 @@
+meta {
+  name: ccenter เพิ่ม
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://apiserver:8080/admin/ccenter/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "name" : "ชื่อสถานฝึกอบรมด้านภาษา และวัฒนธรรม",
+      "status" : 1,
+      "centercode" : "เลขที่ใบอนุญาต",
+      "permitdate" : "2025-10-01",
+      "expdate" : "2035-10-01",
+      "address" : "ที่อยู่",
+      "pvid" : 1,
+      "ddtid" : 1,
+      "sdtid" : 1,
+      "postcode" : "00000",
+      "centertype" : 1,
+      "tel" : "0000000000",
+      "fax" : "0000000000",
+      "acttype" : "ประเภทกิจการ",
+      "mannum" : 20,
+      "womannum" : 20,
+      "managername" : "ชื่อผู้บริหาร",
+      "autname" : "ชื่อผู้รับใบอนญาต",
+      "operpfid" : 1,
+      "operfname" : "ชื่อ",
+      "operlname" : "นามสกุล",
+      "operaddress" : "ที่อยู่",
+      "operpvid" : 1,
+      "operddtid" : 1,
+      "opersdtid" : 1,
+      "operpcode" : "00000",
+      "opertel" : "0000000000",
+      "operfax" : "0000000000",
+      "document_list" : [
+          {
+              "did" : 37,
+              "filename" : "filename.pdf",
+              "uploaddate" : "2023-09-02T15:13:04.435521+07:00"
+          },        
+          {
+              "did" : 38,
+              "filename" : "filename2.pdf",
+              "uploaddate" : "2023-09-02T15:13:04.435521+07:00"
+          },        
+          {
+              "did" : 39,
+              "filename" : "filename3.pdf",
+              "uploaddate" : "2023-09-02T15:13:04.435521+07:00"
+          },        
+          {
+              "did" : 40,
+              "filename" : "filename3.pdf",
+              "uploaddate" : "2023-09-02T15:13:04.435521+07:00"
+          }
+      ]
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

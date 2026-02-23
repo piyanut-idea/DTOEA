@@ -1,0 +1,7 @@
+info:
+  name: ยื่นคำขอ
+  type: folder
+  seq: 1
+
+request:
+  auth: inherit

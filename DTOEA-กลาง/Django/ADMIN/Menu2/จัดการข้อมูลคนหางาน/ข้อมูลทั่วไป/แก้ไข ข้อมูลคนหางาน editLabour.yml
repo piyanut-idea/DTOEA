@@ -1,0 +1,209 @@
+info:
+  name: แก้ไข ข้อมูลคนหางาน editLabour
+  type: http
+  seq: 2
+
+http:
+  method: PUT
+  url: http://apiserver:8080/admin/seekerdtl/101/
+  params:
+    - name: name
+      value: ""
+      type: query
+      disabled: true
+  body:
+    type: json
+    data: "{\r
+
+      \    \"action\" : \"editLabour\",\r
+
+      \    \"gender\"    : 2,\r
+
+      \    \"pfid\"  : 1,\r
+
+      \    \"pfnameen\"  : 1,\r
+
+      \    \"pfnameth\"  : 1,\r
+
+      \    \"fnameth\"   : \"ชื่อทดสอบ\",\r
+
+      \    \"lnameth\"   : \"นามสกุลทดสอบ\",\r
+
+      \    \"fnameen\"   : \"fnametest\",\r
+
+      \    \"lnameen\"   : \"lnametest\",\r
+
+      \    \"birthdate\": \"1990-01-01T00:00:00\",\r
+
+      \    \"stampbdate\"    : \"2025-10-01T00:00:00\",\r
+
+      \    \"height\"    : 168,\r
+
+      \    \"weight\"    : 52,\r
+
+      \    \"addressth\" : \"ทดสอบที่อยู่ 192/3 หมู่ 2\",\r
+
+      \    \"addressen\" : \"test addressen 192/3 Moo.2\",\r
+
+      \    \"pvid\"  : 1,\r
+
+      \    \"ddtid\" : 1,\r
+
+      \    \"sdtid\" : 1,\r
+
+      \    \"postcode\"  : 81000,\r
+
+      \    \"sameaddr\"  : 1,\r
+
+      \    \"ctaddressth\"   : \"ทดสอบที่อยู่ 192/3 หมู่ 2\",\r
+
+      \    \"ctaddressen\"   : \"test addressen 192/3 Moo.2\",\r
+
+      \    \"ctpvid\"    : 1,\r
+
+      \    \"ctddtid\"   : 1,\r
+
+      \    \"ctsdtid\"   : 1,\r
+
+      \    \"ctpostcode\"    : 81000,\r
+
+      \    // \"email\"   : \"piyanut.work@gmail.com\",\r
+
+      \    \"mobile1\"   : \"0000000000\",\r
+
+      \    \"mobile2\"   : \"0000000000\",\r
+
+      \    \"tel\"   : \"0000000000\",\r
+
+      \    \"passportno\"    : \"AA0987654\",\r
+
+      \    \"periodexp\" : null,\r
+
+      \    \"issuedate\" : \"2025-01-01T00:00:00\",\r
+
+      \    \"expdate\"   : \"2035-01-01T00:00:00\",\r
+
+      \    \"emerpfid\"  : 1,\r
+
+      \    \"emerfname\" : \"ทดสอบชื่อฉุกเเฉิน\",\r
+
+      \    \"emerlname\" : \"ทดสอบนามสกุลฉุกเเฉิน\",\r
+
+      \    \"relation\"  : \"บิดา\",\r
+
+      \    \"emertel\"   : \"0000000000\",\r
+
+      \    \"sameemr\"   : 1,\r
+
+      \    \"emeraddr\"  : \"ทดสอบที่อยู่ฉุกเฉิน 192/3 หมู่ 2\",\r
+
+      \    \"empostcode\"  : \"10200\",\r
+
+      \    \"empvid\"    : 1,\r
+
+      \    \"emddtid\"   : 1,\r
+
+      \    \"emsdtid\"   : 1,\r
+
+      \    \"dgid\"  : 1,\r
+
+      \    \"mjid\"  : 5000,\r
+
+      \    \"schoolname\"    : \"ชื่อสถานศึกษา\",\r
+
+      \    \"scpvid\"    : 1,\r
+
+      \    \"langskill1\"    : 1,\r
+
+      \    \"langskill2\"    : 2,\r
+
+      \    \"langskill3\"    : 3,\r
+
+      \    \"langskill4\"    : 4,\r
+
+      \    \"langskill5\"    : 5,\r
+
+      \    // \"j1id\"  : 5000,\r
+
+      \    // \"j2id\"  : 5001,\r
+
+      \    // \"j3id\"  : 5002,\r
+
+      \    \"jobstatus\" : 1,\r
+
+      \    \"cnt1id\"    : 1000,\r
+
+      \    \"cnt2id\"    : 1002,\r
+
+      \    \"cnt3id\"    : 1004,\r
+
+      \    \"ctstatus\"  : 1,\r
+
+      \    \"traveltype\"    : 4,\r
+
+      \    \"tagenttype\"    : 1,\r
+
+      \    // \"cid\"   : 1,\r
+
+      \    // \"jt2id\" : 1,\r
+
+      \    // \"jt2job\"    : \"รหัส จต.2\",\r
+
+      \    // \"jt3id\" : 1,\r
+
+      \    \"needstatus\"    : 1,\r
+
+      \    \"status\"    : 1,\r
+
+      \    \"seekerregistdoctmp_list\" : [\r
+
+      \        {\r
+
+      \            \"did\" : 37,\r
+
+      \            \"filename\" : \"filename.pdf\",\r
+
+      \            \"uploaddate\" : \"2023-09-02T15:13:04.435521+07:00\"\r
+
+      \        },        \r
+
+      \        {\r
+
+      \            \"did\" : 38,\r
+
+      \            \"filename\" : \"filename2.pdf\",\r
+
+      \            \"uploaddate\" : \"2023-09-02T15:13:04.435521+07:00\"\r
+
+      \        },        \r
+
+      \        {\r
+
+      \            \"did\" : 39,\r
+
+      \            \"filename\" : \"filename3.pdf\",\r
+
+      \            \"uploaddate\" : \"2023-09-02T15:13:04.435521+07:00\"\r
+
+      \        },        \r
+
+      \        {\r
+
+      \            \"did\" : 40,\r
+
+      \            \"filename\" : \"filename3.pdf\",\r
+
+      \            \"uploaddate\" : \"2023-09-02T15:13:04.435521+07:00\"\r
+
+      \        }\r
+
+      \    ]\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,22 @@
+info:
+  name: project ลบ
+  type: http
+  seq: 6
+
+http:
+  method: PUT
+  url: http://apiserver:8080/web/project/3/
+  body:
+    type: json
+    data: "{\r
+
+      \    \"action\" : \"deleteDemandProject\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
