@@ -1,0 +1,28 @@
+meta {
+  name: health แก้ไข
+  type: http
+  seq: 3
+}
+
+put {
+  url: http://apiserver:8080/admin/health/1/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "action" : "addHealthInfo",
+      "ckcongen": 0,
+      "congen": "ไม่มีโรคประจำตัว",
+      "blood": "A",
+      "ckdrug": 0,
+      "drug": "ไม่มีประวัติการใช้ยาเสพติด",
+      "ojid": 1,
+      "hpid": 5
+  }
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,22 @@
+meta {
+  name: crime ลบ
+  type: http
+  seq: 4
+}
+
+put {
+  url: http://apiserver:8080/admin/crime/1/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "action" : "deleteCrimeInfo"
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+}

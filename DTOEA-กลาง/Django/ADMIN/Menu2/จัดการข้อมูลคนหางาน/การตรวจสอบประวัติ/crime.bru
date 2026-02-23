@@ -1,0 +1,30 @@
+meta {
+  name: crime
+  type: http
+  seq: 1
+}
+
+get {
+  url: http://apiserver:8090/admin/crime
+  body: text
+  auth: inherit
+}
+
+body:text {
+  {
+      "action" : "addCrimeInfo",
+      "checkdate": "2024-05-20",
+      "result": 1,
+      "ojid": 1,
+      "document_list" : [
+          {
+              "did" : 37,
+              "filename" : "filename.pdf"
+          }
+      ]
+  }
+}
+
+settings {
+  encodeUrl: true
+}

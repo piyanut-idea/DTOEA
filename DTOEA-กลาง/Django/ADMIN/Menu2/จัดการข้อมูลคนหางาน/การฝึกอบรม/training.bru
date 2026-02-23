@@ -1,15 +1,15 @@
-info:
+meta {
   name: training
   type: http
   seq: 1
+}
 
-http:
-  method: GET
+get {
   url: http://apiserver:8090/admin/training
+  body: none
   auth: inherit
+}
 
-settings:
+settings {
   encodeUrl: true
-  timeout: 0
-  followRedirects: true
-  maxRedirects: 5
+}
