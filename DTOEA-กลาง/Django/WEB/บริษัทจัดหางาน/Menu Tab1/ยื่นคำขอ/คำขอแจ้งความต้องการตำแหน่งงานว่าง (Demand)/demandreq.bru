@@ -1,0 +1,15 @@
+meta {
+  name: demandreq
+  type: http
+  seq: 1
+}
+
+get {
+  url: http://apiserver:8090/web/demandreq
+  body: json
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,19 @@
+meta {
+  name: position
+  type: http
+  seq: 7
+}
+
+get {
+  url: http://apiserver:8090/web/position
+  body: json
+  auth: inherit
+}
+
+params:query {
+  ~id: 3016
+}
+
+settings {
+  encodeUrl: true
+}
