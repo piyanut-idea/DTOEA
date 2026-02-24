@@ -1,18 +1,18 @@
 meta {
-  name: demand_2
+  name: demandreqlist Step 1
   type: http
   seq: 3
 }
 
 put {
-  url: http://apiserver:8080/admin/demand/1/
+  url: http://apiserver:8080/web/demandreqlist/3/
   body: json
   auth: inherit
 }
 
 body:json {
   {
-      "action" : "editDemandInfo",
+      "action" : "requestDemandStep1",
       "cid" : 5267,
       "demanddate" : "2025-01-01",
       "demandexp" : "2030-01-01",
@@ -20,17 +20,16 @@ body:json {
       "dmanrequest" : 200,
       "comtype": 1,
       "comcode" : "290837952",
-      "fnameen": "shang wang precision industry co.,ltd.",
-      "lnameen": null,
+      "bossfnameen": "shang wang precision industry co.,ltd.",
       "idtid": 5567,
       "address": "no.7, lane 236, zhengguang st., yonglong village, taiping dist., taichung city, taiwan r.o.c.",
       "cntid" : 1196,  
       "fcitid" : 1,
-      "postcode" : null,
+      "bosspostcode" : null,
       "ynid" : 1,
       "yuandate": "2025-01-01",
       "yuanexp": "2025-12-31T00:00:00+07:00",
-      "employtype" : 3,
+      "bc1" : 2,
       "orcid" : 1,
       "document_list" : [
           {
@@ -59,5 +58,4 @@ body:json {
 
 settings {
   encodeUrl: true
-  timeout: 0
 }
