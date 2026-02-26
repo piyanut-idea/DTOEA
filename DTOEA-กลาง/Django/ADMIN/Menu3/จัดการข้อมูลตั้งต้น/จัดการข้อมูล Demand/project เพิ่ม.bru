@@ -12,8 +12,8 @@ post {
 
 body:json {
   {
-      "action" : "addDemandProject",
-      "dmid" : 6,
+      "action" : "addProjectInfo",
+      "dmid" : 1,
       "projtype": 1,
       "name": "Projname",
       "address": "Projaddress",
@@ -43,10 +43,25 @@ body:json {
       "empyear" : 1,
       "empmonth" : 0,
       "empday" : 0,
-      "endprojdate" : "2025-04-01"
+      "endprojdate" : "2025-04-01",
+      "document_list" : [
+          {
+              "did" : 37,
+              "filename" : "filename5.pdf"
+          },        
+          {
+              "did" : 38,
+              "filename" : "filename2.pdf"
+          },
+          {
+              "did" : 39,
+              "filename" : "filename3.pdf"
+          }
+      ]
   }
 }
 
 settings {
   encodeUrl: true
+  timeout: 0
 }

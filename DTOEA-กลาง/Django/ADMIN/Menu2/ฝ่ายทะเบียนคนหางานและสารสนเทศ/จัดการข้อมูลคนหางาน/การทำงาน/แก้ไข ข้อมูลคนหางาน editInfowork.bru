@@ -6,10 +6,50 @@ meta {
 
 post {
   url: http://apiserver:8080/admin/seekerwork/
-  body: none
+  body: json
   auth: inherit
+}
+
+body:json {
+  {
+      "action" : "editWorkInfo",
+      "reqid" : "",
+      "rtid" : "",
+      "msid" : "",
+      "ojid" : 101,
+      "comtype": 1,
+      "biid" : 1,
+      "comcode" : "290837952",
+      "bossfnameen": "shang wang precision industry co.,ltd.",
+      "address": "no.7, lane 236, zhengguang st., yonglong village, taiping dist., taichung city, taiwan r.o.c.",
+      "cntid" : 1066,
+      "fcitid" : 1,    
+      "bosspostcode" : "101000",
+      "idtid": 5567,
+      "taiwanagent" : "",
+      "twcid" : 101,
+      "tel" : "0000000000",
+      "fax" : "0000000000",
+      "issame" : 0,
+      "addressen2" : "Taiwan Company Test co.,ltd",
+      "cntid2" : 1066,
+      "fcitid2" : 1,
+      "postcode2" : "12000",
+      "placetype" : 1,
+      "jid" : 2001,
+      "jobdesc" : "ผลิตอาหารกระป๋อง",
+      "wtid" : 1,
+      "wage" : 10000,
+      "curid" : 1,
+      "periodyear" : 1,
+      "periodmonth" : 1,
+      "periodday" : 1,
+      "telother" : "000000000",
+      "lineid" : "lineid_test"
+  }
 }
 
 settings {
   encodeUrl: true
+  timeout: 0
 }
