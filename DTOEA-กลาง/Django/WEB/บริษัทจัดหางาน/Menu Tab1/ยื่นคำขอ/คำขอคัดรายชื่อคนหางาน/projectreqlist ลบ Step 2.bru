@@ -1,0 +1,21 @@
+meta {
+  name: projectreqlist ลบ Step 2
+  type: http
+  seq: 4
+}
+
+put {
+  url: http://apiserver:8080/web/projectreqlist/3/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "action" : "deleteProjectReqList"
+  }
+}
+
+settings {
+  encodeUrl: true
+}
