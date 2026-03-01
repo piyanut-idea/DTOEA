@@ -1,0 +1,21 @@
+meta {
+  name: companyreqlist Step 2 ถัดไป
+  type: http
+  seq: 4
+}
+
+put {
+  url: http://apiserver:8080/web/companyreqlist/5/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "action" : "requesInformStep2"
+  }
+}
+
+settings {
+  encodeUrl: true
+}
