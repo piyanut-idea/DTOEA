@@ -1,0 +1,24 @@
+meta {
+  name: add coursetest
+  type: http
+  seq: 4
+}
+
+post {
+  url: http://apiserver:8080/admin/coursetest/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  // ใส่ไว้ในจัดการบุคลากรในสถานทดสอบฝีมือแรงงานเป็นการชั่วคราว
+  {
+    "action": "add",
+    "branchname": "สาขาทดสอบ"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
