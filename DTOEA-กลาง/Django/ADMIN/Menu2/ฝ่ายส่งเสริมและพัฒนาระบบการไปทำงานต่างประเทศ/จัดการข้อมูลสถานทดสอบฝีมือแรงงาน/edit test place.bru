@@ -1,0 +1,40 @@
+meta {
+  name: edit test place
+  type: http
+  seq: 3
+}
+
+put {
+  url: http://apiserver:8080/admin/testplace/5101/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "action": "edit",
+    "placename": "testplace1",
+    "permitcode": "permitcode01",
+    "permitdate": "2025-10-01T00:00:00+07:00",
+    "expdate": "2026-10-01T00:00:00+07:00",
+    "address": "test address (edited)",
+    "postcode": "12345",
+    "tel": "02-987-6543",
+    "fax": "02-987-6544",
+    "email": "testplace1_new@example.com",
+    "tptype": 1,
+    "tpstatus": 3,
+    "coname": "นางทดสอบ แก้ไข",
+    "canceldate": null,
+    "cause": null,
+    "pvid": 1,
+    "ddtid": 1,
+    "sdtid": 1,
+    "remark": "แก้ไขข้อมูล"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

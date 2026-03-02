@@ -1,0 +1,39 @@
+meta {
+  name: add test place
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://apiserver:8080/admin/testplace/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "action": "add",
+    "placename": "testplace 2",
+    "permitcode": "permitcode02",
+    "permitdate": "2025-10-01T00:00:00",
+    "expdate": "2026-10-01T00:00:00",
+    "address": "test address 2",
+    "postcode": "12345",
+    "tel": "02-123-4569",
+    "fax": "02-123-4560",
+    "email": "testplace2@example.com",
+    "tptype": 1,
+    "tpstatus": 1,
+    "coname": "นายทดสอบ จงผ่านพลีส",
+    "canceldate": null,
+    "cause": null,
+    "pvid": 2,
+    "ddtid": 1,
+    "sdtid": 1
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
