@@ -12,17 +12,16 @@ put {
 
 body:json {
   {
-      "action" : "addHealthInfo",
-      "ckcongen": 0,
-      "congen": "ไม่มีโรคประจำตัว",
-      "blood": "A",
-      "ckdrug": 0,
-      "drug": "ไม่มีประวัติการใช้ยาเสพติด",
-      "ojid": 1,
-      "hpid": 5
+      "action" : "editHealthInfo",
+      "ckcongen": 2,
+      "congen": "มีโรคประจำตัว",
+      "blood": 1,
+      "ckdrug": 1,
+      "drug": "ไม่มีประวัติการใช้ยาเสพติด"
   }
 }
 
 settings {
   encodeUrl: true
+  timeout: 0
 }
