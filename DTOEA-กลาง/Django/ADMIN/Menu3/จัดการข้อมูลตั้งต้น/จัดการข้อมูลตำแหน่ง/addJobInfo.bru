@@ -1,0 +1,25 @@
+meta {
+  name: addJobInfo
+  type: http
+  seq: 3
+}
+
+post {
+  url: http://apiserver:8080/admin/jobinfo/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "action": "add",
+    "nameth": "ืทดสอบตำแหน่ง",
+    "nameen": "test job",
+    "jsid": 2416
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
