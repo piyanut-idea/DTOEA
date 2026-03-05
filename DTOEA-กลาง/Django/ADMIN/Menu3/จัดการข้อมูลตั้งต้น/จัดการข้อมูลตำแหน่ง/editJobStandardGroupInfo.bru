@@ -1,0 +1,24 @@
+meta {
+  name: editJobStandardGroupInfo
+  type: http
+  seq: 4
+}
+
+put {
+  url: http://apiserver:8080/admin/jobstandardgroupinfo/58/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "action": "edit",
+    "nameth": "กลุ่มสาขาทดสอบ (แก้ไขแล้ว)",
+    "nameen": "testjobstandardgroupinfo (edited)"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

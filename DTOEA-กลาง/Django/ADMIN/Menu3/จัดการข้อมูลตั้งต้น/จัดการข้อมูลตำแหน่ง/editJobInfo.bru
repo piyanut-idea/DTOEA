@@ -1,0 +1,25 @@
+meta {
+  name: editJobInfo
+  type: http
+  seq: 6
+}
+
+put {
+  url: http://apiserver:8080/admin/jobinfo/1/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "action": "edit",
+    "nameth": "ืทดสอบตำแหน่ง (แก้ไข)",
+    "nameen": "test job (edited)",
+    "jsid": 2416
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
