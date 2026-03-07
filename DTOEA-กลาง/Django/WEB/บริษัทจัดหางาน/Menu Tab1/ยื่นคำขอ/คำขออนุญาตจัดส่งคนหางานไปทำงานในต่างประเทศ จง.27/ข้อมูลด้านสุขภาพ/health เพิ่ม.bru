@@ -5,7 +5,7 @@ meta {
 }
 
 post {
-  url: http://apiserver:8080/admin/health/
+  url: http://apiserver:8080/web/health/
   body: json
   auth: inherit
 }
@@ -13,16 +13,22 @@ post {
 body:json {
   {
       "action" : "addHealthInfo",
+      "reqid": 5286,
       "ckcongen": 2,
       "congen": "มีโรคประจำตัว",
       "blood": 1,
       "ckdrug": 1,
       "drug": "ไม่มีประวัติการใช้ยาเสพติด",
-      "ojid": 101
+      "ojid": 101,
+      "document_list" : [
+          {
+              "did" : 47,
+              "filename" : "filename.pdf"
+          }
+      ]
   }
 }
 
 settings {
   encodeUrl: true
-  timeout: 0
 }
