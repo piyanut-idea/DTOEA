@@ -1,0 +1,23 @@
+meta {
+  name: รายการคำขอ
+  type: http
+  seq: 5
+}
+
+get {
+  url: http://apiserver:8090/admin/request?reqstatus=1
+  body: none
+  auth: inherit
+}
+
+params:query {
+  reqstatus: 1
+  ~"considerby ": รหัสเจ้าหน้าที่พิจจารณา
+  ~idlist: 1,2
+  ~req_cid_nameth: ชื่อบริษัท
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
