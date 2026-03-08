@@ -1,0 +1,20 @@
+meta {
+  name: Step 2 ข้อมูลใบอนุญาตประกอบกิจการจัดหางานของญี่ปุ่นและเอกสารแนบ
+  type: http
+  seq: 6
+}
+
+get {
+  url: http://apiserver:8080/web/senderreqlist?id=14
+  body: none
+  auth: inherit
+}
+
+params:query {
+  id: 14
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

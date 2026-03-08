@@ -1,0 +1,22 @@
+meta {
+  name: Step 2 ส่งเรื่อง
+  type: http
+  seq: 8
+}
+
+put {
+  url: http://apiserver:8080/web/senderreqlist/14/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "action" : "submitSenderDtlStep2"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
