@@ -1,0 +1,20 @@
+meta {
+  name: Step 2 ข้อมูลใบอนุญาตประกอบกิจการจัดหางาน
+  type: http
+  seq: 6
+}
+
+get {
+  url: http://apiserver:8080/web/senderreqlist?id=5
+  body: none
+  auth: inherit
+}
+
+params:query {
+  id: 5
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
