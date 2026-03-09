@@ -1,0 +1,29 @@
+meta {
+  name: createGroup
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://apiserver:8080/admin/group/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "action": "add_group",
+      "name": "Test Group 2",
+      "description": "Test description 2",
+      "grouptype": 2,
+      "permissionlist": [
+          {"id": "1010000000"}
+  //         {"id": "change_user"}
+      ]
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
