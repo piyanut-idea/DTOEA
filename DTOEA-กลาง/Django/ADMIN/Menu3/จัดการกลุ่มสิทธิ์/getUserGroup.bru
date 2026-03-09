@@ -5,14 +5,15 @@ meta {
 }
 
 get {
-  url: http://apiserver:8080/admin/usergroup/?grp_name=superadmin
+  url: http://apiserver:8080/admin/usergroup/?page_size=15&grp_name=คนหางาน&fullname=แอดมิน ทดสอบ
   body: none
   auth: inherit
 }
 
 params:query {
-  grp_name: superadmin
-  ~fullname: 
+  page_size: 15
+  grp_name: คนหางาน
+  fullname: แอดมิน ทดสอบ
 }
 
 settings {
