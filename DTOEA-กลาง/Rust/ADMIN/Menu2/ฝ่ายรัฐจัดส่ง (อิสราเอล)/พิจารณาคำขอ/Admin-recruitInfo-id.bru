@@ -1,0 +1,16 @@
+meta {
+  name: Admin-recruitInfo-id
+  type: http
+  seq: 5
+}
+
+get {
+  url: http://apiserver:8090/admin/recruit/1
+  body: text
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

@@ -1,0 +1,25 @@
+meta {
+  name: Admin-mgmtSendSKInfo-List
+  type: http
+  seq: 2
+}
+
+get {
+  url: http://apiserver:8090/admin/mgmtsendsk?stype=3&tsend&round=1&jt3
+  body: text
+  auth: inherit
+}
+
+params:query {
+  stype: 3
+  tsend: 
+  round: 1
+  jt3: 
+  ~status: 
+  ~idlist: 
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

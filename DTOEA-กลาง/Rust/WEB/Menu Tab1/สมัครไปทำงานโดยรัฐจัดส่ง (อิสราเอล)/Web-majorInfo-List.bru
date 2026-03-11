@@ -1,0 +1,20 @@
+meta {
+  name: Web-majorInfo-List
+  type: http
+  seq: 15
+}
+
+get {
+  url: http://apiserver:8090/web/major?dgid=1
+  body: text
+  auth: inherit
+}
+
+params:query {
+  dgid: 1
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

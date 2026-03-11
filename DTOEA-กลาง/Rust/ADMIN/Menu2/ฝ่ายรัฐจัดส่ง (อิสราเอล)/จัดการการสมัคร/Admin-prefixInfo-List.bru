@@ -1,0 +1,16 @@
+meta {
+  name: Admin-prefixInfo-List
+  type: http
+  seq: 14
+}
+
+get {
+  url: http://apiserver:8090/admin/prefix
+  body: text
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

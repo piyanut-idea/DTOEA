@@ -1,0 +1,16 @@
+meta {
+  name: Web-provinceInfo-List
+  type: http
+  seq: 9
+}
+
+get {
+  url: http://apiserver:8090/web/province
+  body: text
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

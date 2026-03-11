@@ -1,0 +1,31 @@
+meta {
+  name: Admin-seekerRecruitList
+  type: http
+  seq: 10
+}
+
+get {
+  url: http://apiserver:8090/admin/seekerrecruit?reqcode&idcard&fullnamethzdpo&fnameth&lnameth&passportno &gender&idtmp&isstatus&mrid=1
+  body: text
+  auth: inherit
+}
+
+params:query {
+  reqcode: 
+  idcard: 
+  fullnamethzdpo: 
+  fnameth: 
+  lnameth: 
+  "passportno ": 
+  gender: 
+  idtmp: 
+  isstatus: 
+  mrid: 1
+  ~reqstatuslist: 1
+  ~rcidlist: 1,2
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

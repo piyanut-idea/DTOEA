@@ -1,0 +1,21 @@
+meta {
+  name: Web-subdistrictInfo-List
+  type: http
+  seq: 7
+}
+
+get {
+  url: http://apiserver:8090/web/province?pvid=10&ddtid=1010
+  body: text
+  auth: inherit
+}
+
+params:query {
+  pvid: 10
+  ddtid: 1010
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

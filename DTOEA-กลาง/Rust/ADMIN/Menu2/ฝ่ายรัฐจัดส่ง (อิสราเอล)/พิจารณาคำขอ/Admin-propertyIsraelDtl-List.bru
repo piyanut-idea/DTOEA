@@ -1,0 +1,21 @@
+meta {
+  name: Admin-propertyIsraelDtl-List
+  type: http
+  seq: 1
+}
+
+get {
+  url: http://apiserver:8090/admin/propertyisraeldtl?dtlyear&status
+  body: text
+  auth: inherit
+}
+
+params:query {
+  dtlyear: 
+  status: 
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

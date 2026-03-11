@@ -1,0 +1,21 @@
+meta {
+  name: Web-adminDepartment-List
+  type: http
+  seq: 6
+}
+
+get {
+  url: http://apiserver:8090/web/department?dpid=1&adminstatus=1
+  body: text
+  auth: inherit
+}
+
+params:query {
+  dpid: 1
+  adminstatus: 1
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

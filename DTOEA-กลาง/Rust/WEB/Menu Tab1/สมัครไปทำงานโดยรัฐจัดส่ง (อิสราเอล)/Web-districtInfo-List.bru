@@ -1,0 +1,20 @@
+meta {
+  name: Web-districtInfo-List
+  type: http
+  seq: 8
+}
+
+get {
+  url: http://apiserver:8090/web/province?pvid=10
+  body: text
+  auth: inherit
+}
+
+params:query {
+  pvid: 10
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
