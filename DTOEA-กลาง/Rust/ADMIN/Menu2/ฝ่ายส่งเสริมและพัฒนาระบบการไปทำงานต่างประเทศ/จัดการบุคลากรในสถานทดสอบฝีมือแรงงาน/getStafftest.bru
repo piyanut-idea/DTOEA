@@ -1,0 +1,20 @@
+meta {
+  name: getStafftest
+  type: http
+  seq: 1
+}
+
+get {
+  url: http://apiserver:8090/admin/stafftest?tpid=5101
+  body: none
+  auth: inherit
+}
+
+params:query {
+  tpid: 5101
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
