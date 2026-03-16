@@ -1,0 +1,27 @@
+meta {
+  name: moveGroup
+  type: http
+  seq: 3
+}
+
+put {
+  url: http://apiserver:8080/admin/group/105/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "action": "move_group",
+      "user_list": [
+          {"userid": 3},
+          {"userid": 7}
+      ]
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
