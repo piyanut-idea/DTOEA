@@ -1,0 +1,23 @@
+meta {
+  name: Admin-SendSeekerList-cancel
+  type: http
+  seq: 21
+}
+
+put {
+  url: http://apiserver:8080/admin/sendseekerlist/1/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      // ยกเลิกการสมัครสมาชิกกองทุน (krsendsk-seekerlist)
+      "actiontype":"cancel"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

@@ -1,0 +1,27 @@
+meta {
+  name: Admin-RecruitInfo-approve-israel
+  type: http
+  seq: 8
+}
+
+put {
+  url: http://apiserver:8080/admin/recruitinfo/1/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      // พิจารณาคำขอ อิสราเอล (isconsider-request)
+      // result: 1=อนุมัติ, 2=ไม่อนุมัติ, 3=ส่งกลับให้แก้ไข
+      "actiontype":"approve",
+      "result":1,
+      "remark":"อนุมัติคำขอสมัครอิสราเอล",
+      "recpaystatus":2
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

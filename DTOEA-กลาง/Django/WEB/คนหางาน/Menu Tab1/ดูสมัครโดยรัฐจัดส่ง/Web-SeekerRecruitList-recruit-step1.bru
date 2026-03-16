@@ -1,0 +1,34 @@
+meta {
+  name: Web-SeekerRecruitList-recruit-step1
+  type: http
+  seq: 2
+}
+
+put {
+  url: http://apiserver:8080/web/seekerrecruitlist/1/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      // กรอกข้อมูลลงทะเบียน Step1 (orgrequest-regisisst1)
+      "actiontype":"recruit-step1",
+      "fnameth":"ทดสอบ",
+      "lnameth":"นามสกุล",
+      "fnameen":"Test",
+      "lnameen":"Lastname",
+      "gender":"1",
+      "birthdate":"1990-01-01",
+      "idcard":"1234567890123",
+      "mobile1":"0812345678",
+      "recruit_data":{
+          "remark":"หมายเหตุทดสอบ"
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

@@ -1,0 +1,25 @@
+meta {
+  name: Admin-RecruitInfo-transfer
+  type: http
+  seq: 9
+}
+
+put {
+  url: http://apiserver:8080/admin/recruitinfo/1/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      // โอนงาน (is-transfer)
+      "actiontype":"transfer",
+      "rcidlist":[1,2,3],
+      "ojid":2
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

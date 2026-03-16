@@ -1,0 +1,44 @@
+meta {
+  name: Admin-SendSeekerList-add
+  type: http
+  seq: 17
+}
+
+post {
+  url: http://apiserver:8080/admin/sendseekerlist/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      // เพิ่มคนหางานในรอบจัดส่ง (krsendsk-seekeradd)
+      "msid":1,
+      "ojid":1,
+      "comtype":1,
+      "comcode":"ABC123",
+      "bossnameen":"BOSS COMPANY LTD",
+      "address":"123 Main Street",
+      "cntid":1,
+      "idtid":1,
+      "projtype":1,
+      "projname":"Test Project",
+      "paddress":"456 Project Street",
+      "pcntid":1,
+      "pstid":1,
+      "pcotid":1,
+      "pcityid":1,
+      "ppostcode":"10100",
+      "rate":15000,
+      "salary":15000,
+      "empyear":2,
+      "empmonth":0,
+      "empday":0,
+      "tedit":1
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

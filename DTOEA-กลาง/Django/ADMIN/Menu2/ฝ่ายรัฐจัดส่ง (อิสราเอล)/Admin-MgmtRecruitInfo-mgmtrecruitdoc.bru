@@ -1,0 +1,28 @@
+meta {
+  name: Admin-MgmtRecruitInfo-mgmtrecruitdoc
+  type: http
+  seq: 4
+}
+
+put {
+  url: http://apiserver:8080/admin/mgmtrecruit/5/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "actiontype": "mgmtrecruitdoc",
+      "documentlist": [
+        {"did": 1, "docname":"รูปถ่ายขนาด 2 นิ้ว", "require": "1", "ord" : 1},
+        {"did": 2, "docname":"สำเนาหนังสือเดินทาง (Passport)", "require": "0", "ord" : 2},
+        {"did": 3, "docname":"สำเนาบัตรประชาชน", "require": "1", "ord" : 3}
+      ]
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

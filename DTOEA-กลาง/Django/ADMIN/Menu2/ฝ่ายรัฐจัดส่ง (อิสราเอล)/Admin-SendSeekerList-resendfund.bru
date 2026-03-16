@@ -1,0 +1,23 @@
+meta {
+  name: Admin-SendSeekerList-resendfund
+  type: http
+  seq: 20
+}
+
+put {
+  url: http://apiserver:8080/admin/sendseekerlist/1/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      // ส่งเรื่องคำขอส่งเงินเข้ากองทุนฯ อีกครั้ง (krsendsk-seekerlist)
+      "actiontype":"resendfund"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

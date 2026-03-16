@@ -1,0 +1,43 @@
+meta {
+  name: Web-SeekerRecruitList-recruit-step2
+  type: http
+  seq: 3
+}
+
+put {
+  url: http://apiserver:8080/web/seekerrecruitlist/1/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      // กรอกข้อมูลลงทะเบียน Step2 (orgrequest-regisisst2)
+      "actiontype":"recruit-step2",
+      "addressth":"123 หมู่ 1",
+      "pvid":10,
+      "ddtid":100,
+      "sdtid":1000,
+      "postcode":"10100",
+      "recruit_data":{
+          "remark":"หมายเหตุทดสอบ Step2"
+      },
+      "document_list":[
+          {
+              "id":1,
+              "filename":"doc1.pdf",
+              "uploaddate":"2026-03-11"
+          },
+          {
+              "id":2,
+              "filename":"doc2.pdf",
+              "uploaddate":"2026-03-11"
+          }
+      ]
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

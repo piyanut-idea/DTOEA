@@ -5,16 +5,19 @@ meta {
 }
 
 get {
-  url: http://apiserver:8090/admin/propertyisraeldtl?projname&episode&dtlyear&status
+  url: http://apiserver:8090/admin/propertyisraeldtl?dtlyear=2668
   body: text
   auth: inherit
 }
 
 params:query {
-  projname: 
-  episode: 
-  dtlyear: 
-  status: 
+  dtlyear: 2668
+  ~startreq: 20260301T00:00:00Z
+  ~endreq: 20260330T00:00:00Z
+  ~status: 1
+  ~projname: 
+  ~episode: 1
+  ~sendstatus: 1
 }
 
 settings {
