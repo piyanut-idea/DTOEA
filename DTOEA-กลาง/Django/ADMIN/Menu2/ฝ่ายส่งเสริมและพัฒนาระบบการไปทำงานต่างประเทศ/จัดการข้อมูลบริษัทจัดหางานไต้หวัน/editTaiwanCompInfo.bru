@@ -1,0 +1,38 @@
+meta {
+  name: editTaiwanCompInfo
+  type: http
+  seq: 2
+}
+
+put {
+  url: http://apiserver:8080/admin/taiwancomp/2/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "action": "edit",
+      "pfid": 1,
+      "cntid": 1066,
+      "comname": "Taiwan Company Co., Ltd. (Updated)",
+      "fname": "พ่อหนุ่มไต้หวัน",
+      "lname": "ทดสอบแล้ว (แก้ไข)",
+      "lcno": "TW-2026-001",
+      "lcdate": "2023-03-15",
+      "lcexpdate": "2029-03-15",
+      "lcoffice": 1,
+      "registno": "REG-1234-1234",
+      "address": "456 Taiwan Road",
+      "postcode": "11111",
+      "tel": "0212345678",
+      "email": "updated@taiwancomp.com",
+      "status": 1
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
