@@ -1,0 +1,35 @@
+meta {
+  name: editTaiwanRegisteInfo
+  type: http
+  seq: 4
+}
+
+put {
+  url: http://apiserver:8080/admin/taiwanregiste/6/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "action": "edit",
+      "twcid": 2,
+      "allowtype": 1,
+      "allow": 1,
+      "lcallowdate": "2023-03-15",
+      "lcallowexdate": "2032-03-15",
+      "lcoffice": 1,
+      "issueno": "ISS-2024-001-UPDATED",
+      "lcpostdate": "2023-01-15T00:00:00",
+      "numseeker": 60,
+      "numtranslate": 6,
+      "reason": "แก้ไขข้อมูล",
+      "document_list": []
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

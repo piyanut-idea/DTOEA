@@ -1,0 +1,40 @@
+meta {
+  name: addTaiwanRegisteInfo
+  type: http
+  seq: 3
+}
+
+post {
+  url: http://apiserver:8080/admin/taiwanregiste/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "action": "add",
+      "twcid": 2,
+      "allowtype": 1,
+      "allow": 1,
+      "lcallowdate": "2023-03-15",
+      "lcallowexdate": "2030-03-15",
+      "lcoffice": 1,
+      "issueno": "ISS-2024-001",
+      "lcpostdate": "2023-01-15T00:00:00",
+      "numseeker": 50,
+      "numtranslate": 5,
+      "document_list": [
+          {
+              "did": 1,
+              "filename": "document1.pdf",
+              "uploaddate": "2023-03-15T00:00:00"
+          }
+      ]
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
