@@ -1,0 +1,30 @@
+meta {
+  name: trainingroom สร้างห้องอบรม
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://apiserver:8080/admin/trainingroom/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "name": "ห้องอบรม A",
+      "starttime1": "09:00",
+      "stoptime1": "12:00",
+      "starttime2": "13:00",
+      "stoptime2": "16:00",
+      "status": 1,
+      "traintype": 3,
+      "seat": 40,
+      "tool": "Projector, Microphone",
+      "pvid": 10
+  }
+}
+
+settings {
+  encodeUrl: true
+}

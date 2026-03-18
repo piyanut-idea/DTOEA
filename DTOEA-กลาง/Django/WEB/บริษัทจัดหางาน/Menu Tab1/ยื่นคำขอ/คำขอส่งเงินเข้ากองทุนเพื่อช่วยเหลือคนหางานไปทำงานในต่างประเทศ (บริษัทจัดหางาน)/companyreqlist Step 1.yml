@@ -1,0 +1,28 @@
+info:
+  name: companyreqlist Step 1
+  type: http
+  seq: 2
+
+http:
+  method: PUT
+  url: http://apiserver:8080/web/companyreqlist/22/
+  body:
+    type: json
+    data: "{\r
+
+      \    \"action\" : \"requestFundRegisterStep1\",\r
+
+      \    \"rtid\" : 112,\r
+
+      \    \"cid\" : 5267,\r
+
+      \    \"refreqid\" : 5289\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
