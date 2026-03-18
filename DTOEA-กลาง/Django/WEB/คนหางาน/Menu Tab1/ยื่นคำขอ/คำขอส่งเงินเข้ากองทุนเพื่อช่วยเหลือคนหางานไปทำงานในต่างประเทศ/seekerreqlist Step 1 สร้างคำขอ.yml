@@ -1,0 +1,26 @@
+info:
+  name: seekerreqlist Step 1 สร้างคำขอ
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: http://apiserver:8080/web/seekerreqlist/
+  body:
+    type: json
+    data: "{\r
+
+      \    \"action\" : \"requestSKFundRegisterStep1\",\r
+
+      \    \"rtid\" : 204,\r
+
+      \    \"peoid\" : 100\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
