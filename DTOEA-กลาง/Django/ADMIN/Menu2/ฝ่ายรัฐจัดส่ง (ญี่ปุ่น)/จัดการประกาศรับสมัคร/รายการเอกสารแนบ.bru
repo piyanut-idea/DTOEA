@@ -1,0 +1,20 @@
+meta {
+  name: รายการเอกสารแนบ
+  type: http
+  seq: 10
+}
+
+get {
+  url: http://apiserver:8090/admin/mgmtrecruitdoc?mrid=1
+  body: none
+  auth: inherit
+}
+
+params:query {
+  mrid: 1
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
