@@ -1,0 +1,37 @@
+meta {
+  name: addTaiwanCompFaultInfo
+  type: http
+  seq: 8
+}
+
+post {
+  url: http://apiserver:8080/admin/taiwancompfault/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "action": "add",
+      "twcid": 3,
+      "typefault": 2,
+      "ssuspenddate": "2025-03-15",
+      "esuspenddate": "2027-03-15",
+      "reason": "ละเมิดสัญญา",
+      "accord": "หนังสือที่ 001/2025",
+      "asin": 1,
+      "faultdate": "2025-01-15",
+      "appdate": "2025-02-01",
+      "numseeker": 10,
+      "fname": "ไต้หวันบอย",
+      "lname": "ทดสอบ",
+      "filename": "fault_document.pdf",
+      "uploaddate": "2026-03-17T00:00:00"
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

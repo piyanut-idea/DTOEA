@@ -1,0 +1,33 @@
+meta {
+  name: editTaiwanCompFaultInfo
+  type: http
+  seq: 9
+}
+
+put {
+  url: http://apiserver:8080/admin/taiwancompfault/1/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "action": "edit",
+      "typefault": 2,
+      "ssuspenddate": "2025-03-15",
+      "esuspenddate": "2028-03-15",
+      "reason": "แก้ไขข้อมูล",
+      "accord": "หนังสือที่ 002/2025",
+      "faultdate": "2025-01-15",
+      "appdate": "2025-02-01",
+      "numseeker": 15,
+      "fname": "ไต้หวันบอย",
+      "lname": "ทดสอบอีกรอบ"
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
