@@ -1,11 +1,11 @@
 meta {
   name: เข้ามา Step 1 เป็นครั้งแรก
   type: http
-  seq: 6
+  seq: 2
 }
 
 post {
-  url: http://apiserver:8080/web/recruitinfo/
+  url: http://apiserver:8080/web/recruit/
   body: json
   auth: inherit
 }
@@ -14,8 +14,8 @@ body:json {
   {
       // login เป็นคนหางานก่อน เรียก API
       "actiontype":"recruit-apply",
-      "ojid": 202, // id ของคนหางาน seekerdtl ที่ login เข้ามา
-      "mrid": 1  // id ของประกาศ mgmtrecruit
+      "ojid": 118, // id ของคนหางาน seekerdtl ที่ login เข้ามา
+      "mrid": 2  // id ของประกาศ mgmtrecruit
   }
 }
 
