@@ -1,0 +1,22 @@
+meta {
+  name: ลบประกาศ
+  type: http
+  seq: 6
+}
+
+put {
+  url: http://apiserver:8080/admin/propertytaiwandtl/14/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "mar" : "1"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

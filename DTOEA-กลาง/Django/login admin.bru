@@ -1,5 +1,5 @@
 meta {
-  name: login Django
+  name: login admin
   type: http
   seq: 3
 }
@@ -14,7 +14,8 @@ body:json {
   {
       "login"    : "superadmin",
       "passwd" : "password",
-      "typeuser" : "1"
+      "logintype" : "1",
+      "location" : "192.168.25.15"
   }
 }
 
