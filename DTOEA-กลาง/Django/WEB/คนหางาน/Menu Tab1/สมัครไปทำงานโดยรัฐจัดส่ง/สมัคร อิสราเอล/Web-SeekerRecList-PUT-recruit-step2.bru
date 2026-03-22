@@ -1,11 +1,11 @@
 meta {
-  name: Web-SeekerRecruitList-recruit-step2
+  name: Web-SeekerRecList-PUT-recruit-step2
   type: http
   seq: 3
 }
 
 put {
-  url: http://apiserver:8080/web/seekerrecruit/1/
+  url: http://apiserver:8080/web/seekerrec/9/
   body: json
   auth: inherit
 }
@@ -34,14 +34,14 @@ body:json {
       "ctpostcode": "10100",
       // ติดต่อ
       "mobile1": "0812345678",
-      "mobile2": "",
-      "tel": "",
+      "mobile2": null,
+      "tel": null,
       "email": "test@gmail.com",
       // หนังสือเดินทาง
       "passportno": "AA1234567",
       "periodexp": 1,
-      "issuedate": "15-01-2024",
-      "expdate": "14-01-2029",
+      "issuedate": "2029-12-01T00:00:00",
+      "expdate": "2029-12-01T00:00:00",
     
       // ผู้ติดต่อกรณีฉุกเฉิน
       "emerpfid": 3,
@@ -63,41 +63,41 @@ body:json {
       // เปลี่ยนชื่อ
       "chname":null,
       "pfidth1": null,
-      "fnameth1": "",
-      "lnameth1": "",
+      "fnameth1": null,
+      "lnameth1": null,
       "pfiden1": null,
-      "fnameen1": "",
-      "lnameen1": "",
+      "fnameen1": null,
+      "lnameen1": null,
       // 2
       "pfidth2": null,
-      "fnameth2": "",
-      "lnameth2": "",
+      "fnameth2": null,
+      "lnameth2": null,
       "pfiden2": null,
-      "fnameen2": "",
-      "lnameen2": "",
+      "fnameen2": null,
+      "lnameen2": null,
       // 3
       "pfidth3": null,
-      "fnameth3": "",
-      "lnameth3": "",
+      "fnameth3": null,
+      "lnameth3": null,
       "pfiden3": null,
-      "fnameen3": "",
-      "lnameen3": "",  
+      "fnameen3": null,
+      "lnameen3": null,  
     
       // สถานภาพสมรส
       "skstate": 1,
       "spprefix": null,
-      "spfname": "",
-      "splname": "",
+      "spfname": null,
+      "splname": null,
       "spprefixen": null,
-      "spfnameen": "",
-      "splnameen": "",
+      "spfnameen": null,
+      "splnameen": null,
       "spobirthdate": null,
-      "spidcard": "",
-      "aliencard": "",
-      "sppassport": "",
+      "spidcard": null,
+      "aliencard": null,
+      "sppassport": null,
       // การศึกษา
       "dgid": 4,
-      "mjid": 1,
+      "mjid": 5000,
       "schoolname": "มหาวิทยาลัยทดสอบ",
       "scpvid": 1,
       // ทหาร
@@ -119,9 +119,9 @@ body:json {
     
       // document_list สำหรับ update recruitSKdocList
       "document_list": [
-          {"id": 1, "filename": "photo_2inch.jpg", "uploaddate": "22-03-2026"},
-          {"id": 2, "filename": "passport_copy.pdf", "uploaddate": "22-03-2026"},
-          {"id": 3, "filename": "idcard_copy.pdf", "uploaddate": "22-03-2026"}
+          {"id": 73, "filename": "photo_2inch.jpg", "uploaddate": "2026-03-22T00:00:00"},
+          {"id": 2, "filename": "passport_copy.pdf", "uploaddate": "2026-03-22T00:00:00"},
+          {"id": 3, "filename": "idcard_copy.pdf", "uploaddate": "2026-03-22T00:00:00"}
       ]
   }
 }

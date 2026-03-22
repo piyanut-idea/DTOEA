@@ -1,13 +1,17 @@
 meta {
   name: Web-propertyIsraelDtl-List
   type: http
-  seq: 3
+  seq: 2
 }
 
 get {
-  url: http://apiserver:8090/web/propertyisraeldtl
-  body: text
+  url: http://apiserver:8090/web/propertyisraeldtl?mrid=4
+  body: json
   auth: inherit
+}
+
+params:query {
+  mrid: 4
 }
 
 settings {

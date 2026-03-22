@@ -1,11 +1,11 @@
 meta {
-  name: Web-SeekerRecruitList-recruit-step1
+  name: Web-SeekerRecList-PUT-recruit-step1
   type: http
   seq: 2
 }
 
 put {
-  url: http://apiserver:8080/web/seekerrecruit/1/
+  url: http://apiserver:8080/web/seekerrec/9/
   body: json
   auth: inherit
 }
@@ -15,10 +15,10 @@ body:json {
       "actiontype":"recruit-step1",
     
       // ส่วนที่ 1: ผู้ดำเนินการบันทึกคำขอ
-      "tsubmit": 1,
-      "adid": 1, // update adname adposition
-      "peoid": 1,
-      "pincode": "1234",
+      "tsubmit": 2,
+      "adid": 101, // update adname adposition
+      "peoid": 100,
+      "pincode": "8112",
     
       // ส่วนที่ 2: ตำแหน่งงาน
       "piid": 1,
@@ -32,15 +32,15 @@ body:json {
       "license": 1,
       "interlicense": "1",
       // ส่วนที่ 4: สุขภาพ/ร่างกาย
-      "ckcongen": 2,
-      "congen": "",
+      "ckcongen": 1,
+      "congen": null,
       "eyecolor": 1,
       "disabled": 2,
       // ส่วนที่ 5: ข้อมูลอื่นๆ
       "kin": 2,
       "criminal": 2,
       "ckpay": 1,
-      "othpay": ""
+      "othpay": null
   }
 }
 

@@ -1,17 +1,17 @@
 meta {
-  name: Admin-jobInfo-List
+  name: Web-recruitDegreeList-List
   type: http
-  seq: 8
+  seq: 4
 }
 
 get {
-  url: http://apiserver:8090/admin/job
+  url: http://apiserver:8090/web/recruitdegree?mrid=4
   body: json
   auth: inherit
 }
 
 params:query {
-  ~nameth: 
+  mrid: 4
 }
 
 settings {

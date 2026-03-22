@@ -1,17 +1,18 @@
 meta {
   name: Web-recruitSKdocList
   type: http
-  seq: 13
+  seq: 14
 }
 
 get {
-  url: http://apiserver:8090/web/recruitskdoc?rcid=1
+  url: http://apiserver:8090/web/recruitskdoc?rcid=1&lgbit=2
   body: text
   auth: inherit
 }
 
 params:query {
   rcid: 1
+  lgbit: 2
 }
 
 settings {

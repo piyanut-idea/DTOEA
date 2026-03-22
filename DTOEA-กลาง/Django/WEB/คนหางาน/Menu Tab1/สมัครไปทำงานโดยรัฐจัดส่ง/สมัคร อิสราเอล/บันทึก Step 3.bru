@@ -1,7 +1,7 @@
 meta {
-  name: Web-RecruitInfo-recruit-edit
+  name: บันทึก Step 3
   type: http
-  seq: 1
+  seq: 4
 }
 
 put {
@@ -12,8 +12,9 @@ put {
 
 body:json {
   {
-      // แก้ไขคำขอ (orgreqlist-list)
-      "actiontype":"recruit-edit"
+      "actiontype":"recruit-step3"
+    // gen reqcode, tmpcode
+    // set reqstatus=1, reqdate=timezone.now() 
   }
 }
 

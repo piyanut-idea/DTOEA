@@ -5,14 +5,14 @@ meta {
 }
 
 get {
-  url: http://apiserver:8090/web/recruitInfo?status=1&rtype=3
-  body: text
+  url: http://apiserver:8090/web/mgmtrecruit?status=1
+  body: json
   auth: inherit
 }
 
 params:query {
   status: 1
-  rtype: 3
+  ~rtype: 3
 }
 
 settings {

@@ -1,17 +1,18 @@
 meta {
-  name: Web-seekerRecruitList
+  name: Web-seekerRecList
   type: http
-  seq: 2
+  seq: 13
 }
 
 get {
-  url: http://apiserver:8090/web/seekerrecruit?rcid=1
+  url: http://apiserver:8090/web/seekerrec?rcid=9&lgbit=2
   body: text
   auth: inherit
 }
 
 params:query {
-  rcid: 1
+  rcid: 9
+  lgbit: 2
 }
 
 settings {
