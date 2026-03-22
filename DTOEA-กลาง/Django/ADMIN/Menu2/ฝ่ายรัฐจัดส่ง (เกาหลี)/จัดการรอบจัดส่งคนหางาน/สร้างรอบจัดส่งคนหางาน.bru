@@ -1,0 +1,33 @@
+meta {
+  name: สร้างรอบจัดส่งคนหางาน
+  type: http
+  seq: 4
+}
+
+post {
+  url: http://apiserver:8080/admin/sendSeeker/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "jt3date": ,
+    "tsend": ,
+    "outdate": ,
+    "dtlhour": ,
+    "dtlmin": ,
+    "travelout": ,
+    "travelno": ,
+    "pvid": ,
+    "trid": ,
+    "reservedate": ,
+    "": ,
+    "": ,
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

@@ -1,0 +1,47 @@
+meta {
+  name: เลือกเอกสารแนบในประกาศ
+  type: http
+  seq: 4
+}
+
+put {
+  url: http://apiserver:8080/admin/mgmtrecruit/21/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "actiontype": "updatestatus",
+    "documentlist": [
+      {"id": 139, "status": 2},
+      {"id": 140, "status": 1},
+      {"id": 141, "status": 1},
+      {"id": 142, "status": 1},
+      {"id": 143, "status": 1},
+      {"id": 144, "status": 1},
+      {"id": 145, "status": 1},
+      {"id": 146, "status": 1},
+      {"id": 147, "status": 1},
+      {"id": 148, "status": 1},
+      {"id": 149, "status": 1},
+      {"id": 150, "status": 1},
+      {"id": 151, "status": 1},
+      {"id": 152, "status": 1},
+      {"id": 153, "status": 1},
+      {"id": 154, "status": 1},
+      {"id": 155, "status": 1},
+      {"id": 156, "status": 1},
+      {"id": 157, "status": 1},
+      {"id": 158, "status": 1},
+      {"id": 159, "status": 1},
+      {"id": 160, "status": 1},
+      {"id": 161, "status": 1}
+    ]
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

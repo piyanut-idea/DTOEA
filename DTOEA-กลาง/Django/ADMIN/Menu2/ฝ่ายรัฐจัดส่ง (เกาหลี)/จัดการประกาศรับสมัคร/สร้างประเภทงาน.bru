@@ -1,0 +1,33 @@
+meta {
+  name: สร้างประเภทงาน
+  type: http
+  seq: 6
+}
+
+post {
+  url: http://apiserver:8080/admin/positionkorea/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "mrid": 21,
+    "idkid": 1,
+    "numsk": 100,
+    "gender": 0, 
+    "mstartbirth": "1976-01-01",
+    "mendbirth": "2007-01-01",
+    "stallman": 160,
+    "etallman": 185,
+    "fstartbirth": "1976-01-01",
+    "fendbirth": "2007-01-01",
+    "stallwoman": 150,
+    "etallwoman": 180
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
