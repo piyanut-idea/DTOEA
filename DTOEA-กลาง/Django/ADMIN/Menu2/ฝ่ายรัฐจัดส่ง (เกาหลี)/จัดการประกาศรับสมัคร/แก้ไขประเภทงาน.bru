@@ -1,0 +1,33 @@
+meta {
+  name: แก้ไขประเภทงาน
+  type: http
+  seq: 7
+}
+
+put {
+  url: http://apiserver:8080/admin/positionkorea/2/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "mrid": 21,
+    "idkid": 1,
+    "numsk": 80,
+    "gender": 0, 
+    "mstartbirth": "1976-01-01",
+    "mendbirth": "2007-01-01",
+    "stallman": 160,
+    "etallman": 185,
+    "fstartbirth": "1976-01-01",
+    "fendbirth": "2007-01-01",
+    "stallwoman": 150,
+    "etallwoman": 180
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
