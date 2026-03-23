@@ -1,0 +1,20 @@
+meta {
+  name: nationinfo web
+  type: http
+  seq: 13
+}
+
+get {
+  url: http://apiserver:8090/web/nation
+  body: none
+  auth: inherit
+}
+
+params:query {
+  ~idlist: 1
+  ~id: 1
+}
+
+settings {
+  encodeUrl: true
+}

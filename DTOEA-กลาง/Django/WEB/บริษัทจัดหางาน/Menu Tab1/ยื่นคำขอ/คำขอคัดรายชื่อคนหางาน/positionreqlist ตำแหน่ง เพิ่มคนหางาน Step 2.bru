@@ -1,0 +1,30 @@
+meta {
+  name: positionreqlist ตำแหน่ง เพิ่มคนหางาน Step 2
+  type: http
+  seq: 9
+}
+
+put {
+  url: http://apiserver:8080/web/positionreqlist/10/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "action" : "addSeekerPositionReqList",
+      "filtertype": 1,
+      "seeker_list" : [
+          {
+              "sojid" : 1
+          },
+          {
+              "sojid" : 2
+          }
+      ]
+  }
+}
+
+settings {
+  encodeUrl: true
+}
