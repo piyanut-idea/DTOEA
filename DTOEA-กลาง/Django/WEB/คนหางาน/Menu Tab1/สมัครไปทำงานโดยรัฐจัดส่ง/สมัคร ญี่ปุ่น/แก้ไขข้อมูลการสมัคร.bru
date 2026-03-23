@@ -1,0 +1,22 @@
+meta {
+  name: แก้ไขข้อมูลการสมัคร
+  type: http
+  seq: 13
+}
+
+put {
+  url: http://apiserver:8080/web/recruit/1/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "actiontype":"recruit-edit"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

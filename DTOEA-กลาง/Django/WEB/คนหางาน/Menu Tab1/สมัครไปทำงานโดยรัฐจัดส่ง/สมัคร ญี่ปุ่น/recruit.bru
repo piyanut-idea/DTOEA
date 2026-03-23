@@ -1,17 +1,17 @@
 meta {
-  name: recruitskdoc
+  name: recruit
   type: http
-  seq: 10
+  seq: 12
 }
 
 get {
-  url: http://apiserver:8090/web/recruitskdoc?rcid=1
+  url: http://apiserver:8090/web/recruit/1
   body: none
   auth: inherit
 }
 
 params:query {
-  rcid: 1
+  ~rcid: 1
 }
 
 settings {
