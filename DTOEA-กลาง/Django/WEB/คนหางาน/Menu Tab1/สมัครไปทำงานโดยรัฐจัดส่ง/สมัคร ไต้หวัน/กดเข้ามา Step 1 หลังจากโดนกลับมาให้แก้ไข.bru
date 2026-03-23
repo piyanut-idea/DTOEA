@@ -1,0 +1,23 @@
+meta {
+  name: กดเข้ามา Step 1 หลังจากโดนกลับมาให้แก้ไข
+  type: http
+  seq: 10
+}
+
+put {
+  url: http://apiserver:8080/web/recruit/1/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      // login เป็นคนหางานก่อน เรียก API
+      "actiontype":"recruit-edit"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
