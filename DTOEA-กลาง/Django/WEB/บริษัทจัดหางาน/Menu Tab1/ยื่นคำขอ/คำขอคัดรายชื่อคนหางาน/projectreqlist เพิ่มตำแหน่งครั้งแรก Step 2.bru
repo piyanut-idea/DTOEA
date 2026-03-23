@@ -1,0 +1,63 @@
+meta {
+  name: projectreqlist เพิ่มตำแหน่งครั้งแรก Step 2
+  type: http
+  seq: 3
+}
+
+post {
+  url: http://apiserver:8080/web/projectreqlist/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "action" : "addProjectReqList",
+      "reqid": 5272,
+      "projid" : 1,
+      "poid" : 3006,
+      "jidlist" : "2001,2002",
+      "jobdesc" : "ลักษณะงาน",
+      "placetype" : 1,
+      "needgender" : 1,
+      "numseeker" : 10,
+      "numman" : 5,
+      "numwoman" : 5,
+      "wtid": 2,
+      "wage" : 300000,
+      "curid": 1,
+      "rate" : 1,
+      "thrate" : 30,
+      "salary" : 300000,
+      "benefit" : "สวัสดิการ",
+      "ot" : 1,
+      "vehicletype" : 1,
+      "tickettype" : 1,
+      "renew" : 0,
+      "startdate" : "2025-01-01",
+      "empyear" : 1,
+      "empmonth" : 0,
+      "empday" : 0,
+      "endprojdate" : "2025-04-01",
+      "startage": 22,
+      "stopage": 35,
+      "startexp": 1,
+      "stopexp": 5,
+      "startw": 50,
+      "stopw": 70,
+      "starth": 160,
+      "stoph": 180,
+      "needprov": 1,
+      "dgid": 3,
+      "pv1id": 10,
+      "pv2id": 20,
+      "pv3id": null,
+      "pv4id": null,
+      "pv5id": null
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

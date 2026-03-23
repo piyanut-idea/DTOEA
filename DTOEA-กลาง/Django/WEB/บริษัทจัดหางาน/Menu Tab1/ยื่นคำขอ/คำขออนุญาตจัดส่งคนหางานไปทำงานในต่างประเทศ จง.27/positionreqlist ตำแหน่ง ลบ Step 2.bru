@@ -1,0 +1,21 @@
+meta {
+  name: positionreqlist ตำแหน่ง ลบ Step 2
+  type: http
+  seq: 9
+}
+
+put {
+  url: http://apiserver:8080/web/positionreqlist/35/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "action" : "deletePositionReqList"
+  }
+}
+
+settings {
+  encodeUrl: true
+}
