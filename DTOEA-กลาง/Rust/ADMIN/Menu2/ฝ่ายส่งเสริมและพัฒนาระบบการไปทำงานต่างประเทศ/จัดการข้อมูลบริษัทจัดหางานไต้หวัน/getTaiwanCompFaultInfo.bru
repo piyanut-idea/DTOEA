@@ -1,0 +1,15 @@
+meta {
+  name: getTaiwanCompFaultInfo
+  type: http
+  seq: 2
+}
+
+get {
+  url: http://apiserver:8090/admin/taiwancompfault
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}
