@@ -1,0 +1,25 @@
+meta {
+  name: ส่งกลับให้แก้ไข
+  type: http
+  seq: 1
+}
+
+put {
+  url: http://apiserver:8080/admin/recruit/1/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "actiontype": "approve",
+    "result": 3,
+    "ckdoc": 2,
+    "remark": "ข้อมูลไม่ครบถ้วน"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
