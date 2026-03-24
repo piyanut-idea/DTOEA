@@ -1,18 +1,18 @@
 meta {
   name: รายการคำขอ
   type: http
-  seq: 5
+  seq: 6
 }
 
 get {
-  url: http://apiserver:8090/admin/request?s_reqdate= 2026-03-17T00:00:00Z &e_reqdate= 2026-03-17T23:59:59Z 
+  url: http://apiserver:8090/admin/request?s_reqdate= 2026-03-17T00:00:00Z &e_reqdate= 2026-03-17T23:59:59Z
   body: none
   auth: inherit
 }
 
 params:query {
-  s_reqdate:  2026-03-17T00:00:00Z 
-  e_reqdate:  2026-03-17T23:59:59Z 
+  s_reqdate: 2026-03-17T00:00:00Z
+  e_reqdate: 2026-03-17T23:59:59Z
   ~reqstatus: 1
   ~"considerby ": รหัสเจ้าหน้าที่พิจจารณา
   ~idlist: 1,2
