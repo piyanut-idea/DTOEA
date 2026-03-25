@@ -1,0 +1,33 @@
+meta {
+  name: เลือกรายการเอกสารแนบในการสมัคร
+  type: http
+  seq: 11
+}
+
+put {
+  url: http://apiserver:8080/admin/mgmtrecruit/1/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {  
+      "actiontype": "mgmtrecruitdoc",
+      "documentlist": [
+        {"did": 37, "status": "1", "require" : 1},
+        {"did": 144, "status": "1", "require" : 0},
+        {"did": 38, "status": "1", "require" : 1},
+        {"did": 122, "status": "1", "require" : 1},
+        {"did": 217, "status": "0", "require" : null},
+        {"did": 145, "status": "1", "require" : 0},
+        {"did": 147, "status": "1", "require" : 0},
+        {"did": 148, "status": "1", "require" : 0},
+        {"did": 80, "status": "1", "require" : 0}
+      ]
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

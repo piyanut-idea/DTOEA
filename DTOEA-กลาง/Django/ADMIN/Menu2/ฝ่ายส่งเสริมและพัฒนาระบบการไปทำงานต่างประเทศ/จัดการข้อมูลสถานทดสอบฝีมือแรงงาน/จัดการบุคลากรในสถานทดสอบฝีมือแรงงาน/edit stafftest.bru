@@ -1,0 +1,28 @@
+meta {
+  name: edit stafftest
+  type: http
+  seq: 6
+}
+
+put {
+  url: http://apiserver:8080/admin/stafftest/1/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "action": "edit",
+    "tpid": 5101,
+    "fullname": "ทดสอบ ที่นี่จ้ะ (แก้ไข)",
+    "idcard": "1234567890123",
+    "status": 1,
+    "canceldate": null,
+    "coutid_list": [5001]
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

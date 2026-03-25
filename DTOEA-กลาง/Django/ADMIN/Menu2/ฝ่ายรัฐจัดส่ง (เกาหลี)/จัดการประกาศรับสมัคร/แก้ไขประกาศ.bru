@@ -1,0 +1,76 @@
+meta {
+  name: แก้ไขประกาศ
+  type: http
+  seq: 3
+}
+
+put {
+  url: http://apiserver:8080/admin/propertykoreadtl/1/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "projname": "ชื่อโปรเจค",
+    "typean": 2,
+    "episode": 1,
+    "dtlyear": 2025,
+    "status": 1,
+    "showdate": "2025-10-01",
+    "recruitdegreelist": [
+      {"dgid": 2},
+      {"dgid": 3}
+    ],
+    "startreg": "2025-10-05",
+    "endreg": "2025-11-10",
+    "typereg": 3,
+    "stimereg": 5,
+    "etimereg": 22,
+    "endconsider": "2025-11-05",
+    "endsendback": "2025-11-01",
+    "typeedit": 1,
+    //"stimeedit": 4,
+    //"etimeedit": 20,
+    "korealocationlist": [
+      {
+        "pvid": 32,
+        "startnum": 101,
+        "ord": 1
+      }
+    ],
+    "free": 1000,
+    //"endpay": "",
+    "refund": 2,
+    //"refundnum": "",
+    "statuscan": 1,
+    "typereject": 1,
+    "typecancel": 1,
+    "passtestlang": "2025-12-01",
+    "testlang": "2025-12-03",
+    "addtestlang": "กรอกข้อมูลเพิ่มเติม",
+    "testnum": 10,
+    "testscore": 100,
+    "readnum": 20,
+    "readscore": 5,
+    "listennum": 20,
+    "listenscore": 5,
+    "restestlang": "2025-12-05",
+    "testskill": "2025-12-05",
+    "stestskill": "2025-12-05",
+    "etestskill": "2025-12-05",
+    "resstskill": "2025-12-05",
+    "koreaseekerlist": [
+      {
+        "foreigner": "ชื่อ",
+        "gender": 1,
+        "filename": "document.pdf"
+      }
+    ]
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

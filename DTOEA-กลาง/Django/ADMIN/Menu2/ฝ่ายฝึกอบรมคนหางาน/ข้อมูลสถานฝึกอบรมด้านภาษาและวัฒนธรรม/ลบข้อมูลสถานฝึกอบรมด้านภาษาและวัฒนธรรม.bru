@@ -1,0 +1,23 @@
+meta {
+  name: ลบข้อมูลสถานฝึกอบรมด้านภาษาและวัฒนธรรม
+  type: http
+  seq: 8
+}
+
+put {
+  url: http://apiserver:8080/admin/ccenter/1/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "action": "delete",
+      "mar": 1
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

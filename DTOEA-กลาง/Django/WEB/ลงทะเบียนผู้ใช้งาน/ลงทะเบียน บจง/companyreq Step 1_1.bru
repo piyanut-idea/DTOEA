@@ -1,11 +1,11 @@
 meta {
   name: companyreq Step 1_1
   type: http
-  seq: 5
+  seq: 6
 }
 
 put {
-  url: http://apiserver:8080/web/companyreq/11/
+  url: http://apiserver:8080/web/companyreq/ 1/
   body: json
   auth: inherit
 }
@@ -13,9 +13,10 @@ put {
 body:json {
   {
       "action" : "regiterAgentStep1",
+      "reqid" : 14,
       "rtid" : 101,
       "ctype" : 1 ,
-      "comcode" : "1105552005704" ,
+      "comcode" : "0105552005702" ,
       "nameth" : "บริษัทจัดหางานเจ.ไอ.เอ็น อินเตอร์เนชั่นแนล จำกัด" ,
       "nameen" : "J.I.N INTERNATIONAL RECRUITMENT CO., LTD." ,
       "agentnameth" : "บริษัทจัดหางาน เจ.ไอ.เอ็น อินเตอร์เนชั่นแนล จำกัด" ,
@@ -43,7 +44,7 @@ body:json {
       "picname" : "picname.jpg",
       "birthdate" : "1990-09-02",
       "cardtype" : 1,
-      "idcard" : "1100100474375",
+      "idcard" : "1200100470002",
       "cardissue" : "2023-09-02",
       "cardexp" : "2033-09-02",
       "ntid" : 1,
@@ -55,8 +56,8 @@ body:json {
       "sdtidcode" : 810103,
       "postcode" : "10302",
       "tel" : "0998987766",
-      "email" : "aumail5@gmail.com",
-      "sameperson" : 1,
+      "email" : "aumail1@gmail.com",
+      "sameperson" : 0,
       "dpfid" : 1,
       "dfnameth" : "ทดสอบเจ้าหน้าที่",
       "dlnameth" : "ทดสอบนามสกุลเจ้าหน้าที่",
@@ -65,7 +66,7 @@ body:json {
       "dpicname" : "picname.jpg",
       "dbirthdate" : "1990-09-02",
       "dcardtype" : 1,
-      "didcard" : "1100100474376",
+      "didcard" : "1200100470003",
       "dcardissue" : "2023-09-02",
       "dcardexp" : "2033-09-02",
       "dntid" : 1,
@@ -77,9 +78,9 @@ body:json {
       "dsdtidcode" : 810103,
       "dpostcode" : "10302",
       "dtel" : "0998987766",
-      "demail" : "rep6@gmail.com",
-      "passwd" : "rep1@gmail.com",
-      "confirmpasswd" : "rep1@gmail.com",
+      "demail" : "rep1@gmail.com",
+      "passwd" : "12345678",
+      "confirmpasswd" : "12345678",
       "document_list" : [
           {
               "did" : 313,

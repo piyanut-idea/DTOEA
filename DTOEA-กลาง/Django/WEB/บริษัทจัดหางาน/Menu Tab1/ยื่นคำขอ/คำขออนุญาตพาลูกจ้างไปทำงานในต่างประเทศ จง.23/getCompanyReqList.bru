@@ -1,0 +1,20 @@
+meta {
+  name: getCompanyReqList
+  type: http
+  seq: 10
+}
+
+get {
+  url: http://apiserver:8090/web/companyreq?reqid=15
+  body: none
+  auth: inherit
+}
+
+params:query {
+  reqid: 15
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

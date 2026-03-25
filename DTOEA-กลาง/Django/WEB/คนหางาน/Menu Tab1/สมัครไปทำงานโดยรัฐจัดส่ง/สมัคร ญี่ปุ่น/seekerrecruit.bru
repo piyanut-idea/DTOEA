@@ -1,0 +1,21 @@
+meta {
+  name: seekerrecruit
+  type: http
+  seq: 11
+}
+
+get {
+  url: http://apiserver:8090/web/seekerrecruit?rcid=1&lgbit=2
+  body: none
+  auth: inherit
+}
+
+params:query {
+  rcid: 1
+  lgbit: 2
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

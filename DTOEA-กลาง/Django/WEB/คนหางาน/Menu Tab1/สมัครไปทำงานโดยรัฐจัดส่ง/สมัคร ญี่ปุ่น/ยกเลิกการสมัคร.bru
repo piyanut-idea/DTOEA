@@ -1,0 +1,23 @@
+meta {
+  name: ยกเลิกการสมัคร
+  type: http
+  seq: 10
+}
+
+put {
+  url: http://apiserver:8080/web/recruit/1/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "actiontype": "recruit-cancel",
+    "remark": "เหตุผลการยกเลิกคำขอ"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

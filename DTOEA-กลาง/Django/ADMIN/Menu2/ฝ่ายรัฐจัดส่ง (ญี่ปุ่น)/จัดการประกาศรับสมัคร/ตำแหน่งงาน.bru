@@ -1,0 +1,20 @@
+meta {
+  name: ตำแหน่งงาน
+  type: http
+  seq: 6
+}
+
+get {
+  url: http://apiserver:8090/admin/positionjapan?mrid=1
+  body: none
+  auth: inherit
+}
+
+params:query {
+  mrid: 1
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

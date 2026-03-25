@@ -1,0 +1,24 @@
+meta {
+  name: โอนงานให้เจ้าหน้าที่
+  type: http
+  seq: 1
+}
+
+put {
+  url: http://apiserver:8080/admin/recruit/1/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "actiontype": "transfer",
+    "rcidlist": [1, 2, 3], //id recruitinfo 
+    "ojid": 1 //id เจ้าหน้าที่ปลายทาง
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

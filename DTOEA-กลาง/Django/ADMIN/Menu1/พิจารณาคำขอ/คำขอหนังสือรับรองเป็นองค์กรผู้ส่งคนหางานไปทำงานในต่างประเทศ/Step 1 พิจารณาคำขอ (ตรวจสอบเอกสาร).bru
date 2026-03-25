@@ -1,0 +1,25 @@
+meta {
+  name: Step 1 พิจารณาคำขอ (ตรวจสอบเอกสาร)
+  type: http
+  seq: 1
+}
+
+put {
+  url: http://apiserver:8080/admin/request/3/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "action" : "approve",
+      "apptype" : 1, //1:เจ้าหน้าที่พิจสนณา
+      "appstatus" : 2, //1:อนุมัติพิจารณา 2:ส่งเรื่องกลับ 3:คืนคำขอ
+      "description" : "เหตุผลขอแก้ไขหรือคืนคำขอ" //เหตุผลการประกอบการพิจารณา
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

@@ -1,0 +1,30 @@
+meta {
+  name: editGroup
+  type: http
+  seq: 2
+}
+
+put {
+  url: http://apiserver:8080/admin/group/104/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "action": "edit_group",
+      "name": "Test Group Edited",
+      "description": "Updated description",
+      "grouptype": 2,
+      "permissionlist": [
+          {"id": "1010000000"},
+          {"id": "1040000000"}
+      ]
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

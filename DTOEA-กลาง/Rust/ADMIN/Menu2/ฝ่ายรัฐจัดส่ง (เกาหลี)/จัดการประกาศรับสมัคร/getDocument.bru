@@ -1,0 +1,16 @@
+meta {
+  name: getDocument
+  type: http
+  seq: 4
+}
+
+get {
+  url: http://apiserver:8090/admin/document
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
