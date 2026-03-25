@@ -1,0 +1,16 @@
+meta {
+  name: ตำแหน่งงาน
+  type: http
+  seq: 7
+}
+
+get {
+  url: http://apiserver:8080/admin/job/
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

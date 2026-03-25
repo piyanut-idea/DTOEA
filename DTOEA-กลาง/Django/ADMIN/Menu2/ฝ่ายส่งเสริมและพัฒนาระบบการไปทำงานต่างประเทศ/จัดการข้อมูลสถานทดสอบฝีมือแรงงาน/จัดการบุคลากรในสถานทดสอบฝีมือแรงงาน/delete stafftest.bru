@@ -1,0 +1,24 @@
+meta {
+  name: delete stafftest
+  type: http
+  seq: 4
+}
+
+put {
+  url: http://apiserver:8080/admin/stafftest/1/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "action": "delete",
+      "tpid": 5101
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

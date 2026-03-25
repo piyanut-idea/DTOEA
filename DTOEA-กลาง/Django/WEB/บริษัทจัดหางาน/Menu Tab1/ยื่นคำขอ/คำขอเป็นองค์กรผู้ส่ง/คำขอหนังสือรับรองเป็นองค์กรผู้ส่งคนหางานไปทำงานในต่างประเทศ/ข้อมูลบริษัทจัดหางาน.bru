@@ -1,0 +1,20 @@
+meta {
+  name: ข้อมูลบริษัทจัดหางาน
+  type: http
+  seq: 1
+}
+
+get {
+  url: http://apiserver:8080/web/companyreq?id=1
+  body: none
+  auth: inherit
+}
+
+params:query {
+  id: 1
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

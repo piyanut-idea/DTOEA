@@ -1,0 +1,20 @@
+meta {
+  name: getRecruittTypeDocList
+  type: http
+  seq: 3
+}
+
+get {
+  url: http://apiserver:8090/admin/recruitttypedoc?rantype=2
+  body: none
+  auth: inherit
+}
+
+params:query {
+  rantype: 2
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

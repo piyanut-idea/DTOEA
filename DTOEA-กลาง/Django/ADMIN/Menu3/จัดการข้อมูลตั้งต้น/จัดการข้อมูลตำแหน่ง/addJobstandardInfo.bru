@@ -1,0 +1,27 @@
+meta {
+  name: addJobstandardInfo
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://apiserver:8080/admin/jobstandardinfo/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "action": "add",
+    "jsgid": 58,
+    "codename": "TST",
+    "nameen": "testjobstandard",
+    "nameth": "ทดสอบสาขา",
+    "ord": 1
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

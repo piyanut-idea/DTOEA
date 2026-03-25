@@ -1,0 +1,20 @@
+meta {
+  name: Step 2 รายการประวัติการส่งคำขอกลับแก้ไข
+  type: http
+  seq: 7
+}
+
+get {
+  url: http://apiserver:8080/web/messageinfo?msgtype=1
+  body: none
+  auth: inherit
+}
+
+params:query {
+  msgtype: 1
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

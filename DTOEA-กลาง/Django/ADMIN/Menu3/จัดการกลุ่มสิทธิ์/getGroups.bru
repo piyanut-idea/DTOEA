@@ -1,0 +1,21 @@
+meta {
+  name: getGroups
+  type: http
+  seq: 5
+}
+
+get {
+  url: http://apiserver:8080/admin/group/?page_size=15
+  body: none
+  auth: inherit
+}
+
+params:query {
+  page_size: 15
+  ~subname: หางาน
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

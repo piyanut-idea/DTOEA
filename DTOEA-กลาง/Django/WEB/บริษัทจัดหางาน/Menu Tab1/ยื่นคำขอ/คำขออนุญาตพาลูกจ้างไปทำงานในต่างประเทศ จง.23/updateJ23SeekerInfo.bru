@@ -1,0 +1,87 @@
+meta {
+  name: updateJ23SeekerInfo
+  type: http
+  seq: 4
+}
+
+put {
+  url: http://apiserver:8080/web/companyreq/15/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  // {
+  //     "action": "updateJ23SeekerInfo",
+  //     "sojid": 118,
+  //     "height": 170,
+  //     "weight": 65,
+  //     "ctaddressth": "123 ที่อยู่ติดต่อ",
+  //     "ctaddressen": "123 Contact Address",
+  //     "ctpvid": 1,
+  //     "ctddtid": 1,
+  //     "ctsdtid": 1,
+  //     "ctpostcode": "10110",
+  //     "mobile1": "0812345678",
+  //     "passportno": "AA123456",
+  //     "issuedate": "2023-01-01",
+  //     "expdate": "2028-01-01",
+  //     "lastpos": "Engineer",
+  //     "empyear": 1,
+  //     "empmonth": 6,
+  //     "empday": 0,
+  //     "startjob": "2026-06-01",
+  //     "endjob": "2027-12-01",
+  //     "salarylocal": 15000,
+  //     "salaryforeign": 800,
+  //     "allowancetype": 1,
+  //     "allowance": 100,
+  //     "dayamount": 30,
+  //     "document_list": [
+  //         {"did": 38, "filename": "passport.pdf"},
+  //         {"did": 39, "filename": "medical.pdf"},
+  //         {"did": 104, "filename": "contract.pdf"},
+  //         {"did": 105, "filename": "insurance.pdf"}
+  //     ]
+  // }
+  
+  {
+      "action": "updateJ23SeekerInfo",
+      "sojid": 120,
+      "height": 170,
+      "weight": 65,
+      "ctaddressth": "123 ที่อยู่ติดต่อ",
+      "ctaddressen": "123 Contact Address",
+      "ctpvid": 1,
+      "ctddtid": 1,
+      "ctsdtid": 1,
+      "ctpostcode": "10110",
+      "mobile1": "0812345678",
+      "passportno": "BB654321",
+      "issuedate": "2023-01-01",
+      "expdate": "2028-01-01",
+      "lastpos": "Engineer",
+      "empyear": 1,
+      "empmonth": 6,
+      "empday": 0,
+      "startjob": "2026-06-01",
+      "endjob": "2027-12-01",
+      "salarylocal": 15000,
+      "salaryforeign": 800,
+      "allowancetype": 1,
+      "allowance": 100,
+      "dayamount": 30,
+      "document_list": [
+          {"did": 38, "filename": "passport.pdf"},
+          {"did": 39, "filename": "medical.pdf"},
+          {"did": 104, "filename": "contract.pdf"},
+          {"did": 105, "filename": "insurance.pdf"}
+      ]
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

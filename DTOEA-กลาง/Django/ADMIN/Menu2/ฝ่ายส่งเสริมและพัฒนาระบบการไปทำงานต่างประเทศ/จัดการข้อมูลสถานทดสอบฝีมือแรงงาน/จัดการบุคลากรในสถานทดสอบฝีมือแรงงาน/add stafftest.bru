@@ -1,0 +1,28 @@
+meta {
+  name: add stafftest
+  type: http
+  seq: 5
+}
+
+post {
+  url: http://apiserver:8080/admin/stafftest/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "action": "add",
+    "tpid": 5101,
+    "fullname": "ืทดสอบ ตรงนี้",
+    "idcard": "1234567890112",
+    "status": 1,
+    "canceldate": null,
+    "coutid_list": [5001]
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

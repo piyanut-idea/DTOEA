@@ -1,0 +1,46 @@
+meta {
+  name: addTaiwanCompInfo
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://apiserver:8080/admin/taiwancomp/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "action": "add",
+      "pfid": 1,
+      "cntid": 1066,
+      "comname": "Taiwan Company Co., Ltd.",
+      "fname": "พ่อหนุ่มไต้หวัน",
+      "lname": "ทดสอบ",
+      "lcno": "TW-2026-001",
+      "lcdate": "2023-03-15",
+      "lcexpdate": "2028-03-15",
+      "lcoffice": 1,
+      "registno": "REG-1234-1234",
+      "registdate": "2023-01-01T00:00:00",
+      "address": "123 Taipei Road",
+      "postcode": "11111",
+      "tel": "0212345678",
+      "fax": "0212345679",
+      "email": "contact@taiwancomp.com",
+      "numseeker": 50,
+      "numtranslate": 5,
+      "allowtype": 1,
+      "allow": 1,
+      "issueno": "ISS-001",
+      "lcpostdate": "2023-01-15T00:00:00",
+      "status": 1 // ยังไม่มี id สำหรับ "กำลังดำเนินการ" เลยใช้ปกติไปก่อน
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

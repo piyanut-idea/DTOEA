@@ -1,0 +1,22 @@
+meta {
+  name: getUserGroup
+  type: http
+  seq: 4
+}
+
+get {
+  url: http://apiserver:8080/admin/usergroup/?page_size=15&grp_name=คนหางาน&fullname=แอดมิน ทดสอบ
+  body: none
+  auth: inherit
+}
+
+params:query {
+  page_size: 15
+  grp_name: คนหางาน
+  fullname: แอดมิน ทดสอบ
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

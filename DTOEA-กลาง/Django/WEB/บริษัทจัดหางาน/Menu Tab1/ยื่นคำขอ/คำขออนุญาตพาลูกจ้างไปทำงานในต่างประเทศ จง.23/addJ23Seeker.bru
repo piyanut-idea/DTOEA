@@ -1,0 +1,28 @@
+meta {
+  name: addJ23Seeker
+  type: http
+  seq: 2
+}
+
+put {
+  url: http://apiserver:8080/web/companyreq/15/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "action": "addJ23Seeker",
+      "actby": 1,
+      "seeker_list": [
+          {"ojid": 118},
+          {"ojid": 120}
+      ]
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

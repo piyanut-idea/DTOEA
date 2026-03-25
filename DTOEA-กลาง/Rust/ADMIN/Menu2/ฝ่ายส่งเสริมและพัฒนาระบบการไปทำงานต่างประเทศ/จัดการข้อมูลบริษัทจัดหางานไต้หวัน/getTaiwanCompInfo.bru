@@ -1,0 +1,25 @@
+meta {
+  name: getTaiwanCompInfo
+  type: http
+  seq: 1
+}
+
+get {
+  url: http://apiserver:8090/admin/taiwancomp?status=1&comname=taiwan&fname=ไต้หวัน&lcno=TW-2026-001&registno=REG-1234-1234
+  body: none
+  auth: inherit
+}
+
+params:query {
+  status: 1
+  comname: taiwan
+  fname: ไต้หวัน
+  lcno: TW-2026-001
+  registno: REG-1234-1234
+  ~cntid: 1066
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
