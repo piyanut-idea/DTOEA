@@ -1,0 +1,34 @@
+info:
+  name: companyreqlist เลือกคน Step 2
+  type: http
+  seq: 3
+
+http:
+  method: PUT
+  url: http://apiserver:8080/web/companyreqlist/9/
+  body:
+    type: json
+    data: "{\r
+
+      \    \"action\" : \"requestFundRegisterStep2\",\r
+
+      \    \"refreqid\" : 5275,\r
+
+      \    \"seeker_list\" : [\r
+
+      \        {\r
+
+      \            \"ojid\" : 101\r
+
+      \        }    \r
+
+      \    ]\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

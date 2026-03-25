@@ -1,17 +1,17 @@
 meta {
-  name: companyreqlist
+  name: companyreq
   type: http
-  seq: 3
+  seq: 2
 }
 
 get {
-  url: http://apiserver:8080/web/companyreq/
+  url: http://apiserver:8080/web/companyreq/?id=5
   body: text
   auth: inherit
 }
 
 params:query {
-  ~peoid: 100
+  id: 5
   ~peoidlist_str: 100
   ~apprvtype: 1
   ~ckfin: wwwwww

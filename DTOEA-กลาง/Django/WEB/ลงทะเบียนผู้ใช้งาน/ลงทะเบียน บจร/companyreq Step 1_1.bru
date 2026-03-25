@@ -1,11 +1,11 @@
 meta {
-  name: companyreq Step 1
+  name: companyreq Step 1_1
   type: http
   seq: 5
 }
 
-post {
-  url: http://apiserver:8080/web/companyreq/
+put {
+  url: http://apiserver:8080/web/companyreq/1/
   body: json
   auth: inherit
 }
@@ -13,10 +13,9 @@ post {
 body:json {
   {
       "action" : "regiterAgentStep1",
-      "rtid" : 101,
-      "tsubmit" : 1 ,
+      "rtid" : 801,
       "ctype" : 1 ,
-      "comcode" : "1105552005703" ,
+      "comcode" : "0105552005702" ,
       "nameth" : "บริษัทจัดหางานเจ.ไอ.เอ็น อินเตอร์เนชั่นแนล จำกัด" ,
       "nameen" : "J.I.N INTERNATIONAL RECRUITMENT CO., LTD." ,
       "agentnameth" : "บริษัทจัดหางาน เจ.ไอ.เอ็น อินเตอร์เนชั่นแนล จำกัด" ,
@@ -29,7 +28,6 @@ body:json {
       "compostcode" : "10302" ,
       "comtel" : "081-8679954" ,
       // "comfax" : "081-8679954" ,
-
       "comemail" : "comemail@gmail.com" ,
       // "peoid" : 112 ,
       "registdate" : "2025-10-12" ,
@@ -45,11 +43,11 @@ body:json {
       "picname" : "picname.jpg",
       "birthdate" : "1990-09-02",
       "cardtype" : 1,
-      "idcard" : "1200100474370",
+      "idcard" : "1200100470002",
       "cardissue" : "2023-09-02",
       "cardexp" : "2033-09-02",
       "ntid" : 1,
-      // "rlgid" : 1,
+      "rlgid" : 1,
       "addressth" : "เลขที่ 209/91 หมู่ที่ 6",
       "addressen" : "No.209/91 Moo 6",
       "pvidcode" : 81,
@@ -57,7 +55,7 @@ body:json {
       "sdtidcode" : 810103,
       "postcode" : "10302",
       "tel" : "0998987766",
-      "email" : "aumail1@gmail.com",
+      "email" : "aumail2@gmail.com",
       "sameperson" : 0,
       "dpfid" : 1,
       "dfnameth" : "ทดสอบเจ้าหน้าที่",
@@ -67,11 +65,11 @@ body:json {
       "dpicname" : "picname.jpg",
       "dbirthdate" : "1990-09-02",
       "dcardtype" : 1,
-      "didcard" : "1200100470005",
+      "didcard" : "1200100470003",
       "dcardissue" : "2023-09-02",
       "dcardexp" : "2033-09-02",
       "dntid" : 1,
-      // "drlgid" : 1,
+      "drlgid" : 1,
       "daddressth" : "เลขที่ 209/91 หมู่ที่ 6",
       "daddressen" : "No.209/91 Moo 6",
       "dpvidcode" : 81,
@@ -79,31 +77,9 @@ body:json {
       "dsdtidcode" : 810103,
       "dpostcode" : "10302",
       "dtel" : "0998987766",
-      "demail" : "rep2@gmail.com",
+      "demail" : "rep3@gmail.com",
       "passwd" : "rep1@gmail.com",
-      "confirmpasswd" : "rep1@gmail.com",
-      "document_list" : [
-          {
-              "did" : 313,
-              "filename" : "filename.pdf",
-              "uploaddate" : "2023-09-02T15:13:04.435521+07:00"
-          },        
-          {
-              "did" : 2,
-              "filename" : "filename2.pdf",
-              "uploaddate" : "2023-09-02T15:13:04.435521+07:00"
-          },        
-          {
-              "did" : 3,
-              "filename" : "filename3.pdf",
-              "uploaddate" : "2023-09-02T15:13:04.435521+07:00"
-          },        
-          {
-              "did" : 40,
-              "filename" : "filename3.pdf",
-              "uploaddate" : "2023-09-02T15:13:04.435521+07:00"
-          }
-      ]
+      "confirmpasswd" : "rep1@gmail.com"
    }
 }
 

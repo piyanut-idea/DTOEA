@@ -1,0 +1,128 @@
+info:
+  name: Set เจ้าหน้าที่ให้รองรับคำขอฯ
+  type: http
+  seq: 4
+
+http:
+  method: PUT
+  url: http://apiserver:8080/admin/admindtl/105/
+  body:
+    type: json
+    data: "{\r
+
+      \    \"pfid\" : 1,\r
+
+      \    \"fnameth\" : \"ทดสอบเจ้าหน้าที่\",\r
+
+      \    \"lnameth\" : \"ทดสอบนามสกุลเจ้าหน้าที่\",\r
+
+      \    \"fnameen\" : \"testerad\",\r
+
+      \    \"lnameen\" : \"lnamead\",\r
+
+      \    \"email\" : \"piyanut.work@gmail.com\",\r
+
+      \    \"idcard\" : \"1200100470000\",\r
+
+      \    \"tel\" : \"0887768011\",\r
+
+      \    \"peoid\" : 100,\r
+
+      \    \"adposition\" : 1,\r
+
+      \    \"gpid\" : 1,\r
+
+      \    \"position1\" : \"นักวิชาการแรงงานชำนาญการ\",\r
+
+      \    // \"positionen1\" : \"Labour Specialist, Professional\",\r
+
+      \    // \"position2\" : \"ปฏิบัติหน้าที่แทนจัดหางานจังหวัด\",\r
+
+      \    // \"positionen2\" : \"\",\r
+
+      \    \"apprvtype1\" : 1,\r
+
+      \    \"apprvtype2\" : 2,\r
+
+      \    \"bc1\" : 2,\r
+
+      \    \"pincode\" : \"\",\r
+
+      \    \"signname\" : \"signname3.pdf\",\r
+
+      \    \"directorstatus\" : 0,\r
+
+      \    \"ckfin\" : 0,\r
+
+      \    // \"uploaddate\" : \"2023-09-02T15:13:04.435521+07:00\",\r
+
+      \    \"status\" : 1,\r
+
+      \    \"departmentinfo_list1\" : [\r
+
+      \        {\r
+
+      \            \"dpid\" : 8\r
+
+      \        },        \r
+
+      \        {\r
+
+      \            \"dpid\" : 9\r
+
+      \        },        \r
+
+      \        {\r
+
+      \            \"dpid\" : 10\r
+
+      \        },        \r
+
+      \        {\r
+
+      \            \"dpid\" : 17\r
+
+      \        }        \r
+
+      \        \r
+
+      \    ],\r
+
+      \    \"departmentinfo_list2\" : [\r
+
+      \        {\r
+
+      \            \"dpid\" : 11\r
+
+      \        },        \r
+
+      \        {\r
+
+      \            \"dpid\" : 12\r
+
+      \        },        \r
+
+      \        {\r
+
+      \            \"dpid\" : 13\r
+
+      \        },        \r
+
+      \        {\r
+
+      \            \"dpid\" : 14\r
+
+      \        }        \r
+
+      \        \r
+
+      \    ]\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
