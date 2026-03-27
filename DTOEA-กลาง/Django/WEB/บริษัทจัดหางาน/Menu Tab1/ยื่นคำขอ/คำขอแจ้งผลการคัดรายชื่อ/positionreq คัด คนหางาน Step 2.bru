@@ -1,0 +1,42 @@
+meta {
+  name: positionreq คัด คนหางาน Step 2
+  type: http
+  seq: 3
+}
+
+put {
+  url: http://apiserver:8080/web/positionreq/5/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "action" : "addSeekerInform",
+      "seeker_list" : [
+          {
+              "sojid" : 101,
+              "infostatus" : 0
+          },
+          {
+              "sojid" : 102,
+              "infostatus" : 0
+          }
+      ],
+      "fail_seeker_list" : [
+          {
+              "sojid" : 103,
+              "infostatus" :1
+          }/*,
+          {
+              "sojid" : 108,
+              "infostatus" :1
+          }*/
+      ]
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

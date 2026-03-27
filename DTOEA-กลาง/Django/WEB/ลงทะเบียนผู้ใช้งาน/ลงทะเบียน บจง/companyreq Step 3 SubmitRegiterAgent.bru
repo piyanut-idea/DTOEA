@@ -1,0 +1,22 @@
+meta {
+  name: companyreq Step 3 SubmitRegiterAgent
+  type: http
+  seq: 7
+}
+
+put {
+  url: http://apiserver:8080/web/companyreq/11/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "action" : "SubmitRegiterAgent"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

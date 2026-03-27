@@ -1,0 +1,24 @@
+meta {
+  name: บันทึกผลการพิจารณา ไม่อนุมัติ
+  type: http
+  seq: 3
+}
+
+put {
+  url: http://apiserver:8080/admin/recruit/1/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "actiontype": "approve",
+    "result": 2,
+    "remark": "เหตุผลประกอบการพิจารณา"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

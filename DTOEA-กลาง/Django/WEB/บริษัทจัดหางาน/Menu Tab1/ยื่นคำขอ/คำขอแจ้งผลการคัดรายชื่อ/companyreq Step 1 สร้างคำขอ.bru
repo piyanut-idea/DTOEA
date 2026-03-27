@@ -1,0 +1,25 @@
+meta {
+  name: companyreq Step 1 สร้างคำขอ
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://apiserver:8080/web/companyreq/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "action" : "requestInformStep1",
+      "rtid" : 107,
+      "cid" : 5267,
+      "reqid" : 5268
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

@@ -1,0 +1,25 @@
+meta {
+  name: อนุมัติ
+  type: http
+  seq: 3
+}
+
+put {
+  url: http://apiserver:8080/admin/recruit/3/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "actiontype": "approve",
+    "result": 1,
+    "ckdoc": 1,
+    "recpaystatus": 2
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

@@ -5,14 +5,12 @@ meta {
 }
 
 get {
-  url: http://apiserver:8080/admin/agentdtl?idcard=4101400027952&bc1=6
+  url: http://apiserver:8090/admin/agentdtl
   body: text
   auth: inherit
 }
 
 params:query {
-  idcard: 4101400027952
-  bc1: 6
   ~name: 
   ~status: 1
   ~cid: 5262
@@ -21,6 +19,8 @@ params:query {
   ~comtype: 1
   ~cidlist: 5267
   ~oj_cid_ctype: 4
+  ~idcard: 4101400027952
+  ~bc1: 2
 }
 
 body:text {
