@@ -1,0 +1,25 @@
+meta {
+  name: login web
+  type: http
+  seq: 5
+}
+
+post {
+  url: http://apiserver:8080/login/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "login"    : "9323536004149",
+      "passwd" : "12345678",
+      "logintype" : "2",
+      "location" : "mobile"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
