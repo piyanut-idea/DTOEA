@@ -1,0 +1,23 @@
+meta {
+  name: checkResume
+  type: http
+  seq: 3
+}
+
+get {
+  url: https://test-toea.doe.go.th/toeacontent.php?task=checkResume&sessionid=5qvfb2rgcrwxvcrsxszdmxswjszv9asz&csrftoken=wBHKYH2a5XE6CrmCNrJci6e3icLzQ0PD&token=999
+  body: none
+  auth: none
+}
+
+params:query {
+  task: checkResume
+  sessionid: 5qvfb2rgcrwxvcrsxszdmxswjszv9asz
+  csrftoken: wBHKYH2a5XE6CrmCNrJci6e3icLzQ0PD
+  token: 999
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
