@@ -1,0 +1,23 @@
+meta {
+  name: ยกเลิกการสมัคร
+  type: http
+  seq: 6
+}
+
+put {
+  url: http://apiserver:8080/admin/recruit/1/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "actiontype": "skrecruit-cancel",
+    "reason": null
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

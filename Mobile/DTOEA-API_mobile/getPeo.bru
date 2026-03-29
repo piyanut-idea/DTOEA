@@ -1,0 +1,26 @@
+meta {
+  name: getPeo
+  type: http
+  seq: 7
+}
+
+get {
+  url: https://test-toea.doe.go.th/toeacontent.php?task=getPeo&sessionid=hqcjag6wixcwgaciche5x5yfyf15gcwr&csrftoken=POyN2pGNVW6BRVhk68bAC156LcpPi3eb&token=999&sendTime=20260326190023&typereq=39a
+  body: none
+  auth: inherit
+}
+
+params:query {
+  task: getPeo
+  sessionid: hqcjag6wixcwgaciche5x5yfyf15gcwr
+  csrftoken: POyN2pGNVW6BRVhk68bAC156LcpPi3eb
+  token: 999
+  sendTime: 20260326190023
+  typereq: 39a
+  ~typereq: fund
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

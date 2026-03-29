@@ -1,0 +1,26 @@
+info:
+  name: seekerreqlist Step 1
+  type: http
+  seq: 2
+
+http:
+  method: PUT
+  url: http://apiserver:8080/web/seekerreqlist/31/
+  body:
+    type: json
+    data: "{\r
+
+      \    \"action\" : \"requestSKFundRegisterStep1\",\r
+
+      \    \"rtid\" : 204,\r
+
+      \    \"peoid\" : 100\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

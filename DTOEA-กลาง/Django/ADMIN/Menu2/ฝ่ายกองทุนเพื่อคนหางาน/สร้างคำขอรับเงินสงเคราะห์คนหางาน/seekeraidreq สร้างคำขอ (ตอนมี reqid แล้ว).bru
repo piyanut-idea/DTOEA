@@ -1,0 +1,100 @@
+meta {
+  name: seekeraidreq สร้างคำขอ (ตอนมี reqid แล้ว)
+  type: http
+  seq: 2
+}
+
+put {
+  url: http://apiserver:8080/web/seekeraidreq/11/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "action" : "requestAid",
+      "idcard" : "1200100000003",    
+      "aidsameskinfo": 1,
+      "petitiontype": null,
+      "aididcard": "1200100000003",
+      "aididissuedate": null,
+      "aididexpdate": null,
+      "aidfnameth": "สถิตย์",
+      "aidlnameth": "หงถาวงค์",
+      "aidfnameen": "Satit",
+      "aidlnameen": "Hongtawong",
+      "aidgender": 2,
+      "aidbirthdate": "1990-01-01T00:00:00+07:00",
+      "aidpissueat": "ที่ว่าการอำเภอ",
+      "aidissuedate": "2025-10-01",
+      "aidexpdate": "2035-10-01",
+      "aidheight": "168",
+      "aidweight": "5.2",
+      "aidmobile": null,
+      "aidmobile2": null,
+      "aidtel": "0000000000",
+      "aidemail": null,
+      "aidaddressth": "ทดสอบที่อยู่ 192/3 หมู่ 2",
+      "aidaddressen": null,
+      "aidpvid" : 1,
+      "aidddtid" : 1,
+      "aidsdtid" : 1,
+      "aidpostcode": "81000",
+      "aidsameaddr": 1,
+      "aidcaddressth": "ทดสอบที่อยู่ 192/3 หมู่ 2",
+      "aidcaddressen": null,
+      "aidcpvid" : 1,
+      "aidcddtid" : 1,
+      "aidcdtid" : 1,
+      "aidcpostcode": "81000",
+      "aidsamereqworkinfo" : 0,
+      "aidnbosscomtype": 1,
+      "aidnbosscomcode" : "290837952",
+      "aidnbossfnameen": "shang wang precision industry co.,ltd.",
+      "aidnbossidtid": 5567,
+      "aidnbossaddress": "no.7, lane 236, zhengguang st., yonglong village, taiping dist., taichung city, taiwan r.o.c.",
+      "aidnbosscntid" : 1196,  
+      "aidnbossfcid" : 1,
+      "aidnbosspostcode" : "00000",
+      "aidnbosstel" : "00000",
+      "aidnbossfax" : "00000",
+      "aidnbossemail" : "00000",
+      "aidnjid" : 2001,
+      "aidnempyear" : 1,
+      "aidnempmonth" : 1,
+      "aidnempday" : 1,
+      "aidcause" : 1,
+      "aidcausetrouble" : 1,
+      "aidcausedeath" : 1,
+      "aidcausedeathpurpose" : 1,
+      "aidpeoid" : 100,
+      "document_list" : [
+          {
+              "did" : 313,
+              "filename" : "filename.pdf",
+              "uploaddate" : "2023-09-02T15:13:04.435521+07:00"
+          },        
+          {
+              "did" : 2,
+              "filename" : "filename2.pdf",
+              "uploaddate" : "2023-09-02T15:13:04.435521+07:00"
+          },        
+          {
+              "did" : 3,
+              "filename" : "filename3.pdf",
+              "uploaddate" : "2023-09-02T15:13:04.435521+07:00"
+          },        
+          {
+              "did" : 40,
+              "filename" : "filename3.pdf",
+              "uploaddate" : "2023-09-02T15:13:04.435521+07:00"
+          }
+      ]
+  
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

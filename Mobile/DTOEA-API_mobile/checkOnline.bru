@@ -1,0 +1,26 @@
+meta {
+  name: checkOnline
+  type: http
+  seq: 5
+}
+
+get {
+  url: https://test-toea.doe.go.th/toeacontent.php?task=checkOnline&sessionid=hqcjag6wixcwgaciche5x5yfyf15gcwr&csrftoken=POyN2pGNVW6BRVhk68bAC156LcpPi3eb&token=999&lat=32.5115281&long=34.913735&sendtime=20260326190023
+  body: none
+  auth: inherit
+}
+
+params:query {
+  task: checkOnline
+  sessionid: hqcjag6wixcwgaciche5x5yfyf15gcwr
+  csrftoken: POyN2pGNVW6BRVhk68bAC156LcpPi3eb
+  token: 999
+  lat: 32.5115281
+  long: 34.913735
+  sendtime: 20260326190023
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

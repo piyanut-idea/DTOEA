@@ -1,0 +1,20 @@
+meta {
+  name: oeareq
+  type: http
+  seq: 2
+}
+
+get {
+  url: http://apiserver:8080/web/oeareq/
+  body: none
+  auth: inherit
+}
+
+params:query {
+  ~name: 
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

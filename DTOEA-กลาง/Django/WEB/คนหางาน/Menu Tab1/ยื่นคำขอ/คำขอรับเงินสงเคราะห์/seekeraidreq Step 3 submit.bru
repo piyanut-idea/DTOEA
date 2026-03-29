@@ -1,0 +1,21 @@
+meta {
+  name: seekeraidreq Step 3 submit
+  type: http
+  seq: 5
+}
+
+put {
+  url: http://apiserver:8080/web/seekeraidreq/2/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "action" : "requestAidSubmit"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

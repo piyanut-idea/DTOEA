@@ -1,0 +1,19 @@
+meta {
+  name: seekeraidreq
+  type: http
+  seq: 1
+}
+
+get {
+  url: http://apiserver:8090/web/seekeraidreq?id=1
+  body: json
+  auth: inherit
+}
+
+params:query {
+  id: 1
+}
+
+settings {
+  encodeUrl: true
+}

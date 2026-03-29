@@ -1,0 +1,34 @@
+meta {
+  name: บันทึก Step 1
+  type: http
+  seq: 2
+}
+
+put {
+  url: http://apiserver:8080/web/seekerrecruit/6/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "actiontype": "recruit-step1",
+    "pkid": 1, // ตำแหน่งงาน fk positionKoreaInfo
+    "statuswk": 2, // เคยเดินทางไปประเทศที่สมัคร (1:ไม่เคย/2:เคย)
+    "aliencard": "11111111", // หมายเลขบัตรต่างด้าว (กรณีเคยไปทำงานเกาหลี)
+    "statuslaw": 1, // เคยกระทำผิดกฎหมาย (1:ไม่เคย/2:เคย)
+    //"yearlaw": 2025, // เคยกระทำผิดกฎหมาย เมื่อปี พ.ศ.
+    //"remarklaw": , // สาเหตุกระทำผิดกฎหมาย
+    "eye": 2, // สายตา (1:ปกติ/2:สั้น/3:ยาว)
+    "esid": 3, // ระดับสายตา fk eyeSphereInfo
+    "eyecolor": 1, // สายตาบอดสี (1:ไม่บอดสี/2:บอดสี)
+    "talent": "บินได้", // ความสามารถพิเศษ
+    "residence": 2, // E-9 หรือ E-10 (1:>=5ปี/2:<5ปี)
+    "foreigner": "47xSYHjh5" // เลขใบกาม่า
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

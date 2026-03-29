@@ -1,0 +1,22 @@
+meta {
+  name: ลบประสบการณ์ทำงาน
+  type: http
+  seq: 6
+}
+
+put {
+  url: http://apiserver:8080/web/recruitskexp/2/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "mar" : "1"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

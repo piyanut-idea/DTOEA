@@ -1,0 +1,24 @@
+meta {
+  name: ไม่อนุมัติ
+  type: http
+  seq: 2
+}
+
+put {
+  url: http://apiserver:8080/admin/recruit/1/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "actiontype": "approve",
+    "result": 2,
+    "remark": "ไม่ผ่านเกณฑ์"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

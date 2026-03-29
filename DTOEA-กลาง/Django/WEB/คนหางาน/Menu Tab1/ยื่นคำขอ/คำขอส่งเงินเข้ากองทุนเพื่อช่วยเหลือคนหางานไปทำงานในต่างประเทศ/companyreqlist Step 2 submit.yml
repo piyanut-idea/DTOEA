@@ -1,0 +1,22 @@
+info:
+  name: companyreqlist Step 2 submit
+  type: http
+  seq: 3
+
+http:
+  method: PUT
+  url: http://apiserver:8080/web/seekerreqlist/31/
+  body:
+    type: json
+    data: "{\r
+
+      \    \"action\" : \"requestSKFundRegisterSubmit\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

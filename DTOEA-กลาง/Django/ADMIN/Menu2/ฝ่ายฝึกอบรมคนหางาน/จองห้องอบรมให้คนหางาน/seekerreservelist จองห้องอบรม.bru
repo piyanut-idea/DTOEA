@@ -1,0 +1,39 @@
+meta {
+  name: seekerreservelist จองห้องอบรม
+  type: http
+  seq: 1
+}
+
+put {
+  url: http://apiserver:8080/admin/seekerreservelist/6/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "ojid" : 101,
+      "reservedate" : 1,
+      "periodtime" : 1,
+      "pvid" : 1,
+      "trid" : 5261,
+      "document_list" : [
+              {
+                  "did" : 37,
+                  "filename" : "filename5.pdf"
+              },        
+              {
+                  "did" : 38,
+                  "filename" : "filename2.pdf"
+              },
+              {
+                  "did" : 39,
+                  "filename" : "filename3.pdf"
+              }
+          ]
+  }
+}
+
+settings {
+  encodeUrl: true
+}

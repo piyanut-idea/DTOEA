@@ -1,0 +1,23 @@
+meta {
+  name: getProfile
+  type: http
+  seq: 6
+}
+
+get {
+  url: https://test-toea.doe.go.th/toeacontent.php?task=getProfile&sessionid=hqcjag6wixcwgaciche5x5yfyf15gcwr&csrftoken=POyN2pGNVW6BRVhk68bAC156LcpPi3eb&sendTime=20260326190023
+  body: none
+  auth: inherit
+}
+
+params:query {
+  task: getProfile
+  sessionid: hqcjag6wixcwgaciche5x5yfyf15gcwr
+  csrftoken: POyN2pGNVW6BRVhk68bAC156LcpPi3eb
+  sendTime: 20260326190023
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

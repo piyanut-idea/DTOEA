@@ -1,0 +1,22 @@
+meta {
+  name: กดยกเลิกสมัคร
+  type: http
+  seq: 6
+}
+
+put {
+  url: http://apiserver:8080/web/recruit/6/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "actiontype": "recruit-cancel"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

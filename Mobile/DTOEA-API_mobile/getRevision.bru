@@ -1,0 +1,21 @@
+meta {
+  name: getRevision
+  type: http
+  seq: 1
+}
+
+get {
+  url: https://test-toea.doe.go.th/toeacontent.php?task=getRevision&token=999
+  body: none
+  auth: none
+}
+
+params:query {
+  task: getRevision
+  token: 999
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

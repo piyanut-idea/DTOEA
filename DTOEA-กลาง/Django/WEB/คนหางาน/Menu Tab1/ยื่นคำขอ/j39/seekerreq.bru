@@ -1,0 +1,21 @@
+meta {
+  name: seekerreq
+  type: http
+  seq: 4
+}
+
+get {
+  url: http://apiserver:8090/web/seekerreq/?reqid=1&lgbit=6
+  body: none
+  auth: inherit
+}
+
+params:query {
+  reqid: 1
+  lgbit: 6
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

@@ -1,0 +1,23 @@
+meta {
+  name: checkLogout
+  type: http
+  seq: 4
+}
+
+get {
+  url: https://test-toea.doe.go.th/toeacontent.php?task=checkLogout&sessionid=18dw9u3nnhzs7uavlt0imzjnqfaf40vt&csrftoken=8rafV1tiTMaMnUQti7bo07ThJvDBQTzi&token=999
+  body: none
+  auth: none
+}
+
+params:query {
+  task: checkLogout
+  sessionid: 18dw9u3nnhzs7uavlt0imzjnqfaf40vt
+  csrftoken: 8rafV1tiTMaMnUQti7bo07ThJvDBQTzi
+  token: 999
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

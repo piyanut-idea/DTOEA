@@ -1,0 +1,16 @@
+meta {
+  name: ข้อมูลทั่วไป
+  type: http
+  seq: 5
+}
+
+get {
+  url: http://apiserver:8080/admin/seekerrecruit/
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

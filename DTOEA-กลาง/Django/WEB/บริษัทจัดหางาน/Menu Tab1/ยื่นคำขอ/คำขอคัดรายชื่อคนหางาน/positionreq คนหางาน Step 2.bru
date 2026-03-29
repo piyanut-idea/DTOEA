@@ -1,0 +1,21 @@
+meta {
+  name: positionreq คนหางาน Step 2
+  type: http
+  seq: 9
+}
+
+get {
+  url: http://apiserver:8090/web/seeker
+  body: json
+  auth: inherit
+}
+
+params:query {
+  ~workstatus: 17
+  ~cid: 5268
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

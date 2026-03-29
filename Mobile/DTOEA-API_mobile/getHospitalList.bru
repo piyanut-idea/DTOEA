@@ -1,0 +1,25 @@
+meta {
+  name: getHospitalList
+  type: http
+  seq: 12
+}
+
+get {
+  url: https://test-toea.doe.go.th/toeacontent.php?task=getHospitalList&sendTime=20260326190023&sessionid=hqcjag6wixcwgaciche5x5yfyf15gcwr&csrftoken=POyN2pGNVW6BRVhk68bAC156LcpPi3eb&page=1
+  body: none
+  auth: inherit
+}
+
+params:query {
+  task: getHospitalList
+  sendTime: 20260326190023
+  sessionid: hqcjag6wixcwgaciche5x5yfyf15gcwr
+  csrftoken: POyN2pGNVW6BRVhk68bAC156LcpPi3eb
+  page: 1
+  ~pvid: 32
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

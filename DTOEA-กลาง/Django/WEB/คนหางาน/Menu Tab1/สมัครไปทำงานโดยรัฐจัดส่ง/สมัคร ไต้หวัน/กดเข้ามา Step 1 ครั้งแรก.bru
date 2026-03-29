@@ -1,0 +1,25 @@
+meta {
+  name: กดเข้ามา Step 1 ครั้งแรก
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://apiserver:8080/web/recruit/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      // login เป็นคนหางานก่อน เรียก API
+      "actiontype":"recruit-apply",
+      "ojid": 118, // id ของคนหางาน seekerdtl ที่ login เข้ามา
+      "mrid": 1  // id ของประกาศ mgmtrecruit ไต้หวัน
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
