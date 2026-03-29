@@ -1,0 +1,25 @@
+meta {
+  name: login บริษัท
+  type: http
+  seq: 6
+}
+
+post {
+  url: http://apiserver:8080/login/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "login"    : "3101800737312",
+      "passwd" : "password",
+      "logintype" : "2",
+      "location" : "192.168.197.11"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
