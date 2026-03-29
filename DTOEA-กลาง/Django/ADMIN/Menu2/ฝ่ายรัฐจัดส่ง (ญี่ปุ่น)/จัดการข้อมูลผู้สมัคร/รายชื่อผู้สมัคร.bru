@@ -1,0 +1,27 @@
+meta {
+  name: รายชื่อผู้สมัคร
+  type: http
+  seq: 6
+}
+
+get {
+  url: http://apiserver:8090/admin/skrecruit
+  body: none
+  auth: inherit
+}
+
+params:query {
+  ~rtype: 1
+  ~reqstatus: 1
+  ~"reqcode ": JP69-000001
+  ~s_reqdate: 2026-03-17T00:00:00Z
+  ~e_reqdate: 2026-03-17T23:59:59Z
+  ~req_reqbyseeker_idcard: เลขที่บัตรประชาชน
+  ~req_reqbyseeker_fnameth: ชื่อคนหางาน
+  ~req_reqbyseeker_lnameth: นามสกุลคนหางาน
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
