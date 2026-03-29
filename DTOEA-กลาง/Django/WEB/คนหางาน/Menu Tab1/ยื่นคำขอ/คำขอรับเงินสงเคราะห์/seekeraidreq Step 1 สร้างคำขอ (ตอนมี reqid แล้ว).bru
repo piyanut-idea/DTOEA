@@ -1,11 +1,11 @@
 meta {
   name: seekeraidreq Step 1 สร้างคำขอ (ตอนมี reqid แล้ว)
   type: http
-  seq: 2
+  seq: 3
 }
 
 put {
-  url: http://apiserver:8080/web/seekeraidreq/5/
+  url: http://apiserver:8080/web/seekeraidreq/2/
   body: json
   auth: inherit
 }
@@ -17,21 +17,21 @@ body:json {
       "aidcausetrouble" : 1,
       "aidcausedeath" : 1,
       "aidcausedeathpurpose" : 1,
-      "aidnnid" : 1,
-      "aidorgid" : 1,
-      "aidrlgid" : 1,
-      "aidpissueat" : "ที่ว่าการอำเภอ",
-      "aidpissueatpvid" : 1,
-      "aidissuedate" : "2025-10-01",
-      "aidexpdate" : "2035-10-01",
-      "aidtel" : "0000000000",
-      "aidsameaddr" : 1,
-      "aidcaddressth" : "ทดสอบที่อยู่ 192/3 หมู่ 2",
-      "aidcaddressen" : "test addressen 192/3 Moo.2",
-      "aidcpvid" : 1,
-      "aidcddtid" : 1,
-      "aidcdtid" : 1,
-      "aidcpostcode" : "00000",
+      "nnid" : 1,
+      "orgid" : 1,
+      "rlgid" : 1,
+      "pissueat" : "ที่ว่าการอำเภอ",
+      "pissueatpvid" : 1,
+      "issuedate" : "2025-10-01",
+      "expdate" : "2035-10-01",
+      "tel" : "0000000000",
+      "sameaddr" : 1,
+      "caddressth" : "ทดสอบที่อยู่ 192/3 หมู่ 2",
+      "caddressen" : "test addressen 192/3 Moo.2",
+      "cpvid" : 1,
+      "cddtid" : 1,
+      "cdtid" : 1,
+      "cpostcode" : "00000",
       "aidsamereqworkinfo" : 0,
       "aidnbosscomtype": 1,
       "aidnbosscomcode" : "290837952",
@@ -57,5 +57,4 @@ body:json {
 
 settings {
   encodeUrl: true
-  timeout: 0
 }
