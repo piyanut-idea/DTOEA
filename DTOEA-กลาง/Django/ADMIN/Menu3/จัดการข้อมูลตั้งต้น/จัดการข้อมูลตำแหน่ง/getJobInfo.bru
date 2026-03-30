@@ -1,0 +1,20 @@
+meta {
+  name: getJobInfo
+  type: http
+  seq: 7
+}
+
+get {
+  url: http://apiserver:8090/admin/job?jsid=1003
+  body: none
+  auth: inherit
+}
+
+params:query {
+  jsid: 1003
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
