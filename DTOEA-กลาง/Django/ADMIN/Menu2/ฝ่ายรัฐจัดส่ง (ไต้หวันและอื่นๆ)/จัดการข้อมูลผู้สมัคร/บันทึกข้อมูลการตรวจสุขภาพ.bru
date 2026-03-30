@@ -1,0 +1,29 @@
+meta {
+  name: บันทึกข้อมูลการตรวจสุขภาพ
+  type: http
+  seq: 2
+}
+
+put {
+  url: http://apiserver:8080/admin/recruit/1/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "actiontype" : "health-result",
+    "ckdate": "2026-03-30T00:00:00",     // วันที่ตรวจสอบ
+    "expiredate": "2027-03-30T00:00:00", // วันที่หมดอายุ
+    "result": 1,                          // ผลการอบรม (1=pass, 2=fail)
+    "remark": "สุขภาพปกติ",               // เหตุผล
+    "filename": "health_cert.pdf",        // เอกสารรับสมัครคัดเลือกผู้รับการอบรม
+    "uploaddate": "2026-03-30T00:00:00",  // วันที่ upload เอกสาร
+    "hpid" : 5160 //id hospital
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

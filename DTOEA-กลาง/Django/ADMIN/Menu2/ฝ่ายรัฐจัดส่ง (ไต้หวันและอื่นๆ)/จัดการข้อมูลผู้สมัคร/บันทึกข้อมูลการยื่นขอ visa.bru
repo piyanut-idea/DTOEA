@@ -1,0 +1,29 @@
+meta {
+  name: บันทึกข้อมูลการยื่นขอ visa
+  type: http
+  seq: 3
+}
+
+put {
+  url: http://apiserver:8080/admin/recruit/1/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "actiontype" : "visa-result",
+    "ckdate": "2026-03-30T00:00:00",     // วันที่ตรวจสอบ/วันที่ยื่นขอวีซ่า
+    "tvisa": 1,                           // ประเภทการยื่นวีซ่า (1=ธรรมดา, 2=ด่วน)
+    "getdate": "2026-04-05T00:00:00",    // วันที่ได้รับวีซ่า
+    "result": 1,                          // ผลการยื่นวีซ่า (1=pass, 2=fail)
+    "remark": "เอกสารครบ",                // เหตุผล
+    "filename": "visa_doc.pdf",           // เอกสารรับสมัครคัดเลือกผู้รับการอบรม
+    "uploaddate": "2026-03-30T00:00:00"  // วันที่ upload เอกสาร
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

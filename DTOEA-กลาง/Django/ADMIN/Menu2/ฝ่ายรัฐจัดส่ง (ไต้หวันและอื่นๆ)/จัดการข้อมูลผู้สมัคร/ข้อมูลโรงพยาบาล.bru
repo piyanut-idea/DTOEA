@@ -1,0 +1,16 @@
+meta {
+  name: ข้อมูลโรงพยาบาล
+  type: http
+  seq: 4
+}
+
+get {
+  url: http://apiserver:8080/admin/hospital
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

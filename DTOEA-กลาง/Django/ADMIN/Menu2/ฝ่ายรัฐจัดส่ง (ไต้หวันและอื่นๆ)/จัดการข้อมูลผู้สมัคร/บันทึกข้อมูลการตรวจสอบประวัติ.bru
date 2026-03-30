@@ -1,0 +1,27 @@
+meta {
+  name: บันทึกข้อมูลการตรวจสอบประวัติ
+  type: http
+  seq: 1
+}
+
+put {
+  url: http://apiserver:8080/admin/recruit/1/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "actiontype" : "history-result",
+    "ckdate": "2026-03-30T00:00:00", // วันที่ตรวจสอบ
+    "result": 1,                      // ผลการตรวจ (1=pass, 2=fail)
+    "remark": "ไม่มีประวัติ",         // เหตุผล
+    "filename": "document.pdf",       // เอกสารรับสมัครคัดเลือกผู้รับการอบรม
+    "uploaddate": "2026-03-30T00:00:00" // วันที่ upload เอกสาร
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
