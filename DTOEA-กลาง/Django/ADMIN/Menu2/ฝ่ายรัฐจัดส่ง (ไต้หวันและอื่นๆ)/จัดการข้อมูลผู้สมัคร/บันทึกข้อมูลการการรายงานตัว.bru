@@ -1,0 +1,25 @@
+meta {
+  name: บันทึกข้อมูลการการรายงานตัว
+  type: http
+  seq: 3
+}
+
+put {
+  url: http://apiserver:8080/admin/recruit/1/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "actiontype" : "report-result",
+    "result": 2,                 // ผลการรายงานตัว (1=ผ่าน, 2=ไม่ผ่าน, 3=รายงานตัว, 4=สละสิทธิ์)
+    "remark": "ไม่มารายงานตัวแล้ว", // เหตุผล
+    "editcause": "อัปเดตสถานะล่าสุด" // สาเหตุการแก้ไข
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
