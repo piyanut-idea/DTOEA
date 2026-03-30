@@ -1,0 +1,22 @@
+meta {
+  name: getJobStandard
+  type: http
+  seq: 8
+}
+
+get {
+  url: http://apiserver:8090/admin/jobstandard?nameth=พราน
+  body: none
+  auth: inherit
+}
+
+params:query {
+  nameth: พราน
+  ~nameen: hunter
+  ~codename: 
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

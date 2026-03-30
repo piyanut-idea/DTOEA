@@ -1,0 +1,21 @@
+meta {
+  name: getProjectReq
+  type: http
+  seq: 15
+}
+
+get {
+  url: http://apiserver:8090/web/projectreq?reqid=16&lgbit=6
+  body: none
+  auth: inherit
+}
+
+params:query {
+  reqid: 16
+  lgbit: 6
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
