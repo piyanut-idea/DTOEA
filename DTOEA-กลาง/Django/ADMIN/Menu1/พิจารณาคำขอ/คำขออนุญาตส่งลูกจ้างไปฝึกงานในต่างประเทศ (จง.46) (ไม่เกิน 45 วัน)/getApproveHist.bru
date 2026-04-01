@@ -1,18 +1,18 @@
 meta {
-  name: getCompanyReq
+  name: getApproveHist
   type: http
-  seq: 12
+  seq: 6
 }
 
 get {
-  url: http://apiserver:8090/web/companyreq?reqid=16&lgbit=6
+  url: http://apiserver:8090/web/approvehist?reqid=16
   body: none
   auth: inherit
 }
 
 params:query {
   reqid: 16
-  lgbit: 6
+  ~appstatus: 2
 }
 
 settings {
