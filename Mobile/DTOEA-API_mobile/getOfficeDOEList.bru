@@ -1,0 +1,27 @@
+meta {
+  name: getOfficeDOEList
+  type: http
+  seq: 20
+}
+
+get {
+  url: https://test-toea.doe.go.th/toeacontent.php?task=getOfficeDOEList&sendTime=20260326190023&sessionid=hqcjag6wixcwgaciche5x5yfyf15gcwr&csrftoken=POyN2pGNVW6BRVhk68bAC156LcpPi3eb&page=1
+  body: none
+  auth: inherit
+}
+
+params:query {
+  task: getOfficeDOEList
+  sendTime: 20260326190023
+  sessionid: hqcjag6wixcwgaciche5x5yfyf15gcwr
+  csrftoken: POyN2pGNVW6BRVhk68bAC156LcpPi3eb
+  page: 1
+  ~officename: สวิตเซอร์
+  ~officetype: 1
+  ~officetype: 2
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
