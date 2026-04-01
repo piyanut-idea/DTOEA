@@ -1,18 +1,17 @@
 meta {
-  name: getCompanyReq
+  name: getRequestInfo
   type: http
-  seq: 12
+  seq: 2
 }
 
 get {
-  url: http://apiserver:8090/web/companyreq?reqid=16&lgbit=6
+  url: http://apiserver:8090/web/request?id=15
   body: none
   auth: inherit
 }
 
 params:query {
-  reqid: 16
-  lgbit: 6
+  id: 15
 }
 
 settings {

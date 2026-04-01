@@ -1,18 +1,18 @@
 meta {
-  name: getCompanyReq
+  name: getApprovedSeekers
   type: http
-  seq: 12
+  seq: 9
 }
 
 get {
-  url: http://apiserver:8090/web/companyreq?reqid=16&lgbit=6
+  url: http://apiserver:8090/web/seekerposition?reqid=16&ojid=120
   body: none
   auth: inherit
 }
 
 params:query {
   reqid: 16
-  lgbit: 6
+  ojid: 120
 }
 
 settings {

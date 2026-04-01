@@ -1,0 +1,23 @@
+meta {
+  name: cancelJ23Request
+  type: http
+  seq: 16
+}
+
+put {
+  url: http://apiserver:8080/web/companyreq/16/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "action": "cancelJ23Request"
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
