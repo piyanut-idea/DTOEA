@@ -1,0 +1,25 @@
+meta {
+  name: บันทึกข้อมูลการรับเงินสนับสนุนการประกอบอาชีพ
+  type: http
+  seq: 11
+}
+
+post {
+  url: http://apiserver:8080/admin/resultretsuppdtl/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "rcid": 1,    // รหัสการสมัคร
+    "amount": 1,  // ผล 1=400,000เยน  2=600,000เยน
+    "baht": "122980",  // คิดเป็นเงินไทย (บาท)
+    "editcause": "สาเหตุการแก้ไข"  // สาเหตุการแก้ไข
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
