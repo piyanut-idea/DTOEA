@@ -1,19 +1,19 @@
 meta {
-  name: บันทึก Step 2
+  name: เจ้าหน้าที่แก้ไขคนหางาน
   type: http
-  seq: 3
+  seq: 2
 }
 
 put {
-  url: http://apiserver:8080/web/seekerrecruit/1/
+  url: http://apiserver:8080/admin/seekerrecruit/1/
   body: json
   auth: inherit
 }
 
 body:json {
   {
-    "actiontype": "recruit-step2",
-    "height": 175, // ส่วนสูง (ซม.)
+    "actiontype": "editbyadmin",
+    "height": 181, // ส่วนสูง (ซม.)
     "weight": 75, // น้ำหนัก (กก.)
     "ctaddressth": "999 ถนนสุขุมวิท เขตคลองเตย", // ที่อยู่ตามบัตรประชาชน (ไทย)
     "ctaddressen": "123/45 Sukhumvit Road, Khlong Toei", // ที่อยู่ตามบัตรประชาชน (Eng)
@@ -24,7 +24,6 @@ body:json {
     "mobile1": "081-234-5678", // โทรศัพท์มือถือ
     "mobile2": "089-876-5432", // โทรศัพท์มือถือ (สำรอง)
     "tel": "02-123-4567", // โทรศัพท์ที่สามารถติดต่อได้
-    "email": "elefat091@gmail.com",
     "passportno": "AA1234567", // เลขที่หนังสือเดินทาง
     "periodexp": 1, // ระยะเวลาวันหมดอายุของหนังสือเดินทาง
     "issuedate": "2024-01-01T00:00:00", // วันที่ออก
@@ -55,6 +54,7 @@ body:json {
     "schoolname": "Chulalongkorn University",
     "scpvid": 32, // จว รร fk
     "kclid": 1, // ศูนย์สอบ fk korealocationList
+    "remark": "แก้ไขความสูง",
     "document_list": [ // Array เอกสารแนบ
       {
         "id": 37, // รูปถ่ายขนาด 2 นิ้ว

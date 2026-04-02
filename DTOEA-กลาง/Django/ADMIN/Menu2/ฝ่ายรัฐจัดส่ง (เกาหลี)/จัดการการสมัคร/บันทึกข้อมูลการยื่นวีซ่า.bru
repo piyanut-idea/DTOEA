@@ -1,0 +1,31 @@
+meta {
+  name: บันทึกข้อมูลการยื่นวีซ่า
+  type: http
+  seq: 10
+}
+
+post {
+  url: http://apiserver:8080/admin/recruitvisadtl/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "actiontype": "result-record",
+    "rcid": 1,
+    "ckdate": "2026-04-01",
+    "tvisa": 1,
+    "getdate": "2026-04-01",
+    "result": 1,
+    "remark": "ทดสอบบันทึกหมายเหตุ",
+    "filename": "koreavisa.pdf",
+    "uploaddate": "2026-04-01",
+    "editcause": "ทดสอบบันทึกแก้ไข2"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
