@@ -1,0 +1,73 @@
+meta {
+  name: จนท. รับเรื่อง บันทึกสอบปากคำ aidcause 1             กรณีถูกทอดทิ้งในต่างประเทศ
+  type: http
+  seq: 4
+}
+
+post {
+  url: http://apiserver:8080/admin/interrogation/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "action" : "editInterrogationInfo",
+      "reqid" : 1434019,
+      "aidcause" : 1,
+      "aidcausedeath" : null,
+      "aidcausedeathpurpose" : null,
+      "aidcausetrouble" : null,
+      "adojid" : 1,
+      "aidpetition": 1,
+      "aidcjid": 2001,
+      "aidbackdate": "2026-03-31T00:00:00Z",
+      "aidproblem": "ประสบปัญหานายจ้างไม่จ่ายค่าจ้าง",
+      "document_list" : [
+          {
+              "did" : 313,
+              "filename" : "filename.pdf"
+          },        
+          {
+              "did" : 2,
+              "filename" : "filename2.pdf"        },        
+          {
+              "did" : 3,
+              "filename" : "filename3.pdf"
+          },        
+          {
+              "did" : 40,
+              "filename" : "filename3.pdf"
+          }
+      ],
+      "documentfill_list" : [
+          {
+              "docname" : "เอกสารการรับเงินจากนายจ้าง",
+              "filename" : "filename.pdf"
+          },        
+          {
+              "docname" : "เอกสารการรับเงินจากนายจ้าง1",
+              "filename" : "filename2.pdf"    
+          },        
+          {
+              "docname" : "เอกสารการรับเงินจากนายจ้าง",
+              "filename" : "filename3.pdf"        
+          },        
+          {
+              "docname" : "เอกสารการรับเงินจากนายจ้าง",
+              "filename" : "filename3.pdf"
+          }
+      ],
+  
+      
+  
+      "apptypeid" : 1,
+      "apptype" : 1,
+      "appstatus" : 1,
+      "description" : "เหตุผลประกอบการพิจารณา"
+  }
+}
+
+settings {
+  encodeUrl: true
+}
