@@ -1,0 +1,23 @@
+meta {
+  name: deleteMgmtInformation
+  type: http
+  seq: 3
+}
+
+put {
+  url: http://apiserver:8080/admin/mgmtinformation/2/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "action": "deleteMgmtInformation"
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

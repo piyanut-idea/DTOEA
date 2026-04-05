@@ -1,0 +1,43 @@
+meta {
+  name: addMgmtInformation
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://apiserver:8080/admin/mgmtinformation/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "action": "addMgmtInformation",
+      "title": "Test News 1",
+      "detail": "Test Detail",
+      "startinfo": "2026-04-10T09:00:00",
+      "status": 2,
+      "alerttype": 1,
+      "uploadidfile": "test_ids.xlsx"
+  }
+  
+  
+  // {
+  //     // alerttype 2
+  //     "action": "addMgmtInformation",
+  //     "title": "Test News 2",
+  //     "detail": "Test Detail",
+  //     "startinfo": "2026-04-10T09:00:00",
+  //     "status": 2,
+  //     "alerttype": 2,
+  //     "country_list": [
+  //         {"ctgid": 1, "cntid": 1}
+  //     ]
+  // }
+  
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

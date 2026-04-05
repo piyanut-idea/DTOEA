@@ -1,0 +1,33 @@
+meta {
+  name: addNews
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://apiserver:8080/admin/news/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "action": "addNews",
+      "newstype": 2,
+      "bc1": 33,
+      "title": "Test News Title",
+      "shortdetail": "Test short detail",
+      "maindetail": "Test main detail content",
+      "periodtype": 1,
+      "startdate": "2026-04-01T00:00:00",
+      "enddate": "2026-12-31T00:00:00",
+      "status": 1,
+      "filename": "testfilename.pdf"
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
