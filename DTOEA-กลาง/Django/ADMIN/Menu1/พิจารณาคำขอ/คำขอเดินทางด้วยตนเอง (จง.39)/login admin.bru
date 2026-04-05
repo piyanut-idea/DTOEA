@@ -1,0 +1,25 @@
+meta {
+  name: login admin
+  type: http
+  seq: 6
+}
+
+post {
+  url: http://apiserver:8080/login/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "login"    : "7678532906585",
+      "passwd" : "password",
+      "logintype" : "1",
+      "location" : "192.168.25.15"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
