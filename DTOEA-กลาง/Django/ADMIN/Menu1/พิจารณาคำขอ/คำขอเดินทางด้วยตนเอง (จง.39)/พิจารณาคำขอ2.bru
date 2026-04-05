@@ -1,0 +1,26 @@
+meta {
+  name: พิจารณาคำขอ2
+  type: http
+  seq: 3
+}
+
+put {
+  url: http://apiserver:8080/admin/request/5/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "action": "approve",
+      "appstatus": 1,   //ดูจาก approveInfo ฟิวด์ appstatus
+      "apptype": 2 , //ดูจาก approveInfo ฟิวด์ apptype
+      "idtid":7140,
+      "description": null
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
