@@ -1,0 +1,30 @@
+meta {
+  name: addEvent
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://apiserver:8080/admin/event/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "action": "addEvent",
+      "title": "Test Event",
+      "location": "Test Hotel",
+      "startdate": "2026-04-10",
+      "enddate": "2026-04-10",
+      "starttime": 19,
+      "endtime": 25,
+      "status": 1
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
