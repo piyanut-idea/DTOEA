@@ -1,11 +1,11 @@
 meta {
-  name: บันทึกข้อมูลการตรวจสุขภาพ
+  name: บันทึกข้อมูลการรับเงินสนับสนุนการประกอบอาชีพ
   type: http
   seq: 9
 }
 
 post {
-  url: http://apiserver:8080/admin/recruithealthdtl/
+  url: http://apiserver:8080/admin/resultretsuppdtl/
   body: json
   auth: inherit
 }
@@ -14,8 +14,8 @@ body:json {
   {
     "actiontype": "result-record",  
     "rcid": 1,    // รหัสการสมัคร
-    "result": 1,  // ผล 1=ผ่าน 2=ไม่ผ่าน 3=สละสิทธิ์ 4=รักษาตัว
-    "remark": "เหตุผล",  // เหตุผล
+    "amount": 1,  // ผล 1=400,000เยน  2=600,000เยน
+    "baht": "122980",  // คิดเป็นเงินไทย (บาท)
     "editcause": "สาเหตุการแก้ไข"  // สาเหตุการแก้ไข
   }
 }

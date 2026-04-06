@@ -1,11 +1,11 @@
 meta {
-  name: บันทึกข้อมูลการรายงานตัวผู้สอบผ่าน
+  name: บันทึกข้อมูลการประเมิน/การสอบภาษาญี่ปุ่น
   type: http
-  seq: 6
+  seq: 4
 }
 
 post {
-  url: http://apiserver:8080/admin/resultreportdtl/
+  url: http://apiserver:8080/admin/resultevaluationdtl/
   body: json
   auth: inherit
 }
@@ -14,7 +14,7 @@ body:json {
   {
     "actiontype": "result-record",  
     "rcid": 1,    // รหัสการสมัคร
-    "result": 3,  // ผล 3=รายงานตัว 4=สละสิทธิ์
+    "result": 1,  // ผล 1=ผ่าน 2=ไม่ผ่าน 3=สละสิทธิ์
     "remark": "เหตุผล",  // เหตุผล
     "editcause": "สาเหตุการแก้ไข"  // สาเหตุการแก้ไข
   }
