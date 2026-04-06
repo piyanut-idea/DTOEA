@@ -5,7 +5,7 @@ meta {
 }
 
 put {
-  url: http://apiserver:8080/admin/request/2/
+  url: http://apiserver:8080/admin/request/22/
   body: json
   auth: inherit
 }
@@ -14,8 +14,8 @@ body:json {
   {
       "action" : "approve",
       "apptype" : 2, //หัวหน้าฝ่าย
-      "appstatus" : 2, //1:อนุมัติพิจารณา 2:ส่งเรื่องกลับ 3:คืนคำขอ
-      "description" : "เหตุผลขอแก้ไขหรือคืนคำขอ", //เหตุผลการประกอบการพิจารณา
+      "appstatus" : 1, //1:อนุมัติพิจารณา 2:ส่งเรื่องกลับ 3:คืนคำขอ
+      "description" : null, //เหตุผลการประกอบการพิจารณา
       "ispunished" : 1, //1:พบประวัติ , 0:ไม่พบ
       "suspendfromdate" : "2026-01-01T00:00:00",//จากวันที่พบประวัติ
       "suspendtodate" : "2026-04-01T00:00:00",//ถึงวันที่พบประวัติ
