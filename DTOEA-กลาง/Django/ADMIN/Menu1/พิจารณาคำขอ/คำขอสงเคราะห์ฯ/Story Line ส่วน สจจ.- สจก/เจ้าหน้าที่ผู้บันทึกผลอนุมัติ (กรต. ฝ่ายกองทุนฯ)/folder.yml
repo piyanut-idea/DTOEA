@@ -1,7 +1,0 @@
-info:
-  name: เจ้าหน้าที่ผู้บันทึกผลอนุมัติ (กรต. ฝ่ายกองทุนฯ)
-  type: folder
-  seq: 4
-
-request:
-  auth: inherit

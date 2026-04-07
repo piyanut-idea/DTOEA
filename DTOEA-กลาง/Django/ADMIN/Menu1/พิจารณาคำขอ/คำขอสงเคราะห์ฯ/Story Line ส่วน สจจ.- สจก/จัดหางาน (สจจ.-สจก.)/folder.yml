@@ -1,7 +1,0 @@
-info:
-  name: จัดหางาน (สจจ./สจก.)
-  type: folder
-  seq: 3
-
-request:
-  auth: inherit

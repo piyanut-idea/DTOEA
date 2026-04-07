@@ -1,7 +1,0 @@
-info:
-  name: หัวหน้าฝ่าย/หัวหน้ากลุ่ม (สจจ./สจก.)
-  type: folder
-  seq: 2
-
-request:
-  auth: inherit
