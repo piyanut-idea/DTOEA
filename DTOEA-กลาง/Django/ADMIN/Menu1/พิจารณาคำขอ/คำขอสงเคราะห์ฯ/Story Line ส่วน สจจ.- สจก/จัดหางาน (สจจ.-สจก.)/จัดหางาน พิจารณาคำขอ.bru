@@ -1,0 +1,27 @@
+meta {
+  name: จัดหางาน พิจารณาคำขอ
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://apiserver:8080/admin/reqfundaidapprove/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "action" : "approveRequest",
+      "reqid" : 1434019,
+      "apptypeid" : 7, // 7:ผู้อำนวยการ, จัดหางาน
+      "apptype" : 5, // 5:ผู้อำนวยการ, จัดหางาน
+      "appstatus" : 1,
+      "description" : "เหตุผลประกอบการพิจารณา",
+      "pincode" : "1234"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

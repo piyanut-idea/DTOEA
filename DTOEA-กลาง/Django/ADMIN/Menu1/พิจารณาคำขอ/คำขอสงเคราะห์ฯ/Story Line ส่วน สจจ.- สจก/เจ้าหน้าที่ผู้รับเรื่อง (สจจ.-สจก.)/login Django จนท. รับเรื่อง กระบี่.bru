@@ -1,0 +1,23 @@
+meta {
+  name: login Django จนท. รับเรื่อง กระบี่
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://apiserver:8080/login/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "login"    : "1200100470000",
+      "passwd" : "password",
+      "typeuser" : "1"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

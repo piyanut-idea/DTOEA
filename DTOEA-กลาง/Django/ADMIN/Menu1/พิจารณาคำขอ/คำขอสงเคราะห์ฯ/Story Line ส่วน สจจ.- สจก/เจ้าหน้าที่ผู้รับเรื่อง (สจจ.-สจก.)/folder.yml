@@ -1,7 +1,0 @@
-info:
-  name: เจ้าหน้าที่ผู้รับเรื่อง (สจจ./สจก.)
-  type: folder
-  seq: 1
-
-request:
-  auth: inherit
