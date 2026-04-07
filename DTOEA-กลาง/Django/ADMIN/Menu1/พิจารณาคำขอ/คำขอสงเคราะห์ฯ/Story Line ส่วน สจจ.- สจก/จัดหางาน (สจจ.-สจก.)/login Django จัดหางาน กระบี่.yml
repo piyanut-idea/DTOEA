@@ -1,0 +1,26 @@
+info:
+  name: login Django จัดหางาน กระบี่
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: http://apiserver:8080/login/
+  body:
+    type: json
+    data: "{\r
+
+      \    \"login\"    : \"2615244338251\",\r
+
+      \    \"passwd\" : \"password\",\r
+
+      \    \"typeuser\" : \"1\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

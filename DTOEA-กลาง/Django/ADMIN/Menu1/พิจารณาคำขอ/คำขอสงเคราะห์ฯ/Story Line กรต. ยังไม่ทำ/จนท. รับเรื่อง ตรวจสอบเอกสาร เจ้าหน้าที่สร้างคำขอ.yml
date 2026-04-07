@@ -1,0 +1,184 @@
+info:
+  name: จนท. รับเรื่อง ตรวจสอบเอกสาร เจ้าหน้าที่สร้างคำขอ
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: http://apiserver:8080/admin/reqfundaidapprove/
+  body:
+    type: json
+    data: "{\r
+
+      \    \"action\" : \"approveRequest\",\r
+
+      \    \"reqid\" : 1434016,\r
+
+      \    \"aidsameskinfo\": 0,\r
+
+      \    \"petitiontype\": null,    \r
+
+      \    \"aididcard\": \"1200100000004\",\r
+
+      \    \"aididissuedate\": null,\r
+
+      \    \"aididexpdate\": null,\r
+
+      \    \"aidfnameth\": \"สถิตย์\",\r
+
+      \    \"aidlnameth\": \"หงถาวงค์ง\",\r
+
+      \    \"aidfnameen\": \"Satit\",\r
+
+      \    \"aidlnameen\": \"Hongtawong\",\r
+
+      \    \"aidgender\": 2,\r
+
+      \    \"aidbirthdate\": \"1990-01-01T00:00:00+07:00\",\r
+
+      \    \"aidpissueat\": \"ที่ว่าการอำเภอ\",\r
+
+      \    \"aidissuedate\": \"2025-10-01\",\r
+
+      \    \"aidexpdate\": \"2035-10-01\",\r
+
+      \    \"aidheight\": \"168\",\r
+
+      \    \"aidweight\": \"5.2\",\r
+
+      \    \"aidmobile\": null,\r
+
+      \    \"aidmobile2\": null,\r
+
+      \    \"aidtel\": \"0000000000\",\r
+
+      \    \"aidemail\": null,\r
+
+      \    \"aidaddressth\": \"ทดสอบที่อยู่ 192/3 หมู่ 2\",\r
+
+      \    \"aidaddressen\": null,\r
+
+      \    \"aidpvid\" : 1,\r
+
+      \    \"aidddtid\" : 1,\r
+
+      \    \"aidsdtid\" : 1,\r
+
+      \    \"aidpostcode\": \"81000\",\r
+
+      \    \"aidsameaddr\": 1,\r
+
+      \    \"aidcaddressth\": \"ทดสอบที่อยู่ 192/3 หมู่ 2\",\r
+
+      \    \"aidcaddressen\": null,\r
+
+      \    \"aidcpvid\" : 1,\r
+
+      \    \"aidcddtid\" : 1,\r
+
+      \    \"aidcdtid\" : 1,\r
+
+      \    \"aidcpostcode\": \"81000\",\r
+
+      \    \"aidsamereqworkinfo\" : 0,\r
+
+      \    \"aidnbosscomtype\": 1,\r
+
+      \    \"aidnbosscomcode\" : \"290837952\",\r
+
+      \    \"aidnbossfnameen\": \"shang wang precision industry co.,ltd.\",\r
+
+      \    \"aidnbossidtid\": 5567,\r
+
+      \    \"aidnbossaddress\": \"no.7, lane 236, zhengguang st., yonglong village, taiping dist., taichung city, taiwan r.o.c.\",\r
+
+      \    \"aidnbosscntid\" : 1196,  \r
+
+      \    \"aidnbossfcid\" : 1,\r
+
+      \    \"aidnbosspostcode\" : \"00000\",\r
+
+      \    \"aidnbosstel\" : \"00000\",\r
+
+      \    \"aidnbossfax\" : \"00000\",\r
+
+      \    \"aidnbossemail\" : \"00000\",\r
+
+      \    \"aidnjid\" : 2001,\r
+
+      \    \"aidnempyear\" : 1,\r
+
+      \    \"aidnempmonth\" : 1,\r
+
+      \    \"aidnempday\" : 1,\r
+
+      \    \"aidcause\" : 1,\r
+
+      \    \"aidcausetrouble\" : 1,\r
+
+      \    \"aidcausedeath\" : 1,\r
+
+      \    \"aidcausedeathpurpose\" : 1,\r
+
+      \    \"aidpeoid\" : 100,\r
+
+      \    \"document_list\" : [\r
+
+      \        {\r
+
+      \            \"did\" : 313,\r
+
+      \            \"filename\" : \"filename.pdf\",\r
+
+      \            \"uploaddate\" : \"2023-09-02T15:13:04.435521+07:00\"\r
+
+      \        },        \r
+
+      \        {\r
+
+      \            \"did\" : 2,\r
+
+      \            \"filename\" : \"filename2.pdf\",\r
+
+      \            \"uploaddate\" : \"2023-09-02T15:13:04.435521+07:00\"\r
+
+      \        },        \r
+
+      \        {\r
+
+      \            \"did\" : 3,\r
+
+      \            \"filename\" : \"filename3.pdf\",\r
+
+      \            \"uploaddate\" : \"2023-09-02T15:13:04.435521+07:00\"\r
+
+      \        },        \r
+
+      \        {\r
+
+      \            \"did\" : 40,\r
+
+      \            \"filename\" : \"filename3.pdf\",\r
+
+      \            \"uploaddate\" : \"2023-09-02T15:13:04.435521+07:00\"\r
+
+      \        }\r
+
+      \    ],\r
+
+      \    \"apptypeid\" : 0,\r
+
+      \    \"apptype\" : 1,\r
+
+      \    \"appstatus\" : 1,\r
+
+      \    \"description\" : \"เหตุผลประกอบการพิจารณา\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

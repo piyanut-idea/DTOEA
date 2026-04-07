@@ -1,0 +1,32 @@
+info:
+  name: จนท. รับเรื่อง ตรวจสอบเอกสาร คนหางานยื่นคำขอ
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: http://apiserver:8080/admin/reqfundaidapprove/
+  body:
+    type: json
+    data: "{\r
+
+      \    \"action\" : \"approveRequest\",\r
+
+      \    \"reqid\" : 1434019,\r
+
+      \    \"apptypeid\" : 0,\r
+
+      \    \"apptype\" : 1,\r
+
+      \    \"appstatus\" : 1,\r
+
+      \    \"description\" : \"เหตุผลประกอบการพิจารณา\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
