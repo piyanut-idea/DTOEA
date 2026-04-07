@@ -5,17 +5,24 @@ meta {
 }
 
 put {
-  url: http://apiserver:8080/admin/request/16/
+  url: http://apiserver:8080/admin/admindtl/104/
   body: json
   auth: inherit
 }
 
 body:json {
+  // {
+  //     "action": "transfer",
+  //     "reqidlist": [16],
+  //     "considerby": 101
+  // }
+  
   {
       "action": "transfer",
-      "reqidlist": [16],
-      "considerby": 101
+      "reqidlist": [6]  // สามารถใส่ได้หลาย reqid ในกรณีที่ต้องการโอนหลายงานพร้อมกัน
   }
+  
+  
 }
 
 settings {
