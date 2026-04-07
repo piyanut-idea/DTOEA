@@ -1,0 +1,22 @@
+meta {
+  name: deleteNews
+  type: http
+  seq: 1
+}
+
+put {
+  url: http://apiserver:8080/admin/news/1/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "action": "deleteNews"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

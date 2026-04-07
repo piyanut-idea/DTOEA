@@ -5,18 +5,21 @@ meta {
 }
 
 get {
-  url: http://apiserver:8090/admin/request?s_reqdate= 2026-03-17T00:00:00Z &e_reqdate= 2026-03-17T23:59:59Z
+  url: http://apiserver:8090/admin/request
   body: none
   auth: inherit
 }
 
 params:query {
-  s_reqdate: 2026-03-17T00:00:00Z
-  e_reqdate: 2026-03-17T23:59:59Z
+  ~appdatenull: notnull
+  ~appdatenull: null
+  ~s_reqdate: 2026-03-17T00:00:00Z
+  ~e_reqdate: 2026-03-17T23:59:59Z
   ~reqstatus: 1
   ~"considerby ": รหัสเจ้าหน้าที่พิจจารณา
   ~idlist: 1,2
   ~req_cid_nameth: ชื่อบริษัท
+  ~reqstatus: 8
 }
 
 settings {
