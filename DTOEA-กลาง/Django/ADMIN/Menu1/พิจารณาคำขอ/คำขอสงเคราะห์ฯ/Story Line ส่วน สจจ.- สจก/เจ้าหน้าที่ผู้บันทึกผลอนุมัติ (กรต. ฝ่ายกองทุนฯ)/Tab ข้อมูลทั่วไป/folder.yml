@@ -1,0 +1,7 @@
+info:
+  name: บันทึกผลการอนุมัติ (กรต. - ฝ่ายกองทุนเงินสงเคราะห์) - Tab ข้อมูลทั่วไป
+  type: folder
+  seq: 1
+
+request:
+  auth: inherit

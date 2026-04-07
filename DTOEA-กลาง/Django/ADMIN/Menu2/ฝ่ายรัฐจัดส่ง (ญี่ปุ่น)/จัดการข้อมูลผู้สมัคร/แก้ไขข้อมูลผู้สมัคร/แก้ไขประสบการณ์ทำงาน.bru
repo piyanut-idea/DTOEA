@@ -1,0 +1,29 @@
+meta {
+  name: แก้ไขประสบการณ์ทำงาน
+  type: http
+  seq: 3
+}
+
+put {
+  url: http://apiserver:8080/admin/recruitskexp/4/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "comname": "Global Tech Solution Co., Ltd.", // บริษัท/นายจ้าง
+    "cntid": 1, // ประเทศ
+    "position": "Super Senior Operations Manager", // ตำแหน่ง
+    "workyear": 5, // ระยะเวลาทำงาน (ปี)
+    "workmonth": null, // ระยะเวลาทำงาน (เดือน)
+    "workday": null, // ระยะเวลาทำงาน (วัน)
+    "filename": "employment_certificate_v1.pdf", // ชื่อไฟล์
+    "updatedate": "2026-03-21T00:00:00" // วันที่แนบเอกสาร
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

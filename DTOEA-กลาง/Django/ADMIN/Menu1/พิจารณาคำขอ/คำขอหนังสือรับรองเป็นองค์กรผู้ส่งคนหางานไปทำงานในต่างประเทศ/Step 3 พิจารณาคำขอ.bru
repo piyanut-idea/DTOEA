@@ -1,0 +1,52 @@
+meta {
+  name: Step 3 พิจารณาคำขอ
+  type: http
+  seq: 3
+}
+
+put {
+  url: http://apiserver:8080/admin/request/26/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "action" : "senderreqlist-approve-step3",
+      "steps_data" : [  ///แต่ละกล่อง
+        {
+          "apptype" : 1,
+          "appstatus" : 1, //0:ไม่อนุมัติ 1:อนุมัติ
+          "appdate" : "2026-04-01T00:00:00",
+          "ojid" : 101,
+          "reason" : null
+        },
+        {
+          "apptype" : 2,
+          "appstatus" : 1, //0:ไม่อนุมัติ 1:อนุมัติ
+          "appdate" : "2026-04-01T00:00:00",
+          "ojid" : 102,
+          "reason" : null
+        }
+      ],
+      "uploadlist" : [
+        {
+          "filename" : "test1.pdf",
+          "considerbit" : 12 //Fixed
+        },
+        {
+          "filename" : "test2.pdf",
+          "considerbit" : 13 //Fixed
+        },
+        {
+          "filename" : "test3.pdf",
+          "considerbit" : 14 //Fixed
+        }
+      ]
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

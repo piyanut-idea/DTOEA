@@ -5,17 +5,18 @@ meta {
 }
 
 put {
-  url: http://apiserver:8080/web/project/3/
+  url: http://apiserver:8080/web/projectreq/3/
   body: json
   auth: inherit
 }
 
 body:json {
   {
-      "action" : "deleteDemandProject"
+      "action" : "deleteProjectReqList"
   }
 }
 
 settings {
   encodeUrl: true
+  timeout: 0
 }
