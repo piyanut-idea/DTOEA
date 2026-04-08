@@ -1,0 +1,20 @@
+meta {
+  name: ข้อมูลการยกเลิกคำขอ
+  type: http
+  seq: 7
+}
+
+get {
+  url: http://apiserver:8080/web/reqcancelhist?reqid=28
+  body: none
+  auth: inherit
+}
+
+params:query {
+  reqid: 28
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
