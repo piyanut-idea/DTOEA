@@ -1,0 +1,24 @@
+meta {
+  name: login 2
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://apiserver:8080/login/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "login"   : "3102100610426",
+      "passwd" : "password",
+      "typeuser" : "1"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
