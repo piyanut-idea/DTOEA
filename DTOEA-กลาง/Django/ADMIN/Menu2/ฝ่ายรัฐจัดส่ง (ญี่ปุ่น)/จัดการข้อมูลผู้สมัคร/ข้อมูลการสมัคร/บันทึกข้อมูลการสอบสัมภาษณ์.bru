@@ -1,11 +1,11 @@
 meta {
-  name: บันทึกข้อมูลการตรวจสุขภาพ
+  name: บันทึกข้อมูลการสอบสัมภาษณ์
   type: http
-  seq: 8
+  seq: 2
 }
 
 post {
-  url: http://apiserver:8080/admin/recruithealthdtl/
+  url: http://apiserver:8080/admin/resultinterviewdtl/
   body: json
   auth: inherit
 }
@@ -14,7 +14,7 @@ body:json {
   {
     "actiontype": "result-record",  
     "rcid": 1,    // รหัสการสมัคร
-    "result": 1,  // ผล 1=ผ่าน 2=ไม่ผ่าน 3=สละสิทธิ์ 4=รักษาตัว
+    "result": 1,  // ผล 1=ผ่าน 2=ไม่ผ่าน 3=สละสิทธิ์
     "remark": "เหตุผล",  // เหตุผล
     "editcause": "สาเหตุการแก้ไข"  // สาเหตุการแก้ไข
   }

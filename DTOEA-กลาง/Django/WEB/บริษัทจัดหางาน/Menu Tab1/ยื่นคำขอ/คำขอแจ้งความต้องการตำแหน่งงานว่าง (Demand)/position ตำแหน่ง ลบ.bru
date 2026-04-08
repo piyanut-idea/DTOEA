@@ -5,17 +5,18 @@ meta {
 }
 
 put {
-  url: http://apiserver:8080/web/position/3015/
+  url: http://apiserver:8080/web/positionreq/3015/
   body: json
   auth: inherit
 }
 
 body:json {
   {
-      "action" : "deleteRequestDemandPosition"
+      "action" : "deletePositionReqList"
   }
 }
 
 settings {
   encodeUrl: true
+  timeout: 0
 }

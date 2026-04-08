@@ -1,11 +1,11 @@
 meta {
-  name: บันทึกข้อมูลการสอบสมรรถภาพร่างกาย
+  name: บันทึกข้อมูลการตรวจสอบประวัติ
   type: http
-  seq: 3
+  seq: 5
 }
 
 post {
-  url: http://apiserver:8080/admin/resultphyfitnessdtl/
+  url: http://apiserver:8080/admin/recruitcrimedtl/
   body: json
   auth: inherit
 }
@@ -14,7 +14,7 @@ body:json {
   {
     "actiontype": "result-record",  
     "rcid": 1,    // รหัสการสมัคร
-    "result": 1,  // ผล 1=ผ่าน 2=ไม่ผ่าน 3=ไม่เข้าสอบ
+    "result": 1,  // ผล 1=ผ่าน 2=ไม่ผ่าน 3=สละสิทธิ์
     "remark": "เหตุผล",  // เหตุผล
     "editcause": "สาเหตุการแก้ไข"  // สาเหตุการแก้ไข
   }

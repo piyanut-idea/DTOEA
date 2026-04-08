@@ -1,0 +1,27 @@
+meta {
+  name: หัวหน้าฝ่าย/หัวหน้ากลุ่ม (สจจ./สจก.) พิจารณาคำขอ
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://apiserver:8080/admin/reqfundaidapprove/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "action" : "approveRequest",
+      "reqid" : 1434019,
+      "apptypeid" : 5, // 5:หัวหน้ากลุ่ม, หัวหน้าฝ่ายต่างจังหวัด หรือเขตกรุงเทพฯ
+      "apptype" : 3, // 3:หัวหน้ากลุ่ม, หัวหน้าฝ่ายต่างจังหวัด หรือเขตกรุงเทพฯ
+      "appstatus" : 1,
+      "description" : "เหตุผลประกอบการพิจารณา",
+      "pincode" : "1234"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

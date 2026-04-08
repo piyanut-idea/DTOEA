@@ -1,11 +1,11 @@
 meta {
-  name: บันทึกข้อมูลการประเมิน/การสอบภาษาญี่ปุ่น
+  name: บันทึกข้อมูลการตรวจสุขภาพ
   type: http
   seq: 6
 }
 
 post {
-  url: http://apiserver:8080/admin/resultevaluationdtl/
+  url: http://apiserver:8080/admin/recruithealthdtl/
   body: json
   auth: inherit
 }
@@ -14,7 +14,7 @@ body:json {
   {
     "actiontype": "result-record",  
     "rcid": 1,    // รหัสการสมัคร
-    "result": 1,  // ผล 1=ผ่าน 2=ไม่ผ่าน 3=สละสิทธิ์
+    "result": 1,  // ผล 1=ผ่าน 2=ไม่ผ่าน 3=สละสิทธิ์ 4=รักษาตัว
     "remark": "เหตุผล",  // เหตุผล
     "editcause": "สาเหตุการแก้ไข"  // สาเหตุการแก้ไข
   }
