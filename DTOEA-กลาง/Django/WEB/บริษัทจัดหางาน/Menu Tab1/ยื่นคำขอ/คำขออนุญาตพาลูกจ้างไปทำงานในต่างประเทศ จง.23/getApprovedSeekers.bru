@@ -1,0 +1,21 @@
+meta {
+  name: getApprovedSeekers
+  type: http
+  seq: 13
+}
+
+get {
+  url: http://apiserver:8090/web/seekerposition?reqid=16&ojid=120
+  body: none
+  auth: inherit
+}
+
+params:query {
+  reqid: 16
+  ojid: 120
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

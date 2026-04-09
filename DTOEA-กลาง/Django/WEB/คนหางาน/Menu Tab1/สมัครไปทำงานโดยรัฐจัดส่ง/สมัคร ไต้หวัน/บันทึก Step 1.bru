@@ -13,6 +13,10 @@ put {
 body:json {
   {
     "actiontype":"tw-recruit-step1",
+    "tsubmit": 1, // ผู้ที่ดำเนินการบันทึกคำขอ 1=ยื่นคำขอด้วยตนเอง  2=เจ้าหน้าที่บันทึกคำขอแทน
+    "peoid": null, // ส่วนงานของเจ้าหน้าที่บันทึกคำขอแทน  ถ้า tsubmit=1 ส่ง null
+    "adid": null, // id เจ้าหน้าที่บันทึกคำขอแทน  ถ้า tsubmit=1 ส่ง null
+    "pincode": null, // PIN CODE ของเจ้าหน้าที่บันทึกคำขอแทน  ถ้า tsubmit=1 ส่ง null
     "height": 180, // ส่วนสูง (ซม.)
     "weight": 75, // น้ำหนัก (กก.)
     "addressen": "123/45 Sukhumvit Road, Khlong Toei", // ที่อยู่ตามบัตรประชาชน (Eng)

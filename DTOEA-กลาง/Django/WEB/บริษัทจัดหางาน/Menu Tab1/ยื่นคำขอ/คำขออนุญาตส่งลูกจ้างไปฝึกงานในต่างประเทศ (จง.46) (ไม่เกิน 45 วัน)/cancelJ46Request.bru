@@ -1,0 +1,23 @@
+meta {
+  name: cancelJ46Request
+  type: http
+  seq: 15
+}
+
+put {
+  url: http://apiserver:8080/web/companyreq/14/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "action": "cancelJ46Request"
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

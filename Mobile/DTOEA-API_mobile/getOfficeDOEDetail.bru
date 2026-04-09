@@ -1,0 +1,25 @@
+meta {
+  name: getOfficeDOEDetail
+  type: http
+  seq: 21
+}
+
+get {
+  url: https://test-toea.doe.go.th/toeacontent.php?task=getOfficeDOEDetail&sendTime=20260326190023&sessionid=hqcjag6wixcwgaciche5x5yfyf15gcwr&csrftoken=POyN2pGNVW6BRVhk68bAC156LcpPi3eb&page=1&officeid=11
+  body: none
+  auth: inherit
+}
+
+params:query {
+  task: getOfficeDOEDetail
+  sendTime: 20260326190023
+  sessionid: hqcjag6wixcwgaciche5x5yfyf15gcwr
+  csrftoken: POyN2pGNVW6BRVhk68bAC156LcpPi3eb
+  page: 1
+  officeid: 11
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

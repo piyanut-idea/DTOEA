@@ -1,0 +1,22 @@
+meta {
+  name: ลบประสบการณ์ทำงาน
+  type: http
+  seq: 4
+}
+
+put {
+  url: http://apiserver:8080/admin/recruitskexp/4/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "actiontype": "delete-exp"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

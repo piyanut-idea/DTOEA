@@ -1,0 +1,60 @@
+meta {
+  name: bossinter
+  type: http
+  seq: 5
+}
+
+post {
+  url: http://apiserver:8080/web/bossinter/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "comtype": 1,
+    "cntid": 1077,
+    "bossfnameen": "Global Ocean Shipping Co., Ltd.",
+    "bosslnameen": null,
+    "comcode": "GOSC-123456",
+    "idtid": 5386,
+    "address": "123 Ocean Avenue",
+    "state": null,
+    "county": null,
+    "city": null,
+    "fullcity": null,
+    "fcitid": 2,
+    "bosspostcode": "33132",
+    "tel": "+1-555-1234",
+    "fax": "+1-555-5678",
+    "email": "contact@globalocean.com",
+    "status": 1,
+    "migrate": 0,
+    "organize": null,
+    "orgaddr": null,
+    "orgstate": null,
+    "orgcounty": null,
+    "orgcity": null,
+    "orgfullcity": null,
+    "orgpostcode": null,
+    "orgtel": null,
+    "orgfax": null,
+    "filename": null,
+    "remark": null,
+    "twpartner": null,
+    "bosspfid": null,
+    "stid": null,
+    "cotid": null,
+    "cityid": null,
+    "orgstid": null,
+    "orgcotid": null,
+    "orgcityid": null,
+    "orgfcid": null,
+    "twcid": null
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

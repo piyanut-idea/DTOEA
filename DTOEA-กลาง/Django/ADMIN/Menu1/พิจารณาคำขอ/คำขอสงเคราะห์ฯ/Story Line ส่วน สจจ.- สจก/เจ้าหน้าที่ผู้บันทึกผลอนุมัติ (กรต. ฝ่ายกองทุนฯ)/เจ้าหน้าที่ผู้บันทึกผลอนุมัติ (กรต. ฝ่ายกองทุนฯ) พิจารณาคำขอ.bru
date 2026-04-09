@@ -1,0 +1,27 @@
+meta {
+  name: เจ้าหน้าที่ผู้บันทึกผลอนุมัติ (กรต. ฝ่ายกองทุนฯ) พิจารณาคำขอ
+  type: http
+  seq: 4
+}
+
+post {
+  url: http://apiserver:8080/admin/reqfundaidapprove/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "action" : "approveRequest",
+      "reqid" : 1434019,
+      "apptypeid" : 3, // 3:เจ้าหน้าที่ผู้บันทึกผลอนุมัติ (กรต. ฝ่ายกองทุนฯ)
+      "apptype" : 2, // 1:เจ้าหน้าที่ผู้บันทึกผลอนุมัติ (กรต. ฝ่ายกองทุนฯ)
+      "appstatus" : 1,
+      "description" : "เหตุผลประกอบการพิจารณา",
+      "pincode" : "1234"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

@@ -5,26 +5,23 @@ meta {
 }
 
 put {
-  url: http://apiserver:8080/admin/request/2/
+  url: http://apiserver:8080/admin/request/26/
   body: json
   auth: inherit
 }
 
 body:json {
   {
-      "action" : "approve",
-      "apptype" : 2, //หัวหน้าฝ่าย
-      "appstatus" : 2, //1:อนุมัติพิจารณา 2:ส่งเรื่องกลับ 3:คืนคำขอ
-      "description" : "เหตุผลขอแก้ไขหรือคืนคำขอ", //เหตุผลการประกอบการพิจารณา
-      "ispunished" : 1, //1:พบประวัติ , 0:ไม่พบ
-      "suspendfromdate" : "2026-01-01T00:00:00",//จากวันที่พบประวัติ
-      "suspendtodate" : "2026-04-01T00:00:00",//ถึงวันที่พบประวัติ
-      "suspendreason" : "ทดสอบ",//เหตุผลประวัติ
-      "filecompletedate" : "2026-04-01T00:00:00",//วันที่เอกสารครบถ้วน
-      "filename1" : "test1.pdf", //สำเนาหนังสือ
-      "uploaddate1" : "2026-01-02T00:00:00",//วันที่แนบเอกสารสำเนาหนังสือ
-      "filename2" : "test2.pdf", //อื่นๆ
-      "uploaddate2" : "2026-01-02T00:00:00" //วันที่แนบเอกสารอื่นๆ
+      "action" : "senderreqlist-approve-step2",
+      "apptype" : 1, //1:เจ้าหน้าที่พิจสนณา
+      "appstatus" : 1, //1:อนุมัติพิจารณา 2:ส่งเรื่องกลับ 3:คืนคำขอ
+      "description" : null, //เหตุผลการประกอบการพิจารณา
+      "ispunished" : 0,
+      "filecompletedate" : "2026-04-01T00:00:00",
+      "filename1" : "test1.pdf",
+      "uploaddate1" : "2026-04-01T00:00:00",
+      "filename2" :  null,
+      "uploaddate2" : null
   }
 }
 

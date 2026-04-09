@@ -1,0 +1,20 @@
+meta {
+  name: getSeekerDocList
+  type: http
+  seq: 9
+}
+
+get {
+  url: http://apiserver:8090/web/seekerdoc?ojid=118
+  body: none
+  auth: inherit
+}
+
+params:query {
+  ojid: 118
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

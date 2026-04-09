@@ -1,0 +1,23 @@
+meta {
+  name: login Django หัวหน้าฝ่าย/หัวหน้ากลุ่ม กระบี่
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://apiserver:8080/login/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "login"    : "8344196748441",
+      "passwd" : "password",
+      "typeuser" : "1"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

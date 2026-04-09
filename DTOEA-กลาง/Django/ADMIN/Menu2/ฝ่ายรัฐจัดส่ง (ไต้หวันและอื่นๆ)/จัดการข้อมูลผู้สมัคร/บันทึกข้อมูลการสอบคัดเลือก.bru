@@ -1,0 +1,25 @@
+meta {
+  name: บันทึกข้อมูลการสอบคัดเลือก
+  type: http
+  seq: 2
+}
+
+put {
+  url: http://apiserver:8080/admin/recruit/1/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "actiontype" : "exam-result",
+    "result": 2,                 // ผลการสอบคัดเลือก (1=ผ่าน, 2=ไม่ผ่าน)
+    "remark": "คะแนนไม่ผ่านเกณฑ์",  // เหตุผล
+    "editcause": "แก้ไขข้อมูลคะแนน" // สาเหตุการแก้ไข
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

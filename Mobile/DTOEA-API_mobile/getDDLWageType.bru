@@ -1,0 +1,30 @@
+meta {
+  name: getDDLWageType
+  type: http
+  seq: 23
+}
+
+get {
+  url: https://test-toea.doe.go.th/toeacontent.php?task=getDDLWageType&sendTime=20260326190023&sessionid=hqcjag6wixcwgaciche5x5yfyf15gcwr&csrftoken=POyN2pGNVW6BRVhk68bAC156LcpPi3eb
+  body: none
+  auth: inherit
+}
+
+params:query {
+  task: getDDLWageType
+  sendTime: 20260326190023
+  sessionid: hqcjag6wixcwgaciche5x5yfyf15gcwr
+  csrftoken: POyN2pGNVW6BRVhk68bAC156LcpPi3eb
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
+
+docs {
+  ctype
+  1 = บริษัทจัดหางาน
+  2 = นายจ้างในประเทศ
+  3 = คนประจำเรือ
+}

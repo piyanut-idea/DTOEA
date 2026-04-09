@@ -5,14 +5,15 @@ meta {
 }
 
 put {
-  url: http://apiserver:8080/web/senderreq/15/
+  url: http://apiserver:8080/web/senderreq/1/
   body: json
   auth: inherit
 }
 
 body:json {
   {
-    "action" : "deleteRequestSenderDtl"
+    "action" : "deleteRequestSenderDtl",
+    "reason" : "เหตุผลยกเลิกคำขอ"
   }
 }
 

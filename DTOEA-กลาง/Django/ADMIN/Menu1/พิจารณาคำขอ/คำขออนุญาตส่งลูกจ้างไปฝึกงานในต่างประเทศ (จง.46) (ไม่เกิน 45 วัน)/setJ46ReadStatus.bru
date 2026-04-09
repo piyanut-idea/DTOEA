@@ -1,0 +1,23 @@
+meta {
+  name: setJ46ReadStatus
+  type: http
+  seq: 1
+}
+
+put {
+  url: http://apiserver:8080/admin/request/13/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "action": "setJ46ReadStatus",
+    "readstatus": 1
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
