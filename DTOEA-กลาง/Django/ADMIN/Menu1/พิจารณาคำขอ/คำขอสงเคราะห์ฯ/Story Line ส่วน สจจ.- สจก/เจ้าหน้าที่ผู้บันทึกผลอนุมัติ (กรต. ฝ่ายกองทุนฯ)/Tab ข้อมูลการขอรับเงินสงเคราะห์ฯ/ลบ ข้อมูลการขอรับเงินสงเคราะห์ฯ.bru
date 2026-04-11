@@ -1,0 +1,21 @@
+meta {
+  name: ลบ ข้อมูลการขอรับเงินสงเคราะห์ฯ
+  type: http
+  seq: 4
+}
+
+put {
+  url: http://apiserver:8080/admin/allowance/9/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "action" : "deleteAllowanceInfo"
+  }
+}
+
+settings {
+  encodeUrl: true
+}
