@@ -1,0 +1,21 @@
+meta {
+  name: บันทึก ข้อมูลการขอรับเงินสงเคราะห์ฯ
+  type: http
+  seq: 5
+}
+
+put {
+  url: http://apiserver:8080/admin/allowance/9/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "action" : "saveAllowanceInfo"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,15 @@
+meta {
+  name: Query ข้อมูลการยื่นอุทธรณ์
+  type: http
+  seq: 1
+}
+
+get {
+  url: http://apiserver:8090/admin/appeal
+  body: json
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

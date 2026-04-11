@@ -1,0 +1,19 @@
+meta {
+  name: Query  บันทึกผลการอนุมัติ
+  type: http
+  seq: 1
+}
+
+get {
+  url: http://apiserver:8090/admin/reqfundaidapprove?isappresult=1
+  body: none
+  auth: inherit
+}
+
+params:query {
+  isappresult: 1
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,62 @@
+meta {
+  name: บันทึกผลการอนุมัติ
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://apiserver:8080/admin/reqfundaidapprove/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "action" : "addApproveResult",
+      "reqid" : 1434019,
+      "appreccode" : "รง.3857998",
+      "appresulttype" : 3,
+      "approve_result_list" : [
+          {
+              "levelappresult" : 1,
+              "adojid" : 1,
+              "appstatus" : 1,
+              "appdate" : "2026-01-01",
+              "amountbaht" : "50000",
+              "reason" : "เห็นควรอนุมัติ"
+          },
+          {
+              "levelappresult" : 2,
+              "adojid" : 1007,
+              "appstatus" : 1,
+              "appdate" : "2026-01-01",
+              "amountbaht" : "50000",
+              "reason" : "เห็นควรอนุมัติ"
+          },
+          {
+              "levelappresult" : 3,
+              "adojid" : 1010,
+              "appstatus" : 1,
+              "appdate" : "2026-01-01",
+              "amountbaht" : "50000",
+              "reason" : "เห็นควรอนุมัติ"
+          }
+      ],
+      "document_list" : [
+          {
+              "did" : 313,
+              "filename" : "filename.pdf",
+              "uploaddate" : "2023-09-02T15:13:04.435521+07:00"
+          },        
+          {
+              "did" : 2,
+              "filename" : "filename2.pdf",
+              "uploaddate" : "2023-09-02T15:13:04.435521+07:00"
+          }
+      ]
+  }
+}
+
+settings {
+  encodeUrl: true
+}
