@@ -1,0 +1,36 @@
+meta {
+  name: getCcenterList
+  type: http
+  seq: 31
+}
+
+get {
+  url: http://custweb/toeacontent.php?task=getCcenterList&sendTime=20260326190023&sessionid=hqcjag6wixcwgaciche5x5yfyf15gcwr&csrftoken=POyN2pGNVW6BRVhk68bAC156LcpPi3eb&page=1&pvid=32&ccname=ทดสอบ&cctype=1
+  body: none
+  auth: inherit
+}
+
+params:query {
+  task: getCcenterList
+  sendTime: 20260326190023
+  sessionid: hqcjag6wixcwgaciche5x5yfyf15gcwr
+  csrftoken: POyN2pGNVW6BRVhk68bAC156LcpPi3eb
+  page: 1
+  pvid: 32
+  ccname: ทดสอบ
+  cctype: 1
+  ~cctype: 2
+  ~cctype: 3
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
+
+docs {
+  ctype
+  1 = สถาบันการศึกษา
+  2 = หน่วยงานภาครัฐ
+  3 = องค์กรเอกชน
+}

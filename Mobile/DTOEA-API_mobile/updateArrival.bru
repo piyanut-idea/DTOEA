@@ -1,0 +1,56 @@
+meta {
+  name: updateArrival
+  type: http
+  seq: 40
+}
+
+get {
+  url: http://custweb/toeacontent.php?task=updateArrival&sendTime=20260326190023&sessionid=hqcjag6wixcwgaciche5x5yfyf15gcwr&csrftoken=POyN2pGNVW6BRVhk68bAC156LcpPi3eb&arrivaldate=02-04-2026&hour=01&minute=05&backcause=3&remark=ทดสอบแจ้งออก&needback=1&ctid=1066&lastpostype=2&postion=เก็บผลไม้ป่า&causeback=1
+  body: none
+  auth: inherit
+}
+
+params:query {
+  task: updateArrival
+  sendTime: 20260326190023
+  sessionid: hqcjag6wixcwgaciche5x5yfyf15gcwr
+  csrftoken: POyN2pGNVW6BRVhk68bAC156LcpPi3eb
+  arrivaldate: 02-04-2026
+  hour: 01
+  minute: 05
+  backcause: 3
+  remark: ทดสอบแจ้งออก
+  needback: 1
+  ctid: 1066
+  lastpostype: 2
+  postion: เก็บผลไม้ป่า
+  causeback: 1
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
+
+docs {
+  backcause  สาเหตุการเดินทางกลับ
+    1,"พักผ่อน แล้วจะไปทำงานต่างประเทศต่อ"
+    2,"หมดสัญญาจ้าง"
+    3,"อื่น ๆ"
+    4,"พักผ่อน แล้วจะไปทำงานเป็นคนประจำเรือในต่างประเทศต่อ"
+  
+  needback มีความประสงค์จะไปทำงานต่างประเทศ
+    0,"ไม่ไป"
+    1,"ไป"
+    
+  causeback สาเหตุของการประสงค์ไม่ไปทำงานต่อ
+  1,"มีความประสงค์สมัครงานในประเทศ"
+  2,"ประกอบอาชีพอิสระ"
+  
+  
+  
+  lastpostype  "ตำแหน่งงานที่ทำก่อนเดินทางกลับ"
+  1,"ตำแหน่งเดียวกับที่แจ้ง"
+  2,"เปลี่ยนตำแหน่ง"
+      
+}

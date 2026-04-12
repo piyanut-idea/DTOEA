@@ -1,0 +1,31 @@
+meta {
+  name: getEventList
+  type: http
+  seq: 30
+}
+
+get {
+  url: http://custweb/toeacontent.php?task=getEventList&sendTime=20260326190023&sessionid=hqcjag6wixcwgaciche5x5yfyf15gcwr&csrftoken=POyN2pGNVW6BRVhk68bAC156LcpPi3eb&page=1
+  body: none
+  auth: inherit
+}
+
+params:query {
+  task: getEventList
+  sendTime: 20260326190023
+  sessionid: hqcjag6wixcwgaciche5x5yfyf15gcwr
+  csrftoken: POyN2pGNVW6BRVhk68bAC156LcpPi3eb
+  page: 1
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
+
+docs {
+  ctype
+  1 = บริษัทจัดหางาน
+  2 = นายจ้างในประเทศ
+  3 = คนประจำเรือ
+}
