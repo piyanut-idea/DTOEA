@@ -1,11 +1,11 @@
 meta {
-  name: seekerreqlist [Step2]
+  name: testreqlist [Step2]
   type: http
-  seq: 8
+  seq: 1
 }
 
 get {
-  url: http://apiserver:8090/web/seekerreq?reqid=23&lgbit=2&workstatus=17
+  url: http://apiserver:8090/web/testreq?reqid=23&lgbit=2&ojid=120
   body: none
   auth: inherit
 }
@@ -13,7 +13,7 @@ get {
 params:query {
   reqid: 23
   lgbit: 2
-  workstatus: 17
+  ojid: 120
 }
 
 settings {

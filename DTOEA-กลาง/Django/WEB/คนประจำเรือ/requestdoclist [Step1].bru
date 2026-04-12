@@ -1,11 +1,11 @@
 meta {
-  name: trainingreqlist [Step2]
+  name: requestdoclist [Step1]
   type: http
-  seq: 9
+  seq: 1
 }
 
 get {
-  url: http://apiserver:8090/web/trainingreq?reqid=23&lgbit=2&ojid=120
+  url: http://apiserver:8090/web/requestdoc?reqid=23&lgbit=2&didlist=290,291
   body: none
   auth: inherit
 }
@@ -13,7 +13,7 @@ get {
 params:query {
   reqid: 23
   lgbit: 2
-  ojid: 120
+  didlist: 290,291
 }
 
 settings {
