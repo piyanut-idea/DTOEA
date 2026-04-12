@@ -1,0 +1,21 @@
+meta {
+  name: companyreqlist [Step1]
+  type: http
+  seq: 2
+}
+
+get {
+  url: http://apiserver:8090/web/companyreq?reqid=23&lgbit=2
+  body: none
+  auth: inherit
+}
+
+params:query {
+  reqid: 23
+  lgbit: 2
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

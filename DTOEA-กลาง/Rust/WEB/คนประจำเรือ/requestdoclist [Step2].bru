@@ -1,0 +1,22 @@
+meta {
+  name: requestdoclist [Step2]
+  type: http
+  seq: 13
+}
+
+get {
+  url: http://apiserver:8090/web/requestdoc?reqid=23&lgbit=2&didnolist=290,291
+  body: none
+  auth: inherit
+}
+
+params:query {
+  reqid: 23
+  lgbit: 2
+  didnolist: 290,291
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
