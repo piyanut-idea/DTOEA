@@ -1,0 +1,43 @@
+meta {
+  name: แก้ไขรายการคำขอ
+  type: http
+  seq: 4
+}
+
+put {
+  url: http://apiserver:8080/admin/request/26/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "action" : "senderreqlist-edit",
+      "peoid" : 1, //รหัสสำนักจัดหางานจังหวัด
+      "ojid" : 101, //เจ้าหน้าที่
+      "remark": "เหตุผลการแก้ไข",     // เหตุผลการแก้ไข
+      "depart": "ฝ่าย",     // ฝ่าย
+      "postion": "ตำแหน่ง",    // ตำแหน่ง
+      "filename": "test.pdf",   // ชื่อไฟล์ของขอให้แก้ไขหรือยกเลิกข้อมูล
+      "uploaddate": "2026-04-08T00:00:00",  // วันที่ upload file ขอให้แก้ไขหรือยกเลิกข้อมูล
+      "uploadlist" : [
+        {
+          "filename" : "test1.pdf",
+          "considerbit" : 12 //Fixed
+        },
+        {
+          "filename" : "test2.pdf",
+          "considerbit" : 13 //Fixed
+        },
+        {
+          "filename" : "test3.pdf",
+          "considerbit" : 14 //Fixed
+        }
+      ]
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

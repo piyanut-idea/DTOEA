@@ -11,6 +11,53 @@ post {
 }
 
 body:json {
+  // {
+  //   "action": "requestJ23Step1",
+  //   "rtid": 302,
+  //   "cid": 3,
+  
+  //   "laddress": "123 Branch Address",
+  //   "lpvid": 5,
+  
+  //   "biid": -1, // -1 คือการเพิ่มใหม่ ถ้าเลือกจาก dropdown ให้ใส่ biid ของจริง
+  //   "comtype": 1,
+  //   "comname": "Foreign Company New New Ltd",
+  //   "comcode": "FC001",
+  //   "cntid": 1005,
+  //   "idtid": 7720,
+  //   "address": "456 Foreign Address",
+  //   "fullcity": "New York, NY",
+  //   "tel": "+1-555-0000",
+  
+  // //   "projid": 99,
+  //   "projname": "Project Name",
+  //   "projaddress": "456 Foreign Address",
+  //   "projcntid": 1002,
+  //   "projfcitid": 1,
+  //   "projpostcode": "10001",
+  //   "projtype": 3,
+  
+  // //   "poid": 2,
+  //   "empyear": 1,
+  //   "empmonth": 2,
+  //   "empday": 2,
+  //   "startjob": "2026-06-01",
+  //   "endjob": "2027-05-31",
+  //   "salarylocal": 15000,
+  //   "salaryforeign": 800,
+  //   "allowancetype": 1,
+  //   "allowance": 100,
+  //   "dayamount": 30,
+  
+  //   "document_list": [
+  //     { "did": 98, "filename": "contract.pdf" },
+  //     { "did": 99, "filename": "ninenine.pdf"},
+  //     { "did": 4, "filename": "four.pdf" },
+  //     { "did": 100, "filename": "hundred.pdf" },
+  //     { "did": 101, "filename": "hundredone.pdf" },
+  //     { "did": 102, "filename": "hundredtwo.pdf" }
+  //   ]
+  // }
   {
     "action": "requestJ23Step1",
     "rtid": 302,
@@ -18,10 +65,12 @@ body:json {
   
     "laddress": "123 Branch Address",
     "lpvid": 5,
+
+    "peoid": 1,
   
-    "biid": -1, // -1 คือการเพิ่มใหม่ ถ้าเลือกจาก dropdown ให้ใส่ biid ของจริง
+    "biid": -1,
     "comtype": 1,
-    "comname": "Foreign Company Ltd",
+    "comname": "Foreign Company New New Ltd",
     "comcode": "FC001",
     "cntid": 1005,
     "idtid": 7720,
@@ -29,7 +78,6 @@ body:json {
     "fullcity": "New York, NY",
     "tel": "+1-555-0000",
   
-    "projid": 99,
     "projname": "Project Name",
     "projaddress": "456 Foreign Address",
     "projcntid": 1002,
@@ -37,7 +85,7 @@ body:json {
     "projpostcode": "10001",
     "projtype": 3,
   
-    "poid": 1,
+    "jid": 2001,
     "empyear": 1,
     "empmonth": 2,
     "empday": 2,
@@ -51,13 +99,14 @@ body:json {
   
     "document_list": [
       { "did": 98, "filename": "contract.pdf" },
-      { "did": 99, "filename": "ninenine.pdf"},
+      { "did": 99, "filename": "ninenine.pdf" },
       { "did": 4, "filename": "four.pdf" },
       { "did": 100, "filename": "hundred.pdf" },
       { "did": 101, "filename": "hundredone.pdf" },
       { "did": 102, "filename": "hundredtwo.pdf" }
     ]
   }
+  
   
   
 }

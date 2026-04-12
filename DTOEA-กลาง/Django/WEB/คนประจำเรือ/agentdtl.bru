@@ -1,0 +1,57 @@
+meta {
+  name: agentdtl
+  type: http
+  seq: 4
+}
+
+post {
+  url: http://apiserver:8080/web/agentdtl/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "datastatus": 1,
+    "picname": "profile_somchai.jpg",
+    "fnameth": "สมชาย",
+    "lnameth": "ใจดี",
+    "fnameen": "Somchai",
+    "lnameen": "Jaidee",
+    "birthdate": "1990-01-01T00:00:00Z",
+    "cardtype": 1,
+    "idcard": "1234567890123",
+    "cardissue": "2020-01-01T00:00:00Z",
+    "cardexp": "2030-01-01T00:00:00Z",
+    "addressth": "123 ถนนสุขุมวิท",
+    "addressen": "123 Sukhumvit Rd.",
+    "postcode": "10110",
+    "tel": "0812345678",
+    "email": "somchai@test.com",
+    "bc1": 1, 
+    "agentstatus": 1,
+    "position": "ผู้จัดการ",
+    "reasontype": null,
+    "empstatus": 1,
+    "migrate": 0,
+    "status": 1,
+    "addrthaid": "123 ถนนสุขุมวิท (จาก ThaiD)",
+    "periodexp": null,
+    
+    "userid": 119,
+    "pfidth": 1,
+    "pfiden": 2,
+    "pfid": 1,
+    "ntid": 1,
+    "rlgid": 1,
+    "pvid": 10,
+    "ddtid": 121,
+    "sdtid": 906,
+    "cid": 1
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

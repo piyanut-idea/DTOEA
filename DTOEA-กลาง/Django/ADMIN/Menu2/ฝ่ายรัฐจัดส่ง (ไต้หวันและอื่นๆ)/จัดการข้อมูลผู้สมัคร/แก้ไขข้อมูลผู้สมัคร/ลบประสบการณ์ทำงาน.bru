@@ -1,19 +1,18 @@
 meta {
   name: ลบประสบการณ์ทำงาน
   type: http
-  seq: 6
+  seq: 4
 }
 
 put {
-  url: http://apiserver:8080/web/recruitskexp/2/
+  url: http://apiserver:8080/web/recruitskexp/1/
   body: json
   auth: inherit
 }
 
 body:json {
   {
-    "actiontype" : "tw-delete-exp",
-    "rcid" : 1,
+    "actiontype" : "delete-exp",
     "mar" : 1
   }
 }
