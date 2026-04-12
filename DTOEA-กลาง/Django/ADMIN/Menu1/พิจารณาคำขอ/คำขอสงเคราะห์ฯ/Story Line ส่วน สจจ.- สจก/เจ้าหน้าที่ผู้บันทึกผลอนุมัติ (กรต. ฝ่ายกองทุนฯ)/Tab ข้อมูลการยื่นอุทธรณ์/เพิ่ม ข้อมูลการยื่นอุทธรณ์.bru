@@ -1,0 +1,29 @@
+meta {
+  name: เพิ่ม ข้อมูลการยื่นอุทธรณ์
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://apiserver:8080/admin/appeal/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "action" : "addAppealInfo",
+      "reqid" : 1434019,
+      "appealsdate": "2026-04-01",
+      "appealedate": "2026-04-30",
+      "appealdate": "2026-04-10",
+      "appealconsiderdate": "2026-04-15",
+      "appealresultdate": "2026-04-20",
+      "appstatus": 1,
+      "reason": "พิจารณาแล้วเห็นควรอนุมัติ"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

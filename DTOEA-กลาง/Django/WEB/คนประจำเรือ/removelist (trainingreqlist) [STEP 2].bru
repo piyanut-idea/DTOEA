@@ -1,0 +1,24 @@
+meta {
+  name: removelist (trainingreqlist) [STEP 2]
+  type: http
+  seq: 5
+}
+
+put {
+  url: http://apiserver:8080/web/shipownerreq/34/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "removelist":"trainingreqlist",
+    "id":"7"
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
