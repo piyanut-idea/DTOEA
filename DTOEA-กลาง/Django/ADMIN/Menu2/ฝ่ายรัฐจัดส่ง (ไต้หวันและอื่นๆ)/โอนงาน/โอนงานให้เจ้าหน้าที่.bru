@@ -5,16 +5,16 @@ meta {
 }
 
 put {
-  url: http://apiserver:8080/admin/recruit/1/
+  url: http://apiserver:8080/admin/admindtl/1/
   body: json
   auth: inherit
 }
 
 body:json {
   {
-    "actiontype": "transfer",
-    "rcidlist": [1, 2, 3], //id recruitinfo 
-    "considerby": 1 //id เจ้าหน้าที่ปลายทาง
+    "action": "recruit-transfer",
+    "rcidlist": [1], //id recruitinfo 
+    "considerby": 107 //เจ้าหน้าที่ปลายทาง
   }
 }
 
