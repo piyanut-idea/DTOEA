@@ -1,0 +1,22 @@
+meta {
+  name: companyreq ลบ คนหางาน Step 2
+  type: http
+  seq: 4
+}
+
+put {
+  url: http://apiserver:8080/web/companyreq/17/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "action" : "deleteSeeketFundRegisterStep2",
+      "ojid" : 117
+  }
+}
+
+settings {
+  encodeUrl: true
+}
