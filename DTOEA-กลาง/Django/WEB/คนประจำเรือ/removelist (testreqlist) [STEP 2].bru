@@ -1,0 +1,23 @@
+meta {
+  name: removelist (testreqlist) [STEP 2]
+  type: http
+  seq: 6
+}
+
+put {
+  url: http://apiserver:8080/web/shipownerreq/34/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "removelist":"testreqlist",
+    "id":"7"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
