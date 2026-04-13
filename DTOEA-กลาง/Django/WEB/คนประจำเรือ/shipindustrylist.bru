@@ -1,18 +1,19 @@
 meta {
-  name: shiptypeinfo
+  name: shipindustrylist
   type: http
-  seq: 10
+  seq: 6
 }
 
 post {
-  url: http://apiserver:8080/web/shiptype/
+  url: http://apiserver:8080/admin/shipindustry/
   body: json
   auth: inherit
 }
 
 body:json {
   {
-    "name":"เรือสั้น",
+    "shtid":"1",
+    "idtid":"5000",
     "status":"1"
   }
 }
