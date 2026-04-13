@@ -4,8 +4,8 @@ meta {
   seq: 2
 }
 
-post {
-  url: http://apiserver:8080/web/shipownerreq/
+put {
+  url: http://apiserver:8080/web/shipownerreq/1/
   body: json
   auth: inherit
 }
@@ -46,11 +46,11 @@ body:json {
     "email": "info@partnerlogistics.com",
     "attachment_list": [
       {
-        "did": 101,
+        "did": 290,
         "filename": "company_registration3.pdf"
       },
       {
-        "did": 102,
+        "did": 291,
         "filename": "ship_license.jpg"
       }
     ]
