@@ -1,7 +1,7 @@
 meta {
   name: trainingroom สร้างห้องอบรม
   type: http
-  seq: 1
+  seq: 2
 }
 
 post {
@@ -12,17 +12,16 @@ post {
 
 body:json {
   {
+      "action": "addTrainingroomInfo",
+      "pvid": 32,
       "name": "ห้องอบรม A",
-      "starttime1": "09:00",
-      "stoptime1": "12:00",
-      "starttime2": "13:00",
-      "stoptime2": "16:00",
+      "traintype" : 1,
       "status": 1,
-      "traintype": 3,
-      "seat": 40,
-      "tool": "Projector, Microphone",
-      "pvid": 10
+      "trtype": 2,
+      // ถ้าเลือกเป็น trtype : 1 อบรมออนไลน์
+      "cntid" : null
   }
+  
 }
 
 settings {
