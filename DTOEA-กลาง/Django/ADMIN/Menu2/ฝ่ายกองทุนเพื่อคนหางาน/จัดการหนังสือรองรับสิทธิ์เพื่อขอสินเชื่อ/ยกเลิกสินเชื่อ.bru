@@ -1,0 +1,23 @@
+meta {
+  name: ยกเลิกสินเชื่อ
+  type: http
+  seq: 3
+}
+
+put {
+  url: http://apiserver:8080/admin/credit/18/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "action" : "cancel-credit",
+    "description" : "สาเหตุการยกเลิก" //สาเหตุการยกเลิก
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
