@@ -1,0 +1,15 @@
+meta {
+  name: trainingroom ดูข้อมูล
+  type: http
+  seq: 1
+}
+
+get {
+  url: http://apiserver:8090/admin/trainingroom/
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}
