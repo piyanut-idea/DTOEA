@@ -1,0 +1,22 @@
+meta {
+  name: testreqlist [Step2]
+  type: http
+  seq: 1
+}
+
+get {
+  url: http://apiserver:8090/web/testreq?reqid=23&lgbit=2&ojid=120
+  body: none
+  auth: inherit
+}
+
+params:query {
+  reqid: 23
+  lgbit: 2
+  ojid: 120
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

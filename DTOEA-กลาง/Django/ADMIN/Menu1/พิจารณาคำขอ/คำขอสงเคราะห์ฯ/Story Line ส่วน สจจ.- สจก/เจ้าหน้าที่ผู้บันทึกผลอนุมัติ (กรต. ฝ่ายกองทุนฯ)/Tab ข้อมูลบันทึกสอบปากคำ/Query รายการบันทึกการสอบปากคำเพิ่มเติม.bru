@@ -1,0 +1,19 @@
+meta {
+  name: Query รายการบันทึกการสอบปากคำเพิ่มเติม
+  type: http
+  seq: 1
+}
+
+get {
+  url: http://apiserver:8090/admin/approveinterrogatehist?reqid=1434015
+  body: none
+  auth: inherit
+}
+
+params:query {
+  reqid: 1434015
+}
+
+settings {
+  encodeUrl: true
+}

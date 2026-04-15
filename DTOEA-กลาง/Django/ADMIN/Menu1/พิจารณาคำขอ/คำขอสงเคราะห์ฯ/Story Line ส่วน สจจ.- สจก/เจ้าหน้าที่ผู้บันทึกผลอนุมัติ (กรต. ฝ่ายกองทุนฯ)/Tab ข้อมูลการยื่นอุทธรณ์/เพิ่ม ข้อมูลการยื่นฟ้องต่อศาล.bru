@@ -1,0 +1,37 @@
+meta {
+  name: เพิ่ม ข้อมูลการยื่นฟ้องต่อศาล
+  type: http
+  seq: 4
+}
+
+post {
+  url: http://apiserver:8080/admin/sue/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "action" : "addSueInfo",
+      "reqid" : 1434019,
+      "appstatus": 1,
+      "reason": "ศาลมีคำพิพากษาให้จำเลยชำระเงินตามสัญญา",
+      "judgmentdate": "2026-04-10",
+      "document_list" : [
+          {
+              "did" : 313,
+              "filename" : "filename.pdf",
+              "uploaddate" : "2023-09-02T15:13:04.435521+07:00"
+          },        
+          {
+              "did" : 2,
+              "filename" : "filename2.pdf",
+              "uploaddate" : "2023-09-02T15:13:04.435521+07:00"
+          }
+      ]
+  }
+}
+
+settings {
+  encodeUrl: true
+}

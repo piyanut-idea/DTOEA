@@ -1,0 +1,36 @@
+meta {
+  name: getNewsitList
+  type: http
+  seq: 28
+}
+
+get {
+  url: http://custweb/toeacontent.php?task=getNewsitList&sendTime=20260326190023&sessionid=hqcjag6wixcwgaciche5x5yfyf15gcwr&csrftoken=POyN2pGNVW6BRVhk68bAC156LcpPi3eb&page=1&namenews=ทดสอบ&month=03&year=2025&typenews=1
+  body: none
+  auth: inherit
+}
+
+params:query {
+  task: getNewsitList
+  sendTime: 20260326190023
+  sessionid: hqcjag6wixcwgaciche5x5yfyf15gcwr
+  csrftoken: POyN2pGNVW6BRVhk68bAC156LcpPi3eb
+  page: 1
+  namenews: ทดสอบ
+  month: 03
+  year: 2025
+  typenews: 1
+  ~typenews: 2
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
+
+docs {
+  ctype
+  1 = บริษัทจัดหางาน
+  2 = นายจ้างในประเทศ
+  3 = คนประจำเรือ
+}

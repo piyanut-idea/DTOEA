@@ -1,0 +1,23 @@
+meta {
+  name: removelist (healthreqlist) [STEP 2]
+  type: http
+  seq: 7
+}
+
+put {
+  url: http://apiserver:8080/web/shipownerreq/34/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "removelist":"healthreqlist",
+    "id":"7"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

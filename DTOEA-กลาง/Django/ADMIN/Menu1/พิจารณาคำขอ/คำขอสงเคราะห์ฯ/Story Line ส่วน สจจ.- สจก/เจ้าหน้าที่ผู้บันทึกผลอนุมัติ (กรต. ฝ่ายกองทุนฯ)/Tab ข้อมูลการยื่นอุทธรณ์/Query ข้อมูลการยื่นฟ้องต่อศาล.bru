@@ -1,0 +1,15 @@
+meta {
+  name: Query ข้อมูลการยื่นฟ้องต่อศาล
+  type: http
+  seq: 3
+}
+
+get {
+  url: http://apiserver:8090/admin/sue/
+  body: json
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

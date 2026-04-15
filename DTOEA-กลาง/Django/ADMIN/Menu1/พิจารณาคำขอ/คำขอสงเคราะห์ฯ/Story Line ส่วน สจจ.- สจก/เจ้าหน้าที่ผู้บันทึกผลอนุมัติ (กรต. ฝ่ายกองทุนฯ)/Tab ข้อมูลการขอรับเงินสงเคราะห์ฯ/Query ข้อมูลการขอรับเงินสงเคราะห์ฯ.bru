@@ -1,0 +1,15 @@
+meta {
+  name: Query ข้อมูลการขอรับเงินสงเคราะห์ฯ
+  type: http
+  seq: 1
+}
+
+get {
+  url: http://apiserver:8090/admin/allowance
+  body: json
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

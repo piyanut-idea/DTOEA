@@ -1,0 +1,22 @@
+meta {
+  name: trainingschedule ลบ
+  type: http
+  seq: 4
+}
+
+put {
+  url: http://apiserver:8080/admin/trainingroom/5261/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "action": "deleteTrainingroomInfo"
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,27 @@
+meta {
+  name: companyreq เลือกคน Step 2
+  type: http
+  seq: 3
+}
+
+put {
+  url: http://apiserver:8080/web/companyreq/9/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "action" : "requestFundRegisterStep2",
+      "refreqid" : 1434047,
+      "seeker_list" : [
+          {
+              "ojid" : 1001 //คนหางานที่ได้มาจากยื่น  จง.27
+          }    
+      ]
+  }
+}
+
+settings {
+  encodeUrl: true
+}

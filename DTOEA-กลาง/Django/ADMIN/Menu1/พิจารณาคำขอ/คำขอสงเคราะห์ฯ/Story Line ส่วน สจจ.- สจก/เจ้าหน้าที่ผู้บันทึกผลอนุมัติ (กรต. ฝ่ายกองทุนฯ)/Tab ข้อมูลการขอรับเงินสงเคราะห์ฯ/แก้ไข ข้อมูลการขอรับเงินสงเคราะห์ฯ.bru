@@ -1,0 +1,42 @@
+meta {
+  name: แก้ไข ข้อมูลการขอรับเงินสงเคราะห์ฯ
+  type: http
+  seq: 3
+}
+
+put {
+  url: http://apiserver:8080/admin/allowance/9/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "action" : "editAllowanceInfo",
+      // "aidheir": "นายสมชาย ใจดี",
+      "hitid": 1,
+      "relation": "บุตร",
+      "baid2": 12,
+      "bankcode": "004",
+      "transfertype": 1,
+      "transferdate": "2026-10-04",
+      "amountbaht": 50000,
+      "reason": "อนุมัติเงินช่วยเหลือ",
+      "document_list" : [
+          {
+              "did" : 313,
+              "filename" : "filename.pdf",
+              "uploaddate" : "2023-09-02T15:13:04.435521+07:00"
+          },        
+          {
+              "did" : 2,
+              "filename" : "filename2.pdf",
+              "uploaddate" : "2023-09-02T15:13:04.435521+07:00"
+          }
+      ]
+  }
+}
+
+settings {
+  encodeUrl: true
+}
