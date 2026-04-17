@@ -1,0 +1,23 @@
+meta {
+  name: deleteJobPostings
+  type: http
+  seq: 6
+}
+
+put {
+  url: http://apiserver:8080/admin/jobpostings/7/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "action": "deleteJobPostingsInfo"
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
