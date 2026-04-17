@@ -1,0 +1,31 @@
+meta {
+  name: updatePositionPostingsInfo
+  type: http
+  seq: 4
+}
+
+put {
+  url: http://apiserver:8080/admin/positionpostings/15/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "action": "updatePositionPostingsInfo",
+      "biid": 1,
+      "posname": "Updated Position agian",
+      "needgender": 0,
+      "wtid": 1,
+      "wage": 90000,
+      "curid": 1,
+      "rate": 1,
+      "otherdesc": "Updated Updated conditions"
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
