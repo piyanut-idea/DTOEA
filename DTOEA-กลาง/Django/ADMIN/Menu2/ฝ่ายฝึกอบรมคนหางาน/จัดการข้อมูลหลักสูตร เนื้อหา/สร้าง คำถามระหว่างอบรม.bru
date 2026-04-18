@@ -1,0 +1,35 @@
+meta {
+  name: สร้าง คำถามระหว่างอบรม
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://apiserver:8080/admin/questtraining/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "action" : "create-questtraining",
+    "title": "คำถามตัวอย่าง?",   // หัวข้อคำถาม
+    "qstatus": 1,                // สถานะคำถาม (0=ไม่ใช้งาน, 1=ใช้งาน)
+    "cchoice": 2,                // จำนวนตัวเลือก
+    "choice_list" : [
+      {
+        "answer" : "ใช่", //ตัวเลือก
+        "cstatus" : "1" //(1,"ถูกต้อง"),(2,"ไม่ถูกต้อง")
+      },
+      {
+        "answer" : "ไม่ใช่", //ตัวเลือก
+        "cstatus" : "2" //(1,"ถูกต้อง"),(2,"ไม่ถูกต้อง")
+      }
+    ]
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
