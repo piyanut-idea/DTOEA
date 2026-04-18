@@ -5,12 +5,16 @@ meta {
 }
 
 get {
-  url: http://apiserver:8090/admin/request
+  url: http://apiserver:8090/admin/request?cconsiderby=101&creqstatus=1&creqstatuslist=14,15&creqbyadmin=101
   body: none
   auth: inherit
 }
 
 params:query {
+  cconsiderby: 101
+  creqstatus: 1
+  creqstatuslist: 14,15
+  creqbyadmin: 101
   ~appdatenull: notnull
   ~appdatenull: null
   ~s_reqdate: 2026-03-17T00:00:00Z

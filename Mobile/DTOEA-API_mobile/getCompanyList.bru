@@ -1,0 +1,31 @@
+meta {
+  name: getCompanyList
+  type: http
+  seq: 49
+}
+
+get {
+  url: https://test-toea.doe.go.th/toeacontent.php?task=getCompanyList&sendTime=20260326190023&sessionid=hqcjag6wixcwgaciche5x5yfyf15gcwr&csrftoken=POyN2pGNVW6BRVhk68bAC156LcpPi3eb&ctype=1
+  body: none
+  auth: inherit
+}
+
+params:query {
+  task: getCompanyList
+  sendTime: 20260326190023
+  sessionid: hqcjag6wixcwgaciche5x5yfyf15gcwr
+  csrftoken: POyN2pGNVW6BRVhk68bAC156LcpPi3eb
+  ctype: 1
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
+
+docs {
+  ctype
+  1,"บริษัทจัดหางาน"
+  2,"นายจ้างในประเทศ"
+  3,"คนประจำเรือ“
+}

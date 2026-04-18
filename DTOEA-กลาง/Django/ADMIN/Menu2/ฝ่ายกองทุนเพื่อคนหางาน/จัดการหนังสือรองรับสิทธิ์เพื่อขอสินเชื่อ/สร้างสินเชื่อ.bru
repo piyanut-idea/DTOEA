@@ -1,0 +1,53 @@
+meta {
+  name: สร้างสินเชื่อ
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://apiserver:8080/admin/credit/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "action" : "create-credit",
+    "ojid": 118,            // ข้อมูลคนหางาน (FK → seekerDtl.id)
+    "baid": 1,            // ข้อมูลธนาคาร (FK → bankInfo.id)
+    "bankother": "สาขาย่อย",                 // อื่นๆ
+    "branch": "สาขากรุงเทพ",                  // สาขา
+    "pay": 500000.0000,                      // จำนวนเงินสินเชื่อ
+    "gtype": 1,                              // ประเภทหลักประกัน (1=เงินฝาก,...,6=อื่นๆ)
+    "gother": null,                          // หลักประกันอื่น
+    "address": "123/45 กรุงเทพ",             // ที่อยู่
+    "pvid": 10,              // ข้อมูลจังหวัด
+    "ddtid": 101,            // ข้อมูลอำเภอ
+    "sdtid": 1001,           // ข้อมูลตำบล
+    "loandate": "2026-01-01T00:00:00",      // วันที่ออกหนังสือ
+    "loanexpdate": "2027-01-01T00:00:00",   // วันหมดอายุหนังสือ
+    "reqid": null,           // ตารางข้อมูลคำขอ
+    "upload_list" : [
+      {
+        "id": 38, //Fixed สำเนาบัตรประชาชน required
+        "filename": "doc_001.pdf",
+        "uploaddate": "2026-03-21T00:00:00"
+      },
+      {
+        "id": 39,//สำเนาหนังสือเดินทาง (Passport)
+        "filename": "doc_002.pdf",
+        "uploaddate": "2026-03-21T00:00:00"
+      },
+      {
+        "id": 75,//Fixed สำเนาสัญญาจ้างงาน
+        "filename": "doc_003.pdf",
+        "uploaddate": "2026-03-21T00:00:00"
+      }
+    ]
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

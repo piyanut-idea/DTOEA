@@ -1,0 +1,39 @@
+meta {
+  name: updateActLocation
+  type: http
+  seq: 43
+}
+
+get {
+  url: https://test-toea.doe.go.th/toeacontent.php?task=updateDeparture&sendTime=20260326190023&sessionid=hqcjag6wixcwgaciche5x5yfyf15gcwr&csrftoken=POyN2pGNVW6BRVhk68bAC156LcpPi3eb&hour=01&minute=05&travelby=1&travelno=TG5852
+  body: none
+  auth: inherit
+}
+
+params:query {
+  task: updateDeparture
+  sendTime: 20260326190023
+  sessionid: hqcjag6wixcwgaciche5x5yfyf15gcwr
+  csrftoken: POyN2pGNVW6BRVhk68bAC156LcpPi3eb
+  hour: 01
+  minute: 05
+  travelby: 1
+  travelno: TG5852
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
+
+docs {
+  travelby วิธีเดินทาง
+  1,"รถไฟ",
+  2,"รถยนต์",
+  3,"เรือ",
+  4,"อากาศ"
+  
+  
+  
+  travelno หมายเลขเที่ยวโดยสาร
+}

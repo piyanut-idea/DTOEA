@@ -1,0 +1,34 @@
+meta {
+  name: getTestPlaceList
+  type: http
+  seq: 33
+}
+
+get {
+  url: https://test-toea.doe.go.th/toeacontent.php?task=getTestPlaceList&sendTime=20260326190023&sessionid=hqcjag6wixcwgaciche5x5yfyf15gcwr&csrftoken=POyN2pGNVW6BRVhk68bAC156LcpPi3eb&page=1&pvid=32&ccname=ทดสอบ&tptype=1
+  body: none
+  auth: inherit
+}
+
+params:query {
+  task: getTestPlaceList
+  sendTime: 20260326190023
+  sessionid: hqcjag6wixcwgaciche5x5yfyf15gcwr
+  csrftoken: POyN2pGNVW6BRVhk68bAC156LcpPi3eb
+  page: 1
+  pvid: 32
+  ccname: ทดสอบ
+  tptype: 1
+  ~tptype: 2
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
+
+docs {
+  tptype
+  1 = รัฐบาล
+  2 = เอกชน
+}

@@ -1,0 +1,28 @@
+meta {
+  name: อัพเดทผล
+  type: http
+  seq: 4
+}
+
+put {
+  url: http://apiserver:8080/admin/credit/31/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "action" : "approve-credit",
+    "appstatus" : 1,//(1,"ผ่าน"),(2,"ไม่ผ่าน"),
+    "appdate" : "2026-04-16T00:00:00",
+    "amount" : 2000.50,
+    "typeloan" : 1, //(1,"ตนเองเป็นผู้ยื่น"),(2,"บุคคลอื่นยื่น"),
+    "loanname" : "ทดสอบ", //ชื่อ - นามสกุล (ผู้ยื่นขอกู้เงินสินเชื่อ)
+    "remark" : null //สาเหตุไม่ผ่านสินเชื่อ
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
