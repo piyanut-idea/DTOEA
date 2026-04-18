@@ -1,0 +1,21 @@
+meta {
+  name: companyreq Step 3 submit
+  type: http
+  seq: 6
+}
+
+put {
+  url: http://apiserver:8080/web/companyreq/7/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "action" : "submitTraingRoom"
+  }
+}
+
+settings {
+  encodeUrl: true
+}
