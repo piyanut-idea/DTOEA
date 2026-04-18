@@ -1,0 +1,28 @@
+meta {
+  name: registerInterDtlStep1b
+  type: http
+  seq: 3
+}
+
+put {
+  url: http://apiserver:8080/web/interreq/id/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "action": "registerInterDtlStep1",
+      "email": "test@example.com",
+      "refotp": "ABC123",
+      "otp": "654321",
+      "passwd": "MyPassword123",
+      "confirmpasswd": "MyPassword123"
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
