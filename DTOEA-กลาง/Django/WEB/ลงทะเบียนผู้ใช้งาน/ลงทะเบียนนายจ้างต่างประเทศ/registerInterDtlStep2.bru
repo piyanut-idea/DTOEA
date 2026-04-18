@@ -1,0 +1,39 @@
+meta {
+  name: registerInterDtlStep2
+  type: http
+  seq: 4
+}
+
+put {
+  url: http://apiserver:8080/web/interreq/id/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "action": "registerInterDtlStep2",
+      "comtype": 1,
+      "intername": "Test Company Ltd.",
+      "comcode": "TC001",
+      "address": "123 Main St",
+      "postcode": "12345",
+      "state": "California",
+      "county": "Los Angeles",
+      "city": "Los Angeles",
+      "fullcity": "California / Los Angeles / Los Angeles",
+      "tel": "+1-555-0001",
+      "fax": "+1-555-0002",
+      "pfid": 1,
+      "fname": "John",
+      "lname": "Doe",
+      "contactemail": "contact@example.com",
+      "cntid": 1
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
