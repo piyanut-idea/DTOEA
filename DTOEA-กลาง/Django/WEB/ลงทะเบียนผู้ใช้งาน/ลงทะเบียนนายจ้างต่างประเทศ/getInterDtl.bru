@@ -1,0 +1,27 @@
+meta {
+  name: getInterDtl
+  type: http
+  seq: 10
+}
+
+get {
+  url: http://apiserver:8090/web/interdtl?intername=test&comecode=TC001&comtype=1&status=1&email=test@example.com&fname=test&lname=test
+  body: none
+  auth: inherit
+}
+
+params:query {
+  intername: test
+  comecode: TC001
+  comtype: 1
+  status: 1
+  email: test@example.com
+  fname: test
+  lname: test
+  ~cntid: 1
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
