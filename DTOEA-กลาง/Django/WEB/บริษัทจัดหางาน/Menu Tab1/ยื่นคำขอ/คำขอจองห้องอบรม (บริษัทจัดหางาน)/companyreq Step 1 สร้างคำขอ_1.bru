@@ -1,0 +1,27 @@
+meta {
+  name: companyreq Step 1 สร้างคำขอ_1
+  type: http
+  seq: 2
+}
+
+put {
+  url: http://apiserver:8080/web/companyreq/7/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "action" : "requestTraingRoomStep1",
+      "rtid" : 113,
+      "cid" : 5267,
+      "refreqid" : 1434023, //ได้มาจากคำขอ จง.27 ที่อนุมัติแล้ว
+      "jt3id" : 1,
+      "trtype" : 2,
+      "tscid": 10
+  }
+}
+
+settings {
+  encodeUrl: true
+}
