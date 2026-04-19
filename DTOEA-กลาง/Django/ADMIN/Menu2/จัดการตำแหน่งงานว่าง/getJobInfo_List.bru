@@ -1,0 +1,16 @@
+meta {
+  name: getJobInfo_List
+  type: http
+  seq: 9
+}
+
+get {
+  url: http://apiserver:8090/admin/job
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
