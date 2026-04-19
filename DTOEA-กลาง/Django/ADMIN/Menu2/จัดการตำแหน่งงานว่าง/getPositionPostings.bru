@@ -5,13 +5,15 @@ meta {
 }
 
 get {
-  url: http://apiserver:8090/admin/positionpostings?jpoid=1
+  url: http://apiserver:8090/admin/positionpostings?jpoid=1&actby=1&biid=1
   body: none
   auth: inherit
 }
 
 params:query {
   jpoid: 1
+  actby: 1
+  biid: 1
 }
 
 settings {
