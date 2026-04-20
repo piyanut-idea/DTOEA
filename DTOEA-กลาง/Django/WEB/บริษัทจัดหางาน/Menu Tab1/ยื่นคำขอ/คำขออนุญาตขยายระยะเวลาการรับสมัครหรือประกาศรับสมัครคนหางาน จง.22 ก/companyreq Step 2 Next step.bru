@@ -1,0 +1,38 @@
+meta {
+  name: companyreq Step 2 Next step
+  type: http
+  seq: 3
+}
+
+put {
+  url: http://apiserver:8080/web/companyreq/28/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "action" : "requestJ22aStep2",
+      "document_list" : [
+          {
+              "did" : 37,
+              "filename" : "filename5.pdf",
+              "uploaddate" : "2023-09-02T15:13:04.435521+07:00"
+          },        
+          {
+              "did" : 38,
+              "filename" : "filename2.pdf",
+              "uploaddate" : "2023-09-02T15:13:04.435521+07:00"
+          },
+          {
+              "did" : 39,
+              "filename" : "filename3.pdf",
+              "uploaddate" : "2023-09-02T15:13:04.435521+07:00"
+          }
+      ]
+  }
+}
+
+settings {
+  encodeUrl: true
+}
