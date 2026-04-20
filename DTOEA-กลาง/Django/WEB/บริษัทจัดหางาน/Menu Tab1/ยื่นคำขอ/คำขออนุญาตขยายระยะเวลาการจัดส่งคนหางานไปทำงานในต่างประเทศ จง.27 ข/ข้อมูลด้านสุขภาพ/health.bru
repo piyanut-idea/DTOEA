@@ -1,0 +1,27 @@
+meta {
+  name: health
+  type: http
+  seq: 1
+}
+
+get {
+  url: http://apiserver:8080/web/health/
+  body: text
+  auth: inherit
+}
+
+body:text {
+  {
+      "action" : "editHealthInfo",
+      "ckcongen": 2,
+      "congen": "มีโรคประจำตัว",
+      "blood": 1,
+      "ckdrug": 1,
+      "drug": "ไม่มีประวัติการใช้ยาเสพติด",
+      "ojid": 1
+  }
+}
+
+settings {
+  encodeUrl: true
+}
