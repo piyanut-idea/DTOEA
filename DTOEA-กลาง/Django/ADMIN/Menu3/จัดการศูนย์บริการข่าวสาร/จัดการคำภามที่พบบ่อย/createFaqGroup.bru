@@ -1,0 +1,25 @@
+meta {
+  name: createFaqGroup
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://apiserver:8080/admin/faqgroup/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "action": "createFaqGroup",
+      "questgroup": "คำถามทั่วไป",
+      "status": 1
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

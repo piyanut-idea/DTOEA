@@ -1,0 +1,27 @@
+meta {
+  name: addFaqInfo
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://apiserver:8080/admin/faq/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "action": "createFaqInfo",
+      "faqgid": 1,
+      "question": "วิธีสมัครทำอย่างไร",
+      "answer": "กรอกข้อมูลในแบบฟอร์มสมัคร",
+      "status": 1
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
