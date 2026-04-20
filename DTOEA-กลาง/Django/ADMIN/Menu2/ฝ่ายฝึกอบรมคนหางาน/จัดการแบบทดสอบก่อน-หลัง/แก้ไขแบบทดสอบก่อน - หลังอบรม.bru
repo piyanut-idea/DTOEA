@@ -1,0 +1,23 @@
+meta {
+  name: แก้ไขแบบทดสอบก่อน - หลังอบรม
+  type: http
+  seq: 2
+}
+
+put {
+  url: http://apiserver:8080/admin/trainingtest/1/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "question" : "แก้ไขคำถาม", //คำถาม
+    "status" : 1 // (0,"ไม่ใช้งาน"),(1,"ใช้งาน"),
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
