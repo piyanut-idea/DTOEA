@@ -1,0 +1,23 @@
+meta {
+  name: seekerlistinform ข้อมูลคนหางาน Step 2
+  type: http
+  seq: 3
+}
+
+get {
+  url: http://apiserver:8080/web/seekerlistinform/?cid=5267&refreqid=1434023
+  body: json
+  auth: inherit
+}
+
+params:query {
+  cid: 5267
+  refreqid: 1434023
+  ~id: 1001
+  ~idcard: 1200100000005
+  ~fullname_th_like: สุทิวัส
+}
+
+settings {
+  encodeUrl: true
+}
