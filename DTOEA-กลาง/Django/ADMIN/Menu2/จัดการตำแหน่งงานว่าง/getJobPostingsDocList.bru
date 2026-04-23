@@ -1,0 +1,20 @@
+meta {
+  name: getJobPostingsDocList
+  type: http
+  seq: 13
+}
+
+get {
+  url: http://apiserver:8090/admin/jobpostingsdoc?jpoid=2
+  body: none
+  auth: inherit
+}
+
+params:query {
+  jpoid: 2
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
