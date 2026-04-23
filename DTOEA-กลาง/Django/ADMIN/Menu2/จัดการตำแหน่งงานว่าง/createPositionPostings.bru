@@ -11,17 +11,28 @@ post {
 }
 
 body:json {
+  // {
+  //     "action": "createPositionPostingsInfo",
+  //     "biid": -1,  // -1 ถ้าหน้า jobpostingsinfo เป็นการสร้าง bossinterinfo ใหม่ ถ้าเลือกจาก dropdown ให้ใส่ biid ขแงนายจ้างที่เลือก
+  //     "posname": "Test Position",
+  //     "needgender": 0,
+  //     "wtid": 1,
+  //     "wage": 10000,
+  //     "curid": 1,
+  //     "rate": 1,
+  //     "otherdesc": "Test update new new emp"
+  // }
+  
+  
+  // new flow
   {
-      "action": "createPositionPostingsInfo",
-      "biid": 1,  // -1 ถ้าหน้า jobpostingsinfo เป็นการสร้าง bossinterinfo ใหม่ ถ้าเลือกจาก dropdown ให้ใส่ biid ขแงนายจ้างที่เลือก
-      "posname": "Test Position",
-      "needgender": 0,
-      "wtid": 1,
-      "wage": 10000,
-      "curid": 1,
-      "rate": 1,
-      "otherdesc": "Test update new new emp"
+    "action": "createPositionPostingsDraft",
+    "jpoid": "2",
+    "biid": null,
+    "wtid": 1,
+    "curid": 1
   }
+  
   
 }
 

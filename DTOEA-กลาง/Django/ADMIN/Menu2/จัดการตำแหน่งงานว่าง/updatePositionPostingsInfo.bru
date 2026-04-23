@@ -5,22 +5,40 @@ meta {
 }
 
 put {
-  url: http://apiserver:8080/admin/positionpostings/15/
+  url: http://apiserver:8080/admin/positionpostings/3/
   body: json
   auth: inherit
 }
 
 body:json {
+  // {
+  //     "action": "updatePositionPostingsInfo",
+  //     "biid": 1,
+  //     "posname": "Updated Position agian",
+  //     "needgender": 0,
+  //     "wtid": 1,
+  //     "wage": 90000,
+  //     "curid": 1,
+  //     "rate": 1,
+  //     "otherdesc": "Updated Updated conditions"
+  // }
+  
+  
+  // new flow
   {
-      "action": "updatePositionPostingsInfo",
-      "biid": 1,
-      "posname": "Updated Position agian",
-      "needgender": 0,
-      "wtid": 1,
-      "wage": 90000,
-      "curid": 1,
-      "rate": 1,
-      "otherdesc": "Updated Updated conditions"
+    "action": "updatePositionPostingsInfo",
+    "jpoid": "2",
+    "biid": null,
+    "posname": "Test Update Position 1",
+    "needgender": 0,
+    "wtid": 1,
+    "wage": "50000",
+    "curid": 1,
+    "rate": "1",
+    "otherdesc": "test update desc 1",
+    "posamount": 2,
+    "thrate": "50000",
+    "salary": "50000"
   }
   
 }
