@@ -5,7 +5,7 @@ meta {
 }
 
 put {
-  url: http://apiserver:8080/admin/jobpostings/7/
+  url: http://apiserver:8080/admin/jobpostings/2/
   body: json
   auth: inherit
 }
@@ -13,11 +13,10 @@ put {
 body:json {
   {
       "action": "updateJobPostingsInfo",
-      "typean": 2,
+      "typean": 1,
       "cid": 1,
-      "biid": -1,
       "comtype": 1,
-      "bossfname": "Updated Updated Employer Name",
+      "cname": "Updated Updated Company Name",
       "comcode": "FC001",
       "bossaddress": "123 Updated Street",
       "bctid": 1,

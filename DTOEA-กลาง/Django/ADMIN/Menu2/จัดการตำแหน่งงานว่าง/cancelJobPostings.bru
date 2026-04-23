@@ -1,0 +1,23 @@
+meta {
+  name: cancelJobPostings
+  type: http
+  seq: 12
+}
+
+put {
+  url: http://apiserver:8080/admin/jobpostings/{id}/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "action": "cancelJobPostingsDraft"
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

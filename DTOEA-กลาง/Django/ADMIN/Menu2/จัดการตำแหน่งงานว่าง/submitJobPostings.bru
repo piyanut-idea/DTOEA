@@ -1,0 +1,55 @@
+meta {
+  name: submitJobPostings
+  type: http
+  seq: 11
+}
+
+put {
+  url: http://apiserver:8080/admin/jobpostings/2/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  // new boss
+  {
+    "action": "submitJobPostings",
+    "typean": 1,
+    "cname": "Test Division",
+    "startdate": "2026-05-01T00:00:00",
+    "enddate": "2026-06-01T00:00:00",
+    "biid": null,
+    "comtype": 1,
+    "bctid": 1,
+    "bossaddress": "123 Test St",
+    "tel": "0812345678",
+    "bossfname": "Test Boss Co Ltd",
+    "comcode": "BOSS001",
+    "showjt2": 0,
+    "document_list": [
+      { "did": 204, "filename": "test.pdf" }
+      // ถ้า typean = 2 ใช้ 205
+    ]
+  }
+  
+  // existing boss
+  // {
+  //   "action": "saveJobPostingsDraft",
+  //   "typean": 1,
+  //   "cname": "Test Division",
+  //   "startdate": "2026-05-01T00:00:00",
+  //   "enddate": "2026-06-01T00:00:00",
+  //   "biid": "<biid>",
+  //   "showjt2": 0,
+  //   "document_list": [
+  //     { "did": 204, "filename": "test.pdf" }
+  //   ]
+  // }
+  
+  
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
