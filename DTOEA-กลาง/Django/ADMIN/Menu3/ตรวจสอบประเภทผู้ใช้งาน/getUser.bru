@@ -1,0 +1,25 @@
+meta {
+  name: getUser
+  type: http
+  seq: 1
+}
+
+get {
+  url: http://apiserver:8080/admin/user/?page_size=10&action=checkUserType&typeuser=2
+  body: none
+  auth: inherit
+}
+
+params:query {
+  page_size: 10
+  action: checkUserType
+  typeuser: 2
+  ~name: ทดสอบ
+  ~username: 3101800737312
+  ~status: 1
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
