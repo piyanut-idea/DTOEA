@@ -1,0 +1,24 @@
+meta {
+  name: deleteFaqGroup
+  type: http
+  seq: 6
+}
+
+put {
+  url: http://apiserver:8080/admin/faqgroup/1/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "action": "deleteFaqGroup",
+      "mar": 1
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

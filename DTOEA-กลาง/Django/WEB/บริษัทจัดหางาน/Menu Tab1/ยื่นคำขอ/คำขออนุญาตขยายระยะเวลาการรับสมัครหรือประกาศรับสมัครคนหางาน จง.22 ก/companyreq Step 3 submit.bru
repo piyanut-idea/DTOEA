@@ -1,0 +1,21 @@
+meta {
+  name: companyreq Step 3 submit
+  type: http
+  seq: 4
+}
+
+put {
+  url: http://apiserver:8080/web/companyreq/28/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "action" : "submitJ22a"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

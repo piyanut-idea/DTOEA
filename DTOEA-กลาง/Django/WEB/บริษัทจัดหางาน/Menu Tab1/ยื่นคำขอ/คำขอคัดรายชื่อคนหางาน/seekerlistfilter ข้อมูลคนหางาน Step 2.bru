@@ -1,0 +1,25 @@
+meta {
+  name: seekerlistfilter ข้อมูลคนหางาน Step 2
+  type: http
+  seq: 9
+}
+
+get {
+  url: http://apiserver:8080/web/seekerlistfilter/?reqid=1434062&cid=5267&idcard=1200100000005&fullname_th_like=สุทิวัส&j1id&pvid
+  body: json
+  auth: inherit
+}
+
+params:query {
+  reqid: 1434062
+  cid: 5267
+  idcard: 1200100000005
+  fullname_th_like: สุทิวัส
+  j1id: 
+  pvid: 
+  ~id: 1001
+}
+
+settings {
+  encodeUrl: true
+}

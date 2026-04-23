@@ -1,0 +1,26 @@
+meta {
+  name: สำนักงานแรงงานในต่างประเทศ
+  type: http
+  seq: 2
+}
+
+get {
+  url: http://apiserver:8090/admin/labourcenter?typeoff=2&name=สถานทูตไทยในประเทศอาร์เจนตินา Argentina
+  body: text
+  auth: inherit
+}
+
+params:query {
+  typeoff: 2
+  name: สถานทูตไทยในประเทศอาร์เจนตินา Argentina
+}
+
+body:text {
+  typeoff 1 = สำนักงานแรงงานในต่างประเทศ.
+  typeoff 2 = สถานทูต
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
