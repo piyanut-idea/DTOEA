@@ -1,0 +1,20 @@
+meta {
+  name: ประวัติการตรวจสอบประวัติ
+  type: http
+  seq: 16
+}
+
+get {
+  url: http://apiserver:8080/admin/recruitcrimehist?rcid=1
+  body: none
+  auth: inherit
+}
+
+params:query {
+  rcid: 1
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
