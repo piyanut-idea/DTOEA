@@ -5,12 +5,13 @@ meta {
 }
 
 put {
-  url: http://apiserver:8080/admin/jobpostings/2/
+  url: http://apiserver:8080/admin/jobpostingstmphist/2/
   body: json
   auth: inherit
 }
 
 body:json {
+  // ใช้ในการบันทึก jobpostings และ positionpostings ที่ถูกสร้างขึ้นมาในตอนแรก โดยระบบจะสร้าง jobPostingsInfo และ positionPostingsInfo อัตโนมัติจาก draft ที่อยู่ใน jobPostingTmpHist และ positionPostingsTmpHist
   // new boss
   {
     "action": "submitJobPostings",
@@ -19,6 +20,7 @@ body:json {
     "startdate": "2026-05-01T00:00:00",
     "enddate": "2026-06-01T00:00:00",
     "biid": null,
+    "fcitid": 1,
     "comtype": 1,
     "bctid": 1,
     "bossaddress": "123 Test St",

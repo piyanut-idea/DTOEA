@@ -1,16 +1,25 @@
 meta {
-  name: createPositionPostings
+  name: createPositionPostingsDraft
   type: http
   seq: 3
 }
 
 post {
-  url: http://apiserver:8080/admin/positionpostings/
+  url: http://apiserver:8080/admin/positionpostingstmphist/
   body: json
   auth: inherit
 }
 
 body:json {
+  // ใช้ในการสร้าง positionPostings ในกรณี jobpostingstmphist ยังไม่ถูก submit
+  {
+    "action": "createPositionPostingsDraft",
+    "jpoid": "2",
+    "biid": null,
+    "wtid": 1,
+    "curid": 1
+  }
+  
   // {
   //     "action": "createPositionPostingsInfo",
   //     "biid": -1,  // -1 ถ้าหน้า jobpostingsinfo เป็นการสร้าง bossinterinfo ใหม่ ถ้าเลือกจาก dropdown ให้ใส่ biid ขแงนายจ้างที่เลือก
@@ -25,13 +34,14 @@ body:json {
   
   
   // new flow
-  {
-    "action": "createPositionPostingsDraft",
-    "jpoid": "2",
-    "biid": null,
-    "wtid": 1,
-    "curid": 1
-  }
+  // {
+  //   "action": "createPositionPostingsDraft",
+  //   "jpoid": "2",
+  //   "biid": null,
+  //   "wtid": 1,
+  //   "curid": 1
+  // }
+  
   
   
 }
