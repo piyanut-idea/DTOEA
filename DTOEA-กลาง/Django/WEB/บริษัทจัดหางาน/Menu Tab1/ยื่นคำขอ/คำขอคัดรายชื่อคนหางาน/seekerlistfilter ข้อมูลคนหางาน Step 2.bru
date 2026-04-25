@@ -5,14 +5,14 @@ meta {
 }
 
 get {
-  url: http://apiserver:8080/web/seekerlistfilter/?reqid=1434062&cid=5267&idcard=1200100000005&fullname_th_like=สุทิวัส&j1id&pvid
+  url: http://apiserver:8080/web/seekerlistfilter/?reqid=1434062&scid=5267&idcard=1200100000005&fullname_th_like=สุทิวัส&j1id=&pvid=
   body: json
   auth: inherit
 }
 
 params:query {
   reqid: 1434062
-  cid: 5267
+  scid: 5267
   idcard: 1200100000005
   fullname_th_like: สุทิวัส
   j1id: 
@@ -22,4 +22,5 @@ params:query {
 
 settings {
   encodeUrl: true
+  timeout: 0
 }
