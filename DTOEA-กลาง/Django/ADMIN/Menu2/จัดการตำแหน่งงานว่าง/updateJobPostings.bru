@@ -5,12 +5,13 @@ meta {
 }
 
 put {
-  url: http://apiserver:8080/admin/jobpostings/2/
+  url: http://apiserver:8080/admin/jobpostings/4/
   body: json
   auth: inherit
 }
 
 body:json {
+  // ใช้ในการแก้ไข jobpostingsinfo สำหรับ records ที่ถูก submit แล้ว (มี record อยู่ใน jobpostingsinfo)
   {
       "action": "updateJobPostingsInfo",
       "typean": 1,
@@ -18,8 +19,9 @@ body:json {
       "comtype": 1,
       "cname": "Updated Updated Company Name",
       "comcode": "FC001",
-      "bossaddress": "123 Updated Street",
+      "bossaddress": "123 Updated updated Street",
       "bctid": 1,
+      "fcitid": 1,
       "startdate": "2026-06-01",
       "enddate": "2026-09-01",
       "status": 1,
@@ -29,7 +31,6 @@ body:json {
       "comcode": "...",      // comtype=1 only
       "bctid": 1005,
       "idtid": 7720,
-      "bossaddress": "...",
       "fullcity": "...",
       "bosspostcode": "...", // optional
       "tel": "...",

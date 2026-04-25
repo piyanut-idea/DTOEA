@@ -5,12 +5,30 @@ meta {
 }
 
 put {
-  url: http://apiserver:8080/admin/positionpostings/3/
+  url: http://apiserver:8080/admin/positionpostings/2/
   body: json
   auth: inherit
 }
 
 body:json {
+  // ใช้ในการแก้ไข positionpostings ในกรณีที่ถูก submit แล้ว (มี records อยู่ใน positionPostingsInfo)
+  {
+    "action": "updatePositionPostingsInfo",
+    "jid": 1014, // ตำแหน่ง
+    "jpoid": "4",
+    "biid": null,
+    "posname": "Test Update Position 1",
+    "needgender": 0,
+    "wtid": 1,
+    "wage": "50000",
+    "curid": 1,
+    "rate": "1",
+    "otherdesc": "test update desc 1",
+    "posamount": 2,
+    "thrate": "50000",
+    "salary": "50000"
+  }
+  
   // {
   //     "action": "updatePositionPostingsInfo",
   //     "biid": 1,
@@ -24,22 +42,6 @@ body:json {
   // }
   
   
-  // new flow
-  {
-    "action": "updatePositionPostingsInfo",
-    "jpoid": "2",
-    "biid": null,
-    "posname": "Test Update Position 1",
-    "needgender": 0,
-    "wtid": 1,
-    "wage": "50000",
-    "curid": 1,
-    "rate": "1",
-    "otherdesc": "test update desc 1",
-    "posamount": 2,
-    "thrate": "50000",
-    "salary": "50000"
-  }
   
 }
 

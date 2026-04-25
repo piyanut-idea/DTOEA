@@ -1,0 +1,36 @@
+meta {
+  name: updatePositionPostingsDraft
+  type: http
+  seq: 14
+}
+
+put {
+  url: http://apiserver:8080/admin/positionpostingstmphist/2/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  // ใช้ในการบันึก draft ของ positionPostings. เรียกใช้ในตอนกดบันทึก positionPostings (ตอน record ยังไมู่กสร้างใน positionPostingsInfo)
+  {
+    "action": "updatePositionPostingsInfo",
+    "jid": 1005, // ตำแหน่ง
+    "jpoid": "2",
+    "biid": null,
+    "posname": "Test Update Position 1",
+    "needgender": 0,
+    "wtid": 1,
+    "wage": "50000",
+    "curid": 1,
+    "rate": "1",
+    "otherdesc": "test update desc 1",
+    "posamount": 2,
+    "thrate": "50000",
+    "salary": "50000"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

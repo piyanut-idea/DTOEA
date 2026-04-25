@@ -5,12 +5,13 @@ meta {
 }
 
 put {
-  url: http://apiserver:8080/admin/jobpostings/7/
+  url: http://apiserver:8080/admin/jobpostings/4/
   body: json
   auth: inherit
 }
 
 body:json {
+  // ใช้ในกรณีลบ jobPostings ในกรณีที่ถูก submit แล้ว (มี records อยู่ใน jobPostingsInfo)
   {
       "action": "deleteJobPostingsInfo"
   }
