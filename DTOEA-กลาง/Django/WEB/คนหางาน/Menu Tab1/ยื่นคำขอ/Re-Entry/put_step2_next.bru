@@ -1,0 +1,55 @@
+meta {
+  name: put_step2_next
+  type: http
+  seq: 3
+}
+
+put {
+  url: http://apiserver:8080/web/seekerreq/41/
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+      "action":"step2",
+      "rtid":203,
+      "regfund":1,
+      //"remarkfund":"",
+      //"otherremark":"",
+      "peoid":100,
+      "flight":"525442",
+      "airline":"zip air",
+      "flightdate":"2026-01-20",
+      "twpartner":2,
+      "uploadlist": 
+        [
+          {
+            "did": 38, 
+            "filename": "doc_1491030620260410093903.pdf",
+            "uploaddate": "2026-03-21T00:00:00"
+          },
+          {
+            "did": 39, 
+            "filename": "doc_1491030620260410093903.pdf",
+            "uploaddate": "2026-03-21T00:00:00"
+          },
+          {
+            "did": 41, 
+            "filename": "doc_1491030620260410093903.pdf",
+            "uploaddate": "2026-03-21T00:00:00"
+          },
+          {
+            "did": 129, 
+            "filename": "doc_4966677620260410093909.pdf",
+            "uploaddate": "2026-03-21T00:00:00"
+          }
+        ]
+    
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
