@@ -1,0 +1,22 @@
+meta {
+  name: companyreq Step 3 submit
+  type: http
+  seq: 4
+}
+
+put {
+  url: http://apiserver:8080/web/companyreq/21/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "action" : "submitCancelRequestJ22",
+      "mdescription" : "รายละเอียดการแก้ไข" // กรณีส่งกลับแก้ไข
+  }
+}
+
+settings {
+  encodeUrl: true
+}
