@@ -1,0 +1,23 @@
+meta {
+  name: updateLetterCode
+  type: http
+  seq: 18
+}
+
+put {
+  url: http://apiserver:8080/admin/letterinfo/1/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "lettercode": "จง.23/2568/000001"
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
