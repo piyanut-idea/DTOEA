@@ -14,19 +14,19 @@ body:json {
   // ใช้ในการแก้ไข positionpostings ในกรณีที่ถูก submit แล้ว (มี records อยู่ใน positionPostingsInfo)
   {
     "action": "updatePositionPostingsInfo",
-    "jid": 1014, // ตำแหน่ง
-    "jpoid": "4",
-    "biid": null,
-    "posname": "Test Update Position 1",
-    "needgender": 0,
-    "wtid": 1,
-    "wage": "50000",
-    "curid": 1,
-    "rate": "1",
-    "otherdesc": "test update desc 1",
-    "posamount": 2,
-    "thrate": "50000",
-    "salary": "50000"
+    "jid": 1014, // ชื่อตำแหน่ง
+    "jpoid": "4",  // id ของ jobPostingsInfo
+    "posdesc": "description",  // ลักษณะงาน
+    "posname": "Test Update Position 1",  // 
+    "needgender": 0,  // ต้องการระบุเพศคนหางานหรือไม่
+    "numman": 2,  // จำนวนเพศชาย (คน)
+    "numwoman": 1,  // จำนวนเพศหญิง (คน)
+    "wtid": 1,  // ประเภทอัตราค่าจ้าง
+    "wage": "50000",  // อัตราค่าจ้าง
+    "curid": 1,  // สกุลเงิน
+    "rate": 1,  // อัตราแลกเปลี่ยนเงินตราโดยประมาณ
+    "thrate": 1,  // อัตราแลกเปลี่ยนเงินตราโดยประมาณ
+    "description": "test update desc 1" // เงื่อนไขการจ้างงานอื่นๆ
   }
   
   // {
