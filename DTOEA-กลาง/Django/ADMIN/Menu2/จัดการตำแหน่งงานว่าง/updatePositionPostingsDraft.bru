@@ -1,0 +1,35 @@
+meta {
+  name: updatePositionPostingsDraft
+  type: http
+  seq: 14
+}
+
+put {
+  url: http://apiserver:8080/admin/positionpostingstmphist/4/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  // ใช้ในการบันึก draft ของ positionPostings. เรียกใช้ในตอนกดบันทึก positionPostings (ตอน record ยังไมู่กสร้างใน positionPostingsInfo)
+  {
+    "action": "updatePositionPostingsInfo",
+    "jid": 1005, // ชื่อตำแหน่ง
+    "jpoid": "6",  // id จาก jobPostingsTmpHist
+    "posdesc": "Test Update Position 1",  // ลักษณะงาน
+    "needgender": 1,  // ต้องการระบุเพศคนหางานหรือไม่
+    "numman": 1, // จำนวนเพศชาย (คน)
+    "numwoman": 1, // จำนวนเพศหญิง (คน)
+    "wtid": 1,  // ประเภทอัตราค่าจ้าง
+    "wage": "50000",  // อัตราค่าจ้าง
+    "curid": 1,  // สกุลเงิน
+    "rate": 1,  // อัตราแลกเปลี่ยนเงินตราโดยประมาณ
+    "thrate": 1,  // อัตราแลกเปลี่ยนเงินตราโดยประมาณ
+    "description": "test update desc 1" // เงื่อนไขการจ้างงานอื่นๆ
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

@@ -1,18 +1,18 @@
 meta {
-  name: deleteFaqGroup
+  name: createFaqGroupTmp
   type: http
-  seq: 6
+  seq: 9
 }
 
-put {
-  url: http://apiserver:8080/admin/faqgroup/1/
+post {
+  url: http://apiserver:8080/admin/faqgrouptmp/
   body: json
   auth: inherit
 }
 
 body:json {
   {
-      "action": "deleteFaqGroup"
+    "action": "createFaqGroupTmp"
   }
   
 }

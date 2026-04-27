@@ -5,7 +5,7 @@ meta {
 }
 
 get {
-  url: http://apiserver:8090/admin/jobpostings?bossfname=test&typean=1&status=1
+  url: http://apiserver:8090/admin/jobpostings?bossfname=test&typean=1&status=1&bctid=1
   body: none
   auth: inherit
 }
@@ -14,6 +14,7 @@ params:query {
   bossfname: test
   typean: 1
   status: 1
+  bctid: 1
   ~jt2id: 
 }
 

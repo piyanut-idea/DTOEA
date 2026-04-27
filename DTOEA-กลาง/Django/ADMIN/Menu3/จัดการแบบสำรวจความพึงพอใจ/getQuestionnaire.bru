@@ -1,0 +1,22 @@
+meta {
+  name: getQuestionnaire
+  type: http
+  seq: 2
+}
+
+get {
+  url: http://apiserver:8090/admin/questionnaire?dtlyear=2569
+  body: none
+  auth: inherit
+}
+
+params:query {
+  dtlyear: 2569
+  ~status: 1
+  ~qname: test
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

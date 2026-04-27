@@ -5,27 +5,42 @@ meta {
 }
 
 put {
-  url: http://apiserver:8080/admin/jobpostings/2/
+  url: http://apiserver:8080/admin/jobpostingstmphist/6/
   body: json
   auth: inherit
 }
 
 body:json {
+  // ใช้ในการบันทึก jobpostings และ positionpostings ที่ถูกสร้างขึ้นมาในตอนแรก โดยระบบจะสร้าง jobPostingsInfo และ positionPostingsInfo อัตโนมัติจาก draft ที่อยู่ใน jobPostingTmpHist และ positionPostingsTmpHist
   // new boss
   {
     "action": "submitJobPostings",
-    "typean": 1,
-    "cname": "Test Division",
-    "startdate": "2026-05-01T00:00:00",
-    "enddate": "2026-06-01T00:00:00",
-    "biid": null,
-    "comtype": 1,
-    "bctid": 1,
-    "bossaddress": "123 Test St",
-    "tel": "0812345678",
-    "bossfname": "Test Boss Co Ltd",
-    "comcode": "BOSS001",
-    "showjt2": 0,
+    "typean": 1,  // ประเภทการสมัคร
+    "cname": "Test Division",  // ชื่อฝ่าย/หน่วยงาน ที่จัดส่ง
+    "cid": 1,  // ชื่อบริษัทจัดหางาน
+    "showjt2": 0,  // แสดงเลขที่หนังสืออนุญาตให้รับสมัครคนหางาน
+    "jt2id": null,  // เลขที่หนังสืออนุญาตให้รับสมัครคนหางาน
+    "comtype": 1,  // ประเภทนายจ้าง
+    "bctid": 1,  // ประเทศ (Country)
+    "biid": null,  // ชื่อบริษัทนายจ้างต่างประเทศ (นิติบุคคล) ใช้ null ถ้าเป็นการสร้างนายจ้างใหม่ ใช้ biid ถ้าเป็นการเลือกจาก dropdown
+  // ****************************************
+  //  ใส่เฉพาะกรณีที่ biid = null (สร้างนายจ้างใหม่)
+  // ****************************************
+    "bossfname": "Test Boss Co Ltd",  //  ชื่อบริษัทนายจ้างต่างประเทศ (นิติบุคคล) / ชื่อนายจ้างต่างประเทศ (บุคคลธรรมดา)
+    "bosslname": "testlasetname", // นามสกุล นายจ้างต่างประเทศ (อาจต้อง split เอา)
+    "comcode": "BOSS001",  // เลขทะเบียนบริษัทนายจ้างต่างประเทศ
+    "idtid": 7720,  // ประเภทอุตสาหกรรม
+    "bossaddress": "123 Test St",  //  ที่อยู่
+    "fcitid": 1,  // รัฐ (State) / เขตการปกครอง (County) / เมือง (City)
+    "bosspostcode": "34534", // รหัสไปรษณีย์ (Postal Code)
+    "tel": "345435353",  // หมายเลขโทรศัพท์
+    "fax": "980989080",  // โทรสาร
+    "email": "test@example.com",  //  อีเมช
+  // ****************************************
+    "startdate": "2026-05-01T00:00:00",  // วันที่เปิดรับสมัคร
+    "enddate": "2026-06-01T00:00:00",  // วันที่ปิดรับสมัคร
+    "condition": "condition",
+    "contactadd": "contactadd",
     "document_list": [
       { "did": 204, "filename": "test.pdf" }
       // ถ้า typean = 2 ใช้ 205
