@@ -5,37 +5,42 @@ meta {
 }
 
 put {
-  url: http://apiserver:8080/admin/jobpostings/7/
+  url: http://apiserver:8080/admin/jobpostings/4/
   body: json
   auth: inherit
 }
 
 body:json {
+  // ใช้ในการแก้ไข jobpostingsinfo สำหรับ records ที่ถูก submit แล้ว (มี record อยู่ใน jobpostingsinfo)
   {
       "action": "updateJobPostingsInfo",
-      "typean": 2,
-      "cid": 1,
-      "biid": -1,
-      "comtype": 1,
-      "bossfname": "Updated Updated Employer Name",
-      "comcode": "FC001",
-      "bossaddress": "123 Updated Street",
-      "bctid": 1,
-      "startdate": "2026-06-01",
-      "enddate": "2026-09-01",
-      "status": 1,
-      "comtype": 1,
-      "bossfname": "testboss ltd",    // comtype=1 -> company name, comtype=2 -> first name
-      "bosslname": "...",    // comtype=2 only
-      "comcode": "...",      // comtype=1 only
-      "bctid": 1005,
-      "idtid": 7720,
-      "bossaddress": "...",
-      "fullcity": "...",
-      "bosspostcode": "...", // optional
-      "tel": "...",
-      "fax": "...",          // optional
-      "email": "...",        // optional
+      "typean": 1,  // ประเภทการสมัคร
+      "cname": "Updated Updated Company Name",  // ชื่อฝ่าย/หน่วยงาน ที่จัดส่ง
+      "cid": 1,  // ชื่อบริษัทจัดหางาน
+      "showjt2": 0,  // แสดงเลขที่หนังสืออนุญาตให้รับสมัครคนหางาน
+      "jt2id": null,  // เลขที่หนังสืออนุญาตให้รับสมัครคนหางาน
+      "comtype": 1,  // ประเภทนายจ้าง
+      "bctid": 1005,    // ประเทศ
+      "biid": null,  // id ชื่อบริษัทนายจ้างต่างประเทศ (นิติบุคคล), comtype=2 -> ชื่อนายจ้างต่างประเทศ
+  // ****************************************
+  //  ใส่เฉพาะกรณีที่ biid = null (สร้างนายจ้างใหม่)
+  // ****************************************
+      "bossfname": "testboss ltd", // comtype=1 -> ชื่อบริษัทนายจ้างต่างประเทศ (นิติบุคคล), comtype=2 -> ชื่อนายจ้างต่างประเทศ
+      "bosslname": "...",    // comtype=2 นามสกุลนายจ้างต่างประเทศ (าจต้อง split เอาจาก ชื่อ - นามสกุล นายจ้างต่างประเทศ)
+      "comcode": "FC001",    // เลขทะเบียนบริษัทนายจ้างต่างประเทศ comtype=1 only
+      "idtid": 7720,  // ประเภทอุตสาหกรรม
+      "bossaddress": "123 Updated updated Street",  // ที่อยู่
+      "fcitid": 1,  // รัฐ (State) / เขตการปกครอง (County) / เมือง (City)
+      "bosspostcode": "12345", // รหัสไปรษณีย์ (Postal Code)
+      "tel": "123456667",  // หมายเลขโทรศัพท์
+      "fax": "234543653",  // โทรสาร
+      "email": "...", // อีเมล
+  // *******************************************
+      "startdate": "2026-06-01",  // วันที่เปิดรับสมัคร
+      "enddate": "2026-09-01",  // วันที่ปิดรับสมัคร
+      "status": 1,  // สถานะ
+      "condition": "condition",  // รายละเอียดการสมัคร
+      "contactadd": "contactadd",  // สถานที่ติดต่อรับสมัครงาน
       "document_list": [
           {"did": 204, "filename": "updated_doc.pdf"}
       ]

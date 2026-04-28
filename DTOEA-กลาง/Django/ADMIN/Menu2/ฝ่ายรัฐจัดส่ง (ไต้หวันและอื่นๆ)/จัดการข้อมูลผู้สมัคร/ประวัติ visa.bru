@@ -1,0 +1,20 @@
+meta {
+  name: ประวัติ visa
+  type: http
+  seq: 18
+}
+
+get {
+  url: http://apiserver:8080/admin/recruitvisahist?rcid=3
+  body: none
+  auth: inherit
+}
+
+params:query {
+  rcid: 3
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

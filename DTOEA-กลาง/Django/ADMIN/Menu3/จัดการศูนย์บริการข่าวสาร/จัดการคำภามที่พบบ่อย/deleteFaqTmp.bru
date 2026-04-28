@@ -1,0 +1,23 @@
+meta {
+  name: deleteFaqTmp
+  type: http
+  seq: 12
+}
+
+put {
+  url: http://apiserver:8080/admin/faqtmp/id/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "action": "deleteFaqTmp"
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

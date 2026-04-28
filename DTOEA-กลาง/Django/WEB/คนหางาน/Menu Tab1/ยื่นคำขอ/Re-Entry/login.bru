@@ -1,0 +1,25 @@
+meta {
+  name: login
+  type: http
+  seq: 5
+}
+
+post {
+  url: http://apiserver:8080/login/
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+      "login"    : "1042988030128",
+      "passwd" : "password",
+      "logintype" : "2",
+      "location" : "192.168.1.199"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
