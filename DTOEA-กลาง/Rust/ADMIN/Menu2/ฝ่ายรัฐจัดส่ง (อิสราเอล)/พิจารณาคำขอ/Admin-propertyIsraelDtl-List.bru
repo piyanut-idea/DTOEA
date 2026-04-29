@@ -5,14 +5,15 @@ meta {
 }
 
 get {
-  url: http://apiserver:8090/admin/propertyisraeldtl?dtlyear&status
+  url: http://apiserver:8090/admin/propertyisraeldtl?dtlyear=2026&status=1&sb=pid_mrid_projname
   body: text
   auth: inherit
 }
 
 params:query {
-  dtlyear: 
-  status: 
+  dtlyear: 2026
+  status: 1
+  sb: pid_mrid_projname
 }
 
 settings {

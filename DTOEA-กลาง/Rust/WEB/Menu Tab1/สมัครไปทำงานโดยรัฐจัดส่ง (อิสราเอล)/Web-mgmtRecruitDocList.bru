@@ -1,17 +1,18 @@
 meta {
   name: Web-mgmtRecruitDocList
   type: http
-  seq: 5
+  seq: 6
 }
 
 get {
-  url: http://apiserver:8090/web/mgmtrecruitdoc?mrid=4
+  url: http://apiserver:8090/web/mgmtrecruitdoc?mrid=1
   body: text
   auth: inherit
 }
 
 params:query {
-  mrid: 4
+  mrid: 1
+  ~columns: mrid,ord
 }
 
 settings {

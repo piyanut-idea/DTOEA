@@ -5,7 +5,7 @@ meta {
 }
 
 get {
-  url: http://apiserver:8090/admin/propertyisraeldtl?projname&episode&dtlyear&status&relmridlist=1,2
+  url: http://apiserver:8090/admin/propertyisraeldtl?projname=&episode=&dtlyear=&status=
   body: text
   auth: inherit
 }
@@ -15,7 +15,7 @@ params:query {
   episode: 
   dtlyear: 
   status: 
-  relmridlist: 1,2
+  ~relmridlist: 1,2
 }
 
 settings {

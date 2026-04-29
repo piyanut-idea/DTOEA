@@ -5,14 +5,14 @@ meta {
 }
 
 get {
-  url: http://apiserver:8090/admin/sendiommgmthist?mrid=1&statuscode=1
+  url: http://apiserver:8090/admin/sendiommgmthist?mrid=3
   body: text
   auth: inherit
 }
 
 params:query {
-  mrid: 1
-  statuscode: 1
+  mrid: 3
+  ~statuscode: 1
 }
 
 settings {

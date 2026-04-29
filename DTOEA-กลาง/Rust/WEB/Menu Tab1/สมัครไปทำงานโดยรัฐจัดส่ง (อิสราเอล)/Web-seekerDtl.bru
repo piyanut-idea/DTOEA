@@ -1,17 +1,18 @@
 meta {
-  name: Web-majorInfo-List
+  name: Web-seekerDtl
   type: http
-  seq: 18
+  seq: 1
 }
 
 get {
-  url: http://apiserver:8090/web/major?dgid=1
+  url: http://apiserver:8090/web/seekerdtl
   body: text
   auth: inherit
 }
 
 params:query {
-  dgid: 1
+  ~idcard: 9933781048930
+  ~ojid: 119
 }
 
 settings {

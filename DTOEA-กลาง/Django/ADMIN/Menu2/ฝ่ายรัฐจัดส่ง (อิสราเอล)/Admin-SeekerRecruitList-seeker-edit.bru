@@ -5,7 +5,7 @@ meta {
 }
 
 put {
-  url: http://apiserver:8080/admin/seekerrecruit/1/
+  url: http://apiserver:8080/admin/seekerrec/1/
   body: json
   auth: inherit
 }
@@ -13,10 +13,140 @@ put {
 body:json {
   {
       // แก้ไขข้อมูลคนหางาน (isseeker-edit)
-      "actiontype":"seeker-edit",
-      "fnameth":"ทดสอบแก้ไข",
-      "lnameth":"นามสกุลแก้ไข",
-      "mobile1":"0899999999"
+      "actiontype":"editbyadmin",
+    
+      "editcause":"ก็จะแก้อ่ะ",
+    
+      // ข้อมูลส่วนตัว
+      "height": 170,
+      "weight": 65,
+      "bmi": "22.2",
+      // ที่อยู่ตามบัตรประชาชน
+      "addressth": "123 ถ.ทดสอบ",
+      "addressen": "123 Test Road",
+      "pvid": 1,
+      "ddtid": 1,
+      "sdtid": 1,
+      "postcode": "10100",
+      // ที่อยู่ปัจจุบัน
+      "sameaddr": 1,
+      "ctaddressth": "123 ถ.ทดสอบ",
+      "ctaddressen": "123 Test Road",
+      "ctpvid": 1,
+      "ctddtid": 1,
+      "ctsdtid": 1,
+      "ctpostcode": "10100",
+      // ติดต่อ
+      "mobile1": "0812345678",
+      "mobile2": null,
+      "tel": null,
+      "email": "test@gmail.com",
+      // หนังสือเดินทาง
+      "passportno": "AA1234567",
+      "periodexp": 1,
+      "issuedate": "2029-12-01T00:00:00",
+      "expdate": "2029-12-01T00:00:00",
+    
+      // ผู้ติดต่อกรณีฉุกเฉิน
+      "emerpfid": 3,
+      "emerfname": "สมศรี",
+      "emerlname": "ใจดี",
+      "empfiden": 3,
+      "emfnameen": "Somsri",
+      "emlnameen": "Jaidee",
+      "relation": 1,
+      "relationen": 1,
+      "emertel": "0891234567",
+      "sameemer": 1,
+      "emeraddr": "123 ถ.ทดสอบ",
+      "emeraddren": "123 Test Road",
+      "empvid": 1,
+      "emddtid": 1,
+      "emsdtid": 1,
+      "empostcode": "10100",
+      // เปลี่ยนชื่อ
+      "chname":null,
+      "pfidth1": null,
+      "fnameth1": null,
+      "lnameth1": null,
+      "pfiden1": null,
+      "fnameen1": null,
+      "lnameen1": null,
+      // 2
+      "pfidth2": null,
+      "fnameth2": null,
+      "lnameth2": null,
+      "pfiden2": null,
+      "fnameen2": null,
+      "lnameen2": null,
+      // 3
+      "pfidth3": null,
+      "fnameth3": null,
+      "lnameth3": null,
+      "pfiden3": null,
+      "fnameen3": null,
+      "lnameen3": null,  
+    
+      // สถานภาพสมรส
+      "skstate": 1,
+      "spprefix": null,
+      "spfname": null,
+      "splname": null,
+      "spprefixen": null,
+      "spfnameen": null,
+      "splnameen": null,
+      "spobirthdate": null,
+      "spidcard": null,
+      "aliencard": null,
+      "sppassport": null,
+      // การศึกษา
+      "dgid": 4,
+      "mjid": 5000,
+      "schoolname": "มหาวิทยาลัยทดสอบ",
+      "scpvid": 1,
+      // ทหาร
+      "smilitary": 1,
+      // บิดา
+      "fapfidth": 3,
+      "fafnameth": "สมชาย",
+      "falnameth": "ใจดี",
+      "fapfiden": 3,
+      "fafnameen": "Somchai",
+      "falnameen": "Jaidee",
+      // มารดา
+      "mapfidth": 4,
+      "mafnameth": "สมหญิง",
+      "malnameth": "ใจดี",
+      "mapfiden": 4,
+      "mafnameen": "Somying",
+      "malnameen": "Jaidee",
+    
+      // document_list สำหรับ update recruitSKdocList
+      "document_list": [
+          {"id": 73, "filename": "photo_2inch.jpg", "uploaddate": "2026-03-22T00:00:00"},
+          {"id": 2, "filename": "passport_copy.pdf", "uploaddate": "2026-03-22T00:00:00"},
+          {"id": 3, "filename": "idcard_copy.pdf", "uploaddate": "2026-03-22T00:00:00"}
+      ],  
+    
+    
+      // ส่วนที่ 3: ประสบการณ์ทำงาน
+      "ckwkis": 1,
+      "ckexp": 1,
+      "expyear": 2,
+      "typework": 1,
+      "prowork": 2,
+      "license": 1,
+      "interlicense": "1",
+      // ส่วนที่ 4: สุขภาพ/ร่างกาย
+      "ckcongen": 1,
+      "congen": null,
+      "eyecolor": 1,
+      "disabled": 2,
+      // ส่วนที่ 5: ข้อมูลอื่นๆ
+      "kin": 2,
+      "criminal": 2,
+      "ckpay": 1,
+      "othpay": null
   }
 }
 

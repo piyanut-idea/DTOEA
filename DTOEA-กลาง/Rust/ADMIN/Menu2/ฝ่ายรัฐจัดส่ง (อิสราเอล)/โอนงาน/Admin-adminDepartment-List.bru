@@ -5,14 +5,16 @@ meta {
 }
 
 get {
-  url: http://apiserver:8090/admin/department?dpid=1&adminstatus=1
+  url: http://apiserver:8090/admin/admindepartment?dpid=21&adminstatus=1&poeid=100&columns=ojid
   body: text
   auth: inherit
 }
 
 params:query {
-  dpid: 1
+  dpid: 21
   adminstatus: 1
+  poeid: 100
+  columns: ojid
 }
 
 settings {

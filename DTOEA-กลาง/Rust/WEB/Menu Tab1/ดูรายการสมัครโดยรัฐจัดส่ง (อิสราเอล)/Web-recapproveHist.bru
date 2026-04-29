@@ -5,14 +5,14 @@ meta {
 }
 
 get {
-  url: http://apiserver:8090/web/recapprovehist?rcid=1&appstatus=2
+  url: http://apiserver:8090/web/recapprovehist?appstatus=2
   body: text
   auth: inherit
 }
 
 params:query {
-  rcid: 1
   appstatus: 2
+  ~rcid: 21
 }
 
 settings {

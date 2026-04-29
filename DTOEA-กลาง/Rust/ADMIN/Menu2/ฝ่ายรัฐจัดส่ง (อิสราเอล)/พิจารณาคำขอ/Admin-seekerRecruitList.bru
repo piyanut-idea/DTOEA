@@ -5,17 +5,21 @@ meta {
 }
 
 get {
-  url: http://apiserver:8090/admin/seekerrecruit?reqstatuslist=1&rcidlist=1,2&reqcode&idcard&fullnamethzdpo
+  url: http://apiserver:8090/admin/seekerrec?mrid=1
   body: text
   auth: inherit
 }
 
 params:query {
-  reqstatuslist: 1
-  rcidlist: 1,2
-  reqcode: 
-  idcard: 
-  fullnamethzdpo: 
+  mrid: 1
+  ~columns: skrl_rcid_mrid,id,skrl_rcid_reqcode,skrl_rcid_reqdate,fnameth,lnameth,skrl_pfidth_pfnameth,lgbit,skrl_rcid_reqstatus
+  ~reqstatuslist: 1
+  ~rcidlist: 1,2
+  ~reqcode: 
+  ~idcard: 
+  ~fullnamethzdpo: 
+  ~s_reqdate: 
+  ~e_reqdate: 
 }
 
 settings {

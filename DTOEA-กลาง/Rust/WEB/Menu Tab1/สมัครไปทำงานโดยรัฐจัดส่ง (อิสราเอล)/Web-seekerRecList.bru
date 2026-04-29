@@ -1,18 +1,20 @@
 meta {
   name: Web-seekerRecList
   type: http
-  seq: 13
+  seq: 15
 }
 
 get {
-  url: http://apiserver:8090/web/seekerrec?rcid=9&lgbit=2
+  url: http://apiserver:8090/web/seekerrec/8
   body: text
   auth: inherit
 }
 
 params:query {
-  rcid: 9
-  lgbit: 2
+  ~columns: id,skrl_rcid_mrid,rcid,skrl_rcid_reqcode,skrl_rcid_reqdate,fnameth,lnameth,skrl_pfidth_pfnameth,skrl_rcid_statuszstr,skrl_rcid_reqstatuszstr,lgbit,skrl_rcid_considerby
+  ~lgbit: 6
+  ~rcid: 22
+  ~considerbylist: 1
 }
 
 settings {

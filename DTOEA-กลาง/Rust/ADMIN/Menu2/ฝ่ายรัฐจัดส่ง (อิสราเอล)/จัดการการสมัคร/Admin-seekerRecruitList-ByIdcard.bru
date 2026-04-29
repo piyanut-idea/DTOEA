@@ -5,16 +5,16 @@ meta {
 }
 
 get {
-  url: http://apiserver:8090/admin/seekerrecruit?reqstatuslist=1&rcidlist=1,2&idcard=121314114&gender=1
+  url: http://apiserver:8090/admin/seekerrec?rcidlist=1,2
   body: text
   auth: inherit
 }
 
 params:query {
-  reqstatuslist: 1
   rcidlist: 1,2
-  idcard: 121314114
-  gender: 1
+  ~reqstatuslist: 1
+  ~idcard: 121314114
+  ~gender: 1
 }
 
 settings {

@@ -1,17 +1,17 @@
 meta {
   name: Web-districtInfo-List
   type: http
-  seq: 9
+  seq: 11
 }
 
 get {
-  url: http://apiserver:8090/web/province?pvid=10
+  url: http://apiserver:8090/web/district?pvid=28
   body: text
   auth: inherit
 }
 
 params:query {
-  pvid: 10
+  pvid: 28
 }
 
 settings {

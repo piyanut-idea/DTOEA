@@ -1,17 +1,22 @@
 meta {
   name: Web-positionIsraelInfo-List
   type: http
-  seq: 3
+  seq: 4
 }
 
 get {
-  url: http://apiserver:8090/web/mgmtrecruitdoc?mrid=4
+  url: http://apiserver:8090/web/positionisrael?mrid=1&genderlist=0,1&stallman=&etallwoman=&stallwoman=&etallwoman=
   body: text
   auth: inherit
 }
 
 params:query {
-  mrid: 4
+  mrid: 1
+  genderlist: 0,1
+  stallman: 
+  etallwoman: 
+  stallwoman: 
+  etallwoman: 
 }
 
 settings {
