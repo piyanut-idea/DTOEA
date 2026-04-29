@@ -1,0 +1,21 @@
+meta {
+  name: Web-recruitSKdocList
+  type: http
+  seq: 3
+}
+
+get {
+  url: http://apiserver:8090/web/recruitskdoc?rcid=9&lgbit=4
+  body: text
+  auth: inherit
+}
+
+params:query {
+  rcid: 9
+  lgbit: 4
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

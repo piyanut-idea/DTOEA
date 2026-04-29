@@ -1,0 +1,23 @@
+meta {
+  name: Web-RecruitInfo-recruit-step3
+  type: http
+  seq: 4
+}
+
+put {
+  url: http://apiserver:8080/web/recruit/1/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      // ส่งคำขอ Submit (orgrequest-regisisst3)
+      "actiontype":"recruit-step3"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

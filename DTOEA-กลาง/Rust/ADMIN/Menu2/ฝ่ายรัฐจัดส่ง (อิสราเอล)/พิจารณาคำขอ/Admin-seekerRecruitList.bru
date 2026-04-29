@@ -1,0 +1,28 @@
+meta {
+  name: Admin-seekerRecruitList
+  type: http
+  seq: 2
+}
+
+get {
+  url: http://apiserver:8090/admin/seekerrec?mrid=1
+  body: text
+  auth: inherit
+}
+
+params:query {
+  mrid: 1
+  ~columns: skrl_rcid_mrid,id,skrl_rcid_reqcode,skrl_rcid_reqdate,fnameth,lnameth,skrl_pfidth_pfnameth,lgbit,skrl_rcid_reqstatus
+  ~reqstatuslist: 1
+  ~rcidlist: 1,2
+  ~reqcode: 
+  ~idcard: 
+  ~fullnamethzdpo: 
+  ~s_reqdate: 
+  ~e_reqdate: 
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

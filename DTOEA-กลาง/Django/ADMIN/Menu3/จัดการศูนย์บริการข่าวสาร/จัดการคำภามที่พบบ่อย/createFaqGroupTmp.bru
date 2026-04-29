@@ -1,0 +1,23 @@
+meta {
+  name: createFaqGroupTmp
+  type: http
+  seq: 9
+}
+
+post {
+  url: http://apiserver:8080/admin/faqgrouptmp/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "action": "createFaqGroupTmp"
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

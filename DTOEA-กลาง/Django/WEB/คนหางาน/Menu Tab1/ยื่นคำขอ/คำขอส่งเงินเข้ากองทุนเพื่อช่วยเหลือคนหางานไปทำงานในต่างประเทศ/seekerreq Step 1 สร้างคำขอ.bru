@@ -1,0 +1,23 @@
+meta {
+  name: seekerreq Step 1 สร้างคำขอ
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://apiserver:8080/web/seekerreq/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "action" : "requestSKFundRegisterStep1",
+      "rtid" : 204,
+      "peoid" : 100
+  }
+}
+
+settings {
+  encodeUrl: true
+}

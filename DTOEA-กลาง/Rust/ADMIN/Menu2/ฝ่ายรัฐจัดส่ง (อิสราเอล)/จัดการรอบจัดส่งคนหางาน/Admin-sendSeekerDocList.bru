@@ -1,0 +1,21 @@
+meta {
+  name: Admin-sendSeekerDocList
+  type: http
+  seq: 12
+}
+
+get {
+  url: http://apiserver:8090/admin/sendseekerdoc?ojid=1&msid=1
+  body: text
+  auth: inherit
+}
+
+params:query {
+  ojid: 1
+  msid: 1
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

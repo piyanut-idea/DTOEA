@@ -1,0 +1,23 @@
+meta {
+  name: Admin-MgmtSendSKInfo-send
+  type: http
+  seq: 22
+}
+
+put {
+  url: http://apiserver:8080/admin/mgmtsendsk/1/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      // ส่งเรื่องรอบจัดส่ง (issendsk-manage)
+      "actiontype":"send"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

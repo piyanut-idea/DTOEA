@@ -1,0 +1,21 @@
+meta {
+  name: Web-seekerDtl
+  type: http
+  seq: 1
+}
+
+get {
+  url: http://apiserver:8090/web/seekerdtl
+  body: text
+  auth: inherit
+}
+
+params:query {
+  ~idcard: 9933781048930
+  ~ojid: 119
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

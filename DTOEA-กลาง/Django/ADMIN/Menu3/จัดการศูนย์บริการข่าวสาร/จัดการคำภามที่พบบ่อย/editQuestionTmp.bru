@@ -1,0 +1,26 @@
+meta {
+  name: editQuestionTmp
+  type: http
+  seq: 11
+}
+
+put {
+  url: http://apiserver:8080/admin/faqtmp/id/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "action": "updateFaqTmp",
+    "question": "คำถามแก้",
+    "answer": "คำตอบแก้",
+    "status": 1
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

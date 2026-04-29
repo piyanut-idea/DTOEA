@@ -1,0 +1,42 @@
+meta {
+  name: post_step1_next
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://apiserver:8080/web/seekerreq/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      // login เป็นคนหางานก่อน เรียก API
+      "action":"step1",
+      "rtid":203,
+      "channel":1,
+      "emerpfid":1,
+      "emerfnameth":"สมชาบ",
+      "emerlnameth":"สันติ",
+      "relation":"เพิ่อน",
+      "emertel":"00000000000",
+      "empvid":45,
+      "emddtid":596,
+      "emsdtid":4713,
+      "emaddressth":"723 หมู่ที่ 8",
+      "empostcode":"45160",
+      "tsubmit" : 1 
+      //"tsubmit" : 2 ,
+      //"adpeoid":100,
+      //"adid":1,
+      //"pincode":"1234"
+  }
+  
+  
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

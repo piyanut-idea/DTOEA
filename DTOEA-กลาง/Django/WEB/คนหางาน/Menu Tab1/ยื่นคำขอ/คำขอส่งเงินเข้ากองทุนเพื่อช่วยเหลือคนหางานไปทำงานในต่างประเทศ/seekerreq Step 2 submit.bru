@@ -1,0 +1,21 @@
+meta {
+  name: seekerreq Step 2 submit
+  type: http
+  seq: 3
+}
+
+put {
+  url: http://apiserver:8080/web/seekerreq/31/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "action" : "requestSKFundRegisterSubmit"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

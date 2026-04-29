@@ -1,0 +1,23 @@
+meta {
+  name: Web-RecruitInfo-recruit-edit
+  type: http
+  seq: 1
+}
+
+put {
+  url: http://apiserver:8080/web/recruit/9/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      // แก้ไขคำขอ (orgreqlist-list)
+      "actiontype":"recruit-edit"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

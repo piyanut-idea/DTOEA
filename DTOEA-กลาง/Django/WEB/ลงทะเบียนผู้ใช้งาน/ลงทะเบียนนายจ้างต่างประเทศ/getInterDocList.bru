@@ -1,0 +1,20 @@
+meta {
+  name: getInterDocList
+  type: http
+  seq: 13
+}
+
+get {
+  url: http://apiserver:8090/web/interdoc?ojid=1
+  body: none
+  auth: inherit
+}
+
+params:query {
+  ojid: 1
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

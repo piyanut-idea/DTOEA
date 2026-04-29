@@ -1,0 +1,24 @@
+meta {
+  name: cancelJobPostings
+  type: http
+  seq: 12
+}
+
+put {
+  url: http://apiserver:8080/admin/jobpostingstmphist/{id}/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  // ใช้ในกรณีที่ user กดยกเลิกก่อนที่จะบันทึก โดยจะลบ draft ที่อยู่ใน jobpostingsTmpHist
+  {
+    "action": "cancelJobPostingsDraft"
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

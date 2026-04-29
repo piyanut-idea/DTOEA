@@ -1,0 +1,23 @@
+meta {
+  name: Admin-SeekerRecruitList-recruit-cancel
+  type: http
+  seq: 12
+}
+
+put {
+  url: http://apiserver:8080/admin/recruit/1/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "actiontype":"skrecruit-cancel",
+      "reason":"หมายเหตุ"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

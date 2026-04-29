@@ -1,0 +1,29 @@
+meta {
+  name: Admin-TIC-update-statusskis
+  type: http
+  seq: 17
+}
+
+put {
+  url: http://apiserver:8080/admin/propertyisraeldtl/10/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      // เพิ่มข้อมูลรอบจัดส่ง (issendsk-add)
+      "actiontype":"update-statusskis",
+      "sendstatus":"4",  // (4,"ส่งสำเร็จ"), (2,"รอแก้ไข"),
+      "total" : "100",
+      "success" : "100",
+      "fail" : "100",
+      "ackdate" : "2001-12-31T00:00:00",
+      "filename" : "100"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
