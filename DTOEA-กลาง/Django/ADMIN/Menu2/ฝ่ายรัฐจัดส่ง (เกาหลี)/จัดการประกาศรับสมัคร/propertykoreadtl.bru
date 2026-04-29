@@ -1,0 +1,22 @@
+meta {
+  name: propertykoreadtl
+  type: http
+  seq: 10
+}
+
+get {
+  url: http://apiserver:8090/admin/propertykoreadtl
+  body: json
+  auth: inherit
+}
+
+params:query {
+  ~typean: 2
+  ~mrid: 2
+  ~rantype: 2
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

@@ -1,0 +1,22 @@
+meta {
+  name: propertykoreadtl
+  type: http
+  seq: 8
+}
+
+get {
+  url: http://apiserver:8090/admin/mgmtrecruitreport?mrm_mrid_status=1&mrm_krmid_status=1
+  body: none
+  auth: inherit
+}
+
+params:query {
+  mrm_mrid_status: 1
+  mrm_krmid_status: 1
+  ~mrid: 1
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

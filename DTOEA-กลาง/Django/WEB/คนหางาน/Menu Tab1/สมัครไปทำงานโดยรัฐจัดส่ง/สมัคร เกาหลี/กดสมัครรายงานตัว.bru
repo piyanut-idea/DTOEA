@@ -1,0 +1,25 @@
+meta {
+  name: กดสมัครรายงานตัว
+  type: http
+  seq: 9
+}
+
+post {
+  url: http://apiserver:8080/web/recruit/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    // login เป็นคนหางานก่อน เรียก API
+    "actiontype":"recruit-report",
+    "ojid":119, // id ของคนหางาน seekerdtl ที่ login เข้ามา
+    "mrmid": 4  // id mgmtRecruitReportList
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
