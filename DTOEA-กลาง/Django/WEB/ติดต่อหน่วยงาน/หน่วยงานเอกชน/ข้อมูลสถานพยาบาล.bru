@@ -1,0 +1,22 @@
+meta {
+  name: ข้อมูลสถานพยาบาล
+  type: http
+  seq: 2
+}
+
+get {
+  url: http://apiserver:8090/web/hospital?pvid=33
+  body: none
+  auth: inherit
+}
+
+params:query {
+  pvid: 33
+  ~name: โรงพยาบาลศิริราช
+  ~hptype: 1
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

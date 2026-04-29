@@ -1,0 +1,27 @@
+meta {
+  name: addQuestionTmp
+  type: http
+  seq: 10
+}
+
+post {
+  url: http://apiserver:8080/admin/faqtmp/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "action": "createFaqTmp",
+    "fgtid": 1,
+    "question": "คำถามสอง",
+    "answer": "คำตอบสอง",
+    "status": 1
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

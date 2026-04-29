@@ -1,0 +1,39 @@
+meta {
+  name: companyreq Step 2 ถัดไป
+  type: http
+  seq: 7
+}
+
+put {
+  url: http://apiserver:8080/web/companyreq/40/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "action" : "requestJ27bStep2",
+      "description" : "เหตุผลประกอบการพิจารณา",
+      "document_list" : [
+          {
+              "did" : 37,
+              "filename" : "filename.pdf",
+              "uploaddate" : "2023-09-02"        
+              },        
+          {
+              "did" : 38,
+              "filename" : "filename2.pdf",
+              "uploaddate" : "2023-09-02"
+          },
+          {
+              "did" : 39,
+              "filename" : null,
+              "uploaddate" : null
+          }
+      ]   
+  }
+}
+
+settings {
+  encodeUrl: true
+}

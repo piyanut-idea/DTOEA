@@ -1,0 +1,25 @@
+meta {
+  name: saveFaqGroupTmp
+  type: http
+  seq: 13
+}
+
+put {
+  url: http://apiserver:8080/admin/faqgrouptmp/1/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "action": "saveFaq",
+    "questgroup": "กลุ่มคำถาม 1",
+    "status": 1
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

@@ -1,0 +1,23 @@
+meta {
+  name: seekerlistfundagent ข้อมูลคนหางาน Step 2
+  type: http
+  seq: 3
+}
+
+get {
+  url: http://apiserver:8080/web/seekerlistfundagent/?reqid=1434062&refreqid&cid=5267&idcard=1200100000005&fullname_th_like=สุทิวัส
+  body: json
+  auth: inherit
+}
+
+params:query {
+  reqid: 1434062
+  refreqid: 
+  cid: 5267
+  idcard: 1200100000005
+  fullname_th_like: สุทิวัส
+}
+
+settings {
+  encodeUrl: true
+}

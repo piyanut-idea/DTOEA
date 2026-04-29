@@ -1,0 +1,24 @@
+meta {
+  name: companyreq Step 1 สร้างคำขอ
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://apiserver:8080/web/companyreq/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "action" : "cancelRequestJ22Step1",
+      "rtid" : 132,
+      "cid" : 5267,
+      "jt2id" : 1006 //ได้มาจากคำขอ จง.22 ที่อนุมัติแล้ว
+  }
+}
+
+settings {
+  encodeUrl: true
+}

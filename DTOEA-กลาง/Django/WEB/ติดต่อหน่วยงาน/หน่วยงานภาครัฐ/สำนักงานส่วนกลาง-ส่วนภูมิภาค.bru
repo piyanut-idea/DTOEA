@@ -1,0 +1,32 @@
+meta {
+  name: สำนักงานส่วนกลาง/ส่วนภูมิภาค
+  type: http
+  seq: 1
+}
+
+get {
+  url: http://apiserver:8090/web/peo
+  body: text
+  auth: inherit
+}
+
+params:query {
+  ~petype: 1
+  ~name: สจจ. กระบี่
+  ~peoname: สำนักงานจัดหางานจังหวัดกระบี่
+}
+
+body:text {
+  1 = สจจ.
+  2 = กรต.
+  3 = สจก.
+  4 = ศทส.
+  5 = กองทะเบียนจัดหางานกลางและคุ้มครองคนหางาน
+  6 = ด่าน
+  7 = สำนักงานปลัดกระทรวงแรงงาน
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

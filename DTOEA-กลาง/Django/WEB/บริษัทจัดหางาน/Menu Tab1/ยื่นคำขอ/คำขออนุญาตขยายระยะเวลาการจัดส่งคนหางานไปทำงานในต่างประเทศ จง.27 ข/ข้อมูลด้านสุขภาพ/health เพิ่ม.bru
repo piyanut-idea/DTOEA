@@ -1,0 +1,35 @@
+meta {
+  name: health เพิ่ม
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://apiserver:8080/web/health/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "action" : "addHealthInfo",
+      "reqid": 1434024,
+      "checkdate": "2026-04-10T00:00",
+      "ckcongen": 2,
+      "congen": "มีโรคประจำตัว",
+      "blood": 1,
+      "ckdrug": 1,
+      "drug": "ไม่มีประวัติการใช้ยาเสพติด",
+      "ojid": 1001,
+      "document_list" : [
+          {
+              "did" : 47,
+              "filename" : "filename.pdf"
+          }
+      ]
+  }
+}
+
+settings {
+  encodeUrl: true
+}

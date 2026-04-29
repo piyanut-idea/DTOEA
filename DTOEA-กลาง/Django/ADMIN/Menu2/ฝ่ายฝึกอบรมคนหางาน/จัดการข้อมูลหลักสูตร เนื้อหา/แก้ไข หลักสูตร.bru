@@ -1,0 +1,35 @@
+meta {
+  name: แก้ไข หลักสูตร
+  type: http
+  seq: 7
+}
+
+put {
+  url: http://apiserver:8080/admin/course/5/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "action" : "edit-course",
+    "name": "แก้ไขหลักสูตรการใช้งานระบบ",        // ชื่อหลักสูตร
+    "objective": "เพื่อให้ผู้ใช้งานเข้าใจระบบ", // วัตถุประสงค์
+    "cstatus": 1,                           // สถานะ (0=ไม่ใช้งาน, 1=ใช้งาน)
+    "link": "https://example.com/video",   // ลิงก์วิดีโอ
+    "lengthclip": "00:30:00",              // ความยาววิดีโอ (hh:mm:ss)
+    "questduring": 1,                      // มีคำถามระหว่างอบรม (1=มี, 2=ไม่มี)
+    "setlimit": 60,                        // กำหนดเวลาในการตอบคำถาม (วินาที)
+    "question_list" : [
+      {
+        "setperiod": "00:00:50", //(ชั่วโมง:นาที:วินาที)
+        "qtid": 8 //รหัสคำถามระหว่างอบรม
+      }
+    ]
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

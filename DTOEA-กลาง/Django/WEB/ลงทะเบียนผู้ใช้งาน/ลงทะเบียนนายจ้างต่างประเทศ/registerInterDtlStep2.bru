@@ -5,7 +5,7 @@ meta {
 }
 
 put {
-  url: http://apiserver:8080/web/interreq/id/
+  url: http://apiserver:8080/web/interreq/1/
   body: json
   auth: inherit
 }
@@ -22,13 +22,15 @@ body:json {
       "county": "Los Angeles",
       "city": "Los Angeles",
       "fullcity": "California / Los Angeles / Los Angeles",
+      "fcitid": 1,
       "tel": "+1-555-0001",
       "fax": "+1-555-0002",
       "pfid": 1,
       "fname": "John",
       "lname": "Doe",
       "contactemail": "contact@example.com",
-      "cntid": 1
+      "cntid": 1,
+      "filename": "necessaryinfo.pdf"
   }
   
 }

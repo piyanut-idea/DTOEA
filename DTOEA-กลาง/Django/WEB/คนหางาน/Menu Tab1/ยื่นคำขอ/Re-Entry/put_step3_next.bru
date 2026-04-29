@@ -1,0 +1,23 @@
+meta {
+  name: put_step3_next
+  type: http
+  seq: 4
+}
+
+put {
+  url: http://apiserver:8080/web/seekerreq/35/
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+      "action":"submit",
+      "rtid":202
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
