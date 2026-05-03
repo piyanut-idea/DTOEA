@@ -1,0 +1,20 @@
+meta {
+  name: Admin-seekerRecruitList
+  type: http
+  seq: 6
+}
+
+get {
+  url: http://apiserver:8090/admin/seekerrecruit?idcard
+  body: text
+  auth: inherit
+}
+
+params:query {
+  idcard: 
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

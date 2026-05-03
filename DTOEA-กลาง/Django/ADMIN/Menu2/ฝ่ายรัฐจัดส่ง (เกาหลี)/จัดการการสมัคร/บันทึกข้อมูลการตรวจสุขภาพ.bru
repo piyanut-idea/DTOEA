@@ -1,0 +1,31 @@
+meta {
+  name: บันทึกข้อมูลการตรวจสุขภาพ
+  type: http
+  seq: 7
+}
+
+post {
+  url: http://apiserver:8080/admin/recruithealthdtl/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "actiontype": "result-record",
+    "rcid": 1,
+    "hpid": 5000,
+    "ckdate": "2026-04-01",
+    "expiredate": "2027-04-01",
+    "result": 1,
+    "remark": "ทดสอบบันทึกหมายเหตุ",
+    "filename": "koreahealth.pdf",
+    "uploaddate": "2026-04-01",
+    "editcause": "ทดสอบบันทึกแก้ไข2"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

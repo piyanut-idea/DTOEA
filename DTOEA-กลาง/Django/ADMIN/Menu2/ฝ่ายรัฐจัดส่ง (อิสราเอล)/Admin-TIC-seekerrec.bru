@@ -1,0 +1,23 @@
+meta {
+  name: Admin-TIC-seekerrec
+  type: http
+  seq: 15
+}
+
+get {
+  url: http://apiserver:8090/admin/seekerrec?sendstatus=3&reqstatus=8&lgbit=6&mrid=100
+  body: text
+  auth: inherit
+}
+
+params:query {
+  sendstatus: 3
+  reqstatus: 8
+  lgbit: 6
+  mrid: 100
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

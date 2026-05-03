@@ -1,0 +1,21 @@
+meta {
+  name: Admin-trainingroomInfo-List
+  type: http
+  seq: 3
+}
+
+get {
+  url: http://apiserver:8090/admin/trainingroom?status=1&traintype=2
+  body: text
+  auth: inherit
+}
+
+params:query {
+  status: 1
+  traintype: 2
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

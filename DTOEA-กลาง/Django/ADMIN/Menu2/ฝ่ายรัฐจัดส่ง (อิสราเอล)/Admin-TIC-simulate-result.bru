@@ -1,0 +1,23 @@
+meta {
+  name: Admin-TIC-simulate-result
+  type: http
+  seq: 18
+}
+
+put {
+  url: http://apiserver:8080/admin/recruit/8/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "actiontype":"tic-simulate-result",
+      "isnumber":"99001"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

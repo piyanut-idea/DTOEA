@@ -1,0 +1,21 @@
+meta {
+  name: Admin-bossinterInfo-List
+  type: http
+  seq: 8
+}
+
+get {
+  url: http://apiserver:8090/admin/bossinter?comtype=1&cntid=1
+  body: text
+  auth: inherit
+}
+
+params:query {
+  comtype: 1
+  cntid: 1
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

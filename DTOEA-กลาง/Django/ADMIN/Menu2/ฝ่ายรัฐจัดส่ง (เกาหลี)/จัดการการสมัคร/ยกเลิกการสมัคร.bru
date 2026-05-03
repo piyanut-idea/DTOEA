@@ -1,0 +1,46 @@
+meta {
+  name: ยกเลิกการสมัคร
+  type: http
+  seq: 11
+}
+
+put {
+  url: http://apiserver:8080/admin/recruit/1/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "actiontype": "skrecruit-cancel",
+    "resrefund": 1,
+    "reason": "ทดสอบยกเลิกโดยเจ้าหน้าที่",
+    "document_list": [  // เอกสารแนบ recruitSKdocList id rtype=3
+      {
+        "id": 211, // สำเนาแบบคำร้องขอยกเลิกการสมัครและขอคืนเงิน
+        "filename": "doc_201.jpg", // ชื่อไฟล์
+        "uploaddate": "2026-03-21T00:00:00" // วันที่อัปโหลด
+      },
+      {
+        "id": 38, // สำเนาบัตรประชาชน
+        "filename": "doc_202.pdf",
+        "uploaddate": "2026-03-21T00:00:00"
+      },
+      {
+        "id": 212, // สำเนาหน้าสมุดบัญชีเงินฝากธนาคารตามที่ระบุในแบบฟอร์ม
+        "filename": "doc_203.pdf",
+        "uploaddate": "2026-03-21T00:00:00"
+      },
+      {
+        "id": 213, // สำเนาหลักฐานการชำระเงินค่าสมัครสอบ
+        "filename": "doc_204.pdf",
+        "uploaddate": "2026-03-21T00:00:00"
+      }
+    ]
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

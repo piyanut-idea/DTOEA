@@ -1,0 +1,20 @@
+meta {
+  name: Admin-sendIOMdetailHist
+  type: http
+  seq: 20
+}
+
+get {
+  url: http://apiserver:8090/admin/sendiommgmthist?smhid=1
+  body: text
+  auth: inherit
+}
+
+params:query {
+  smhid: 1
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

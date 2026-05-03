@@ -1,0 +1,31 @@
+meta {
+  name: answerQuestionnaire
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://apiserver:8080/admin/objquestionnaire/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "qnid": 1,
+      "gender": 1,
+      "typeans": 3,
+      "freq": 1,
+      "suggestion": "ข้อเสนอแนะจากแอดมิน",
+      "quelist": [
+          {"qtid": 1, "score": 5},
+          {"qtid": 2, "score": 5},
+          {"qtid": 3, "score": 5}
+      ]
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

@@ -1,0 +1,23 @@
+meta {
+  name: เปลี่ยนสถานะการรายงานตัว
+  type: http
+  seq: 1
+}
+
+put {
+  url: http://apiserver:8080/admin/propertykoreadtl/1/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "actiontype": "update-rptstatus",
+    "rptstatus": 1
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

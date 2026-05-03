@@ -1,0 +1,23 @@
+meta {
+  name: Admin-SendSeekerList-delete
+  type: http
+  seq: 25
+}
+
+put {
+  url: http://apiserver:8080/admin/sendseeker/1/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      // ลบคนหางานในรอบจัดส่ง (krsendsk-seekerlist)
+      "mar":1
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

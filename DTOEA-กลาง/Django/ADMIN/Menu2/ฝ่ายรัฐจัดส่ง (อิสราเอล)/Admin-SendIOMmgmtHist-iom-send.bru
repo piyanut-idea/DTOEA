@@ -1,0 +1,25 @@
+meta {
+  name: Admin-SendIOMmgmtHist-iom-send
+  type: http
+  seq: 13
+}
+
+post {
+  url: http://apiserver:8080/admin/sendiommgmthist/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      // ส่งรายชื่อให้ระบบ IOM (isapplicant-seekerlistsent)
+      "actiontype":"iom-send",
+      "mrid":1,
+      "seeker_ids":[1,2,3]
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

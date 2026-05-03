@@ -5,7 +5,7 @@ meta {
 }
 
 put {
-  url: http://apiserver:8080/admin/positionpostingstmphist/4/
+  url: http://apiserver:8080/admin/positionpostingstmphist/1/
   body: json
   auth: inherit
 }
@@ -15,7 +15,7 @@ body:json {
   {
     "action": "updatePositionPostingsInfo",
     "jid": 1005, // ชื่อตำแหน่ง
-    "jpoid": "6",  // id จาก jobPostingsTmpHist
+    "jplid": "1",  // id จาก jobPostingsTmpHist
     "posdesc": "Test Update Position 1",  // ลักษณะงาน
     "needgender": 1,  // ต้องการระบุเพศคนหางานหรือไม่
     "numman": 1, // จำนวนเพศชาย (คน)

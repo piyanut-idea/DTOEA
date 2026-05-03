@@ -1,0 +1,28 @@
+meta {
+  name: บันทึกข้อมูลการสอบภาษาเกาหลี
+  type: http
+  seq: 3
+}
+
+post {
+  url: http://apiserver:8080/admin/resultkrtestdtl/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "actiontype": "result-record",
+    "rcid": 1,
+    "round": 1,
+    "result": 1,
+    "testread": 80,
+    "testlisten": 100,
+    "editcause": "ทดสอบบันทึกแก้ไข"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

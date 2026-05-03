@@ -1,0 +1,20 @@
+meta {
+  name: Admin-mgmtRecruitDocList
+  type: http
+  seq: 7
+}
+
+get {
+  url: http://apiserver:8090/admin/mgmtrecruitdoc?mrid=5
+  body: text
+  auth: inherit
+}
+
+params:query {
+  mrid: 5
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

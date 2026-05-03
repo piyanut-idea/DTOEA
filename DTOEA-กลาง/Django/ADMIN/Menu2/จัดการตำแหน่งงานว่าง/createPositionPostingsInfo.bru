@@ -1,0 +1,27 @@
+meta {
+  name: createPositionPostingsInfo
+  type: http
+  seq: 18
+}
+
+post {
+  url: http://apiserver:8080/admin/positionpostings/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "action": "createPositionPostingsInfo",
+      "jpoid": 6,
+      "wtid": 1,
+      "curid": 1
+  //     "biid": 1
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

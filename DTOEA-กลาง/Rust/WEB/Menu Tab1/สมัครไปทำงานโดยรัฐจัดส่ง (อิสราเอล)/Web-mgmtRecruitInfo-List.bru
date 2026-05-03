@@ -1,0 +1,21 @@
+meta {
+  name: Web-mgmtRecruitInfo-List
+  type: http
+  seq: 2
+}
+
+get {
+  url: http://apiserver:8090/web/mgmtrecruit?status=1
+  body: json
+  auth: inherit
+}
+
+params:query {
+  status: 1
+  ~rtype: 3
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

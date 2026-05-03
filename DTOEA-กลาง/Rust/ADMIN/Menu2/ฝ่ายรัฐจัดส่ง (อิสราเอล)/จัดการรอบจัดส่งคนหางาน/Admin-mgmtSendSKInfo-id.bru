@@ -1,0 +1,16 @@
+meta {
+  name: Admin-mgmtSendSKInfo-id
+  type: http
+  seq: 4
+}
+
+get {
+  url: http://apiserver:8090/admin/mgmtsendsk/1
+  body: text
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
