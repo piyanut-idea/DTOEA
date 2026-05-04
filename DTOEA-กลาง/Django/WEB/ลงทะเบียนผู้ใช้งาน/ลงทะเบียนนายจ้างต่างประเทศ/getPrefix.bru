@@ -1,0 +1,15 @@
+meta {
+  name: getPrefix
+  type: http
+  seq: 11
+}
+
+get {
+  url: http://apiserver:8090/admin/prefix
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

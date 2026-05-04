@@ -1,0 +1,21 @@
+meta {
+  name: ค้นหา step 1
+  type: http
+  seq: 2
+}
+
+get {
+  url: http://apiserver:8080/admin/propertytaiwandtl?cntid=1&boss=บริษัทนายจ้าง
+  body: none
+  auth: inherit
+}
+
+params:query {
+  cntid: 1
+  boss: บริษัทนายจ้าง
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

@@ -1,0 +1,21 @@
+meta {
+  name: getApproveHist
+  type: http
+  seq: 12
+}
+
+get {
+  url: http://apiserver:8090/web/approvehist?reqid=16
+  body: none
+  auth: inherit
+}
+
+params:query {
+  reqid: 16
+  ~appstatus: 2
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

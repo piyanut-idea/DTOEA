@@ -1,0 +1,21 @@
+meta {
+  name: getFullCity
+  type: http
+  seq: 14
+}
+
+get {
+  url: http://apiserver:8090/web/fullcity?cntid=1196
+  body: none
+  auth: inherit
+}
+
+params:query {
+  cntid: 1196
+  ~nameen: test
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

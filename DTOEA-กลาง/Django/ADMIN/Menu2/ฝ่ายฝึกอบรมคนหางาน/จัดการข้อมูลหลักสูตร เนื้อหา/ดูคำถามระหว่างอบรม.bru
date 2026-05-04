@@ -1,0 +1,16 @@
+meta {
+  name: ดูคำถามระหว่างอบรม
+  type: http
+  seq: 4
+}
+
+get {
+  url: http://apiserver:8080/admin/questTraining
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

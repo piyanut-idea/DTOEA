@@ -1,0 +1,23 @@
+meta {
+  name: deleteEvent
+  type: http
+  seq: 3
+}
+
+put {
+  url: http://apiserver:8080/admin/event/1/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "action": "deleteEvent"
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

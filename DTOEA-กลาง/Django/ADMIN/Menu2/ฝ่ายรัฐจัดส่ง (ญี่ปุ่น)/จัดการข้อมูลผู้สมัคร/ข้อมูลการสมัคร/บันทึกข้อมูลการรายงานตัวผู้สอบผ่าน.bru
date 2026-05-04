@@ -1,0 +1,26 @@
+meta {
+  name: บันทึกข้อมูลการรายงานตัวผู้สอบผ่าน
+  type: http
+  seq: 3
+}
+
+post {
+  url: http://apiserver:8080/admin/resultreportdtl/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "actiontype": "result-record",  
+    "rcid": 1,    // รหัสการสมัคร
+    "result": 3,  // ผล 3=รายงานตัว 4=สละสิทธิ์
+    "remark": "เหตุผล",  // เหตุผล
+    "editcause": "สาเหตุการแก้ไข"  // สาเหตุการแก้ไข
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

@@ -1,0 +1,22 @@
+meta {
+  name: ข้อมูลบริษัทจัดหางาน
+  type: http
+  seq: 1
+}
+
+get {
+  url: http://apiserver:8090/web/company
+  body: none
+  auth: inherit
+}
+
+params:query {
+  ~nameen: JIRKITTI MANPOWER CO.,LTD.
+  ~nameth: บริษัทจัดหางาน จิรกิตติ จำกัด
+  ~pvid: 32
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

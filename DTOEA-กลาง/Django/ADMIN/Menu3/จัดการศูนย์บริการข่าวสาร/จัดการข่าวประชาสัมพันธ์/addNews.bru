@@ -1,0 +1,39 @@
+meta {
+  name: addNews
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://apiserver:8080/admin/news/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "action": "addNews",
+      "newstype": 2,  // ประเภทประกาศ
+      "bc1": 33,  // ช่องทางการเผยแพร่ข้อมูล/รูปแบบการแสดงผลข้อมูล เป็น bitfield
+      "title": "Test News Title", // ชื่อเรื่อง
+      "shortdetail": "Test short detail",  // เนื้อหาแบบย่อ
+      "maindetail_cus": "Test main detail content",  // เนื้อหาหลัก
+      "periodtype": 1,  // กำหนดระยะเวลาประกาศ
+      "startdate": "2026-04-01T00:00:00", // วันที่เริ่มต้นประกาศ
+      "enddate": "2026-12-31T00:00:00",  // วันที่สิ้นสุดประกาศ
+      "status": 1,  // สถานะประกาศ
+      "filename": "doc_12345_yyyymmdd.pdf",  // แนบเอกสาร/ชื่อไฟล์
+      "picfile": "name_of_attached_file",
+      "uploadfiledate": "2026-04-01T00:00:00",
+      "picture_list": [
+        {"filename": "test1.png"},
+        {"filename": "test2.png"}
+      ]
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

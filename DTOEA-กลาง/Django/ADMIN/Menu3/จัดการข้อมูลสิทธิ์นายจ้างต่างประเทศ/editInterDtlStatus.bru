@@ -1,0 +1,24 @@
+meta {
+  name: editInterDtlStatus
+  type: http
+  seq: 1
+}
+
+put {
+  url: http://apiserver:8080/admin/interdtl/1/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "action": "changeStatus",
+      "status": 2
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

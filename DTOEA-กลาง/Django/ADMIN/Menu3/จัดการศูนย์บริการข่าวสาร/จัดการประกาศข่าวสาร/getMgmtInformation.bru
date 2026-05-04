@@ -1,0 +1,23 @@
+meta {
+  name: getMgmtInformation
+  type: http
+  seq: 4
+}
+
+get {
+  url: http://apiserver:8090/admin/mgmtinformation?title=test&alerttype=1&status=2
+  body: none
+  auth: inherit
+}
+
+params:query {
+  title: test
+  alerttype: 1
+  status: 2
+  ~startinfo: 
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

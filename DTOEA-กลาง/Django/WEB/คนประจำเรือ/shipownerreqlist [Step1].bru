@@ -1,0 +1,21 @@
+meta {
+  name: shipownerreqlist [Step1]
+  type: http
+  seq: 1
+}
+
+get {
+  url: http://apiserver:8090/web/shipownerreq/1?reqid=23&lgbit=2
+  body: none
+  auth: inherit
+}
+
+params:query {
+  reqid: 23
+  lgbit: 2
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

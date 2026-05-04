@@ -1,0 +1,25 @@
+meta {
+  name: updateOtpStep1
+  type: http
+  seq: 2
+}
+
+put {
+  url: http://apiserver:8080/web/interreq/id/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "action": "updateotp",
+      "refotp": "ABC123",
+      "otp": "654321"
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

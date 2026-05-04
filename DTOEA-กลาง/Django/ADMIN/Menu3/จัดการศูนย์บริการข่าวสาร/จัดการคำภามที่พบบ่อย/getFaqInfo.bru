@@ -1,0 +1,21 @@
+meta {
+  name: getFaqInfo
+  type: http
+  seq: 8
+}
+
+get {
+  url: http://apiserver:8090/admin/faq?faqid=1&status=1
+  body: none
+  auth: inherit
+}
+
+params:query {
+  faqid: 1
+  status: 1
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
