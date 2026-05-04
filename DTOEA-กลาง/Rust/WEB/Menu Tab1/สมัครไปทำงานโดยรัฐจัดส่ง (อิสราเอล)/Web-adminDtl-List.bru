@@ -1,0 +1,27 @@
+meta {
+  name: Web-adminDtl-List
+  type: http
+  seq: 9
+}
+
+get {
+  url: http://apiserver:8090/admin/admindtl
+  body: text
+  auth: inherit
+}
+
+params:query {
+  ~username: 7678532906585
+  ~typeuser: 6
+  ~status: 1
+  ~idcard: 7678532906585
+  ~status: 1
+  ~peoid: 100
+  ~ojid: 
+  ~columns: id,position1,position2
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

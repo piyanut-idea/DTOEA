@@ -1,0 +1,16 @@
+meta {
+  name: Admin-propertyIsraelDtl-id
+  type: http
+  seq: 4
+}
+
+get {
+  url: http://apiserver:8090/admin/propertyisraeldtl/1
+  body: text
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

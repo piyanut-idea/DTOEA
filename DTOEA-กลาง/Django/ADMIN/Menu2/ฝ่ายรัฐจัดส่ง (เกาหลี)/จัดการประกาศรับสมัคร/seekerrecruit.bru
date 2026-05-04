@@ -1,0 +1,23 @@
+meta {
+  name: seekerrecruit
+  type: http
+  seq: 15
+}
+
+get {
+  url: http://apiserver:8090/admin/seekerrecruit?lgbit=6&reqstatuslist=1&rtype=1&mridlist=1,2,3
+  body: json
+  auth: inherit
+}
+
+params:query {
+  lgbit: 6
+  reqstatuslist: 1
+  rtype: 1
+  mridlist: 1,2,3
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

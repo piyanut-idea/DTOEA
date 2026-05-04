@@ -1,0 +1,16 @@
+meta {
+  name: industryTypeKR
+  type: http
+  seq: 14
+}
+
+get {
+  url: http://apiserver:8090/admin/industrytypekr/
+  body: json
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

@@ -1,0 +1,22 @@
+meta {
+  name: Web-recruitSKdocList
+  type: http
+  seq: 16
+}
+
+get {
+  url: http://apiserver:8090/web/recruitskdoc?rcid=21&lgbit=2&columns=did,filename,docname,createdate,lastupdate,uploaddate
+  body: text
+  auth: inherit
+}
+
+params:query {
+  rcid: 21
+  lgbit: 2
+  columns: did,filename,docname,createdate,lastupdate,uploaddate
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

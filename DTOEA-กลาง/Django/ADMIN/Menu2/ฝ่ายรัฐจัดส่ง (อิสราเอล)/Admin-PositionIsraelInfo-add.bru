@@ -1,0 +1,34 @@
+meta {
+  name: Admin-PositionIsraelInfo-add
+  type: http
+  seq: 5
+}
+
+post {
+  url: http://apiserver:8080/admin/positionisrael/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "mrid": 1,
+    
+      "jid": 2001,
+      "numsk": 50,
+      "gender": 1,  
+      "mstartbirth": "1986-01-01T00:00:00",
+      "mendbirth": "2001-12-31T00:00:00",
+      "stallman": 160,
+      "etallman": 185,  
+      "fstartbirth": "1986-01-01T00:00:00",
+      "fendbirth": "2001-12-31T00:00:00",
+      "stallwoman": 150,
+      "etallwoman": 175
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

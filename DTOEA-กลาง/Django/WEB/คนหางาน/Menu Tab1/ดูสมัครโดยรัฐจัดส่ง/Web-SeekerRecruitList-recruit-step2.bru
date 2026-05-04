@@ -1,0 +1,132 @@
+meta {
+  name: Web-SeekerRecruitList-recruit-step2
+  type: http
+  seq: 3
+}
+
+put {
+  url: http://apiserver:8080/web/seekerrecruit/1/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "actiontype":"recruit-step2",
+    
+      // ข้อมูลส่วนตัว
+      "height": 170,
+      "weight": 65,
+      // ที่อยู่ตามบัตรประชาชน
+      "addressth": "123 ถ.ทดสอบ",
+      "addressen": "123 Test Road",
+      "pvid": 1,
+      "ddtid": 1,
+      "sdtid": 1,
+      "postcode": "10100",
+      // ที่อยู่ปัจจุบัน
+      "sameaddr": 1,
+      "ctaddressth": "123 ถ.ทดสอบ",
+      "ctaddressen": "123 Test Road",
+      "ctpvid": 1,
+      "ctddtid": 1,
+      "ctsdtid": 1,
+      "ctpostcode": "10100",
+      // ติดต่อ
+      "mobile1": "0812345678",
+      "mobile2": "",
+      "tel": "",
+      "email": "test@gmail.com",
+      // หนังสือเดินทาง
+      "passportno": "AA1234567",
+      "periodexp": 1,
+      "issuedate": "15-01-2024",
+      "expdate": "14-01-2029",
+    
+      // ผู้ติดต่อกรณีฉุกเฉิน
+      "emerpfid": 3,
+      "emerfname": "สมศรี",
+      "emerlname": "ใจดี",
+      "empfiden": 3,
+      "emfnameen": "Somsri",
+      "emlnameen": "Jaidee",
+      "relation": 1,
+      "relationen": 1,
+      "emertel": "0891234567",
+      "sameemer": 1,
+      "emeraddr": "123 ถ.ทดสอบ",
+      "emeraddren": "123 Test Road",
+      "empvid": 1,
+      "emddtid": 1,
+      "emsdtid": 1,
+      "empostcode": "10100",
+      // เปลี่ยนชื่อ
+      "chname":null,
+      "pfidth1": null,
+      "fnameth1": "",
+      "lnameth1": "",
+      "pfiden1": null,
+      "fnameen1": "",
+      "lnameen1": "",
+      // 2
+      "pfidth2": null,
+      "fnameth2": "",
+      "lnameth2": "",
+      "pfiden2": null,
+      "fnameen2": "",
+      "lnameen2": "",
+      // 3
+      "pfidth3": null,
+      "fnameth3": "",
+      "lnameth3": "",
+      "pfiden3": null,
+      "fnameen3": "",
+      "lnameen3": "",  
+    
+      // สถานภาพสมรส
+      "skstate": 1,
+      "spprefix": null,
+      "spfname": "",
+      "splname": "",
+      "spprefixen": null,
+      "spfnameen": "",
+      "splnameen": "",
+      "spobirthdate": null,
+      "spidcard": "",
+      "aliencard": "",
+      "sppassport": "",
+      // การศึกษา
+      "dgid": 4,
+      "mjid": 1,
+      "schoolname": "มหาวิทยาลัยทดสอบ",
+      "scpvid": 1,
+      // ทหาร
+      "smilitary": 1,
+      // บิดา
+      "fapfidth": 3,
+      "fafnameth": "สมชาย",
+      "falnameth": "ใจดี",
+      "fapfiden": 3,
+      "fafnameen": "Somchai",
+      "falnameen": "Jaidee",
+      // มารดา
+      "mapfidth": 4,
+      "mafnameth": "สมหญิง",
+      "malnameth": "ใจดี",
+      "mapfiden": 4,
+      "mafnameen": "Somying",
+      "malnameen": "Jaidee",
+    
+      // document_list สำหรับ update recruitSKdocList
+      "document_list": [
+          {"id": 1, "filename": "photo_2inch.jpg", "uploaddate": "22-03-2026"},
+          {"id": 2, "filename": "passport_copy.pdf", "uploaddate": "22-03-2026"},
+          {"id": 3, "filename": "idcard_copy.pdf", "uploaddate": "22-03-2026"}
+      ]
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

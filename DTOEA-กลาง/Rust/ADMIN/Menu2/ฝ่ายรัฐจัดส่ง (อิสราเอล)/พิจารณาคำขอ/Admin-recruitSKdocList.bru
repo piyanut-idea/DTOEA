@@ -1,0 +1,20 @@
+meta {
+  name: Admin-recruitSKdocList
+  type: http
+  seq: 8
+}
+
+get {
+  url: http://apiserver:8090/admin/recruitskdoc?rcid=1
+  body: text
+  auth: inherit
+}
+
+params:query {
+  rcid: 1
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

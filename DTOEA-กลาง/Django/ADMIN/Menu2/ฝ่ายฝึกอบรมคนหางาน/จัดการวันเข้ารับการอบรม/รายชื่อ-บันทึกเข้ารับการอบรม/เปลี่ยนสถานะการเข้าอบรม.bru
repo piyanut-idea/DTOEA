@@ -5,9 +5,19 @@ meta {
 }
 
 put {
-  url: http://apiserver:8080/admin/seekerreserve/1/
-  body: none
+  url: http://apiserver:8080/admin/seekerreserve/6/
+  body: json
   auth: inherit
+}
+
+body:json {
+  // เปลี่ยนรายคน
+  {
+    "action": "changeSeekerTrainStatus",
+    "ojid": 1001,
+    "trainstatus": 2
+  }
+  
 }
 
 settings {

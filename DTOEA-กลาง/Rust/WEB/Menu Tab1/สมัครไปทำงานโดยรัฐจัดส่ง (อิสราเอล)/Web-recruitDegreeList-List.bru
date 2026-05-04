@@ -1,0 +1,20 @@
+meta {
+  name: Web-recruitDegreeList-List
+  type: http
+  seq: 5
+}
+
+get {
+  url: http://apiserver:8090/web/recruitdegree?mrid=4
+  body: json
+  auth: inherit
+}
+
+params:query {
+  mrid: 4
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

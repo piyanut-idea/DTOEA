@@ -1,0 +1,16 @@
+meta {
+  name: Web-degreeInfo-List
+  type: http
+  seq: 17
+}
+
+get {
+  url: http://apiserver:8090/web/degree
+  body: text
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

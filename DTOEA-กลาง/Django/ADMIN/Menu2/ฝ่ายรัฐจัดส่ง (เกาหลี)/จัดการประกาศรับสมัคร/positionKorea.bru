@@ -1,0 +1,21 @@
+meta {
+  name: positionKorea
+  type: http
+  seq: 13
+}
+
+get {
+  url: http://apiserver:8090/admin/positionkorea/
+  body: json
+  auth: inherit
+}
+
+params:query {
+  ~mrid: 1
+  ~idkid: 1
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
