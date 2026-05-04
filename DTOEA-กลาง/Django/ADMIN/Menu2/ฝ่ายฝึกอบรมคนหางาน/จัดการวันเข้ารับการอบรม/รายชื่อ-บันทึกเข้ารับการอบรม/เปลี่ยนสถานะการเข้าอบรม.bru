@@ -1,0 +1,16 @@
+meta {
+  name: เปลี่ยนสถานะการเข้าอบรม
+  type: http
+  seq: 1
+}
+
+put {
+  url: http://apiserver:8080/admin/seekerreserve/1/
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
