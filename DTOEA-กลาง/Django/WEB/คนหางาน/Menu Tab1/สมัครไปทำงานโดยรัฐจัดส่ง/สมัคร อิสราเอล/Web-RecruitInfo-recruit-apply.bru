@@ -1,0 +1,26 @@
+meta {
+  name: Web-RecruitInfo-recruit-apply
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://apiserver:8080/web/recruit/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      // login เป็นคนหางานก่อน เรียก API
+      // สมัครเข้ารับการคัดเลือก (orgrequest-list)
+      "actiontype":"recruit-apply",
+      "ojid": 118,
+      "mrid": 1
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

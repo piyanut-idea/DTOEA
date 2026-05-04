@@ -1,0 +1,23 @@
+meta {
+  name: Admin-MgmtSendSKInfo-delete
+  type: http
+  seq: 21
+}
+
+put {
+  url: http://apiserver:8080/admin/mgmtsendsk/1/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      // ลบรอบจัดส่ง (issendsk-manage)
+      "actiontype":"delete"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

@@ -1,0 +1,20 @@
+meta {
+  name: Web-districtInfo-List
+  type: http
+  seq: 11
+}
+
+get {
+  url: http://apiserver:8090/web/district?pvid=28
+  body: text
+  auth: inherit
+}
+
+params:query {
+  pvid: 28
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

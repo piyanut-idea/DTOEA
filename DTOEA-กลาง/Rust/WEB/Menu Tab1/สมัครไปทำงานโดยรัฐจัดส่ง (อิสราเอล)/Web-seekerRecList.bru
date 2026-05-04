@@ -1,0 +1,23 @@
+meta {
+  name: Web-seekerRecList
+  type: http
+  seq: 15
+}
+
+get {
+  url: http://apiserver:8090/web/seekerrec/8
+  body: text
+  auth: inherit
+}
+
+params:query {
+  ~columns: id,skrl_rcid_mrid,rcid,skrl_rcid_reqcode,skrl_rcid_reqdate,fnameth,lnameth,skrl_pfidth_pfnameth,skrl_rcid_statuszstr,skrl_rcid_reqstatuszstr,lgbit,skrl_rcid_considerby
+  ~lgbit: 6
+  ~rcid: 22
+  ~considerbylist: 1
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

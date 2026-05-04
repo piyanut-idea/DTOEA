@@ -1,0 +1,24 @@
+meta {
+  name: Admin-TIC-update-sendstatus
+  type: http
+  seq: 16
+}
+
+put {
+  url: http://apiserver:8080/admin/propertyisraeldtl/10/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      // เพิ่มข้อมูลรอบจัดส่ง (issendsk-add)
+      "actiontype":"tic-update-sendstatus",
+      "sendstatus":"6"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

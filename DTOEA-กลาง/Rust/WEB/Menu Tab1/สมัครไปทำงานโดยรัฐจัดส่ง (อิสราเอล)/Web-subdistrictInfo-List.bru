@@ -1,0 +1,21 @@
+meta {
+  name: Web-subdistrictInfo-List
+  type: http
+  seq: 10
+}
+
+get {
+  url: http://apiserver:8090/web/subdistrict
+  body: text
+  auth: inherit
+}
+
+params:query {
+  ~pvid: 10
+  ~ddtid: 1010
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

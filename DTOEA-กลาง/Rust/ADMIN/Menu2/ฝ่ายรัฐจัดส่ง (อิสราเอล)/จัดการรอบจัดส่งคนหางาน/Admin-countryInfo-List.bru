@@ -1,0 +1,16 @@
+meta {
+  name: Admin-countryInfo-List
+  type: http
+  seq: 7
+}
+
+get {
+  url: http://apiserver:8090/admin/country
+  body: text
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

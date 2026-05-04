@@ -1,0 +1,50 @@
+meta {
+  name: Web-SeekerRecList-PUT-recruit-step1
+  type: http
+  seq: 2
+}
+
+put {
+  url: http://apiserver:8080/web/seekerrec/9/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "actiontype":"recruit-step1",
+    
+      // ส่วนที่ 1: ผู้ดำเนินการบันทึกคำขอ
+      "tsubmit": 2,
+      "adid": 101, // update adname adposition
+      "peoid": 100,
+      "pincode": "8112",
+    
+      // ส่วนที่ 2: ตำแหน่งงาน
+      "piid": 1,
+    
+      // ส่วนที่ 3: ประสบการณ์ทำงาน
+      "ckwkis": 1,
+      "ckexp": 1,
+      "expyear": 2,
+      "typework": 1,
+      "prowork": 2,
+      "license": 1,
+      "interlicense": "1",
+      // ส่วนที่ 4: สุขภาพ/ร่างกาย
+      "ckcongen": 1,
+      "congen": null,
+      "eyecolor": 1,
+      "disabled": 2,
+      // ส่วนที่ 5: ข้อมูลอื่นๆ
+      "kin": 2,
+      "criminal": 2,
+      "ckpay": 1,
+      "othpay": null
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

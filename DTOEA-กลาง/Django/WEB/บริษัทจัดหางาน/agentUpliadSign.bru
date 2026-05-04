@@ -1,0 +1,25 @@
+meta {
+  name: agentUpliadSign
+  type: http
+  seq: 7
+}
+
+put {
+  url: http://apiserver:8080/web/agentdtl/122/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "action"    : "recprofile-edit",
+      "document_list" : [
+        {"did":"1009","filename":"pom.pdf"}
+      ]
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

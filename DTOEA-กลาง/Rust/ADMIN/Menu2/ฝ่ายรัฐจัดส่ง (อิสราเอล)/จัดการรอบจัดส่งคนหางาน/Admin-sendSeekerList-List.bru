@@ -1,0 +1,25 @@
+meta {
+  name: Admin-sendSeekerList-List
+  type: http
+  seq: 5
+}
+
+get {
+  url: http://apiserver:8090/admin/sendseeker?msid=1&idcard=111111&fullnameth=ชื่อ - นามสกุล&bossname=ชื่อบริษัทนายจ้างต่างประเทศ&jobname
+  body: text
+  auth: inherit
+}
+
+params:query {
+  msid: 1
+  idcard: 111111
+  fullnameth: ชื่อ - นามสกุล
+  bossname: ชื่อบริษัทนายจ้างต่างประเทศ
+  jobname: 
+  : 
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

@@ -1,29 +1,30 @@
 meta {
   name: สร้างรอบจัดส่งคนหางาน
   type: http
-  seq: 4
+  seq: 1
 }
 
 post {
-  url: http://apiserver:8080/admin/sendSeeker/
+  url: http://apiserver:8080/admin/mgmtsendsk/
   body: json
   auth: inherit
 }
 
 body:json {
   {
-    "jt3date": ,
-    "tsend": ,
-    "outdate": ,
-    "dtlhour": ,
-    "dtlmin": ,
-    "travelout": ,
-    "travelno": ,
-    "pvid": ,
-    "trid": ,
-    "reservedate": ,
-    "": ,
-    "": ,
+    "jt3date": "2026-06-01",  // วันที่จต 3
+    "stype": 2,  // ประเภทของหน่วยงานจัดส่ง (1:ญี่ปุ่น/2:เกาหลี/3:อิสลาเอล/4:ไต้หวัน)
+    "tsend": 1,  // ประเภทของการจัดส่ง (1:Normal/2:Re-Entry/3:Direct)
+    "outdate": "2026-07-01",  // วันที่เดินทางออก
+    "dtlhour": 4,  // ชัวโมง
+    "dtlmin": 0,  // นาที
+    "travelout": 4,  // วิธีเดินทาง (1:รถไฟ/2:รถยนต์/3:เรือ/4:อากาศ)
+    "travelno": "TH237k",  // หมายเลขเที่ยวโดยสาร
+    "pvid": 32,  // ศูนย์อบรม
+    "trid": 5040,  // ห้องอบรม
+    "reservedate": "2026-06-02",  // วันที่อบรม
+    "starttime": "13:00",  // เวลาอบรม เริ่ม
+    "stoptime": "16:00"  // เวลาอบรม สิ้นสุด
   }
 }
 

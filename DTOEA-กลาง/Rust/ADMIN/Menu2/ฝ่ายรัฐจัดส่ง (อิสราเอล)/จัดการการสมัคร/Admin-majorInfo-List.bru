@@ -1,0 +1,20 @@
+meta {
+  name: Admin-majorInfo-List
+  type: http
+  seq: 6
+}
+
+get {
+  url: http://apiserver:8090/admin/major?dgid=1
+  body: text
+  auth: inherit
+}
+
+params:query {
+  dgid: 1
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

@@ -5,7 +5,7 @@ meta {
 }
 
 put {
-  url: http://apiserver:8080/web/seekerrecruit/6/
+  url: http://apiserver:8080/web/seekerrecruit/1/
   body: json
   auth: inherit
 }
@@ -55,30 +55,50 @@ body:json {
     "schoolname": "Chulalongkorn University",
     "scpvid": 32, // จว รร fk
     "kclid": 1, // ศูนย์สอบ fk korealocationList
-    "document_list": [ // Array เอกสารแนบ
+    "document_list": [ // Array เอกสารแนบ recruitSKdocList id rtype=1
       {
-        "id": 37, // รูปถ่ายขนาด 2 นิ้ว
+        "id": 152, // รูปถ่าย (พื้นหลังสีขาว รวบผมให้เห็นใบหูและไม่สวมเสื้อสีขาว)
         "filename": "doc_001.jpg", // ชื่อไฟล์
         "uploaddate": "2026-03-21T00:00:00" // วันที่อัปโหลด
       },
       {
-        "id": 144, // สำเนาหนังสือเดินทาง (ถ้ามี)
+        "id": 215, // บัตรประชาชน
         "filename": "doc_002.pdf",
         "uploaddate": "2026-03-21T00:00:00"
       },
       {
-        "id": 38, // สำเนาบัตรประชาชน
+        "id": 216, // หนังสือเดินทาง (ถ้ามี)
         "filename": "doc_003.pdf",
         "uploaddate": "2026-03-21T00:00:00"
       },
       {
-        "id": 122, // สำเนาทะเบียนบ้าน
+        "id": 304, // สำเนาหนังสือเดินทางที่ใช้เดินทางออกจากสาธารณรัฐเกาหลี (ถ้ามี)
         "filename": "doc_004.pdf",
         "uploaddate": "2026-03-21T00:00:00"
       },
       {
-        "id": 148, // สำเนาหนังสือเปลี่ยนชื่อ - สกุล (ถ้ามี)
+        "id": 305, // ประวัติการทำหนังสือเดินทาง
         "filename": "doc_005.pdf",
+        "uploaddate": "2026-03-21T00:00:00"
+      },
+      {
+        "id": 306, // ใบประกาศนียบัตรรับรองความสามารถภาษาเกาหลี
+        "filename": "doc_006.pdf",
+        "uploaddate": "2026-03-21T00:00:00"
+      },
+      {
+        "id": 307, // ใบประกาศนียบัตรรับรองความสามารถทางภาษาเกาหลี TOPIK ระดับ 3
+        "filename": "doc_007.pdf",
+        "uploaddate": "2026-03-21T00:00:00"
+      },
+      {
+        "id": 308, // ใบประกาศนียบัตรรับรองการฝึกอาชีพก่อนกลับประเทศไทย
+        "filename": "doc_008.pdf",
+        "uploaddate": "2026-03-21T00:00:00"
+      },
+      {
+        "id": 80, // อื่นๆ
+        "filename": "doc_009.pdf",
         "uploaddate": "2026-03-21T00:00:00"
       }
     ]

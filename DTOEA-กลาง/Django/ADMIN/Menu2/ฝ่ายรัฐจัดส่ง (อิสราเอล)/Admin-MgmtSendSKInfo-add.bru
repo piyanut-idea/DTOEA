@@ -1,0 +1,33 @@
+meta {
+  name: Admin-MgmtSendSKInfo-add
+  type: http
+  seq: 19
+}
+
+post {
+  url: http://apiserver:8080/admin/mgmtsendsk/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      // เพิ่มข้อมูลรอบจัดส่ง (issendsk-add)
+      "stype":3,
+      "outdate":"2026-04-01",
+      "dtlhour":8,
+      "dtlmin":30,
+      "travelout":"สนามบินสุวรรณภูมิ",
+      "travelno":"TG971",
+      "reservedate":"01-04-2026",
+      "tsend":1,
+      "jt3date":"2026-03-15",
+      "trid":1,
+      "roomtype":1
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
