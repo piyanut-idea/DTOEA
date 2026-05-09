@@ -1,0 +1,26 @@
+meta {
+  name: ยกเลิก จต.3
+  type: http
+  seq: 1
+}
+
+put {
+  url: http://apiserver:8080/admin/jt3/2/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "action" : "cancelJT3",
+      "seeker_list" : [
+          {
+              "ojid" : 124
+          }
+      ]
+  }
+}
+
+settings {
+  encodeUrl: true
+}
