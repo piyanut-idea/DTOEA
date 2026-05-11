@@ -1,0 +1,22 @@
+meta {
+  name: deleteBlacklist
+  type: http
+  seq: 3
+}
+
+put {
+  url: http://apiserver:8080/admin/blacklist/1/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "action": "deleteBlacklist"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
