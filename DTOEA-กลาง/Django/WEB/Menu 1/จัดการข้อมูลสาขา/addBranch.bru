@@ -1,0 +1,33 @@
+meta {
+  name: addBranch
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://apiserver:8080/web/location/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "action": "addBranch",
+      "name": "สาขาทดสอบ 1",
+      "addressth": "123 ถ.สุขุมวิท แขวงคลองเตย",
+      "addressen": "123 Sukhumvit Rd, Khlong Toei",
+      "postcode": "10110",
+  //     "typebrn": 2,
+      "status": 1,
+      "cid": 1,
+      "pvid": 1,
+      "ddtid": 1,
+      "sdtid": 1
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
