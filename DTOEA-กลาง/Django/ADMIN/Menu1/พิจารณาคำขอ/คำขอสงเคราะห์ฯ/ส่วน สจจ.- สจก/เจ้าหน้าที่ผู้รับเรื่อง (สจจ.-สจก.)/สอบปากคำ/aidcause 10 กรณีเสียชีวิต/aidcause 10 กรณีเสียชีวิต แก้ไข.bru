@@ -1,0 +1,104 @@
+meta {
+  name: aidcause 10 กรณีเสียชีวิต แก้ไข
+  type: http
+  seq: 2
+}
+
+put {
+  url: http://apiserver:8080/admin/interrogation/1/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "action" : "editInterrogationInfo",
+      "reqid" : 1434032,
+      "aidcause" : 10,
+      "aidcausedeath" : null,
+      "aidcausedeathpurpose" : null,
+      "aidcausetrouble" : null,
+      "adojid" : 1,
+      "aidpetition": "1",
+      "aiddeathreason": "ประสบอุบัติเหตุจากการทำงาน",
+      "aiddeathfrom": "นายจ้าง",
+      "aidnotideathdate": "12/05/2026",
+      "aidcjid": 2001,
+      "aidreceiptnumber": "RC20260001",
+      "aidreceiptbook": "BK-015",
+      "aidreceiptissue": "บริษัท Funeral Service Co.,Ltd.",
+      "aidpaydate": "15/05/2026",
+      "aidnamepay": "นายสมชาย ใจดี",
+      "aidreceiptamount": "50000",
+      "aidreceivedescendants": "1",
+      "aidreceiveamount": "200000",
+      "aidresponsiblename": "สถานทูตไทย ณ กรุงโซล",
+      "aidfathername": "นายประสิทธิ์ ใจดี",
+      "aidfatherstatus": "1",
+      "aidfatherstatusmarried": "1",
+      "aidmothername": "นางสมหญิง ใจดี",
+      "aidmotherstatus": "1",
+      "aidmotherstatusmarried": "1",
+      "aidcouplename": "นางสาวกานดา ใจดี",
+      "aidcouplestatus": "1",
+      "aidcouplestatusmarried": "1",
+      "aidheir": "1",    
+      "heir_list" : [
+          {
+              "aidchildname" : "นางสาวิภา ใจดี",
+              "aidchildage" : "19" //กรณี มีทายาท
+              // "aidchildrelevant" : "เพื่อนสนิท", //กรณี ไม่มีทายาท
+          },
+          {
+              "aidchildname" : "นางสาววิมน ใจดี",
+              "aidchildage" : "16" //กรณี มีทายาท
+              // "aidchildrelevant" : "เพื่อนสนิท", //กรณี ไม่มีทายาท
+          }
+      ],
+      "document_list" : [
+          {
+              "did" : 313,
+              "filename" : "filename.pdf"
+          },        
+          {
+              "did" : 2,
+              "filename" : "filename2.pdf"        
+          },        
+          {
+              "did" : 3,
+              "filename" : "filename3.pdf"
+          },        
+          {
+              "did" : 40,
+              "filename" : "filename3.pdf"
+          }
+      ],
+      "documentfill_list" : [
+          {
+              "docname" : "เอกสารการรับเงินจากนายจ้าง",
+              "filename" : "filename.pdf"
+          },        
+          {
+              "docname" : "เอกสารการรับเงินจากนายจ้าง1",
+              "filename" : "filename2.pdf"    
+          },        
+          {
+              "docname" : "เอกสารการรับเงินจากนายจ้าง",
+              "filename" : "filename3.pdf"        
+          },        
+          {
+              "docname" : "เอกสารการรับเงินจากนายจ้าง",
+              "filename" : "filename3.pdf"
+          }
+      ],
+      "apptypeid" : 1,
+      "apptype" : 1,
+      "appstatus" : 1,
+      "description" : "เหตุผลประกอบการพิจารณา"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

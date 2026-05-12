@@ -1,0 +1,72 @@
+meta {
+  name: aidcause 5 กรณีประสบปัญหาในต่างประเทศ
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://apiserver:8080/admin/interrogation/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "action" : "addInterrogationInfo",
+      "reqid" : 1434032,
+      "aidcause" : 5,
+      "aidcausedeath" : null,
+      "aidcausedeathpurpose" : null,
+      "aidcausetrouble" : null,
+      "adojid" : 1,
+      "aidpetition": 1,
+      "aidcjid": 2105,
+      "aidbackdate": "2026-03-15",
+      "aidercauseeffect": 2,
+      "aidproblem": "นายจ้างปิดกิจการกะทันหัน ทำให้ไม่ได้รับค่าจ้างและต้องเดินทางกลับประเทศไทยก่อนครบสัญญา",
+      "document_list" : [
+          {
+              "did" : 313,
+              "filename" : "filename.pdf"
+          },        
+          {
+              "did" : 2,
+              "filename" : "filename2.pdf"        },        
+          {
+              "did" : 3,
+              "filename" : "filename3.pdf"
+          },        
+          {
+              "did" : 40,
+              "filename" : "filename3.pdf"
+          }
+      ],
+      "documentfill_list" : [
+          {
+              "docname" : "เอกสารการรับเงินจากนายจ้าง",
+              "filename" : "filename.pdf"
+          },        
+          {
+              "docname" : "เอกสารการรับเงินจากนายจ้าง1",
+              "filename" : "filename2.pdf"    
+          },        
+          {
+              "docname" : "เอกสารการรับเงินจากนายจ้าง",
+              "filename" : "filename3.pdf"        
+          },        
+          {
+              "docname" : "เอกสารการรับเงินจากนายจ้าง",
+              "filename" : "filename3.pdf"
+          }
+      ],
+      "apptypeid" : 1,
+      "apptype" : 1,
+      "appstatus" : 1,
+      "description" : "เหตุผลประกอบการพิจารณา"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
