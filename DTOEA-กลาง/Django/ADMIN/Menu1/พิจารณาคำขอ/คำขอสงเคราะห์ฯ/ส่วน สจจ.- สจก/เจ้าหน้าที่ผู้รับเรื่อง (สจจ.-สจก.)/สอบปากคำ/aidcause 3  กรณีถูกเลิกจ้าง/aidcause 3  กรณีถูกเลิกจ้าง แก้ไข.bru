@@ -1,0 +1,89 @@
+meta {
+  name: aidcause 3  กรณีถูกเลิกจ้าง แก้ไข
+  type: http
+  seq: 2
+}
+
+put {
+  url: http://apiserver:8080/admin/interrogation/1/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "action" : "editInterrogationInfo",
+      "reqid" : 1434032,
+      "aidcause" : 3,
+      "aidcausedeath" : null,
+      "aidcausedeathpurpose" : null,
+      "aidcausetrouble" : null,
+      "adojid" : 1,
+      "aidpetition": 1,
+      "aidcjid": 101,
+      "aidaccident": 1,
+      "aidaccidentdate": "2026-05-01",
+      "aidaccidentinwork": 1,
+      "aidaccidentdetail": "ลื่นล้มระหว่างปฏิบัติงาน",
+      "aidmedical": 1,
+      "aidmedicalcntid": 410,
+      "aidhospitalplace": "Seoul Central Hospital",
+      "aidmedicalday": 7,
+      "aidmedicalsdate": "2026-05-01",
+      "aidmedicaledate": "2026-05-07",
+      "aidbackdate": "2026-05-10",
+      "aideffectivedate": "2026-05-08",
+      "aiddisability": 2,
+      "aideffectdetail": "ไม่สามารถใช้แขนขวาได้ตามปกติ",
+      "aidcompensationcntid": 410,
+      "aidcompensation": 50000.00,
+      "aidhospitalname": "โรงพยาบาลราชวิถี",
+      "aidhospitalpvid": 10,
+      "aiddiagnoseresults": "กระดูกแขนขวาร้าว ต้องพักรักษาตัวต่อเนื่อง",
+      "document_list" : [
+          {
+              "did" : 313,
+              "filename" : "filename.pdf"
+          },        
+          {
+              "did" : 2,
+              "filename" : "filename2.pdf"        
+          },        
+          {
+              "did" : 3,
+              "filename" : "filename3.pdf"
+          },        
+          {
+              "did" : 40,
+              "filename" : "filename3.pdf"
+          }
+      ],
+      "documentfill_list" : [
+          {
+              "docname" : "เอกสารการรับเงินจากนายจ้าง",
+              "filename" : "filename.pdf"
+          },        
+          {
+              "docname" : "เอกสารการรับเงินจากนายจ้าง1",
+              "filename" : "filename2.pdf"    
+          },        
+          {
+              "docname" : "เอกสารการรับเงินจากนายจ้าง",
+              "filename" : "filename3.pdf"        
+          },        
+          {
+              "docname" : "เอกสารการรับเงินจากนายจ้าง",
+              "filename" : "filename3.pdf"
+          }
+      ],
+      "apptypeid" : 1,
+      "apptype" : 1,
+      "appstatus" : 1,
+      "description" : "เหตุผลประกอบการพิจารณา"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
