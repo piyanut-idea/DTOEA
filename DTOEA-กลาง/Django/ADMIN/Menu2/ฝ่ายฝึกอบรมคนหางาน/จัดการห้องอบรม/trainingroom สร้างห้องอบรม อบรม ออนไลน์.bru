@@ -1,0 +1,37 @@
+meta {
+  name: trainingroom สร้างห้องอบรม อบรม ออนไลน์
+  type: http
+  seq: 6
+}
+
+post {
+  url: http://apiserver:8080/admin/trainingroom/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "action": "addTrainingroomInfo",
+      "pvid": 1,
+      "name": "ห้องอบรม กระบี่",
+      "traintype" : 1,
+      "status": 1,
+      "trtype": 1, // ถ้าเลือกเป็น trtype : 1 อบรมออนไลน์ , 2 : อบรม ณ สำนักงาน
+      "cntid" : 1066,
+      "course_list" : [
+          {
+              "csid" : 1
+          },
+          {
+              "csid" : 2
+          }
+      ]
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

@@ -1,0 +1,33 @@
+meta {
+  name: editBranch
+  type: http
+  seq: 2
+}
+
+put {
+  url: http://apiserver:8080/web/location/2/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "action": "editBranch",
+      "name": "สาขาทดสอบ แก้ไข",
+      "addressth": "456 ถ.พระราม 4 แขวงคลองเตย",
+      "addressen": "456 Rama IV Rd, Khlong Toei",
+      "postcode": "10110",
+      "typebrn": 2,
+      "status": 1,
+      "cid": 1,
+      "pvid": 1,
+      "ddtid": 1,
+      "sdtid": 1
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

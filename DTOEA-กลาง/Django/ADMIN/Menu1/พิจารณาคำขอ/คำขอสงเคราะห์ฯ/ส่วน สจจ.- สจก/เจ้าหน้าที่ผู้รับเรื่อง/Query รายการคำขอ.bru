@@ -1,0 +1,21 @@
+meta {
+  name: Query รายการคำขอ
+  type: http
+  seq: 8
+}
+
+get {
+  url: http://apiserver:8090/admin/request/1434020?idlist=1434020
+  body: json
+  auth: inherit
+}
+
+params:query {
+  idlist: 1434020
+  ~reqstatus: 
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
