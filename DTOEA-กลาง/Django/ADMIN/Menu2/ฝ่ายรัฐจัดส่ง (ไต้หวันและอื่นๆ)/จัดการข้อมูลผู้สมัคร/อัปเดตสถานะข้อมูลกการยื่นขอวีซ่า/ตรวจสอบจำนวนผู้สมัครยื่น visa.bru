@@ -1,0 +1,44 @@
+meta {
+  name: ตรวจสอบจำนวนผู้สมัครยื่น visa
+  type: http
+  seq: 1
+}
+
+put {
+  url: http://apiserver:8080/admin/propertytaiwandtl/3/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "actiontype" : "check-visa-result",
+    "filename" : "test.pdf",
+    "uploaddate" : "2026-05-11T00:00:00",
+    "result_list": [
+      {
+        "no" : 1,
+        "idcard" : "2619036618348",
+        "fullname" : "นางดวงพร แก้วทอง",
+        "idregister" : "6903-01-0002",
+        "checkdate" : "2026-05-12T00:00:00", //วันที่ยื่นขอวีซ่า
+        "result" : 2, //(1,"ผ่าน"),(2,"ไม่ผ่าน"),
+        "remark" : "ไม่ผ่านครับ"
+      },
+      {
+        "no" : 2,
+        "idcard" : "6951404986643",
+        "fullname" : "นางกชพร มีสุขใจ",
+        "idregister" : "6806-10-0002",
+        "checkdate" : "2026-05-12T00:00:00", //วันที่ยื่นขอวีซ่า
+        "result" : 2, //(1,"ผ่าน"),(2,"ไม่ผ่าน"),
+        "remark" : "ไม่ผ่าน"  
+      }
+    ]
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

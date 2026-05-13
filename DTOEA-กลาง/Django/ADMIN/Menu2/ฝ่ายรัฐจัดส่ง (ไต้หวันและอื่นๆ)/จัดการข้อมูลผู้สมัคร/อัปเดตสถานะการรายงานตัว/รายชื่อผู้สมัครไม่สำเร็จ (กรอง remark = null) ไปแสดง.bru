@@ -1,0 +1,20 @@
+meta {
+  name: รายชื่อผู้สมัครไม่สำเร็จ (กรอง remark = null) ไปแสดง
+  type: http
+  seq: 2
+}
+
+get {
+  url: http://apiserver:8080/admin/uploaderror?ufid=23
+  body: none
+  auth: inherit
+}
+
+params:query {
+  ufid: 23
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

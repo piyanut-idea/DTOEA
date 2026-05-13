@@ -1,0 +1,42 @@
+meta {
+  name: ตรวจสอบจำนวนผู้สมัครรายงานตัว
+  type: http
+  seq: 1
+}
+
+put {
+  url: http://apiserver:8080/admin/propertytaiwandtl/3/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "actiontype" : "check-report-result",
+    "filename" : "test.pdf",
+    "uploaddate" : "2026-05-11T00:00:00",
+    "result_list": [
+      {
+        "no" : 1,
+        "idcard" : "2619036618348",
+        "fullname" : "นางดวงพร แก้วทอง",
+        "idregister" : "6903-01-0002",
+        "result" : 1,  //(1,"ผ่าน"),(2,"ไม่ผ่าน"),(4,"สละสิทธิ์"),
+        "remark" : null
+      },
+      {
+        "no" : 2,
+        "idcard" : "6951404986643",
+        "fullname" : "นางกชพร มีสุขใจ",
+        "idregister" : "6806-10-0002",
+        "result" : 2, //(1,"ผ่าน"),(2,"ไม่ผ่าน"),(4,"สละสิทธิ์"),
+        "remark" : "ไม่ผ่าน"  
+      }
+    ]
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
