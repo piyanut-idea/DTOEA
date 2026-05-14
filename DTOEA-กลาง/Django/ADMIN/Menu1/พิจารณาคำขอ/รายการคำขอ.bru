@@ -5,16 +5,17 @@ meta {
 }
 
 get {
-  url: http://apiserver:8090/admin/request?cconsiderby=101&creqstatus=1&creqstatuslist=14,15&creqbyadmin=101
+  url: http://apiserver:8090/admin/request?s_reqidcard=1710401206264
   body: none
   auth: inherit
 }
 
 params:query {
-  cconsiderby: 101
-  creqstatus: 1
-  creqstatuslist: 14,15
-  creqbyadmin: 101
+  s_reqidcard: 1710401206264
+  ~cconsiderby: 101
+  ~creqstatus: 1
+  ~creqstatuslist: 14,15
+  ~creqbyadmin: 101
   ~appdatenull: notnull
   ~appdatenull: null
   ~s_reqdate: 2026-03-17T00:00:00Z
@@ -24,6 +25,7 @@ params:query {
   ~idlist: 1,2
   ~req_cid_nameth: ชื่อบริษัท
   ~reqstatus: 8
+  ~s_admin_fnameth: ชื่อตัว
 }
 
 settings {
