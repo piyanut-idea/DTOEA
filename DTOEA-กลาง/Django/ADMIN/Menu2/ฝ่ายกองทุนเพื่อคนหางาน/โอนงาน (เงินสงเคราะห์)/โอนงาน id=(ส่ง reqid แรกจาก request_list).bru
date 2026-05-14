@@ -1,0 +1,34 @@
+meta {
+  name: โอนงาน id=(ส่ง reqid แรกจาก request_list)
+  type: http
+  seq: 1
+}
+
+put {
+  url: http://apiserver:8080/admin/request/1434023/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "action" : "transferReqAid",
+      "ojid" : 1, //จนท. กรต. ฝ่ายกองทุนเงินสงเคราะห์ เท่านั้น
+      "ojid2" : 2, //จนท. กรต. ฝ่ายกองทุนเงินสงเคราะห์ เท่านั้น
+      "request_list" : [
+          {
+              "reqid" : 1434023
+          },
+          {
+              "reqid" : 1434063
+          },
+          {
+              "reqid" : 1434035
+          }
+      ]
+  }
+}
+
+settings {
+  encodeUrl: true
+}
