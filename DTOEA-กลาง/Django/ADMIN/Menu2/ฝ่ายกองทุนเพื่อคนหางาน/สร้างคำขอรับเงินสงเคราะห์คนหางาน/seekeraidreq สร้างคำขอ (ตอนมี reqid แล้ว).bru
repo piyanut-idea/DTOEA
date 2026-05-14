@@ -5,7 +5,7 @@ meta {
 }
 
 put {
-  url: http://apiserver:8080/web/seekeraidreq/11/
+  url: http://apiserver:8080/admin/seekeraidreq/7/
   body: json
   auth: inherit
 }
@@ -14,8 +14,8 @@ body:json {
   {
       "action" : "requestAid",
       "idcard" : "1200100000003",    
-      "aidsameskinfo": 1,
-      "petitiontype": null,
+      "aidsameskinfo": 0,
+      "petitiontype": 1,    
       "aididcard": "1200100000003",
       "aididissuedate": null,
       "aididexpdate": null,
@@ -63,6 +63,9 @@ body:json {
       "aidnempyear" : 1,
       "aidnempmonth" : 1,
       "aidnempday" : 1,
+      "aidnfundno" : "E10/00019/09082556",
+      "aidnfundcntid" : 1066,
+      "aidnfundrate" : 500,
       "aidcause" : 1,
       "aidcausetrouble" : 1,
       "aidcausedeath" : 1,
@@ -96,5 +99,4 @@ body:json {
 
 settings {
   encodeUrl: true
-  timeout: 0
 }
