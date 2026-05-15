@@ -1,0 +1,78 @@
+meta {
+  name: แก้ไขคำขอ39
+  type: http
+  seq: 4
+}
+
+put {
+  url: http://apiserver:8080/admin/seekerreq/4/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "action" : "editreqtravelsk",
+    "emerpfid":1,
+    "emerfname":"สมชาบ",
+    "emerlname":"สันติ",
+    "relation":"เพิ่อน",
+    "emertel":"00000000000",
+    "sameemr":3,
+    "empvid":45,
+    "emddtid":596,
+    "emsdtid":4713,
+    "emeraddr":"723 หมู่ที่ 8",
+    "empostcode":"45160",
+    "jobtype":2,
+    "j1id":2001,
+    "wtid":1,
+    "wage":50000,
+    "curid":70,
+    "empyear":1,
+    //"empmonth":"",
+    //"empday":"",
+    //"proyear":"1",
+    //"promonth":"",
+    //"proday":"",
+    "endjob":"2027-12-31",
+    "cntid":1066,
+    "comtype" : 1,
+    "comcode" : "1253154125111",
+    "bosspfid" : "",
+    "bossfnameen" : "HANNSTAR BOARD CORPORATION",
+    "bosslnameen" : "",
+    "address" : "NO. 9, GONGYE 4TH RD.,",
+    "fcitid":10,
+    "bosspostcode" : "25315",
+    "idtid" : 7800,
+    "tel" : "023532654282",
+    "fax" : "",
+    "email" : "natee@vpadvance.com",
+    "twcid" : "",
+    "contacttype" : 2,
+    "contactoth" : "",
+    "contactpay" : 0,
+    "twpartner":2,
+    "samebossaddr":1,
+    "sbcntid":1066,
+    "workaddress":"NO. 9, GONGYE 4TH RD.,",
+    "sfcitid":10,
+    "zipcode":"52520",
+    "flight":"525442",
+    "airline":"zip air",
+    "flightdate":"2026-01-20",
+    "actpeoid":"100",
+    "depart":"ฝ่ายทะเบียน",
+    "actojid":"101",
+    "postion":"ทดสอบระบบ",
+    "remark":"ทดสอบการแก้ไข",
+    "filename":"file.pdf",
+    "uploaddate":"2026-05-01T15:30:00"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
