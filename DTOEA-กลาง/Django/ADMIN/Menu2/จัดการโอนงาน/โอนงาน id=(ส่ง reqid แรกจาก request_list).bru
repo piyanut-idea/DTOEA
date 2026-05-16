@@ -1,0 +1,35 @@
+meta {
+  name: โอนงาน id=(ส่ง reqid แรกจาก request_list)
+  type: http
+  seq: 1
+}
+
+put {
+  url: http://apiserver:8080/admin/request/1434035/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "action" : "transferReq",
+      "peoid" : 100, 
+      "ojid" : 1013, // จนท. ที่ต้องการโอนงานให้
+      "ojid2" : 101, // จนท. ต้นทาง
+      "request_list" : [
+          {
+              "reqid" : 1434035
+          }
+          // {
+          //     "reqid" : 1434063
+          // },
+          // {
+          //     "reqid" : 1434035
+          // }
+      ]
+  }
+}
+
+settings {
+  encodeUrl: true
+}
