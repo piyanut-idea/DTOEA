@@ -1,0 +1,20 @@
+meta {
+  name: จำนวนการตรวจสอบ
+  type: http
+  seq: 2
+}
+
+get {
+  url: http://apiserver:8080/admin/uploadfile?id=28
+  body: none
+  auth: inherit
+}
+
+params:query {
+  id: 28
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
