@@ -1,11 +1,11 @@
 meta {
   name: companyreq Step 1
   type: http
-  seq: 5
+  seq: 4
 }
 
 put {
-  url: http://apiserver:8080/web/companyreq/24/
+  url: http://apiserver:8080/web/companyreq/25/
   body: json
   auth: inherit
 }
@@ -21,7 +21,18 @@ body:json {
       "adojid" : 1,
       "pincode" : "1234",
       "twpartner" : 1,
-      "twcid" : 101
+      "twcid" : 101,
+      "comtype": 1,
+      "comcode" : "290837952",
+      "bossfnameen": "shang wang precision industry co.,ltd.",
+      "idtid": 5567,
+      "address": "no.7, lane 236, zhengguang st., yonglong village, taiping dist., taichung city, taiwan r.o.c.",
+      "cntid" : 1196,  
+      "fcitid" : 1,
+      "bosspostcode" : null,
+      "fax" : null,
+      "tel" : null,
+      "email" : "tesemail@gmail.com"
   }
 }
 
