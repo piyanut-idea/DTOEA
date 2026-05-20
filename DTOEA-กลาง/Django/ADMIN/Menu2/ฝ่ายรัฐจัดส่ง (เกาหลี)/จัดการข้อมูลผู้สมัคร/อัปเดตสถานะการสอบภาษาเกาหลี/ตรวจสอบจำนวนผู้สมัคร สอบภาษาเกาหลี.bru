@@ -1,0 +1,41 @@
+meta {
+  name: ตรวจสอบจำนวนผู้สมัคร สอบภาษาเกาหลี
+  type: http
+  seq: 1
+}
+
+put {
+  url: http://apiserver:8080/admin/propertykoreadtl/3/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  // {
+  //   "actiontype": "check-krtest-result",
+  //   "filename": "krtest.xlsx",
+  //   "uploaddate": "2026-05-20T00:00:00",
+  //   "isfinal": false,
+  //   "result_list": [
+  //     {"no": 1, "idcard": "5165899634227", "fullname": "Test One",   "idregister": "KR0003001", "result": 1, "remark": "good", "round": 1, "testread": 85, "testlisten": 92},
+  //     {"no": 2, "idcard": "1695274120973", "fullname": "Test Two",   "idregister": "KR0003002", "result": 2, "remark": "low",  "round": 1, "testread": 45, "testlisten": 50},
+  //     {"no": 3, "idcard": "5252846730546", "fullname": "Test Three", "idregister": "KR0003003t", "result": 2, "remark": "low",  "round": 1, "testread": 40, "testlisten": 48}
+  //   ]
+  // }
+  
+  {
+    "actiontype": "check-krtest-result",
+    "uploadfileid": 2,  // เอามาจาก response จาก batch ก่อนๆ
+    "isfinal": true,  // isfinal เป็น true เพื่อ glag ว่าเป็น batch สุดท้าย
+    "result_list": [
+      {"no": 4, "idcard": "2619036618348", "fullname": "Test Four", "idregister": "KR0003004", "result": 1, "remark": "good", "round": 1, "testread": 88, "testlisten": 90},
+      {"no": 5, "idcard": "3861919268429", "fullname": "Test Five", "idregister": "KR0003005", "result": 2, "remark": "low",  "round": 1, "testread": 42, "testlisten": 55}
+    ]
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
