@@ -1,0 +1,24 @@
+meta {
+  name: บันทึกสถานะการขอ CCVI
+  type: http
+  seq: 2
+}
+
+put {
+  url: http://apiserver:8080/admin/propertykoreadtl/<PROPKID>/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "actiontype": "upload-ccvi-result",
+    "uploadfileid": <UPLOADFILEID>
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
