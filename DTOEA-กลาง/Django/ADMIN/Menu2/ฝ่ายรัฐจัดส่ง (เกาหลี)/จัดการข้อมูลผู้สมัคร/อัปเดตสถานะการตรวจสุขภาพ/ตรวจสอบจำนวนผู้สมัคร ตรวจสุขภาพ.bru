@@ -1,0 +1,41 @@
+meta {
+  name: ตรวจสอบจำนวนผู้สมัคร ตรวจสุขภาพ
+  type: http
+  seq: 1
+}
+
+put {
+  url: http://apiserver:8080/admin/propertykoreadtl/3/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "actiontype": "check-health-result",
+    "filename": "health.xlsx",
+    "uploaddate": "2026-05-20T00:00:00",
+    "isfinal": false,
+    "result_list": [
+      {"no": 1, "idcard": "5165899634227", "fullname": "Test One",   "idregister": "KR0003001", "result": 1, "remark": "fit",   "ckdate": "2026-01-15", "expiredate": "2027-01-15", "hospitalname": "โรงพยาบาลศิริราช"},
+      {"no": 2, "idcard": "1695274120973", "fullname": "Test Two",   "idregister": "KR0003002", "result": 2, "remark": "unfit", "ckdate": "2026-01-15", "expiredate": "2027-01-15", "hospitalname": "โรงพยาบาลศิริราช"},
+      {"no": 3, "idcard": "5252846730546", "fullname": "Test Three", "idregister": "KR0003003", "result": 1, "remark": "fit",   "ckdate": "2026-01-15", "expiredate": "2027-01-15", "hospitalname": "โรงพยาบาลศิริราช"}
+    ]
+  }
+  
+  // {
+  //   "actiontype": "check-health-result",
+  //   "uploadfileid": 4,
+  //   "isfinal": true,
+  //   "result_list": [
+  //     {"no": 4, "idcard": "2619036618348", "fullname": "Test Four", "idregister": "KR0003004", "result": 1, "remark": "fit",   "ckdate": "2026-01-16", "expiredate": "2027-01-16", "hospitalname": "โรงพยาบาลศิริราชn"},
+  //     {"no": 5, "idcard": "3861919268429", "fullname": "Test Five", "idregister": "KR0003005", "result": 2, "remark": "unfit", "ckdate": "2026-01-16", "expiredate": "2027-01-16", "hospitalname": "โรงพยาบาลศิริราชm"}
+  //   ]
+  // }
+  
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
