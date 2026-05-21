@@ -1,0 +1,24 @@
+meta {
+  name: สแกน QR เข้าห้องอบรม Onsite
+  type: http
+  seq: 6
+}
+
+put {
+  url: http://apiserver:8080/web/seekerreserve/14/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "action" : "updateStartTrainOnsite",
+      "tscid" : 2,
+      "ojid" : 2
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
