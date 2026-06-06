@@ -1,0 +1,20 @@
+meta {
+  name: ข้อมูลการอนุญาตเป็นองค์กรผู้ส่ง
+  type: http
+  seq: 4
+}
+
+get {
+  url: http://apiserver:8080/admin/companyreq?reqid=4
+  body: none
+  auth: inherit
+}
+
+params:query {
+  reqid: 4
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
