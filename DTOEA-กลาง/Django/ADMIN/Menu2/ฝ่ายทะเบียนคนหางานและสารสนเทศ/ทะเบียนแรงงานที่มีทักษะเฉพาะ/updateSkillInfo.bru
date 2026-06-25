@@ -1,0 +1,62 @@
+meta {
+  name: updateSkillInfo
+  type: http
+  seq: 1
+}
+
+put {
+  url: http://apiserver:8080/admin/registerseekerskill/1/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "action": "updateSkillInfo",
+      "skstatus": 1,
+      "ckcongen": 2,
+      "congen": null,
+      "cksklanguage": 1,
+      "sklanguage": 3,
+      "langskill1": 1,
+      "langskill2": 6,
+      "langskill3": null,
+      "langplace": "สถาบันภาษาญี่ปุ่น กรุงเทพ",
+      "cktestresult": null,
+      "bwmsplace": null,
+      "wmsplace": null,
+      "statuswk": 2,
+      "ntypejob": null,  
+      "htwork": null,
+      "typejob": null,
+      "usedjob": null,
+      "othertypejob": null,
+      "empyear": null,
+      "empmonth": null,
+      "empday": null,
+      "wage": null,
+      "startdate": null,
+      "enddate": null,
+      "ckworkpermit": null,
+      "job1": "test job 1",
+      "job2": "test job 2",
+      "job3": null,
+      "jobworkpermit": null,
+      "ntypejob2": null,
+  //     "jid1": null,
+  //     "jid2": null,
+  //     "jid3": null,
+  //     "jid4": null,
+  //     "jid5": null,
+      "cid": null,  // used
+      "document_list": [
+          {"did": 38, "filename": "passport.pdf", "uploaddate": "2026-05-15T10:00:00", "lgbit": 1}
+      ]
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
