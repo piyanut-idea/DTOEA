@@ -5,23 +5,19 @@ meta {
 }
 
 put {
-  url: http://apiserver:8080/admin/company?id=1
+  url: http://apiserver:8080/admin/company/1/
   body: json
   auth: inherit
-}
-
-params:query {
-  id: 1
 }
 
 body:json {
   {
     "action" : "editorgsenderpunish",
-    "reqid" : 1,
+    "reqid" : 42,
     "ispunished" : 1, //(0,"ไม่พบการถูกลงโทษ"),(1,"พบการถูกลงโทษ") 
-    "suspendfromdate" : "",//ตั้งแต่วันที่
-    "suspendtodate" : "",//ถึงวันที่
-    "suspendreason" : "",
+    "suspendfromdate" : "2026-01-01T00:00:00",//ตั้งแต่วันที่
+    "suspendtodate" : "2026-01-01T00:00:00",//ถึงวันที่
+    "suspendreason" : "หมายเหตุ",
     "filename1" : "test1.pdf", //สำเนาหนังสือตรวจสอบคุณสมบัติบริษัทจัดหางาน
     "uploaddate1" : "2026-04-01T00:00:00", //วันที่สำเนาหนังสือตรวจสอบคุณสมบัติบริษัทจัดหางาน
     "filename2" :  null, //อื่น ๆ
