@@ -1,0 +1,16 @@
+meta {
+  name: รายการประวัติการถูกลงโทษทางทะเบียน
+  type: http
+  seq: 1
+}
+
+get {
+  url: http://apiserver:8080/admin/orgsenderpunish/
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

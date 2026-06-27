@@ -1,0 +1,51 @@
+meta {
+  name: แก้ไขข้อมูลพื้นฐานขององค์กรผู้ส่งที่ได้รับอนุญาต
+  type: http
+  seq: 4
+}
+
+put {
+  url: http://apiserver:8080/admin/orgsender?id=1
+  body: json
+  auth: inherit
+}
+
+params:query {
+  id: 1
+}
+
+body:json {
+  {
+    "action" : "editorgsender",
+    "establishdate" : "", //วันที่ก่อตั้ง
+    "email" : "", //อีเมล
+    "url" : "",
+    "industryth" : "", //ประเภทอตุสาหกรรมและธุรกิจหลัก (ไทย)
+    "industryen" : "", //ประเภทอตุสาหกรรมและธุรกิจหลัก (Eng)
+    "employee" : "", //จำนวนลูกจ้างเต็มเวลา (จำนวนลูกจ้างที่เกี่ยวข้องกับงานการจัดส่ง)
+    "capital" : "", //เงินทุน
+    "sales" : "", //ยอดขายประจำปี (ที่เป็นปัจจุบันที่สุด)
+    "pfidth" : 1, //คำนำหน้าชื่อ (ไทย)
+    "fnameth" : "", //ชื่อไทย
+    "lnameth" : "", //นามสกุลไทย
+    "pfiden" : 1,//คำนำหน้าชื่อ (Eng)
+    "fnameen" : "",//ชื่อ (Eng)
+    "lnameen" : "",//นามสกุล (Eng)
+    "positionth" : "",//ตำแหน่ง (ไทย)
+    "positionen" : "",//ตำแหน่ง (Eng)
+    "addressth" : "",//ที่อยู่ (ไทย)
+    "addressen" : "",//ที่อยู่ (Eng)
+    "pvid" : 1,//id  จังหวัด
+    "ddtid" : 1,//id อำเภอ / เขต
+    "sdtid" : 1, //id ตำบล / แขวง
+    "postcode" : 1,
+    "tel" : "", //โทรศัพท์
+    "fax" : "", //โทรสาร
+    "comemail" : "" //อีเมล
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
