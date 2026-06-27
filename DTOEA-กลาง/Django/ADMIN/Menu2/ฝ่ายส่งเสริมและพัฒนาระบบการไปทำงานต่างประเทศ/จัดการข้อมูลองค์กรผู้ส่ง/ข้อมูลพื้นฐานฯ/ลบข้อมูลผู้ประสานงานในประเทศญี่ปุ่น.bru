@@ -1,17 +1,19 @@
 meta {
   name: ลบข้อมูลผู้ประสานงานในประเทศญี่ปุ่น
   type: http
-  seq: 8
+  seq: 12
 }
 
 put {
-  url: http://apiserver:8080/admin/orgsenderco?id=1
-  body: none
+  url: http://apiserver:8080/admin/orgsenderco/10/
+  body: json
   auth: inherit
 }
 
-params:query {
-  id: 1
+body:json {
+  {
+    "mar" : 1
+  }
 }
 
 settings {

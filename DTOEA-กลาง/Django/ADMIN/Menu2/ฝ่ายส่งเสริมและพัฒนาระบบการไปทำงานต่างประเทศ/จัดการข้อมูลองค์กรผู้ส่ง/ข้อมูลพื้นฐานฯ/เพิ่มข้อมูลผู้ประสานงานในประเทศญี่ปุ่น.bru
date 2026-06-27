@@ -1,7 +1,7 @@
 meta {
   name: เพิ่มข้อมูลผู้ประสานงานในประเทศญี่ปุ่น
   type: http
-  seq: 6
+  seq: 10
 }
 
 post {
@@ -12,10 +12,9 @@ post {
 
 body:json {
   {
-    "osid" : 1,
-    "cid" : 1,
-    "pfidth" : 1, //รหัสคำนำหน้าชื่อไทย
-    "pfiden" : 1, //รหัสคำนำหน้าชื่ออังกฤษ
+    "osid" : 1, //id orgsenderinfo
+    "cid" : 1, //id company
+    "pfid" : 1, //รหัสคำนำหน้าชื่อ
     "fnameth": "สมชาย",      // ชื่อ (ไทย)
     "lnameth": "ใจดี",      // นามสกุล (ไทย)
     "fnameen": "Somchai",      // ชื่อ (อังกฤษ)
