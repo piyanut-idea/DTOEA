@@ -5,9 +5,13 @@ meta {
 }
 
 get {
-  url: http://apiserver:8080/admin/orgsenderhist/
+  url: http://apiserver:8080/admin/orgsenderhist?cid=1
   body: none
   auth: inherit
+}
+
+params:query {
+  cid: 1
 }
 
 settings {
