@@ -1,0 +1,16 @@
+meta {
+  name: ข้อมูลจังหวัด
+  type: http
+  seq: 6
+}
+
+get {
+  url: http://apiserver:8080/web/province/
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
