@@ -1,0 +1,25 @@
+meta {
+  name: ค้นหาข้อมูลผลการจัดส่งแรงงานไทย
+  type: http
+  seq: 1
+}
+
+get {
+  url: http://apiserver:8080/web/sendersendlist?orgname=ชื่อองค์กรผู้รับ&oss_jid_nameth=ตำแหน่ง&oss_reqid_reqcode=เลขคำขอ&startdate=2026-01-01T00:00:00&enddate=2026-01-10T00:00:00
+  body: none
+  auth: inherit
+}
+
+params:query {
+  orgname: ชื่อองค์กรผู้รับ
+  oss_jid_nameth: ตำแหน่ง
+  oss_reqid_reqcode: เลขคำขอ
+  startdate: 2026-01-01T00:00:00
+  enddate: 2026-01-10T00:00:00
+  ~osid: 1
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

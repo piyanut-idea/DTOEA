@@ -1,0 +1,22 @@
+meta {
+  name: ลบข้อมูลผู้ประสานงานในประเทศญี่ปุ่น
+  type: http
+  seq: 8
+}
+
+put {
+  url: http://apiserver:8080/web/orgsenderco/18/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "mar" : 1
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
