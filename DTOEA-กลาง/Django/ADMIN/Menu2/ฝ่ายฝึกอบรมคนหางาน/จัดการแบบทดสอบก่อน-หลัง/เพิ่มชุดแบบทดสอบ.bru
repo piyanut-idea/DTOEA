@@ -1,0 +1,27 @@
+meta {
+  name: เพิ่มชุดแบบทดสอบ
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://apiserver:8080/admin/quiz/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "action": "addQuizInfo",
+      "quiztype": 1, // ถ้าเลือกเป็น quiztype : 1 ก่อน , 2 : หลัง
+      "quiztitle": "แบบทดสอบวัดความรู้ความเข้าใจก่อนเข้ารับการอบรมคนหางานก่อนเดินทางไปทำงานคต่างประเทศ ชุดที่ 1",
+      "passingscore": 50,
+      "startdate": "2026-06-06",
+      "enddate": "2026-31-09"
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+}
