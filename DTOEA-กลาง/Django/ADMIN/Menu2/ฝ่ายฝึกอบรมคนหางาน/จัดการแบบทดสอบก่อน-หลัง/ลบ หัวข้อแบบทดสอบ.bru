@@ -1,0 +1,21 @@
+meta {
+  name: ลบ หัวข้อแบบทดสอบ
+  type: http
+  seq: 7
+}
+
+put {
+  url: http://apiserver:8080/admin/quizquest/1/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "action": "deleteQuizQuestInfo"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

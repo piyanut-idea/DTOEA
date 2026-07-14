@@ -1,0 +1,25 @@
+meta {
+  name: แก้ไขหัวข้อแบบทดสอบ
+  type: http
+  seq: 6
+}
+
+put {
+  url: http://apiserver:8080/admin/quizquest/1/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "action": "editQuizQuestInfo",
+      "qzid": 1,
+      "questiontitle": "ก่อนเดินทางออกไปทำงานต่างประเทศ ต้องนำเอกสาร จง.12 ไปยื่นที่หน่วยงานใด2",
+      "score": 1,
+      "status": 1
+  }
+}
+
+settings {
+  encodeUrl: true
+}

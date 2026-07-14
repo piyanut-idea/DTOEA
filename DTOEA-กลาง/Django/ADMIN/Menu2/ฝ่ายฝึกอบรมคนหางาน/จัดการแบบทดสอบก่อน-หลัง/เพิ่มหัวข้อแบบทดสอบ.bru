@@ -1,0 +1,26 @@
+meta {
+  name: เพิ่มหัวข้อแบบทดสอบ
+  type: http
+  seq: 5
+}
+
+post {
+  url: http://apiserver:8080/admin/quizquest/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "action": "addQuizQuestInfo",
+      "qzid": 1,
+      "questiontitle": "ก่อนเดินทางออกไปทำงานต่างประเทศ ต้องนำเอกสาร จง.12 ไปยื่นที่หน่วยงานใด",
+      "score": 1,
+      "status": 1
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+}

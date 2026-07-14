@@ -1,0 +1,26 @@
+meta {
+  name: เพิ่มตัวเลือก
+  type: http
+  seq: 8
+}
+
+post {
+  url: http://apiserver:8080/admin/quizchoice/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "action": "addQuizChoiceInfo",
+      "qqid": 1,
+      "choicetitle": "สำนักงานจัดหางานเขต2",
+      "correcttype": 1,
+      "status": 1
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+}
