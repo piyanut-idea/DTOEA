@@ -1,22 +1,20 @@
 meta {
-  name: regstep1_sendotp
+  name: getLoanDoc
   type: http
-  seq: 51
+  seq: 64
 }
 
 get {
-  url: https://test-toea.doe.go.th/toeacontent.php?task=regstep1_sendotp&sendTime=20260326190023&sessionid=hqcjag6wixcwgaciche5x5yfyf15gcwr&csrftoken=POyN2pGNVW6BRVhk68bAC156LcpPi3eb&regid=4&email=nnnnn@vpadvance.com
+  url: http://custweb/toeacontent.php?task=getLoanDoc&sendTime=20260326190023&sessionid=hqcjag6wixcwgaciche5x5yfyf15gcwr&csrftoken=POyN2pGNVW6BRVhk68bAC156LcpPi3eb
   body: none
   auth: inherit
 }
 
 params:query {
-  task: regstep1_sendotp
+  task: getLoanDoc
   sendTime: 20260326190023
   sessionid: hqcjag6wixcwgaciche5x5yfyf15gcwr
   csrftoken: POyN2pGNVW6BRVhk68bAC156LcpPi3eb
-  regid: 4
-  email: nnnnn@vpadvance.com
 }
 
 settings {

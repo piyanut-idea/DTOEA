@@ -1,0 +1,29 @@
+meta {
+  name: addBlacklist
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://apiserver:8080/admin/blacklist/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "action": "addBlacklist",
+      "ojid": 121,
+      "cntid": 1,
+      "bltype": 1,
+      "cause": 4,
+      "description": "test blacklist",
+      "filename": "reason.pdf"
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

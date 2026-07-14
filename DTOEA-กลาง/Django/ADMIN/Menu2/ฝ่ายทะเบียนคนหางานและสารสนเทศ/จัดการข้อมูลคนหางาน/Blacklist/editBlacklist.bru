@@ -1,0 +1,27 @@
+meta {
+  name: editBlacklist
+  type: http
+  seq: 2
+}
+
+put {
+  url: http://apiserver:8080/admin/blacklist/1/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "action": "editBlacklist",
+      "bltype": 2,
+      "cause": 3,
+      "description": "updated reason",
+      "filename": "newreason.pdf"
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

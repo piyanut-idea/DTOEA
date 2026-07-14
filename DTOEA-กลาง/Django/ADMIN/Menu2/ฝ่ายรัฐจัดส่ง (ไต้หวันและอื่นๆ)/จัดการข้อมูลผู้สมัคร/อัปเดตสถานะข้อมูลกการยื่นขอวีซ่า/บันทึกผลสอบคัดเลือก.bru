@@ -1,0 +1,23 @@
+meta {
+  name: บันทึกผลสอบคัดเลือก
+  type: http
+  seq: 4
+}
+
+put {
+  url: http://apiserver:8080/admin/propertytaiwandtl/3/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "actiontype" : "upload-visa-result",
+    "uploadfileid" : 32
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

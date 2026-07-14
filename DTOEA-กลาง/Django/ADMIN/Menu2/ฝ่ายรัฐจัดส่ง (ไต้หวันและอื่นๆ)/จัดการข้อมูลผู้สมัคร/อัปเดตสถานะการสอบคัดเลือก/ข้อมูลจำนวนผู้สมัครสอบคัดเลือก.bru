@@ -1,0 +1,16 @@
+meta {
+  name: ข้อมูลจำนวนผู้สมัครสอบคัดเลือก
+  type: http
+  seq: 3
+}
+
+get {
+  url: http://apiserver:8080/admin/uploadfile
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

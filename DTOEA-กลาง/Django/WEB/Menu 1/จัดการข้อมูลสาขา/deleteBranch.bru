@@ -1,0 +1,23 @@
+meta {
+  name: deleteBranch
+  type: http
+  seq: 3
+}
+
+put {
+  url: http://apiserver:8080/web/location/{id}/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "action": "deleteBranch"
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
