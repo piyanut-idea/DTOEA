@@ -1,0 +1,23 @@
+meta {
+  name: Step 2 ส่งเรื่อง
+  type: http
+  seq: 9
+}
+
+put {
+  url: http://apiserver:8080/web/senderreq/6/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "action" : "submitFormChangeSenderDtlStep2",
+    "editmessage" : "ใส่รายละเอียดแก้ไขหลังจากเจ้าหน้าที่ส่งกลับมาให้แก้ไข" //รายละเอียดการแก้ไข
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

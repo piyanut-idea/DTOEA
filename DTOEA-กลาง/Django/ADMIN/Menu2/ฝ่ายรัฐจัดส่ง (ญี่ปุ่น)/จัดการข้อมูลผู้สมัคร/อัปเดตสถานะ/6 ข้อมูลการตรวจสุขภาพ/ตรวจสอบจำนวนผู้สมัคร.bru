@@ -1,0 +1,62 @@
+meta {
+  name: ตรวจสอบจำนวนผู้สมัคร
+  type: http
+  seq: 1
+}
+
+put {
+  url: http://apiserver:8080/admin/propertyjapandtl/3/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "actiontype" : "check-health-result",
+    "filename" : "test.pdf",
+    "uploaddate" : "2026-05-11T00:00:00",
+    "result_list": [
+      {
+        "no" : 1,
+        "idcard" : "2197578683506",
+        "fullname" : "นางกชนิภา มีสุขใจ",
+        "idexam" : "0001",
+        "idregister" : "680610001",
+        "result" : 1, //(1-ผ่าน),(2-ไม่ผ่าน),(3-รักษาตัว),(4-สละสิทธิ์)
+        "remark" : "เหตุผล"
+      },
+      {
+        "no" : 2,
+        "idcard" : "2083229640396",
+        "fullname" : "นางกชพร มีสุขใจ",
+        "idexam" : "0002",
+        "idregister" : "680610002",
+        "result" : 2, //(1-ผ่าน),(2-ไม่ผ่าน),(3-รักษาตัว),(4-สละสิทธิ์)
+        "remark" : "เหตุผล"
+      },
+      {
+        "no" : 3,
+        "idcard" : "2441050066181",
+        "fullname" : "นางกชพรรณ มีสุขใจ",
+        "idexam" : "0003",
+        "idregister" : "680610003",
+        "result" : 3, //(1-ผ่าน),(2-ไม่ผ่าน),(3-รักษาตัว),(4-สละสิทธิ์)
+        "remark" : "เหตุผล"
+      },
+      {
+        "no" : 4,
+        "idcard" : "2552921282439",
+        "fullname" : "นายกันต์ มีสุขใจ",
+        "idexam" : "0004",
+        "idregister" : "680610004",
+        "result" : 4, //(1-ผ่าน),(2-ไม่ผ่าน),(3-รักษาตัว),(4-สละสิทธิ์)
+        "remark" : "เหตุผล"
+      }
+    ]
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

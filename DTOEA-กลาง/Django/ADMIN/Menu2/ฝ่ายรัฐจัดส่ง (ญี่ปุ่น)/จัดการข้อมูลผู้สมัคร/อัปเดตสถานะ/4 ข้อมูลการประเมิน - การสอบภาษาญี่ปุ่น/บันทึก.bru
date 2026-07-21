@@ -1,0 +1,23 @@
+meta {
+  name: บันทึก
+  type: http
+  seq: 4
+}
+
+put {
+  url: http://apiserver:8080/admin/propertyjapandtl/3/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "actiontype" : "upload-evaluation-result",
+    "uploadfileid" : 24
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

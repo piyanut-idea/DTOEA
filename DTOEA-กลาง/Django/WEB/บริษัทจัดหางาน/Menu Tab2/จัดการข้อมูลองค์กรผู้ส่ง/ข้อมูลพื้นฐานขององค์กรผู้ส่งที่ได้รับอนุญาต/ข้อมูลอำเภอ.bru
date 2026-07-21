@@ -1,0 +1,16 @@
+meta {
+  name: ข้อมูลอำเภอ
+  type: http
+  seq: 7
+}
+
+get {
+  url: http://apiserver:8080/admin/district/
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

@@ -1,0 +1,46 @@
+meta {
+  name: ตรวจสอบจำนวนผู้สมัคร
+  type: http
+  seq: 1
+}
+
+put {
+  url: http://apiserver:8080/admin/propertyjapandtl/3/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "actiontype" : "check-support-result",
+    "filename" : "test.pdf",
+    "uploaddate" : "2026-05-11T00:00:00",
+    "result_list": [
+      {
+        "no" : 1,
+        "idcard" : "2197578683506",
+        "fullname" : "นางกชนิภา มีสุขใจ",
+        "idexam" : "0001",
+        "idregister" : "680610001",
+        "amount" : 1, //1=400,000เยน  2=600,000เยน
+        "baht" : "12000",
+        "remark" : "เหตุผล"
+      },
+      {
+        "no" : 2,
+        "idcard" : "2083229640396",
+        "fullname" : "นางกชพร มีสุขใจ",
+        "idexam" : "0002",
+        "idregister" : "680610002",
+        "amount" : 2, //1=400,000เยน  2=600,000เยน
+        "baht" : "18000",
+        "remark" : "เหตุผล"
+      }
+    ]
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

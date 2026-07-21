@@ -1,0 +1,20 @@
+meta {
+  name: เอกสารแนบ
+  type: http
+  seq: 5
+}
+
+get {
+  url: http://apiserver:8080/web/requestdoc?cid=1
+  body: none
+  auth: inherit
+}
+
+params:query {
+  cid: 1
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

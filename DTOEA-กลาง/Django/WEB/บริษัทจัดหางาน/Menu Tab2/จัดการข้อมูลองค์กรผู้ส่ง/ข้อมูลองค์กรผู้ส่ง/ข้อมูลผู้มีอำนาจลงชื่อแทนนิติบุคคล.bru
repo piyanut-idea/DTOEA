@@ -1,0 +1,21 @@
+meta {
+  name: ข้อมูลผู้มีอำนาจลงชื่อแทนนิติบุคคล
+  type: http
+  seq: 2
+}
+
+get {
+  url: http://apiserver:8080/web/agentdtl?cid=1&bc1=4
+  body: none
+  auth: inherit
+}
+
+params:query {
+  cid: 1
+  bc1: 4
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

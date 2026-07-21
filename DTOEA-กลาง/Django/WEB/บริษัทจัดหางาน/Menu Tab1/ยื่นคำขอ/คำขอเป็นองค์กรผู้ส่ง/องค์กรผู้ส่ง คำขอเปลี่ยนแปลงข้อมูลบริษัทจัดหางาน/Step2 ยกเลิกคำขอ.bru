@@ -1,0 +1,23 @@
+meta {
+  name: Step2 ยกเลิกคำขอ
+  type: http
+  seq: 6
+}
+
+put {
+  url: http://apiserver:8080/web/senderreq/1/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "action" : "removeTmpRequestSenderDtl",
+    "reason" : "ยกเลิกคำขอ"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

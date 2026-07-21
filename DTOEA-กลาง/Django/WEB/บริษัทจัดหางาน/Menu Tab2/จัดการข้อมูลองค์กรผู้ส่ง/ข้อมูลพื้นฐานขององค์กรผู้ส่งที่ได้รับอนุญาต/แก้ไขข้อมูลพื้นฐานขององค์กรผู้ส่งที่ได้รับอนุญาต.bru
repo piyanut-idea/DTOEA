@@ -1,0 +1,47 @@
+meta {
+  name: แก้ไขข้อมูลพื้นฐานขององค์กรผู้ส่งที่ได้รับอนุญาต
+  type: http
+  seq: 9
+}
+
+put {
+  url: http://apiserver:8080/web/company/1/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "action" : "editorgsender",
+    "establishdate" : "2024-01-01T00:00:00", //วันที่ก่อตั้ง
+    "email" : "test@mail.com", //อีเมล
+    "url" : "http://test.com",
+    "industryth" : "ไทยรุ่ง", //ประเภทอตุสาหกรรมและธุรกิจหลัก (ไทย)
+    "industryen" : "ThaiRung", //ประเภทอตุสาหกรรมและธุรกิจหลัก (Eng)
+    "employee" : 20, //จำนวนลูกจ้างเต็มเวลา (จำนวนลูกจ้างที่เกี่ยวข้องกับงานการจัดส่ง)
+    "capital" : 100000, //เงินทุน
+    "sales" : 30000000, //ยอดขายประจำปี (ที่เป็นปัจจุบันที่สุด)
+    "pfidth" : 1, //คำนำหน้าชื่อ (ไทย)
+    "fnameth" : "สมชาย", //ชื่อไทย
+    "lnameth" : "ใจดี", //นามสกุลไทย
+    "pfiden" : 1,//คำนำหน้าชื่อ (Eng)
+    "fnameen" : "Somchai",//ชื่อ (Eng)
+    "lnameen" : "Jaidee",//นามสกุล (Eng)
+    "positionth" : "พัฒนา",//ตำแหน่ง (ไทย)
+    "positionen" : "Deveop",//ตำแหน่ง (Eng)
+    "addressth" : "กรุงเทพ",//ที่อยู่ (ไทย)
+    "addressen" : "bangkok",//ที่อยู่ (Eng)
+    "pvid" : 1,//id  จังหวัด
+    "ddtid" : 1,//id อำเภอ / เขต
+    "sdtid" : 1, //id ตำบล / แขวง
+    "postcode" : 1,
+    "tel" : "025225587", //โทรศัพท์
+    "fax" : "0252255879", //โทรสาร
+    "comemail" : "test2@mail.com" //อีเมล
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

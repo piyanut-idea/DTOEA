@@ -1,0 +1,20 @@
+meta {
+  name: รายการอัปเดตสถานะ
+  type: http
+  seq: 1
+}
+
+get {
+  url: http://apiserver:8090/admin/recruitresult?rcid=5
+  body: none
+  auth: inherit
+}
+
+params:query {
+  rcid: 5
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

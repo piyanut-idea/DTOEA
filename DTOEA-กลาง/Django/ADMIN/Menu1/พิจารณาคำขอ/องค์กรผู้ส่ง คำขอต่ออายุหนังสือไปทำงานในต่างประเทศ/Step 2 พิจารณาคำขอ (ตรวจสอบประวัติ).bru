@@ -1,0 +1,34 @@
+meta {
+  name: Step 2 พิจารณาคำขอ (ตรวจสอบประวัติ)
+  type: http
+  seq: 2
+}
+
+put {
+  url: http://apiserver:8080/admin/request/12/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "action" : "senderreqlist-approve-step2",
+      "apptype" : 1, //1:เจ้าหน้าที่พิจสนณา
+      "appstatus" : 1, //1:อนุมัติพิจารณา 2:ส่งเรื่องกลับ 3:คืนคำขอ
+      "description" : null, //เหตุผลการประกอบการพิจารณา
+      "ispunished" : 0,
+      "suspendfromdate" : null,
+      "suspendtodate" : null,
+      "suspendreason" : null,
+      "filecompletedate" : "2026-04-01T00:00:00",
+      "filename1" : "test1.pdf",
+      "uploaddate1" : "2026-04-01T00:00:00",
+      "filename2" :  null,
+      "uploaddate2" : null
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

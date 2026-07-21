@@ -1,0 +1,32 @@
+meta {
+  name: แก้ไขข้อมูลผู้ประสานงานในประเทศญี่ปุ่น
+  type: http
+  seq: 11
+}
+
+put {
+  url: http://apiserver:8080/admin/orgsenderco/10/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "pfid" : 1, //รหัสคำนำหน้าชื่อ
+    "fnameth": "แก้ไขสมชาย",      // ชื่อ (ไทย)
+    "lnameth": "ใจดี",      // นามสกุล (ไทย)
+    "fnameen": "Somchai",      // ชื่อ (อังกฤษ)
+    "lnameen": "Jaidee",      // นามสกุล (อังกฤษ)
+    "orgnameth": "บริษัท เอ บี ซี จำกัด",    // ชื่อตัวแทน (บริษัท/องค์กร) (ไทย)
+    "orgnameen": "ABC Company Limited",    // ชื่อตัวแทน (บริษัท/องค์กร) (อังกฤษ)
+    "addressen": "Bangkok, Thailand",    // ที่อยู่ (อังกฤษ)
+    "tel": "02-123-4567",          // เบอร์โทรศัพท์
+    "fax": "02-123-4568",          // เบอร์โทรสาร
+    "email": "somchai@example.com"         // อีเมล
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
